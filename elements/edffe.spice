@@ -1,0 +1,13 @@
+* NGSPICE file created from edffe.ext - technology: sky130A
+
+.subckt edffe
+X0 a_n390_n595# a_n445_n355# a_n485_n595# VSUBS sky130_fd_pr__nfet_01v8 ad=7.71875e+10p pd=800000u as=7.71875e+10p ps=800000u w=475000u l=150000u
+X1 a_n485_n105# a_n575_n105# a_n390_n105# w_n615_n145# sky130_fd_pr__pfet_01v8 ad=1.62301e+11p pd=1.5115e+06u as=1.1375e+11p ps=1.025e+06u w=700000u l=150000u
+X2 a_n485_n595# a_n540_n455# a_n575_n595# VSUBS sky130_fd_pr__nfet_01v8 ad=7.71875e+10p pd=800000u as=1.425e+11p ps=1.55e+06u w=475000u l=150000u
+X3 a_n575_n105# a_n390_n105# a_n485_n105# w_n615_n145# sky130_fd_pr__pfet_01v8 ad=2.175e+11p pd=2.06053e+06u as=1.68097e+11p ps=1.56549e+06u w=725000u l=150000u
+X4 a_n390_n105# a_n575_n105# a_n390_n595# VSUBS sky130_fd_pr__nfet_01v8 ad=1.425e+11p pd=1.55e+06u as=7.71875e+10p ps=800000u w=475000u l=150000u
+X5 a_n575_n595# a_n390_n105# a_n575_n105# VSUBS sky130_fd_pr__nfet_01v8 ad=1.425e+11p pd=1.55e+06u as=1.425e+11p ps=1.55e+06u w=475000u l=150000u
+X6 a_n390_n105# a_n445_n355# a_n485_n105# w_n615_n145# sky130_fd_pr__pfet_01v8 ad=1.1375e+11p pd=1.025e+06u as=1.62301e+11p ps=1.5115e+06u w=700000u l=150000u
+X7 a_n485_n105# a_n540_n455# a_n575_n105# w_n615_n145# sky130_fd_pr__pfet_01v8 ad=1.62301e+11p pd=1.5115e+06u as=2.1e+11p ps=1.98947e+06u w=700000u l=150000u
+.ends
+

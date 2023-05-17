@@ -1,0 +1,15 @@
+************************************** 
+* SPICE STIMULI FILE 
+* generated from 
+************************************** 
+
+VVCC VCC 0 PWL 0n 0 1n 0 1.1n {VCC} 
+Vi_clk i_clk 0 PWL 0n 0 3n 0 3.1n {VCC} 5n {VCC} 5.1n 0 8n 
++0 8.1n {VCC} 10n {VCC} 10.1n 0 12n 0 12.1n {VCC} 14n {VCC} 14.1n 0 
++16.2n 0 16.3n {VCC} 18.3n {VCC} 18.4n 0 20.3n 0 20.4n {VCC} 22.3n {VCC} 22.4n 
++0 
+Vi_data i_data 0 PWL 0n 0 7n 0 7.1n {VCC} 10n {VCC} 10.1n 0 16n 
++0 16.1n {VCC} 16.4n {VCC} 16.5n 0 
+Vi_en i_en 0 PWL 0n {VCC} 
+VVSS VSS 0 PWL 0n 0 
+
