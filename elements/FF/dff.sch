@@ -126,7 +126,7 @@ lab=db2}
 N 870 160 870 260 {
 lab=db2}
 N 900 120 900 300 {
-lab=QQn}
+lab=Qn}
 N 870 100 870 120 {
 lab=VCC}
 N 840 100 870 100 {
@@ -140,7 +140,7 @@ lab=VSS}
 N 840 300 840 320 {
 lab=VSS}
 N 810 160 810 260 {
-lab=QQn}
+lab=Qn}
 N 780 120 780 300 {
 lab=db2l}
 N 810 300 810 320 {
@@ -168,11 +168,11 @@ lab=VCC}
 N 950 100 950 120 {
 lab=VCC}
 N 950 160 950 260 {
-lab=QQn}
+lab=Qn}
 N 980 120 980 300 {
-lab=QQp}
+lab=Qp}
 N 810 200 900 200 {
-lab=QQn}
+lab=Qn}
 N 750 320 810 320 {
 lab=VSS}
 N 750 100 810 100 {
@@ -182,7 +182,7 @@ lab=VCC}
 N 690 320 750 320 {
 lab=VSS}
 N 900 200 950 200 {
-lab=QQn}
+lab=Qn}
 N 870 100 920 100 {
 lab=VCC}
 N 870 320 920 320 {
@@ -209,44 +209,9 @@ N 390 100 450 100 {
 lab=VCC}
 N 390 320 450 320 {
 lab=VSS}
-C {sky130_fd_pr/corner.sym} -260 70 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/code.sym} -260 230 0 0 {name=STDCELLS_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value="
-.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
-"
-spice_ignore=false}
-C {devices/simulator_commands.sym} -260 410 0 0 {name=COMMANDS1
-simulator=ngspice
-only_toplevel=false 
-value="
-*.option method=gear
-.param VCC=1.8
-
-.include stimuli_edffe.cir
-.control
-* save all
-tran 0.1n 40n uic
-write edffe.raw
-acct
-rusage
-.endc
-"}
 C {devices/launcher.sym} 100 850 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/dff.spice.raw tran"
-}
-C {devices/simulator_commands.sym} -260 590 0 0 {name=COMMANDS2
-simulator=xyce
-only_toplevel=false 
-value="
-.param VCC=1.8
-* generate following file with Simulation->Utile stimuli editor and pressing 'Translate'
-.include stimuli_edffe.cir
-.tran 1p 40n uic
-.print tran format=raw file=edff.spice.raw v(*)
-"
 }
 C {devices/ipin.sym} 110 220 0 0 {name=p6 lab=i_clk}
 C {devices/ipin.sym} 110 250 0 0 {name=p7 lab=i_data}
@@ -440,7 +405,7 @@ nf=1 mult=1
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 980 230 2 0 {name=p55 sig_type=std_logic lab=QQp}
+C {devices/lab_pin.sym} 980 230 2 0 {name=p55 sig_type=std_logic lab=Qp}
 C {devices/gnd.sym} 950 320 0 1 {name=l33 lab=VSS}
 C {devices/vdd.sym} 950 100 0 1 {name=l34 lab=VCC}
-C {devices/lab_pin.sym} 950 200 2 0 {name=p52 sig_type=std_logic lab=QQn}
+C {devices/lab_pin.sym} 950 200 2 0 {name=p52 sig_type=std_logic lab=Qn}
