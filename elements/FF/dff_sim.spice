@@ -1,0 +1,14 @@
+
+.include ../inc_lib.spice
+.include dff.spice
+
+XM1 i_data i_clk Qp Qn VSS VCC VSS VCC dff
+
+.param VCC=1.8
+.include stimuli_dff.cir
+.tran 1p 40n uic
+.print tran format=raw file=dff.spice.raw v(*) i(vvcc)
+
+.GLOBAL VCC
+.GLOBAL VSS
+.end

@@ -1,0 +1,29 @@
+* NGSPICE file created from dff.ext - technology: sky130A
+
+.subckt dff i_data i_clk Qp Qn VGND VPWR VNB VPB
+X0 db2l pc db2 VPB sky130_fd_pr__pfet_01v8 ad=2.55937e+11p pd=1.5e+06u as=2.80313e+11p ps=1.55e+06u w=975000u l=150000u
+X1 VPWR Qn db2l VPB sky130_fd_pr__pfet_01v8 ad=1.98047e+11p pd=1.625e+06u as=2.55937e+11p ps=1.5e+06u w=975000u l=150000u
+X2 pc pcb VPWR VPB sky130_fd_pr__pfet_01v8 ad=3.16875e+11p pd=2.6e+06u as=1.98047e+11p ps=1.625e+06u w=975000u l=150000u
+X3 db i_data VPWR VPB sky130_fd_pr__pfet_01v8 ad=2.55937e+11p pd=1.5e+06u as=1.98047e+11p ps=1.625e+06u w=975000u l=150000u
+X4 db1 pc db VPB sky130_fd_pr__pfet_01v8 ad=2.80313e+11p pd=1.55e+06u as=2.55937e+11p ps=1.5e+06u w=975000u l=150000u
+X5 db1b db1 VGND VNB sky130_fd_pr__nfet_01v8 ad=1.36562e+11p pd=1.05e+06u as=9.64844e+10p ps=1e+06u w=475000u l=150000u
+X6 Qn db2 VGND VNB sky130_fd_pr__nfet_01v8 ad=1.54375e+11p pd=1.6e+06u as=9.64844e+10p ps=1e+06u w=475000u l=150000u
+X7 Qp Qn VGND VNB sky130_fd_pr__nfet_01v8 ad=1.54375e+11p pd=1.6e+06u as=9.64844e+10p ps=1e+06u w=475000u l=150000u
+X8 db2 pcb db1b VPB sky130_fd_pr__pfet_01v8 ad=2.80313e+11p pd=1.55e+06u as=2.80313e+11p ps=1.55e+06u w=975000u l=150000u
+X9 db1l pc db1 VNB sky130_fd_pr__nfet_01v8 ad=1.24687e+11p pd=1e+06u as=1.36562e+11p ps=1.05e+06u w=475000u l=150000u
+X10 VPWR i_clk pcb VPB sky130_fd_pr__pfet_01v8 ad=1.98047e+11p pd=1.625e+06u as=3.16875e+11p ps=2.6e+06u w=975000u l=150000u
+X11 VGND db1b db1l VNB sky130_fd_pr__nfet_01v8 ad=9.64844e+10p pd=1e+06u as=1.24687e+11p ps=1e+06u w=475000u l=150000u
+X12 db2l pcb db2 VNB sky130_fd_pr__nfet_01v8 ad=1.24687e+11p pd=1e+06u as=1.36562e+11p ps=1.05e+06u w=475000u l=150000u
+X13 VGND Qn db2l VNB sky130_fd_pr__nfet_01v8 ad=9.64844e+10p pd=1e+06u as=1.24687e+11p ps=1e+06u w=475000u l=150000u
+X14 pc pcb VGND VNB sky130_fd_pr__nfet_01v8 ad=1.54375e+11p pd=1.6e+06u as=9.64844e+10p ps=1e+06u w=475000u l=150000u
+X15 db i_data VGND VNB sky130_fd_pr__nfet_01v8 ad=1.24687e+11p pd=1e+06u as=9.64844e+10p ps=1e+06u w=475000u l=150000u
+X16 db1 pcb db VNB sky130_fd_pr__nfet_01v8 ad=1.36562e+11p pd=1.05e+06u as=1.24687e+11p ps=1e+06u w=475000u l=150000u
+X17 db1b db1 VPWR VPB sky130_fd_pr__pfet_01v8 ad=2.80313e+11p pd=1.55e+06u as=1.98047e+11p ps=1.625e+06u w=975000u l=150000u
+X18 Qn db2 VPWR VPB sky130_fd_pr__pfet_01v8 ad=3.16875e+11p pd=2.6e+06u as=1.98047e+11p ps=1.625e+06u w=975000u l=150000u
+X19 Qp Qn VPWR VPB sky130_fd_pr__pfet_01v8 ad=3.16875e+11p pd=2.6e+06u as=1.98047e+11p ps=1.625e+06u w=975000u l=150000u
+X20 db1l pcb db1 VPB sky130_fd_pr__pfet_01v8 ad=2.55937e+11p pd=1.5e+06u as=2.80313e+11p ps=1.55e+06u w=975000u l=150000u
+X21 db2 pc db1b VNB sky130_fd_pr__nfet_01v8 ad=1.36562e+11p pd=1.05e+06u as=1.36562e+11p ps=1.05e+06u w=475000u l=150000u
+X22 VPWR db1b db1l VPB sky130_fd_pr__pfet_01v8 ad=1.98047e+11p pd=1.625e+06u as=2.55937e+11p ps=1.5e+06u w=975000u l=150000u
+X23 VGND i_clk pcb VNB sky130_fd_pr__nfet_01v8 ad=9.64844e+10p pd=1e+06u as=1.54375e+11p ps=1.6e+06u w=475000u l=150000u
+.ends
+
