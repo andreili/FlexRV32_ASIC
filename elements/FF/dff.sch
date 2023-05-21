@@ -13,18 +13,17 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=4e-08
+x1=2.88533e-08
+x2=3.4402e-08
 divx=5
 subdivx=1
 node="i_en
 i_clk
 i_data
 Qp
-Qn
-QQp
-QQn"
-color="4 5 6 4 4 4 4"
+xm1.db2l
+Qn"
+color="4 5 6 4 4 4"
 dataset=-1
 unitx=1
 logx=0
@@ -236,7 +235,7 @@ rusage
 "}
 C {devices/launcher.sym} 100 850 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/edff.spice.raw tran"
+tclcommand="xschem raw_read $netlist_dir/dff.spice.raw tran"
 }
 C {devices/simulator_commands.sym} -260 590 0 0 {name=COMMANDS2
 simulator=xyce
