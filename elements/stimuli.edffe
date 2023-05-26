@@ -9,11 +9,34 @@ buswidth i_rd 256 [ ]
 beginfile stimuli_edffe.cir
 set VCC 0
 set VSS 0
-set i_en {VCC}
+set i_en 0
 set i_clk 0
 set i_data 0
 s 1
 set VCC {VCC}
+s 2
+
+set i_data {VCC}
+s 1
+set i_clk {VCC}
+s 2
+set i_data 0
+set i_clk 0
+s 2
+
+set i_clk {VCC}
+s 2
+set i_clk 0
+s 2
+
+set i_data {VCC}
+s 0.2
+set i_clk {VCC}
+s 0.2
+set i_data 0
+s 1.9
+set i_clk 0
+set i_en {VCC}
 s 2
 
 set i_clk {VCC}

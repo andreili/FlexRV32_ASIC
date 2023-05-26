@@ -1,0 +1,983 @@
+** sch_path: /media/FlexRV32/asic/blocks/rv_fetch_buf/rv_fetch_buf.sch
+**.subckt rv_fetch_buf i_reset_n i_clk i_push i_stall
+*+ i_pc[31],i_pc[30],i_pc[29],i_pc[28],i_pc[27],i_pc[26],i_pc[25],i_pc[24],i_pc[23],i_pc[22],i_pc[21],i_pc[20],i_pc[19],i_pc[18],i_pc[17],i_pc[16],i_pc[15],i_pc[14],i_pc[13],i_pc[12],i_pc[11],i_pc[10],i_pc[9],i_pc[8],i_pc[7],i_pc[6],i_pc[5],i_pc[4],i_pc[3],i_pc[2],i_pc[1]
+*+ i_data[31],i_data[30],i_data[29],i_data[28],i_data[27],i_data[26],i_data[25],i_data[24],i_data[23],i_data[22],i_data[21],i_data[20],i_data[19],i_data[18],i_data[17],i_data[16],i_data[15],i_data[14],i_data[13],i_data[12],i_data[11],i_data[10],i_data[9],i_data[8],i_data[7],i_data[6],i_data[5],i_data[4],i_data[3],i_data[2],i_data[1],i_data[0] o_not_full
+*+ o_data[15],o_data[14],o_data[13],o_data[12],o_data[11],o_data[10],o_data[9],o_data[8],o_data[7],o_data[6],o_data[5],o_data[4],o_data[3],o_data[2],o_data[1],o_data[0]
+*+ o_data[31],o_data[30],o_data[29],o_data[28],o_data[27],o_data[26],o_data[25],o_data[24],o_data[23],o_data[22],o_data[21],o_data[20],o_data[19],o_data[18],o_data[17],o_data[16] o_not_empty
+*+ o_pc_next[31],o_pc_next[30],o_pc_next[29],o_pc_next[28],o_pc_next[27],o_pc_next[26],o_pc_next[25],o_pc_next[24],o_pc_next[23],o_pc_next[22],o_pc_next[21],o_pc_next[20],o_pc_next[19],o_pc_next[18],o_pc_next[17],o_pc_next[16],o_pc_next[15],o_pc_next[14],o_pc_next[13],o_pc_next[12],o_pc_next[11],o_pc_next[10],o_pc_next[9],o_pc_next[8],o_pc_next[7],o_pc_next[6],o_pc_next[5],o_pc_next[4],o_pc_next[3],o_pc_next[2],o_pc_next[1]
+*+ o_pc[31],o_pc[30],o_pc[29],o_pc[28],o_pc[27],o_pc[26],o_pc[25],o_pc[24],o_pc[23],o_pc[22],o_pc[21],o_pc[20],o_pc[19],o_pc[18],o_pc[17],o_pc[16],o_pc[15],o_pc[14],o_pc[13],o_pc[12],o_pc[11],o_pc[10],o_pc[9],o_pc[8],o_pc[7],o_pc[6],o_pc[5],o_pc[4],o_pc[3],o_pc[2],o_pc[1]
+*.ipin i_reset_n
+*.ipin i_clk
+*.ipin i_push
+*.ipin i_stall
+*.ipin
+*+ i_pc[31],i_pc[30],i_pc[29],i_pc[28],i_pc[27],i_pc[26],i_pc[25],i_pc[24],i_pc[23],i_pc[22],i_pc[21],i_pc[20],i_pc[19],i_pc[18],i_pc[17],i_pc[16],i_pc[15],i_pc[14],i_pc[13],i_pc[12],i_pc[11],i_pc[10],i_pc[9],i_pc[8],i_pc[7],i_pc[6],i_pc[5],i_pc[4],i_pc[3],i_pc[2],i_pc[1]
+*.ipin
+*+ i_data[31],i_data[30],i_data[29],i_data[28],i_data[27],i_data[26],i_data[25],i_data[24],i_data[23],i_data[22],i_data[21],i_data[20],i_data[19],i_data[18],i_data[17],i_data[16],i_data[15],i_data[14],i_data[13],i_data[12],i_data[11],i_data[10],i_data[9],i_data[8],i_data[7],i_data[6],i_data[5],i_data[4],i_data[3],i_data[2],i_data[1],i_data[0]
+*.opin o_not_full
+*.opin
+*+ o_data[15],o_data[14],o_data[13],o_data[12],o_data[11],o_data[10],o_data[9],o_data[8],o_data[7],o_data[6],o_data[5],o_data[4],o_data[3],o_data[2],o_data[1],o_data[0]
+*.opin
+*+ o_data[31],o_data[30],o_data[29],o_data[28],o_data[27],o_data[26],o_data[25],o_data[24],o_data[23],o_data[22],o_data[21],o_data[20],o_data[19],o_data[18],o_data[17],o_data[16]
+*.opin o_not_empty
+*.opin
+*+ o_pc_next[31],o_pc_next[30],o_pc_next[29],o_pc_next[28],o_pc_next[27],o_pc_next[26],o_pc_next[25],o_pc_next[24],o_pc_next[23],o_pc_next[22],o_pc_next[21],o_pc_next[20],o_pc_next[19],o_pc_next[18],o_pc_next[17],o_pc_next[16],o_pc_next[15],o_pc_next[14],o_pc_next[13],o_pc_next[12],o_pc_next[11],o_pc_next[10],o_pc_next[9],o_pc_next[8],o_pc_next[7],o_pc_next[6],o_pc_next[5],o_pc_next[4],o_pc_next[3],o_pc_next[2],o_pc_next[1]
+*.opin
+*+ o_pc[31],o_pc[30],o_pc[29],o_pc[28],o_pc[27],o_pc[26],o_pc[25],o_pc[24],o_pc[23],o_pc[22],o_pc[21],o_pc[20],o_pc[19],o_pc[18],o_pc[17],o_pc[16],o_pc[15],o_pc[14],o_pc[13],o_pc[12],o_pc[11],o_pc[10],o_pc[9],o_pc[8],o_pc[7],o_pc[6],o_pc[5],o_pc[4],o_pc[3],o_pc[2],o_pc[1]
+x142 is_head_p[4] is_head_n[4] clk_p_h h_next_p[4] dff
+x100 i_reset_n reset_p not
+x102 i_push push_n not
+x105 net5 net1 pop_p pc_n[1] nand2
+x106 net15 net7 net4 pop_p nand2
+x108 net16 latch_up_p i_push net5 nand2
+x182 is_head_p[0] is_head_n[0] clk_p_h h_next_p[0] dff
+x172 is_head_p[1] net17 clk_p_h h_next_p[1] dff
+x162 is_head_p[2] net18 clk_p_h h_next_p[2] dff
+x152 is_head_p[3] net19 clk_p_h h_next_p[3] dff
+x116 net11 net10 pop_p first_half_n nand2
+x120[31] o_pc[31] pc_n[31] clk_p_a o_pc_next[31] dff
+x120[30] o_pc[30] pc_n[30] clk_p_a o_pc_next[30] dff
+x120[29] o_pc[29] pc_n[29] clk_p_a o_pc_next[29] dff
+x120[28] o_pc[28] pc_n[28] clk_p_a o_pc_next[28] dff
+x120[27] o_pc[27] pc_n[27] clk_p_a o_pc_next[27] dff
+x120[26] o_pc[26] pc_n[26] clk_p_a o_pc_next[26] dff
+x120[25] o_pc[25] pc_n[25] clk_p_a o_pc_next[25] dff
+x120[24] o_pc[24] pc_n[24] clk_p_a o_pc_next[24] dff
+x120[23] o_pc[23] pc_n[23] clk_p_a o_pc_next[23] dff
+x120[22] o_pc[22] pc_n[22] clk_p_a o_pc_next[22] dff
+x120[21] o_pc[21] pc_n[21] clk_p_a o_pc_next[21] dff
+x120[20] o_pc[20] pc_n[20] clk_p_a o_pc_next[20] dff
+x120[19] o_pc[19] pc_n[19] clk_p_a o_pc_next[19] dff
+x120[18] o_pc[18] pc_n[18] clk_p_a o_pc_next[18] dff
+x120[17] o_pc[17] pc_n[17] clk_p_a o_pc_next[17] dff
+x120[16] o_pc[16] pc_n[16] clk_p_a o_pc_next[16] dff
+x120[15] o_pc[15] pc_n[15] clk_p_a o_pc_next[15] dff
+x120[14] o_pc[14] pc_n[14] clk_p_a o_pc_next[14] dff
+x120[13] o_pc[13] pc_n[13] clk_p_a o_pc_next[13] dff
+x120[12] o_pc[12] pc_n[12] clk_p_a o_pc_next[12] dff
+x120[11] o_pc[11] pc_n[11] clk_p_a o_pc_next[11] dff
+x120[10] o_pc[10] pc_n[10] clk_p_a o_pc_next[10] dff
+x120[9] o_pc[9] pc_n[9] clk_p_a o_pc_next[9] dff
+x120[8] o_pc[8] pc_n[8] clk_p_a o_pc_next[8] dff
+x120[7] o_pc[7] pc_n[7] clk_p_a o_pc_next[7] dff
+x120[6] o_pc[6] pc_n[6] clk_p_a o_pc_next[6] dff
+x120[5] o_pc[5] pc_n[5] clk_p_a o_pc_next[5] dff
+x120[4] o_pc[4] pc_n[4] clk_p_a o_pc_next[4] dff
+x120[3] o_pc[3] pc_n[3] clk_p_a o_pc_next[3] dff
+x120[2] o_pc[2] pc_n[2] clk_p_a o_pc_next[2] dff
+x120[1] o_pc[1] pc_n[1] clk_p_a o_pc_next[1] dff
+x202 net24 net3 i_push pop_p nand2
+x189[15] latch_hi_p[15] net26[15] clk_p_d4 net27[15] dff
+x189[14] latch_hi_p[14] net26[14] clk_p_d4 net27[14] dff
+x189[13] latch_hi_p[13] net26[13] clk_p_d4 net27[13] dff
+x189[12] latch_hi_p[12] net26[12] clk_p_d4 net27[12] dff
+x189[11] latch_hi_p[11] net26[11] clk_p_d4 net27[11] dff
+x189[10] latch_hi_p[10] net26[10] clk_p_d4 net27[10] dff
+x189[9] latch_hi_p[9] net26[9] clk_p_d4 net27[9] dff
+x189[8] latch_hi_p[8] net26[8] clk_p_d4 net27[8] dff
+x189[7] latch_hi_p[7] net26[7] clk_p_d4 net27[7] dff
+x189[6] latch_hi_p[6] net26[6] clk_p_d4 net27[6] dff
+x189[5] latch_hi_p[5] net26[5] clk_p_d4 net27[5] dff
+x189[4] latch_hi_p[4] net26[4] clk_p_d4 net27[4] dff
+x189[3] latch_hi_p[3] net26[3] clk_p_d4 net27[3] dff
+x189[2] latch_hi_p[2] net26[2] clk_p_d4 net27[2] dff
+x189[1] latch_hi_p[1] net26[1] clk_p_d4 net27[1] dff
+x189[0] latch_hi_p[0] net26[0] clk_p_d4 net27[0] dff
+x206 hi_valid_p hi_valid_n clk_p_h net13 dff
+x201 net28 first_half_n clk_p_h net14 dff
+x190[15] pc_buf_p[1] latch_hi_p[15] o_data[15] pc_buf_n[1] data_0[15] mux2
+x190[14] pc_buf_p[1] latch_hi_p[14] o_data[14] pc_buf_n[1] data_0[14] mux2
+x190[13] pc_buf_p[1] latch_hi_p[13] o_data[13] pc_buf_n[1] data_0[13] mux2
+x190[12] pc_buf_p[1] latch_hi_p[12] o_data[12] pc_buf_n[1] data_0[12] mux2
+x190[11] pc_buf_p[1] latch_hi_p[11] o_data[11] pc_buf_n[1] data_0[11] mux2
+x190[10] pc_buf_p[1] latch_hi_p[10] o_data[10] pc_buf_n[1] data_0[10] mux2
+x190[9] pc_buf_p[1] latch_hi_p[9] o_data[9] pc_buf_n[1] data_0[9] mux2
+x190[8] pc_buf_p[1] latch_hi_p[8] o_data[8] pc_buf_n[1] data_0[8] mux2
+x190[7] pc_buf_p[1] latch_hi_p[7] o_data[7] pc_buf_n[1] data_0[7] mux2
+x190[6] pc_buf_p[1] latch_hi_p[6] o_data[6] pc_buf_n[1] data_0[6] mux2
+x190[5] pc_buf_p[1] latch_hi_p[5] o_data[5] pc_buf_n[1] data_0[5] mux2
+x190[4] pc_buf_p[1] latch_hi_p[4] o_data[4] pc_buf_n[1] data_0[4] mux2
+x190[3] pc_buf_p[1] latch_hi_p[3] o_data[3] pc_buf_n[1] data_0[3] mux2
+x190[2] pc_buf_p[1] latch_hi_p[2] o_data[2] pc_buf_n[1] data_0[2] mux2
+x190[1] pc_buf_p[1] latch_hi_p[1] o_data[1] pc_buf_n[1] data_0[1] mux2
+x190[0] pc_buf_p[1] latch_hi_p[0] o_data[0] pc_buf_n[1] data_0[0] mux2
+x191[15] pc_buf_p[1] data_0[15] o_data[31] pc_buf_n[1] data_0[31] mux2
+x191[14] pc_buf_p[1] data_0[14] o_data[30] pc_buf_n[1] data_0[30] mux2
+x191[13] pc_buf_p[1] data_0[13] o_data[29] pc_buf_n[1] data_0[29] mux2
+x191[12] pc_buf_p[1] data_0[12] o_data[28] pc_buf_n[1] data_0[28] mux2
+x191[11] pc_buf_p[1] data_0[11] o_data[27] pc_buf_n[1] data_0[27] mux2
+x191[10] pc_buf_p[1] data_0[10] o_data[26] pc_buf_n[1] data_0[26] mux2
+x191[9] pc_buf_p[1] data_0[9] o_data[25] pc_buf_n[1] data_0[25] mux2
+x191[8] pc_buf_p[1] data_0[8] o_data[24] pc_buf_n[1] data_0[24] mux2
+x191[7] pc_buf_p[1] data_0[7] o_data[23] pc_buf_n[1] data_0[23] mux2
+x191[6] pc_buf_p[1] data_0[6] o_data[22] pc_buf_n[1] data_0[22] mux2
+x191[5] pc_buf_p[1] data_0[5] o_data[21] pc_buf_n[1] data_0[21] mux2
+x191[4] pc_buf_p[1] data_0[4] o_data[20] pc_buf_n[1] data_0[20] mux2
+x191[3] pc_buf_p[1] data_0[3] o_data[19] pc_buf_n[1] data_0[19] mux2
+x191[2] pc_buf_p[1] data_0[2] o_data[18] pc_buf_n[1] data_0[18] mux2
+x191[1] pc_buf_p[1] data_0[1] o_data[17] pc_buf_n[1] data_0[17] mux2
+x191[0] pc_buf_p[1] data_0[0] o_data[16] pc_buf_n[1] data_0[16] mux2
+x113 is_comp_p is_comp_n o_data[1] o_data[0] nand2
+x179[31] data_0[31] net31[31] clk_p_d0 d_next_0[31] dff
+x179[30] data_0[30] net31[30] clk_p_d0 d_next_0[30] dff
+x179[29] data_0[29] net31[29] clk_p_d0 d_next_0[29] dff
+x179[28] data_0[28] net31[28] clk_p_d0 d_next_0[28] dff
+x179[27] data_0[27] net31[27] clk_p_d0 d_next_0[27] dff
+x179[26] data_0[26] net31[26] clk_p_d0 d_next_0[26] dff
+x179[25] data_0[25] net31[25] clk_p_d0 d_next_0[25] dff
+x179[24] data_0[24] net31[24] clk_p_d0 d_next_0[24] dff
+x179[23] data_0[23] net31[23] clk_p_d0 d_next_0[23] dff
+x179[22] data_0[22] net31[22] clk_p_d0 d_next_0[22] dff
+x179[21] data_0[21] net31[21] clk_p_d0 d_next_0[21] dff
+x179[20] data_0[20] net31[20] clk_p_d0 d_next_0[20] dff
+x179[19] data_0[19] net31[19] clk_p_d0 d_next_0[19] dff
+x179[18] data_0[18] net31[18] clk_p_d0 d_next_0[18] dff
+x179[17] data_0[17] net31[17] clk_p_d0 d_next_0[17] dff
+x179[16] data_0[16] net31[16] clk_p_d0 d_next_0[16] dff
+x179[15] data_0[15] net31[15] clk_p_d0 d_next_0[15] dff
+x179[14] data_0[14] net31[14] clk_p_d0 d_next_0[14] dff
+x179[13] data_0[13] net31[13] clk_p_d0 d_next_0[13] dff
+x179[12] data_0[12] net31[12] clk_p_d0 d_next_0[12] dff
+x179[11] data_0[11] net31[11] clk_p_d0 d_next_0[11] dff
+x179[10] data_0[10] net31[10] clk_p_d0 d_next_0[10] dff
+x179[9] data_0[9] net31[9] clk_p_d0 d_next_0[9] dff
+x179[8] data_0[8] net31[8] clk_p_d0 d_next_0[8] dff
+x179[7] data_0[7] net31[7] clk_p_d0 d_next_0[7] dff
+x179[6] data_0[6] net31[6] clk_p_d0 d_next_0[6] dff
+x179[5] data_0[5] net31[5] clk_p_d0 d_next_0[5] dff
+x179[4] data_0[4] net31[4] clk_p_d0 d_next_0[4] dff
+x179[3] data_0[3] net31[3] clk_p_d0 d_next_0[3] dff
+x179[2] data_0[2] net31[2] clk_p_d0 d_next_0[2] dff
+x179[1] data_0[1] net31[1] clk_p_d0 d_next_0[1] dff
+x179[0] data_0[0] net31[0] clk_p_d0 d_next_0[0] dff
+x169[31] data_1[31] net32[31] clk_p_d1 d_next_1[31] dff
+x169[30] data_1[30] net32[30] clk_p_d1 d_next_1[30] dff
+x169[29] data_1[29] net32[29] clk_p_d1 d_next_1[29] dff
+x169[28] data_1[28] net32[28] clk_p_d1 d_next_1[28] dff
+x169[27] data_1[27] net32[27] clk_p_d1 d_next_1[27] dff
+x169[26] data_1[26] net32[26] clk_p_d1 d_next_1[26] dff
+x169[25] data_1[25] net32[25] clk_p_d1 d_next_1[25] dff
+x169[24] data_1[24] net32[24] clk_p_d1 d_next_1[24] dff
+x169[23] data_1[23] net32[23] clk_p_d1 d_next_1[23] dff
+x169[22] data_1[22] net32[22] clk_p_d1 d_next_1[22] dff
+x169[21] data_1[21] net32[21] clk_p_d1 d_next_1[21] dff
+x169[20] data_1[20] net32[20] clk_p_d1 d_next_1[20] dff
+x169[19] data_1[19] net32[19] clk_p_d1 d_next_1[19] dff
+x169[18] data_1[18] net32[18] clk_p_d1 d_next_1[18] dff
+x169[17] data_1[17] net32[17] clk_p_d1 d_next_1[17] dff
+x169[16] data_1[16] net32[16] clk_p_d1 d_next_1[16] dff
+x169[15] data_1[15] net32[15] clk_p_d1 d_next_1[15] dff
+x169[14] data_1[14] net32[14] clk_p_d1 d_next_1[14] dff
+x169[13] data_1[13] net32[13] clk_p_d1 d_next_1[13] dff
+x169[12] data_1[12] net32[12] clk_p_d1 d_next_1[12] dff
+x169[11] data_1[11] net32[11] clk_p_d1 d_next_1[11] dff
+x169[10] data_1[10] net32[10] clk_p_d1 d_next_1[10] dff
+x169[9] data_1[9] net32[9] clk_p_d1 d_next_1[9] dff
+x169[8] data_1[8] net32[8] clk_p_d1 d_next_1[8] dff
+x169[7] data_1[7] net32[7] clk_p_d1 d_next_1[7] dff
+x169[6] data_1[6] net32[6] clk_p_d1 d_next_1[6] dff
+x169[5] data_1[5] net32[5] clk_p_d1 d_next_1[5] dff
+x169[4] data_1[4] net32[4] clk_p_d1 d_next_1[4] dff
+x169[3] data_1[3] net32[3] clk_p_d1 d_next_1[3] dff
+x169[2] data_1[2] net32[2] clk_p_d1 d_next_1[2] dff
+x169[1] data_1[1] net32[1] clk_p_d1 d_next_1[1] dff
+x169[0] data_1[0] net32[0] clk_p_d1 d_next_1[0] dff
+x159[31] data_2[31] net33[31] clk_p_d2 d_next_2[31] dff
+x159[30] data_2[30] net33[30] clk_p_d2 d_next_2[30] dff
+x159[29] data_2[29] net33[29] clk_p_d2 d_next_2[29] dff
+x159[28] data_2[28] net33[28] clk_p_d2 d_next_2[28] dff
+x159[27] data_2[27] net33[27] clk_p_d2 d_next_2[27] dff
+x159[26] data_2[26] net33[26] clk_p_d2 d_next_2[26] dff
+x159[25] data_2[25] net33[25] clk_p_d2 d_next_2[25] dff
+x159[24] data_2[24] net33[24] clk_p_d2 d_next_2[24] dff
+x159[23] data_2[23] net33[23] clk_p_d2 d_next_2[23] dff
+x159[22] data_2[22] net33[22] clk_p_d2 d_next_2[22] dff
+x159[21] data_2[21] net33[21] clk_p_d2 d_next_2[21] dff
+x159[20] data_2[20] net33[20] clk_p_d2 d_next_2[20] dff
+x159[19] data_2[19] net33[19] clk_p_d2 d_next_2[19] dff
+x159[18] data_2[18] net33[18] clk_p_d2 d_next_2[18] dff
+x159[17] data_2[17] net33[17] clk_p_d2 d_next_2[17] dff
+x159[16] data_2[16] net33[16] clk_p_d2 d_next_2[16] dff
+x159[15] data_2[15] net33[15] clk_p_d2 d_next_2[15] dff
+x159[14] data_2[14] net33[14] clk_p_d2 d_next_2[14] dff
+x159[13] data_2[13] net33[13] clk_p_d2 d_next_2[13] dff
+x159[12] data_2[12] net33[12] clk_p_d2 d_next_2[12] dff
+x159[11] data_2[11] net33[11] clk_p_d2 d_next_2[11] dff
+x159[10] data_2[10] net33[10] clk_p_d2 d_next_2[10] dff
+x159[9] data_2[9] net33[9] clk_p_d2 d_next_2[9] dff
+x159[8] data_2[8] net33[8] clk_p_d2 d_next_2[8] dff
+x159[7] data_2[7] net33[7] clk_p_d2 d_next_2[7] dff
+x159[6] data_2[6] net33[6] clk_p_d2 d_next_2[6] dff
+x159[5] data_2[5] net33[5] clk_p_d2 d_next_2[5] dff
+x159[4] data_2[4] net33[4] clk_p_d2 d_next_2[4] dff
+x159[3] data_2[3] net33[3] clk_p_d2 d_next_2[3] dff
+x159[2] data_2[2] net33[2] clk_p_d2 d_next_2[2] dff
+x159[1] data_2[1] net33[1] clk_p_d2 d_next_2[1] dff
+x159[0] data_2[0] net33[0] clk_p_d2 d_next_2[0] dff
+x149[31] data_3[31] net34[31] clk_p_d3 d_next_3[31] dff
+x149[30] data_3[30] net34[30] clk_p_d3 d_next_3[30] dff
+x149[29] data_3[29] net34[29] clk_p_d3 d_next_3[29] dff
+x149[28] data_3[28] net34[28] clk_p_d3 d_next_3[28] dff
+x149[27] data_3[27] net34[27] clk_p_d3 d_next_3[27] dff
+x149[26] data_3[26] net34[26] clk_p_d3 d_next_3[26] dff
+x149[25] data_3[25] net34[25] clk_p_d3 d_next_3[25] dff
+x149[24] data_3[24] net34[24] clk_p_d3 d_next_3[24] dff
+x149[23] data_3[23] net34[23] clk_p_d3 d_next_3[23] dff
+x149[22] data_3[22] net34[22] clk_p_d3 d_next_3[22] dff
+x149[21] data_3[21] net34[21] clk_p_d3 d_next_3[21] dff
+x149[20] data_3[20] net34[20] clk_p_d3 d_next_3[20] dff
+x149[19] data_3[19] net34[19] clk_p_d3 d_next_3[19] dff
+x149[18] data_3[18] net34[18] clk_p_d3 d_next_3[18] dff
+x149[17] data_3[17] net34[17] clk_p_d3 d_next_3[17] dff
+x149[16] data_3[16] net34[16] clk_p_d3 d_next_3[16] dff
+x149[15] data_3[15] net34[15] clk_p_d3 d_next_3[15] dff
+x149[14] data_3[14] net34[14] clk_p_d3 d_next_3[14] dff
+x149[13] data_3[13] net34[13] clk_p_d3 d_next_3[13] dff
+x149[12] data_3[12] net34[12] clk_p_d3 d_next_3[12] dff
+x149[11] data_3[11] net34[11] clk_p_d3 d_next_3[11] dff
+x149[10] data_3[10] net34[10] clk_p_d3 d_next_3[10] dff
+x149[9] data_3[9] net34[9] clk_p_d3 d_next_3[9] dff
+x149[8] data_3[8] net34[8] clk_p_d3 d_next_3[8] dff
+x149[7] data_3[7] net34[7] clk_p_d3 d_next_3[7] dff
+x149[6] data_3[6] net34[6] clk_p_d3 d_next_3[6] dff
+x149[5] data_3[5] net34[5] clk_p_d3 d_next_3[5] dff
+x149[4] data_3[4] net34[4] clk_p_d3 d_next_3[4] dff
+x149[3] data_3[3] net34[3] clk_p_d3 d_next_3[3] dff
+x149[2] data_3[2] net34[2] clk_p_d3 d_next_3[2] dff
+x149[1] data_3[1] net34[1] clk_p_d3 d_next_3[1] dff
+x149[0] data_3[0] net34[0] clk_p_d3 d_next_3[0] dff
+x103 pop_n pop_p stall_p is_head_n[0] nand2
+x110 net20 o_not_full is_head_n[4] net6 nand2
+x107 net6 net21 is_head_p[3] i_push pop_n nand3
+x109 net7 latch_dn_p net1 latch_dn_n nor2
+x104 is_comp_n net4 hi_valid_n net22 nor2
+x111 latch_m_dn_n latch_m_dn_p latch_dn_p push_n nand2
+x112 latch_m_up_n latch_m_up_p i_push latch_dn_n nand2
+x101 i_stall stall_p not
+x180 latch_m_dn_p is_head_p[1] net35 latch_m_up_n is_head_p[0] mux2
+x204 net3 hi_update_p reset_p net12 nor2
+x203 net25 hi_next i_reset_n is_head_n[0] nand2
+x200 net29 net14 is_head_p[0] o_pc[1] hi_valid_n nand3
+x114 net30 o_not_empty is_head_n[0] first_half_n nand2
+x140 latch_m_up_p is_head_p[3] net36 net2 is_head_p[4] mux2
+x141 net37 h_next_p[4] net36 i_reset_n nand2
+x150 latch_m_dn_p net38 is_head_p[4] latch_m_up_p is_head_p[2] net2 is_head_p[3] mux3
+x151 net39 h_next_p[3] net38 i_reset_n nand2
+x160 latch_m_dn_p net40 is_head_p[3] latch_m_up_p is_head_p[1] net2 is_head_p[2] mux3
+x161 net41 h_next_p[2] net40 i_reset_n nand2
+x170 latch_m_dn_p net42 is_head_p[2] latch_m_up_p is_head_p[0] net2 is_head_p[1] mux3
+x171 net43 h_next_p[1] net42 i_reset_n nand2
+x130 net44 net2 latch_m_up_n latch_m_dn_n nand2
+x119[31] net9 o_pc_next[31] pc_add[31] net8 o_pc[31] reset_p i_pc[31] mux3
+x119[30] net9 o_pc_next[30] pc_add[30] net8 o_pc[30] reset_p i_pc[30] mux3
+x119[29] net9 o_pc_next[29] pc_add[29] net8 o_pc[29] reset_p i_pc[29] mux3
+x119[28] net9 o_pc_next[28] pc_add[28] net8 o_pc[28] reset_p i_pc[28] mux3
+x119[27] net9 o_pc_next[27] pc_add[27] net8 o_pc[27] reset_p i_pc[27] mux3
+x119[26] net9 o_pc_next[26] pc_add[26] net8 o_pc[26] reset_p i_pc[26] mux3
+x119[25] net9 o_pc_next[25] pc_add[25] net8 o_pc[25] reset_p i_pc[25] mux3
+x119[24] net9 o_pc_next[24] pc_add[24] net8 o_pc[24] reset_p i_pc[24] mux3
+x119[23] net9 o_pc_next[23] pc_add[23] net8 o_pc[23] reset_p i_pc[23] mux3
+x119[22] net9 o_pc_next[22] pc_add[22] net8 o_pc[22] reset_p i_pc[22] mux3
+x119[21] net9 o_pc_next[21] pc_add[21] net8 o_pc[21] reset_p i_pc[21] mux3
+x119[20] net9 o_pc_next[20] pc_add[20] net8 o_pc[20] reset_p i_pc[20] mux3
+x119[19] net9 o_pc_next[19] pc_add[19] net8 o_pc[19] reset_p i_pc[19] mux3
+x119[18] net9 o_pc_next[18] pc_add[18] net8 o_pc[18] reset_p i_pc[18] mux3
+x119[17] net9 o_pc_next[17] pc_add[17] net8 o_pc[17] reset_p i_pc[17] mux3
+x119[16] net9 o_pc_next[16] pc_add[16] net8 o_pc[16] reset_p i_pc[16] mux3
+x119[15] net9 o_pc_next[15] pc_add[15] net8 o_pc[15] reset_p i_pc[15] mux3
+x119[14] net9 o_pc_next[14] pc_add[14] net8 o_pc[14] reset_p i_pc[14] mux3
+x119[13] net9 o_pc_next[13] pc_add[13] net8 o_pc[13] reset_p i_pc[13] mux3
+x119[12] net9 o_pc_next[12] pc_add[12] net8 o_pc[12] reset_p i_pc[12] mux3
+x119[11] net9 o_pc_next[11] pc_add[11] net8 o_pc[11] reset_p i_pc[11] mux3
+x119[10] net9 o_pc_next[10] pc_add[10] net8 o_pc[10] reset_p i_pc[10] mux3
+x119[9] net9 o_pc_next[9] pc_add[9] net8 o_pc[9] reset_p i_pc[9] mux3
+x119[8] net9 o_pc_next[8] pc_add[8] net8 o_pc[8] reset_p i_pc[8] mux3
+x119[7] net9 o_pc_next[7] pc_add[7] net8 o_pc[7] reset_p i_pc[7] mux3
+x119[6] net9 o_pc_next[6] pc_add[6] net8 o_pc[6] reset_p i_pc[6] mux3
+x119[5] net9 o_pc_next[5] pc_add[5] net8 o_pc[5] reset_p i_pc[5] mux3
+x119[4] net9 o_pc_next[4] pc_add[4] net8 o_pc[4] reset_p i_pc[4] mux3
+x119[3] net9 o_pc_next[3] pc_add[3] net8 o_pc[3] reset_p i_pc[3] mux3
+x119[2] net9 o_pc_next[2] pc_add[2] net8 o_pc[2] reset_p i_pc[2] mux3
+x119[1] net9 o_pc_next[1] pc_add[1] net8 o_pc[1] reset_p i_pc[1] mux3
+x118 net45 net8 i_reset_n net11 nand2
+x117 net46 net9 i_reset_n net10 nand2
+x205 hi_update_p hi_next net13 net12 hi_valid_p mux2
+x188[15] pop_buf_p data_0[31] net27[15] pop_buf_n latch_hi_p[15] mux2
+x188[14] pop_buf_p data_0[30] net27[14] pop_buf_n latch_hi_p[14] mux2
+x188[13] pop_buf_p data_0[29] net27[13] pop_buf_n latch_hi_p[13] mux2
+x188[12] pop_buf_p data_0[28] net27[12] pop_buf_n latch_hi_p[12] mux2
+x188[11] pop_buf_p data_0[27] net27[11] pop_buf_n latch_hi_p[11] mux2
+x188[10] pop_buf_p data_0[26] net27[10] pop_buf_n latch_hi_p[10] mux2
+x188[9] pop_buf_p data_0[25] net27[9] pop_buf_n latch_hi_p[9] mux2
+x188[8] pop_buf_p data_0[24] net27[8] pop_buf_n latch_hi_p[8] mux2
+x188[7] pop_buf_p data_0[23] net27[7] pop_buf_n latch_hi_p[7] mux2
+x188[6] pop_buf_p data_0[22] net27[6] pop_buf_n latch_hi_p[6] mux2
+x188[5] pop_buf_p data_0[21] net27[5] pop_buf_n latch_hi_p[5] mux2
+x188[4] pop_buf_p data_0[20] net27[4] pop_buf_n latch_hi_p[4] mux2
+x188[3] pop_buf_p data_0[19] net27[3] pop_buf_n latch_hi_p[3] mux2
+x188[2] pop_buf_p data_0[18] net27[2] pop_buf_n latch_hi_p[2] mux2
+x188[1] pop_buf_p data_0[17] net27[1] pop_buf_n latch_hi_p[1] mux2
+x188[0] pop_buf_p data_0[16] net27[0] pop_buf_n latch_hi_p[0] mux2
+x181 net35 h_next_p[0] reset_p net23 nor2
+x168[31] d1_sl d_next_1[31] data_1[31] d1_sn i_data[31] d1_su data_2[31] mux3
+x168[30] d1_sl d_next_1[30] data_1[30] d1_sn i_data[30] d1_su data_2[30] mux3
+x168[29] d1_sl d_next_1[29] data_1[29] d1_sn i_data[29] d1_su data_2[29] mux3
+x168[28] d1_sl d_next_1[28] data_1[28] d1_sn i_data[28] d1_su data_2[28] mux3
+x168[27] d1_sl d_next_1[27] data_1[27] d1_sn i_data[27] d1_su data_2[27] mux3
+x168[26] d1_sl d_next_1[26] data_1[26] d1_sn i_data[26] d1_su data_2[26] mux3
+x168[25] d1_sl d_next_1[25] data_1[25] d1_sn i_data[25] d1_su data_2[25] mux3
+x168[24] d1_sl d_next_1[24] data_1[24] d1_sn i_data[24] d1_su data_2[24] mux3
+x168[23] d1_sl d_next_1[23] data_1[23] d1_sn i_data[23] d1_su data_2[23] mux3
+x168[22] d1_sl d_next_1[22] data_1[22] d1_sn i_data[22] d1_su data_2[22] mux3
+x168[21] d1_sl d_next_1[21] data_1[21] d1_sn i_data[21] d1_su data_2[21] mux3
+x168[20] d1_sl d_next_1[20] data_1[20] d1_sn i_data[20] d1_su data_2[20] mux3
+x168[19] d1_sl d_next_1[19] data_1[19] d1_sn i_data[19] d1_su data_2[19] mux3
+x168[18] d1_sl d_next_1[18] data_1[18] d1_sn i_data[18] d1_su data_2[18] mux3
+x168[17] d1_sl d_next_1[17] data_1[17] d1_sn i_data[17] d1_su data_2[17] mux3
+x168[16] d1_sl d_next_1[16] data_1[16] d1_sn i_data[16] d1_su data_2[16] mux3
+x168[15] d1_sl d_next_1[15] data_1[15] d1_sn i_data[15] d1_su data_2[15] mux3
+x168[14] d1_sl d_next_1[14] data_1[14] d1_sn i_data[14] d1_su data_2[14] mux3
+x168[13] d1_sl d_next_1[13] data_1[13] d1_sn i_data[13] d1_su data_2[13] mux3
+x168[12] d1_sl d_next_1[12] data_1[12] d1_sn i_data[12] d1_su data_2[12] mux3
+x168[11] d1_sl d_next_1[11] data_1[11] d1_sn i_data[11] d1_su data_2[11] mux3
+x168[10] d1_sl d_next_1[10] data_1[10] d1_sn i_data[10] d1_su data_2[10] mux3
+x168[9] d1_sl d_next_1[9] data_1[9] d1_sn i_data[9] d1_su data_2[9] mux3
+x168[8] d1_sl d_next_1[8] data_1[8] d1_sn i_data[8] d1_su data_2[8] mux3
+x168[7] d1_sl d_next_1[7] data_1[7] d1_sn i_data[7] d1_su data_2[7] mux3
+x168[6] d1_sl d_next_1[6] data_1[6] d1_sn i_data[6] d1_su data_2[6] mux3
+x168[5] d1_sl d_next_1[5] data_1[5] d1_sn i_data[5] d1_su data_2[5] mux3
+x168[4] d1_sl d_next_1[4] data_1[4] d1_sn i_data[4] d1_su data_2[4] mux3
+x168[3] d1_sl d_next_1[3] data_1[3] d1_sn i_data[3] d1_su data_2[3] mux3
+x168[2] d1_sl d_next_1[2] data_1[2] d1_sn i_data[2] d1_su data_2[2] mux3
+x168[1] d1_sl d_next_1[1] data_1[1] d1_sn i_data[1] d1_su data_2[1] mux3
+x168[0] d1_sl d_next_1[0] data_1[0] d1_sn i_data[0] d1_su data_2[0] mux3
+x158[31] d2_sl d_next_2[31] data_2[31] d2_sn i_data[31] d2_su data_3[31] mux3
+x158[30] d2_sl d_next_2[30] data_2[30] d2_sn i_data[30] d2_su data_3[30] mux3
+x158[29] d2_sl d_next_2[29] data_2[29] d2_sn i_data[29] d2_su data_3[29] mux3
+x158[28] d2_sl d_next_2[28] data_2[28] d2_sn i_data[28] d2_su data_3[28] mux3
+x158[27] d2_sl d_next_2[27] data_2[27] d2_sn i_data[27] d2_su data_3[27] mux3
+x158[26] d2_sl d_next_2[26] data_2[26] d2_sn i_data[26] d2_su data_3[26] mux3
+x158[25] d2_sl d_next_2[25] data_2[25] d2_sn i_data[25] d2_su data_3[25] mux3
+x158[24] d2_sl d_next_2[24] data_2[24] d2_sn i_data[24] d2_su data_3[24] mux3
+x158[23] d2_sl d_next_2[23] data_2[23] d2_sn i_data[23] d2_su data_3[23] mux3
+x158[22] d2_sl d_next_2[22] data_2[22] d2_sn i_data[22] d2_su data_3[22] mux3
+x158[21] d2_sl d_next_2[21] data_2[21] d2_sn i_data[21] d2_su data_3[21] mux3
+x158[20] d2_sl d_next_2[20] data_2[20] d2_sn i_data[20] d2_su data_3[20] mux3
+x158[19] d2_sl d_next_2[19] data_2[19] d2_sn i_data[19] d2_su data_3[19] mux3
+x158[18] d2_sl d_next_2[18] data_2[18] d2_sn i_data[18] d2_su data_3[18] mux3
+x158[17] d2_sl d_next_2[17] data_2[17] d2_sn i_data[17] d2_su data_3[17] mux3
+x158[16] d2_sl d_next_2[16] data_2[16] d2_sn i_data[16] d2_su data_3[16] mux3
+x158[15] d2_sl d_next_2[15] data_2[15] d2_sn i_data[15] d2_su data_3[15] mux3
+x158[14] d2_sl d_next_2[14] data_2[14] d2_sn i_data[14] d2_su data_3[14] mux3
+x158[13] d2_sl d_next_2[13] data_2[13] d2_sn i_data[13] d2_su data_3[13] mux3
+x158[12] d2_sl d_next_2[12] data_2[12] d2_sn i_data[12] d2_su data_3[12] mux3
+x158[11] d2_sl d_next_2[11] data_2[11] d2_sn i_data[11] d2_su data_3[11] mux3
+x158[10] d2_sl d_next_2[10] data_2[10] d2_sn i_data[10] d2_su data_3[10] mux3
+x158[9] d2_sl d_next_2[9] data_2[9] d2_sn i_data[9] d2_su data_3[9] mux3
+x158[8] d2_sl d_next_2[8] data_2[8] d2_sn i_data[8] d2_su data_3[8] mux3
+x158[7] d2_sl d_next_2[7] data_2[7] d2_sn i_data[7] d2_su data_3[7] mux3
+x158[6] d2_sl d_next_2[6] data_2[6] d2_sn i_data[6] d2_su data_3[6] mux3
+x158[5] d2_sl d_next_2[5] data_2[5] d2_sn i_data[5] d2_su data_3[5] mux3
+x158[4] d2_sl d_next_2[4] data_2[4] d2_sn i_data[4] d2_su data_3[4] mux3
+x158[3] d2_sl d_next_2[3] data_2[3] d2_sn i_data[3] d2_su data_3[3] mux3
+x158[2] d2_sl d_next_2[2] data_2[2] d2_sn i_data[2] d2_su data_3[2] mux3
+x158[1] d2_sl d_next_2[1] data_2[1] d2_sn i_data[1] d2_su data_3[1] mux3
+x158[0] d2_sl d_next_2[0] data_2[0] d2_sn i_data[0] d2_su data_3[0] mux3
+x178[31] d0_sl d_next_0[31] data_0[31] d0_sn i_data[31] d0_su data_1[31] mux3
+x178[30] d0_sl d_next_0[30] data_0[30] d0_sn i_data[30] d0_su data_1[30] mux3
+x178[29] d0_sl d_next_0[29] data_0[29] d0_sn i_data[29] d0_su data_1[29] mux3
+x178[28] d0_sl d_next_0[28] data_0[28] d0_sn i_data[28] d0_su data_1[28] mux3
+x178[27] d0_sl d_next_0[27] data_0[27] d0_sn i_data[27] d0_su data_1[27] mux3
+x178[26] d0_sl d_next_0[26] data_0[26] d0_sn i_data[26] d0_su data_1[26] mux3
+x178[25] d0_sl d_next_0[25] data_0[25] d0_sn i_data[25] d0_su data_1[25] mux3
+x178[24] d0_sl d_next_0[24] data_0[24] d0_sn i_data[24] d0_su data_1[24] mux3
+x178[23] d0_sl d_next_0[23] data_0[23] d0_sn i_data[23] d0_su data_1[23] mux3
+x178[22] d0_sl d_next_0[22] data_0[22] d0_sn i_data[22] d0_su data_1[22] mux3
+x178[21] d0_sl d_next_0[21] data_0[21] d0_sn i_data[21] d0_su data_1[21] mux3
+x178[20] d0_sl d_next_0[20] data_0[20] d0_sn i_data[20] d0_su data_1[20] mux3
+x178[19] d0_sl d_next_0[19] data_0[19] d0_sn i_data[19] d0_su data_1[19] mux3
+x178[18] d0_sl d_next_0[18] data_0[18] d0_sn i_data[18] d0_su data_1[18] mux3
+x178[17] d0_sl d_next_0[17] data_0[17] d0_sn i_data[17] d0_su data_1[17] mux3
+x178[16] d0_sl d_next_0[16] data_0[16] d0_sn i_data[16] d0_su data_1[16] mux3
+x178[15] d0_sl d_next_0[15] data_0[15] d0_sn i_data[15] d0_su data_1[15] mux3
+x178[14] d0_sl d_next_0[14] data_0[14] d0_sn i_data[14] d0_su data_1[14] mux3
+x178[13] d0_sl d_next_0[13] data_0[13] d0_sn i_data[13] d0_su data_1[13] mux3
+x178[12] d0_sl d_next_0[12] data_0[12] d0_sn i_data[12] d0_su data_1[12] mux3
+x178[11] d0_sl d_next_0[11] data_0[11] d0_sn i_data[11] d0_su data_1[11] mux3
+x178[10] d0_sl d_next_0[10] data_0[10] d0_sn i_data[10] d0_su data_1[10] mux3
+x178[9] d0_sl d_next_0[9] data_0[9] d0_sn i_data[9] d0_su data_1[9] mux3
+x178[8] d0_sl d_next_0[8] data_0[8] d0_sn i_data[8] d0_su data_1[8] mux3
+x178[7] d0_sl d_next_0[7] data_0[7] d0_sn i_data[7] d0_su data_1[7] mux3
+x178[6] d0_sl d_next_0[6] data_0[6] d0_sn i_data[6] d0_su data_1[6] mux3
+x178[5] d0_sl d_next_0[5] data_0[5] d0_sn i_data[5] d0_su data_1[5] mux3
+x178[4] d0_sl d_next_0[4] data_0[4] d0_sn i_data[4] d0_su data_1[4] mux3
+x178[3] d0_sl d_next_0[3] data_0[3] d0_sn i_data[3] d0_su data_1[3] mux3
+x178[2] d0_sl d_next_0[2] data_0[2] d0_sn i_data[2] d0_su data_1[2] mux3
+x178[1] d0_sl d_next_0[1] data_0[1] d0_sn i_data[1] d0_su data_1[1] mux3
+x178[0] d0_sl d_next_0[0] data_0[0] d0_sn i_data[0] d0_su data_1[0] mux3
+x148[31] d3_sl data_3[31] d_next_3[31] d3_sn i_data[31] mux2
+x148[30] d3_sl data_3[30] d_next_3[30] d3_sn i_data[30] mux2
+x148[29] d3_sl data_3[29] d_next_3[29] d3_sn i_data[29] mux2
+x148[28] d3_sl data_3[28] d_next_3[28] d3_sn i_data[28] mux2
+x148[27] d3_sl data_3[27] d_next_3[27] d3_sn i_data[27] mux2
+x148[26] d3_sl data_3[26] d_next_3[26] d3_sn i_data[26] mux2
+x148[25] d3_sl data_3[25] d_next_3[25] d3_sn i_data[25] mux2
+x148[24] d3_sl data_3[24] d_next_3[24] d3_sn i_data[24] mux2
+x148[23] d3_sl data_3[23] d_next_3[23] d3_sn i_data[23] mux2
+x148[22] d3_sl data_3[22] d_next_3[22] d3_sn i_data[22] mux2
+x148[21] d3_sl data_3[21] d_next_3[21] d3_sn i_data[21] mux2
+x148[20] d3_sl data_3[20] d_next_3[20] d3_sn i_data[20] mux2
+x148[19] d3_sl data_3[19] d_next_3[19] d3_sn i_data[19] mux2
+x148[18] d3_sl data_3[18] d_next_3[18] d3_sn i_data[18] mux2
+x148[17] d3_sl data_3[17] d_next_3[17] d3_sn i_data[17] mux2
+x148[16] d3_sl data_3[16] d_next_3[16] d3_sn i_data[16] mux2
+x148[15] d3_sl data_3[15] d_next_3[15] d3_sn i_data[15] mux2
+x148[14] d3_sl data_3[14] d_next_3[14] d3_sn i_data[14] mux2
+x148[13] d3_sl data_3[13] d_next_3[13] d3_sn i_data[13] mux2
+x148[12] d3_sl data_3[12] d_next_3[12] d3_sn i_data[12] mux2
+x148[11] d3_sl data_3[11] d_next_3[11] d3_sn i_data[11] mux2
+x148[10] d3_sl data_3[10] d_next_3[10] d3_sn i_data[10] mux2
+x148[9] d3_sl data_3[9] d_next_3[9] d3_sn i_data[9] mux2
+x148[8] d3_sl data_3[8] d_next_3[8] d3_sn i_data[8] mux2
+x148[7] d3_sl data_3[7] d_next_3[7] d3_sn i_data[7] mux2
+x148[6] d3_sl data_3[6] d_next_3[6] d3_sn i_data[6] mux2
+x148[5] d3_sl data_3[5] d_next_3[5] d3_sn i_data[5] mux2
+x148[4] d3_sl data_3[4] d_next_3[4] d3_sn i_data[4] mux2
+x148[3] d3_sl data_3[3] d_next_3[3] d3_sn i_data[3] mux2
+x148[2] d3_sl data_3[2] d_next_3[2] d3_sn i_data[2] mux2
+x148[1] d3_sl data_3[1] d_next_3[1] d3_sn i_data[1] mux2
+x148[0] d3_sl data_3[0] d_next_3[0] d3_sn i_data[0] mux2
+x145 net47 d3_sn net48 net49 nor2
+x143 net50 net47 latch_dn_p is_head_p[4] nand2
+x144 net51 net48 is_head_p[3] latch_up_p nand2
+x146 latch_dn_p net52 d3_sn d3_sl nor2
+x175 net53 d0_sn net54 net55 nor2
+x173 net56 net54 latch_dn_p is_head_p[1] nand2
+x174 net57 net53 is_head_p[0] latch_up_p nand2
+x176 latch_dn_p net58 d0_sn d0_sl nor2
+x177 net59 d0_su net55 latch_dn_p nand2
+x165 net60 d1_sn net61 net62 nor2
+x163 net63 net61 latch_dn_p is_head_p[2] nand2
+x164 net64 net60 is_head_p[1] latch_up_p nand2
+x166 latch_dn_p net65 d1_sn d1_sl nor2
+x167 net66 d1_su net62 latch_dn_p nand2
+x155 net67 d2_sn net68 net69 nor2
+x153 net70 net68 latch_dn_p is_head_p[3] nand2
+x154 net71 net67 is_head_p[2] latch_up_p nand2
+x156 latch_dn_p net72 d2_sn d2_sl nor2
+x157 net73 d2_su net69 latch_dn_p nand2
+x3 pop_p net74 not
+x7 o_pc[1] net75 not
+x20 clk_n clk_p_d1 not_4
+x21 clk_n_d clk_p_d3 not_4
+x22 clk_n_d clk_p_d4 not_4
+x23 clk_n clk_p_d0 not_4
+x24 clk_n clk_p_a not_4
+x6 net76 pc_buf_n[1] not_4
+x5 net75 pc_buf_p[1] not_4
+x1 net74 pop_buf_p not_4
+x2 net77 pop_buf_n not_4
+x4 clk_n_d clk_p_d2 not_4
+x8 clk_n clk_p_h not
+x115 o_pc[31] o_pc[30] o_pc[29] o_pc[28] o_pc[27] o_pc[26] o_pc[25] o_pc[24] o_pc[23] o_pc[22]
++ o_pc[21] o_pc[20] o_pc[19] o_pc[18] o_pc[17] o_pc[16] o_pc[15] o_pc[14] o_pc[13] o_pc[12] o_pc[11] o_pc[10]
++ o_pc[9] o_pc[8] o_pc[7] o_pc[6] o_pc[5] o_pc[4] o_pc[3] o_pc[2] o_pc[1] is_comp_p is_comp_n pc_add[31]
++ pc_add[30] pc_add[29] pc_add[28] pc_add[27] pc_add[26] pc_add[25] pc_add[24] pc_add[23] pc_add[22] pc_add[21]
++ pc_add[20] pc_add[19] pc_add[18] pc_add[17] pc_add[16] pc_add[15] pc_add[14] pc_add[13] pc_add[12] pc_add[11]
++ pc_add[10] pc_add[9] pc_add[8] pc_add[7] pc_add[6] pc_add[5] pc_add[4] pc_add[3] pc_add[2] pc_add[1] pc_inc
+x11 i_clk clk_n not_2
+x12 i_clk clk_n_d not_2
+x9 pc_n[1] net76 not
+x10 pop_n net77 not
+**.ends
+
+* expanding   symbol:  ../../elements/FF/dff.sym # of pins=4
+** sym_path: /media/FlexRV32/asic/elements/FF/dff.sym
+** sch_path: /media/FlexRV32/asic/elements/FF/dff.sch
+.subckt dff Qp Qn i_clk i_data
+*.ipin i_clk
+*.ipin i_data
+*.opin Qp
+*.opin Qn
+XM25 pcb i_clk VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM26 pcb i_clk VCC VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM27 pc pcb VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM28 pc pcb VCC VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM29 db1 pcb db1l VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM30 db1 pc db1l VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM31 db1b db1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM32 db1b db1 VCC VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM33 db1l db1b VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM34 db1l db1b VCC VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM35 db pc db1 VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM36 db pcb db1 VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM37 db i_data VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM38 db i_data VCC VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM61 db1b pcb db2 VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM62 db1b pc db2 VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM67 db2 pc db2l VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM68 db2 pcb db2l VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM9 Qn db2 VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM10 Qn db2 VCC VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM11 db2l Qn VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM12 db2l Qn VCC VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM13 Qp Qn VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM14 Qp Qn VCC VCC sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/not.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/elements/logic/not.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/not.sch
+.subckt not A Y
+*.ipin A
+*.opin Y
+XM1 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/nand2.sym # of pins=4
+** sym_path: /media/FlexRV32/asic/elements/logic/nand2.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/nand2.sch
+.subckt nand2 NAND AND A B
+*.ipin A
+*.opin NAND
+*.opin AND
+*.ipin B
+XM2 NAND B VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 NAND A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM6 NAND A net1 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM7 net1 B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 AND NAND VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 AND NAND VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/mux2.sym # of pins=5
+** sym_path: /media/FlexRV32/asic/elements/logic/mux2.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/mux2.sch
+.subckt mux2 s0 d0 Y s1 d1
+*.ipin s0
+*.ipin d0
+*.ipin s1
+*.ipin d1
+*.opin Y
+XM1 net1 s0 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 net1 d0 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 net1 d0 net3 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 net3 s0 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 net2 s1 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM6 net2 d1 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM7 net2 d1 net4 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM8 net4 s1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM19 Y net1 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM20 Y net2 net5 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM21 net5 net1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM23 Y net2 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/nand3.sym # of pins=5
+** sym_path: /media/FlexRV32/asic/elements/logic/nand3.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/nand3.sch
+.subckt nand3 NAND AND A B C
+*.ipin A
+*.opin NAND
+*.opin AND
+*.ipin B
+*.ipin C
+XM1 NAND C VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 NAND B VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 NAND A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM6 NAND A net1 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM7 net1 B net2 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM8 net2 C VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 AND NAND VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 AND NAND VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/nor2.sym # of pins=4
+** sym_path: /media/FlexRV32/asic/elements/logic/nor2.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/nor2.sch
+.subckt nor2 A OR B NOR
+*.ipin A
+*.opin NOR
+*.ipin B
+*.opin OR
+XM4 net1 A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 NOR B net1 net1 sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM9 NOR B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM10 NOR A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM11 OR NOR VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM12 OR NOR VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/mux3.sym # of pins=7
+** sym_path: /media/FlexRV32/asic/elements/logic/mux3.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/mux3.sch
+.subckt mux3 s0 Y d0 s1 d1 s2 d2
+*.ipin s0
+*.ipin d0
+*.ipin s1
+*.ipin d1
+*.ipin s2
+*.ipin d2
+*.opin Y
+XM1 net1 s0 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 net1 d0 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 net1 d0 net4 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 net4 s0 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 net2 s1 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM6 net2 d1 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM7 net2 d1 net5 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM8 net5 s1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM9 net3 s2 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM10 net3 d2 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM11 net3 d2 net6 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM12 net6 s2 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM17 Y net1 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM18 Y net2 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM19 Y net3 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM21 Y net3 net7 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM22 net7 net2 net8 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM24 net8 net1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/not_4.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/elements/logic/not_4.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/not_4.sch
+.subckt not_4 A Y
+*.ipin A
+*.opin Y
+XM1 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM6 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM7 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM8 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../pc_inc/pc_inc.sym # of pins=4
+** sym_path: /media/FlexRV32/asic/blocks/pc_inc/pc_inc.sym
+** sch_path: /media/FlexRV32/asic/blocks/pc_inc/pc_inc.sch
+.subckt pc_inc A[31] A[30] A[29] A[28] A[27] A[26] A[25] A[24] A[23] A[22] A[21] A[20] A[19] A[18]
++ A[17] A[16] A[15] A[14] A[13] A[12] A[11] A[10] A[9] A[8] A[7] A[6] A[5] A[4] A[3] A[2] A[1] is_comp_p
++ is_comp_n S[31] S[30] S[29] S[28] S[27] S[26] S[25] S[24] S[23] S[22] S[21] S[20] S[19] S[18] S[17] S[16]
++ S[15] S[14] S[13] S[12] S[11] S[10] S[9] S[8] S[7] S[6] S[5] S[4] S[3] S[2] S[1]
+*.opin
+*+ S[31],S[30],S[29],S[28],S[27],S[26],S[25],S[24],S[23],S[22],S[21],S[20],S[19],S[18],S[17],S[16],S[15],S[14],S[13],S[12],S[11],S[10],S[9],S[8],S[7],S[6],S[5],S[4],S[3],S[2],S[1]
+*.ipin
+*+ A[31],A[30],A[29],A[28],A[27],A[26],A[25],A[24],A[23],A[22],A[21],A[20],A[19],A[18],A[17],A[16],A[15],A[14],A[13],A[12],A[11],A[10],A[9],A[8],A[7],A[6],A[5],A[4],A[3],A[2],A[1]
+*.ipin is_comp_p
+*.ipin is_comp_n
+x26 net30 g[1] A[1] is_comp_p nand2
+x5 net31 g[2] A[2] is_comp_n nand2
+x6 g[1] p[2] S[2] xor
+x9 g[2] net1 net32 net33 nor2
+x10 net34 net32 g[1] p[2] nand2
+x14 net1 A[3] S[3] xor
+x16 net35 net2 A[3] net1 nand2
+x1 net2 A[4] S[4] xor
+x8 net36 net3 A[4] net2 nand2
+x11 net3 A[5] S[5] xor
+x12 net37 net4 A[5] net3 nand2
+x13 net4 A[6] S[6] xor
+x15 net38 net5 A[6] net4 nand2
+x17 net5 A[7] S[7] xor
+x18 net39 net6 A[7] net5 nand2
+x19 net6 A[8] S[8] xor
+x20 net40 net7 A[8] net6 nand2
+x22 net7 A[9] S[9] xor
+x23 net41 net8 A[9] net7 nand2
+x24 net8 A[10] S[10] xor
+x25 net42 net9 A[10] net8 nand2
+x27 net9 A[11] S[11] xor
+x28 net43 net10 A[11] net9 nand2
+x29 net10 A[12] S[12] xor
+x30 net44 net11 A[12] net10 nand2
+x31 net11 A[13] S[13] xor
+x32 net45 net12 A[13] net11 nand2
+x33 net12 A[14] S[14] xor
+x34 net46 net13 A[14] net12 nand2
+x35 net13 A[15] S[15] xor
+x36 net47 net14 A[15] net13 nand2
+x37 net14 A[16] S[16] xor
+x38 net48 net15 A[16] net14 nand2
+x39 net15 A[17] S[17] xor
+x40 net49 net16 A[17] net15 nand2
+x41 net16 A[18] S[18] xor
+x42 net50 net17 A[18] net16 nand2
+x43 net17 A[19] S[19] xor
+x44 net51 net18 A[19] net17 nand2
+x45 net18 A[20] S[20] xor
+x46 net52 net19 A[20] net18 nand2
+x47 net19 A[21] S[21] xor
+x48 net53 net20 A[21] net19 nand2
+x49 net20 A[22] S[22] xor
+x50 net54 net21 A[22] net20 nand2
+x51 net21 A[23] S[23] xor
+x52 net55 net22 A[23] net21 nand2
+x53 net22 A[24] S[24] xor
+x54 net56 net23 A[24] net22 nand2
+x55 net23 A[25] S[25] xor
+x56 net57 net24 A[25] net23 nand2
+x57 net24 A[26] S[26] xor
+x58 net58 net25 A[26] net24 nand2
+x59 net25 A[27] S[27] xor
+x60 net59 net26 A[27] net25 nand2
+x61 net26 A[28] S[28] xor
+x62 net60 net27 A[28] net26 nand2
+x63 net27 A[29] S[29] xor
+x64 net61 net28 A[29] net27 nand2
+x65 net28 A[30] S[30] xor
+x66 net62 net29 A[30] net28 nand2
+x67 net29 A[31] S[31] xor
+x3 A[1] is_comp_p S[1] xor
+x2 A[2] is_comp_n p[2] xor
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/not_2.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/elements/logic/not_2.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/not_2.sch
+.subckt not_2 A Y
+*.ipin A
+*.opin Y
+XM1 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/xor.sym # of pins=3
+** sym_path: /media/FlexRV32/asic/elements/logic/xor.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/xor.sch
+.subckt xor A B Y
+*.ipin A
+*.ipin B
+*.opin Y
+XM2 net1 A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM1 Y Bn net1 VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 net2 An VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 Y A net3 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 net3 B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM6 Y An net4 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM7 Y B net2 VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM8 net4 Bn VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM9 An A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM10 An A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM11 Bn B VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM12 Bn B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+.GLOBAL VCC
+.GLOBAL VSS
+.end

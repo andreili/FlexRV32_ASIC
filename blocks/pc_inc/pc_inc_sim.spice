@@ -1,0 +1,18 @@
+
+.include ../../elements/inc_lib.spice
+.include simulation/pc_inc.spice
+
+.param VCC=1.8
+
+VVCC VCC 0 PWL 0ns 0 1ns 0 1.1ns {VCC}
+VVSS VSS 0 PWL 0n 0
+
+.include simulation/stimuli_pc_inc.cir
+.options timeint reltol=1e-3 abstol=1e-5
+.options linsol type=belos AZ_tol=1.0e-3
+.tran 1p 14n
+.print tran format=raw file=simulation/pc_inc.spice.raw v(*)
+
+.GLOBAL VCC
+.GLOBAL VSS
+.end

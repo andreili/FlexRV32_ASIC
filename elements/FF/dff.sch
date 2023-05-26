@@ -7,23 +7,30 @@ S {}
 E {}
 B 2 50 410 850 810 {flags=graph
 y1=0
-y2=2
+y2=1.4
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.88533e-08
-x2=3.4402e-08
+x1=0
+x2=4e-08
 divx=5
 subdivx=1
 node="i_en
 i_clk
 i_data
-Qp
+xm1.pc
+xm1.pcb
+xm1.db
+xm1.db1
+xm1.db1l
+xm1.db1b
+xm1.db2
 xm1.db2l
-Qn"
-color="4 5 6 4 4 4"
+Qn
+Qp"
+color="4 5 6 4 4 4 4 4 4 4 4 4 4"
 dataset=-1
 unitx=1
 logx=0
@@ -72,7 +79,7 @@ lab=VCC}
 N 390 100 390 120 {
 lab=VCC}
 N 390 160 390 260 {
-lab=i_data}
+lab=#net1}
 N 450 100 450 120 {
 lab=VCC}
 N 450 300 450 320 {
@@ -213,11 +220,10 @@ C {devices/launcher.sym} 100 850 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/dff.spice.raw tran"
 }
-C {devices/ipin.sym} 110 220 0 0 {name=p6 lab=i_clk}
-C {devices/ipin.sym} 110 250 0 0 {name=p7 lab=i_data}
+C {devices/ipin.sym} 190 210 0 0 {name=p6 lab=i_clk}
+C {devices/ipin.sym} 390 210 0 0 {name=p7 lab=i_data}
 C {devices/opin.sym} 1080 190 0 0 {name=p1 lab=Qp}
 C {devices/opin.sym} 1080 210 0 0 {name=p2 lab=Qn}
-C {devices/lab_pin.sym} 190 210 2 1 {name=p28 sig_type=std_logic lab=i_clk}
 C {sky130_fd_pr/nfet_01v8.sym} 190 280 3 1 {name=M25
 L=0.3
 W=0.65  
@@ -324,7 +330,6 @@ nf=1 mult=1
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 390 210 2 1 {name=p39 sig_type=std_logic lab=i_data}
 C {sky130_fd_pr/pfet_01v8.sym} 690 140 1 1 {name=M61
 L=0.3
 W=1

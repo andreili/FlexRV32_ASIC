@@ -1,0 +1,36 @@
+unit n
+voltage {VCC}
+slope 0.1
+format hspice_simple
+
+buswidth A 32 [ ]
+
+beginfile stimuli_pc_inc.cir
+
+set A 0000_0000
+set is_comp_p 0
+set is_comp_n {VCC}
+s 2
+
+set A 0000_0010
+set is_comp_p 0
+set is_comp_n {VCC}
+s 2
+
+set A 0000_0010
+set is_comp_p {VCC}
+set is_comp_n 0
+s 2
+
+set A 1fff_ffff
+set is_comp_p {VCC}
+set is_comp_n 0
+s 4
+
+set A 1fff_ffff
+set is_comp_p 0
+set is_comp_n {VCC}
+s 4
+
+endfile
+
