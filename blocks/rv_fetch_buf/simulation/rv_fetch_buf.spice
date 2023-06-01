@@ -27,14 +27,14 @@
 x142 is_head_p[4] is_head_n[4] clk_p_h h_next_p[4] dff
 x100 i_reset_n reset_p not
 x102 i_push push_n not
-x105 net5 net1 pop_p pc_n[1] nand2
-x106 net15 net7 net4 pop_p nand2
-x108 net16 latch_up_p i_push net5 nand2
+x105 net16 net17 pop_p pc_n[1] nand2
+x106 net18 net19 net20 pop_p nand2
+x108 net21 latch_up_p net16 i_push nand2
 x182 is_head_p[0] is_head_n[0] clk_p_h h_next_p[0] dff
-x172 is_head_p[1] net17 clk_p_h h_next_p[1] dff
-x162 is_head_p[2] net18 clk_p_h h_next_p[2] dff
-x152 is_head_p[3] net19 clk_p_h h_next_p[3] dff
-x116 net11 net10 pop_p first_half_n nand2
+x172 is_head_p[1] net22 clk_p_h h_next_p[1] dff
+x162 is_head_p[2] net23 clk_p_h h_next_p[2] dff
+x152 is_head_p[3] net24 clk_p_h h_next_p[3] dff
+x116 net7 net6 pop_p first_half_n nand2
 x120[31] o_pc[31] pc_n[31] clk_p_a o_pc_next[31] dff
 x120[30] o_pc[30] pc_n[30] clk_p_a o_pc_next[30] dff
 x120[29] o_pc[29] pc_n[29] clk_p_a o_pc_next[29] dff
@@ -66,25 +66,25 @@ x120[4] o_pc[4] pc_n[4] clk_p_a o_pc_next[4] dff
 x120[3] o_pc[3] pc_n[3] clk_p_a o_pc_next[3] dff
 x120[2] o_pc[2] pc_n[2] clk_p_a o_pc_next[2] dff
 x120[1] o_pc[1] pc_n[1] clk_p_a o_pc_next[1] dff
-x202 net24 net3 i_push pop_p nand2
-x189[15] latch_hi_p[15] net26[15] clk_p_d4 net27[15] dff
-x189[14] latch_hi_p[14] net26[14] clk_p_d4 net27[14] dff
-x189[13] latch_hi_p[13] net26[13] clk_p_d4 net27[13] dff
-x189[12] latch_hi_p[12] net26[12] clk_p_d4 net27[12] dff
-x189[11] latch_hi_p[11] net26[11] clk_p_d4 net27[11] dff
-x189[10] latch_hi_p[10] net26[10] clk_p_d4 net27[10] dff
-x189[9] latch_hi_p[9] net26[9] clk_p_d4 net27[9] dff
-x189[8] latch_hi_p[8] net26[8] clk_p_d4 net27[8] dff
-x189[7] latch_hi_p[7] net26[7] clk_p_d4 net27[7] dff
-x189[6] latch_hi_p[6] net26[6] clk_p_d4 net27[6] dff
-x189[5] latch_hi_p[5] net26[5] clk_p_d4 net27[5] dff
-x189[4] latch_hi_p[4] net26[4] clk_p_d4 net27[4] dff
-x189[3] latch_hi_p[3] net26[3] clk_p_d4 net27[3] dff
-x189[2] latch_hi_p[2] net26[2] clk_p_d4 net27[2] dff
-x189[1] latch_hi_p[1] net26[1] clk_p_d4 net27[1] dff
-x189[0] latch_hi_p[0] net26[0] clk_p_d4 net27[0] dff
-x206 hi_valid_p hi_valid_n clk_p_h net13 dff
-x201 net28 first_half_n clk_p_h net14 dff
+x202 net29 net2 i_push pop_p nand2
+x189[15] latch_hi_p[15] net31[15] clk_p_d4 net32[15] dff
+x189[14] latch_hi_p[14] net31[14] clk_p_d4 net32[14] dff
+x189[13] latch_hi_p[13] net31[13] clk_p_d4 net32[13] dff
+x189[12] latch_hi_p[12] net31[12] clk_p_d4 net32[12] dff
+x189[11] latch_hi_p[11] net31[11] clk_p_d4 net32[11] dff
+x189[10] latch_hi_p[10] net31[10] clk_p_d4 net32[10] dff
+x189[9] latch_hi_p[9] net31[9] clk_p_d4 net32[9] dff
+x189[8] latch_hi_p[8] net31[8] clk_p_d4 net32[8] dff
+x189[7] latch_hi_p[7] net31[7] clk_p_d4 net32[7] dff
+x189[6] latch_hi_p[6] net31[6] clk_p_d4 net32[6] dff
+x189[5] latch_hi_p[5] net31[5] clk_p_d4 net32[5] dff
+x189[4] latch_hi_p[4] net31[4] clk_p_d4 net32[4] dff
+x189[3] latch_hi_p[3] net31[3] clk_p_d4 net32[3] dff
+x189[2] latch_hi_p[2] net31[2] clk_p_d4 net32[2] dff
+x189[1] latch_hi_p[1] net31[1] clk_p_d4 net32[1] dff
+x189[0] latch_hi_p[0] net31[0] clk_p_d4 net32[0] dff
+x206 hi_valid_p hi_valid_n clk_p_h net9 dff
+x201 net33 first_half_n clk_p_h net10 dff
 x190[15] pc_buf_p[1] latch_hi_p[15] o_data[15] pc_buf_n[1] data_0[15] mux2
 x190[14] pc_buf_p[1] latch_hi_p[14] o_data[14] pc_buf_n[1] data_0[14] mux2
 x190[13] pc_buf_p[1] latch_hi_p[13] o_data[13] pc_buf_n[1] data_0[13] mux2
@@ -118,207 +118,207 @@ x191[2] pc_buf_p[1] data_0[2] o_data[18] pc_buf_n[1] data_0[18] mux2
 x191[1] pc_buf_p[1] data_0[1] o_data[17] pc_buf_n[1] data_0[17] mux2
 x191[0] pc_buf_p[1] data_0[0] o_data[16] pc_buf_n[1] data_0[16] mux2
 x113 is_comp_p is_comp_n o_data[1] o_data[0] nand2
-x179[31] data_0[31] net31[31] clk_p_d0 d_next_0[31] dff
-x179[30] data_0[30] net31[30] clk_p_d0 d_next_0[30] dff
-x179[29] data_0[29] net31[29] clk_p_d0 d_next_0[29] dff
-x179[28] data_0[28] net31[28] clk_p_d0 d_next_0[28] dff
-x179[27] data_0[27] net31[27] clk_p_d0 d_next_0[27] dff
-x179[26] data_0[26] net31[26] clk_p_d0 d_next_0[26] dff
-x179[25] data_0[25] net31[25] clk_p_d0 d_next_0[25] dff
-x179[24] data_0[24] net31[24] clk_p_d0 d_next_0[24] dff
-x179[23] data_0[23] net31[23] clk_p_d0 d_next_0[23] dff
-x179[22] data_0[22] net31[22] clk_p_d0 d_next_0[22] dff
-x179[21] data_0[21] net31[21] clk_p_d0 d_next_0[21] dff
-x179[20] data_0[20] net31[20] clk_p_d0 d_next_0[20] dff
-x179[19] data_0[19] net31[19] clk_p_d0 d_next_0[19] dff
-x179[18] data_0[18] net31[18] clk_p_d0 d_next_0[18] dff
-x179[17] data_0[17] net31[17] clk_p_d0 d_next_0[17] dff
-x179[16] data_0[16] net31[16] clk_p_d0 d_next_0[16] dff
-x179[15] data_0[15] net31[15] clk_p_d0 d_next_0[15] dff
-x179[14] data_0[14] net31[14] clk_p_d0 d_next_0[14] dff
-x179[13] data_0[13] net31[13] clk_p_d0 d_next_0[13] dff
-x179[12] data_0[12] net31[12] clk_p_d0 d_next_0[12] dff
-x179[11] data_0[11] net31[11] clk_p_d0 d_next_0[11] dff
-x179[10] data_0[10] net31[10] clk_p_d0 d_next_0[10] dff
-x179[9] data_0[9] net31[9] clk_p_d0 d_next_0[9] dff
-x179[8] data_0[8] net31[8] clk_p_d0 d_next_0[8] dff
-x179[7] data_0[7] net31[7] clk_p_d0 d_next_0[7] dff
-x179[6] data_0[6] net31[6] clk_p_d0 d_next_0[6] dff
-x179[5] data_0[5] net31[5] clk_p_d0 d_next_0[5] dff
-x179[4] data_0[4] net31[4] clk_p_d0 d_next_0[4] dff
-x179[3] data_0[3] net31[3] clk_p_d0 d_next_0[3] dff
-x179[2] data_0[2] net31[2] clk_p_d0 d_next_0[2] dff
-x179[1] data_0[1] net31[1] clk_p_d0 d_next_0[1] dff
-x179[0] data_0[0] net31[0] clk_p_d0 d_next_0[0] dff
-x169[31] data_1[31] net32[31] clk_p_d1 d_next_1[31] dff
-x169[30] data_1[30] net32[30] clk_p_d1 d_next_1[30] dff
-x169[29] data_1[29] net32[29] clk_p_d1 d_next_1[29] dff
-x169[28] data_1[28] net32[28] clk_p_d1 d_next_1[28] dff
-x169[27] data_1[27] net32[27] clk_p_d1 d_next_1[27] dff
-x169[26] data_1[26] net32[26] clk_p_d1 d_next_1[26] dff
-x169[25] data_1[25] net32[25] clk_p_d1 d_next_1[25] dff
-x169[24] data_1[24] net32[24] clk_p_d1 d_next_1[24] dff
-x169[23] data_1[23] net32[23] clk_p_d1 d_next_1[23] dff
-x169[22] data_1[22] net32[22] clk_p_d1 d_next_1[22] dff
-x169[21] data_1[21] net32[21] clk_p_d1 d_next_1[21] dff
-x169[20] data_1[20] net32[20] clk_p_d1 d_next_1[20] dff
-x169[19] data_1[19] net32[19] clk_p_d1 d_next_1[19] dff
-x169[18] data_1[18] net32[18] clk_p_d1 d_next_1[18] dff
-x169[17] data_1[17] net32[17] clk_p_d1 d_next_1[17] dff
-x169[16] data_1[16] net32[16] clk_p_d1 d_next_1[16] dff
-x169[15] data_1[15] net32[15] clk_p_d1 d_next_1[15] dff
-x169[14] data_1[14] net32[14] clk_p_d1 d_next_1[14] dff
-x169[13] data_1[13] net32[13] clk_p_d1 d_next_1[13] dff
-x169[12] data_1[12] net32[12] clk_p_d1 d_next_1[12] dff
-x169[11] data_1[11] net32[11] clk_p_d1 d_next_1[11] dff
-x169[10] data_1[10] net32[10] clk_p_d1 d_next_1[10] dff
-x169[9] data_1[9] net32[9] clk_p_d1 d_next_1[9] dff
-x169[8] data_1[8] net32[8] clk_p_d1 d_next_1[8] dff
-x169[7] data_1[7] net32[7] clk_p_d1 d_next_1[7] dff
-x169[6] data_1[6] net32[6] clk_p_d1 d_next_1[6] dff
-x169[5] data_1[5] net32[5] clk_p_d1 d_next_1[5] dff
-x169[4] data_1[4] net32[4] clk_p_d1 d_next_1[4] dff
-x169[3] data_1[3] net32[3] clk_p_d1 d_next_1[3] dff
-x169[2] data_1[2] net32[2] clk_p_d1 d_next_1[2] dff
-x169[1] data_1[1] net32[1] clk_p_d1 d_next_1[1] dff
-x169[0] data_1[0] net32[0] clk_p_d1 d_next_1[0] dff
-x159[31] data_2[31] net33[31] clk_p_d2 d_next_2[31] dff
-x159[30] data_2[30] net33[30] clk_p_d2 d_next_2[30] dff
-x159[29] data_2[29] net33[29] clk_p_d2 d_next_2[29] dff
-x159[28] data_2[28] net33[28] clk_p_d2 d_next_2[28] dff
-x159[27] data_2[27] net33[27] clk_p_d2 d_next_2[27] dff
-x159[26] data_2[26] net33[26] clk_p_d2 d_next_2[26] dff
-x159[25] data_2[25] net33[25] clk_p_d2 d_next_2[25] dff
-x159[24] data_2[24] net33[24] clk_p_d2 d_next_2[24] dff
-x159[23] data_2[23] net33[23] clk_p_d2 d_next_2[23] dff
-x159[22] data_2[22] net33[22] clk_p_d2 d_next_2[22] dff
-x159[21] data_2[21] net33[21] clk_p_d2 d_next_2[21] dff
-x159[20] data_2[20] net33[20] clk_p_d2 d_next_2[20] dff
-x159[19] data_2[19] net33[19] clk_p_d2 d_next_2[19] dff
-x159[18] data_2[18] net33[18] clk_p_d2 d_next_2[18] dff
-x159[17] data_2[17] net33[17] clk_p_d2 d_next_2[17] dff
-x159[16] data_2[16] net33[16] clk_p_d2 d_next_2[16] dff
-x159[15] data_2[15] net33[15] clk_p_d2 d_next_2[15] dff
-x159[14] data_2[14] net33[14] clk_p_d2 d_next_2[14] dff
-x159[13] data_2[13] net33[13] clk_p_d2 d_next_2[13] dff
-x159[12] data_2[12] net33[12] clk_p_d2 d_next_2[12] dff
-x159[11] data_2[11] net33[11] clk_p_d2 d_next_2[11] dff
-x159[10] data_2[10] net33[10] clk_p_d2 d_next_2[10] dff
-x159[9] data_2[9] net33[9] clk_p_d2 d_next_2[9] dff
-x159[8] data_2[8] net33[8] clk_p_d2 d_next_2[8] dff
-x159[7] data_2[7] net33[7] clk_p_d2 d_next_2[7] dff
-x159[6] data_2[6] net33[6] clk_p_d2 d_next_2[6] dff
-x159[5] data_2[5] net33[5] clk_p_d2 d_next_2[5] dff
-x159[4] data_2[4] net33[4] clk_p_d2 d_next_2[4] dff
-x159[3] data_2[3] net33[3] clk_p_d2 d_next_2[3] dff
-x159[2] data_2[2] net33[2] clk_p_d2 d_next_2[2] dff
-x159[1] data_2[1] net33[1] clk_p_d2 d_next_2[1] dff
-x159[0] data_2[0] net33[0] clk_p_d2 d_next_2[0] dff
-x149[31] data_3[31] net34[31] clk_p_d3 d_next_3[31] dff
-x149[30] data_3[30] net34[30] clk_p_d3 d_next_3[30] dff
-x149[29] data_3[29] net34[29] clk_p_d3 d_next_3[29] dff
-x149[28] data_3[28] net34[28] clk_p_d3 d_next_3[28] dff
-x149[27] data_3[27] net34[27] clk_p_d3 d_next_3[27] dff
-x149[26] data_3[26] net34[26] clk_p_d3 d_next_3[26] dff
-x149[25] data_3[25] net34[25] clk_p_d3 d_next_3[25] dff
-x149[24] data_3[24] net34[24] clk_p_d3 d_next_3[24] dff
-x149[23] data_3[23] net34[23] clk_p_d3 d_next_3[23] dff
-x149[22] data_3[22] net34[22] clk_p_d3 d_next_3[22] dff
-x149[21] data_3[21] net34[21] clk_p_d3 d_next_3[21] dff
-x149[20] data_3[20] net34[20] clk_p_d3 d_next_3[20] dff
-x149[19] data_3[19] net34[19] clk_p_d3 d_next_3[19] dff
-x149[18] data_3[18] net34[18] clk_p_d3 d_next_3[18] dff
-x149[17] data_3[17] net34[17] clk_p_d3 d_next_3[17] dff
-x149[16] data_3[16] net34[16] clk_p_d3 d_next_3[16] dff
-x149[15] data_3[15] net34[15] clk_p_d3 d_next_3[15] dff
-x149[14] data_3[14] net34[14] clk_p_d3 d_next_3[14] dff
-x149[13] data_3[13] net34[13] clk_p_d3 d_next_3[13] dff
-x149[12] data_3[12] net34[12] clk_p_d3 d_next_3[12] dff
-x149[11] data_3[11] net34[11] clk_p_d3 d_next_3[11] dff
-x149[10] data_3[10] net34[10] clk_p_d3 d_next_3[10] dff
-x149[9] data_3[9] net34[9] clk_p_d3 d_next_3[9] dff
-x149[8] data_3[8] net34[8] clk_p_d3 d_next_3[8] dff
-x149[7] data_3[7] net34[7] clk_p_d3 d_next_3[7] dff
-x149[6] data_3[6] net34[6] clk_p_d3 d_next_3[6] dff
-x149[5] data_3[5] net34[5] clk_p_d3 d_next_3[5] dff
-x149[4] data_3[4] net34[4] clk_p_d3 d_next_3[4] dff
-x149[3] data_3[3] net34[3] clk_p_d3 d_next_3[3] dff
-x149[2] data_3[2] net34[2] clk_p_d3 d_next_3[2] dff
-x149[1] data_3[1] net34[1] clk_p_d3 d_next_3[1] dff
-x149[0] data_3[0] net34[0] clk_p_d3 d_next_3[0] dff
+x179[31] data_0[31] net36[31] clk_p_d0 d_next_0[31] dff
+x179[30] data_0[30] net36[30] clk_p_d0 d_next_0[30] dff
+x179[29] data_0[29] net36[29] clk_p_d0 d_next_0[29] dff
+x179[28] data_0[28] net36[28] clk_p_d0 d_next_0[28] dff
+x179[27] data_0[27] net36[27] clk_p_d0 d_next_0[27] dff
+x179[26] data_0[26] net36[26] clk_p_d0 d_next_0[26] dff
+x179[25] data_0[25] net36[25] clk_p_d0 d_next_0[25] dff
+x179[24] data_0[24] net36[24] clk_p_d0 d_next_0[24] dff
+x179[23] data_0[23] net36[23] clk_p_d0 d_next_0[23] dff
+x179[22] data_0[22] net36[22] clk_p_d0 d_next_0[22] dff
+x179[21] data_0[21] net36[21] clk_p_d0 d_next_0[21] dff
+x179[20] data_0[20] net36[20] clk_p_d0 d_next_0[20] dff
+x179[19] data_0[19] net36[19] clk_p_d0 d_next_0[19] dff
+x179[18] data_0[18] net36[18] clk_p_d0 d_next_0[18] dff
+x179[17] data_0[17] net36[17] clk_p_d0 d_next_0[17] dff
+x179[16] data_0[16] net36[16] clk_p_d0 d_next_0[16] dff
+x179[15] data_0[15] net36[15] clk_p_d0 d_next_0[15] dff
+x179[14] data_0[14] net36[14] clk_p_d0 d_next_0[14] dff
+x179[13] data_0[13] net36[13] clk_p_d0 d_next_0[13] dff
+x179[12] data_0[12] net36[12] clk_p_d0 d_next_0[12] dff
+x179[11] data_0[11] net36[11] clk_p_d0 d_next_0[11] dff
+x179[10] data_0[10] net36[10] clk_p_d0 d_next_0[10] dff
+x179[9] data_0[9] net36[9] clk_p_d0 d_next_0[9] dff
+x179[8] data_0[8] net36[8] clk_p_d0 d_next_0[8] dff
+x179[7] data_0[7] net36[7] clk_p_d0 d_next_0[7] dff
+x179[6] data_0[6] net36[6] clk_p_d0 d_next_0[6] dff
+x179[5] data_0[5] net36[5] clk_p_d0 d_next_0[5] dff
+x179[4] data_0[4] net36[4] clk_p_d0 d_next_0[4] dff
+x179[3] data_0[3] net36[3] clk_p_d0 d_next_0[3] dff
+x179[2] data_0[2] net36[2] clk_p_d0 d_next_0[2] dff
+x179[1] data_0[1] net36[1] clk_p_d0 d_next_0[1] dff
+x179[0] data_0[0] net36[0] clk_p_d0 d_next_0[0] dff
+x169[31] data_1[31] net37[31] clk_p_d1 d_next_1[31] dff
+x169[30] data_1[30] net37[30] clk_p_d1 d_next_1[30] dff
+x169[29] data_1[29] net37[29] clk_p_d1 d_next_1[29] dff
+x169[28] data_1[28] net37[28] clk_p_d1 d_next_1[28] dff
+x169[27] data_1[27] net37[27] clk_p_d1 d_next_1[27] dff
+x169[26] data_1[26] net37[26] clk_p_d1 d_next_1[26] dff
+x169[25] data_1[25] net37[25] clk_p_d1 d_next_1[25] dff
+x169[24] data_1[24] net37[24] clk_p_d1 d_next_1[24] dff
+x169[23] data_1[23] net37[23] clk_p_d1 d_next_1[23] dff
+x169[22] data_1[22] net37[22] clk_p_d1 d_next_1[22] dff
+x169[21] data_1[21] net37[21] clk_p_d1 d_next_1[21] dff
+x169[20] data_1[20] net37[20] clk_p_d1 d_next_1[20] dff
+x169[19] data_1[19] net37[19] clk_p_d1 d_next_1[19] dff
+x169[18] data_1[18] net37[18] clk_p_d1 d_next_1[18] dff
+x169[17] data_1[17] net37[17] clk_p_d1 d_next_1[17] dff
+x169[16] data_1[16] net37[16] clk_p_d1 d_next_1[16] dff
+x169[15] data_1[15] net37[15] clk_p_d1 d_next_1[15] dff
+x169[14] data_1[14] net37[14] clk_p_d1 d_next_1[14] dff
+x169[13] data_1[13] net37[13] clk_p_d1 d_next_1[13] dff
+x169[12] data_1[12] net37[12] clk_p_d1 d_next_1[12] dff
+x169[11] data_1[11] net37[11] clk_p_d1 d_next_1[11] dff
+x169[10] data_1[10] net37[10] clk_p_d1 d_next_1[10] dff
+x169[9] data_1[9] net37[9] clk_p_d1 d_next_1[9] dff
+x169[8] data_1[8] net37[8] clk_p_d1 d_next_1[8] dff
+x169[7] data_1[7] net37[7] clk_p_d1 d_next_1[7] dff
+x169[6] data_1[6] net37[6] clk_p_d1 d_next_1[6] dff
+x169[5] data_1[5] net37[5] clk_p_d1 d_next_1[5] dff
+x169[4] data_1[4] net37[4] clk_p_d1 d_next_1[4] dff
+x169[3] data_1[3] net37[3] clk_p_d1 d_next_1[3] dff
+x169[2] data_1[2] net37[2] clk_p_d1 d_next_1[2] dff
+x169[1] data_1[1] net37[1] clk_p_d1 d_next_1[1] dff
+x169[0] data_1[0] net37[0] clk_p_d1 d_next_1[0] dff
+x159[31] data_2[31] net38[31] clk_p_d2 d_next_2[31] dff
+x159[30] data_2[30] net38[30] clk_p_d2 d_next_2[30] dff
+x159[29] data_2[29] net38[29] clk_p_d2 d_next_2[29] dff
+x159[28] data_2[28] net38[28] clk_p_d2 d_next_2[28] dff
+x159[27] data_2[27] net38[27] clk_p_d2 d_next_2[27] dff
+x159[26] data_2[26] net38[26] clk_p_d2 d_next_2[26] dff
+x159[25] data_2[25] net38[25] clk_p_d2 d_next_2[25] dff
+x159[24] data_2[24] net38[24] clk_p_d2 d_next_2[24] dff
+x159[23] data_2[23] net38[23] clk_p_d2 d_next_2[23] dff
+x159[22] data_2[22] net38[22] clk_p_d2 d_next_2[22] dff
+x159[21] data_2[21] net38[21] clk_p_d2 d_next_2[21] dff
+x159[20] data_2[20] net38[20] clk_p_d2 d_next_2[20] dff
+x159[19] data_2[19] net38[19] clk_p_d2 d_next_2[19] dff
+x159[18] data_2[18] net38[18] clk_p_d2 d_next_2[18] dff
+x159[17] data_2[17] net38[17] clk_p_d2 d_next_2[17] dff
+x159[16] data_2[16] net38[16] clk_p_d2 d_next_2[16] dff
+x159[15] data_2[15] net38[15] clk_p_d2 d_next_2[15] dff
+x159[14] data_2[14] net38[14] clk_p_d2 d_next_2[14] dff
+x159[13] data_2[13] net38[13] clk_p_d2 d_next_2[13] dff
+x159[12] data_2[12] net38[12] clk_p_d2 d_next_2[12] dff
+x159[11] data_2[11] net38[11] clk_p_d2 d_next_2[11] dff
+x159[10] data_2[10] net38[10] clk_p_d2 d_next_2[10] dff
+x159[9] data_2[9] net38[9] clk_p_d2 d_next_2[9] dff
+x159[8] data_2[8] net38[8] clk_p_d2 d_next_2[8] dff
+x159[7] data_2[7] net38[7] clk_p_d2 d_next_2[7] dff
+x159[6] data_2[6] net38[6] clk_p_d2 d_next_2[6] dff
+x159[5] data_2[5] net38[5] clk_p_d2 d_next_2[5] dff
+x159[4] data_2[4] net38[4] clk_p_d2 d_next_2[4] dff
+x159[3] data_2[3] net38[3] clk_p_d2 d_next_2[3] dff
+x159[2] data_2[2] net38[2] clk_p_d2 d_next_2[2] dff
+x159[1] data_2[1] net38[1] clk_p_d2 d_next_2[1] dff
+x159[0] data_2[0] net38[0] clk_p_d2 d_next_2[0] dff
+x149[31] data_3[31] net39[31] clk_p_d3 d_next_3[31] dff
+x149[30] data_3[30] net39[30] clk_p_d3 d_next_3[30] dff
+x149[29] data_3[29] net39[29] clk_p_d3 d_next_3[29] dff
+x149[28] data_3[28] net39[28] clk_p_d3 d_next_3[28] dff
+x149[27] data_3[27] net39[27] clk_p_d3 d_next_3[27] dff
+x149[26] data_3[26] net39[26] clk_p_d3 d_next_3[26] dff
+x149[25] data_3[25] net39[25] clk_p_d3 d_next_3[25] dff
+x149[24] data_3[24] net39[24] clk_p_d3 d_next_3[24] dff
+x149[23] data_3[23] net39[23] clk_p_d3 d_next_3[23] dff
+x149[22] data_3[22] net39[22] clk_p_d3 d_next_3[22] dff
+x149[21] data_3[21] net39[21] clk_p_d3 d_next_3[21] dff
+x149[20] data_3[20] net39[20] clk_p_d3 d_next_3[20] dff
+x149[19] data_3[19] net39[19] clk_p_d3 d_next_3[19] dff
+x149[18] data_3[18] net39[18] clk_p_d3 d_next_3[18] dff
+x149[17] data_3[17] net39[17] clk_p_d3 d_next_3[17] dff
+x149[16] data_3[16] net39[16] clk_p_d3 d_next_3[16] dff
+x149[15] data_3[15] net39[15] clk_p_d3 d_next_3[15] dff
+x149[14] data_3[14] net39[14] clk_p_d3 d_next_3[14] dff
+x149[13] data_3[13] net39[13] clk_p_d3 d_next_3[13] dff
+x149[12] data_3[12] net39[12] clk_p_d3 d_next_3[12] dff
+x149[11] data_3[11] net39[11] clk_p_d3 d_next_3[11] dff
+x149[10] data_3[10] net39[10] clk_p_d3 d_next_3[10] dff
+x149[9] data_3[9] net39[9] clk_p_d3 d_next_3[9] dff
+x149[8] data_3[8] net39[8] clk_p_d3 d_next_3[8] dff
+x149[7] data_3[7] net39[7] clk_p_d3 d_next_3[7] dff
+x149[6] data_3[6] net39[6] clk_p_d3 d_next_3[6] dff
+x149[5] data_3[5] net39[5] clk_p_d3 d_next_3[5] dff
+x149[4] data_3[4] net39[4] clk_p_d3 d_next_3[4] dff
+x149[3] data_3[3] net39[3] clk_p_d3 d_next_3[3] dff
+x149[2] data_3[2] net39[2] clk_p_d3 d_next_3[2] dff
+x149[1] data_3[1] net39[1] clk_p_d3 d_next_3[1] dff
+x149[0] data_3[0] net39[0] clk_p_d3 d_next_3[0] dff
 x103 pop_n pop_p stall_p is_head_n[0] nand2
-x110 net20 o_not_full is_head_n[4] net6 nand2
-x107 net6 net21 is_head_p[3] i_push pop_n nand3
-x109 net7 latch_dn_p net1 latch_dn_n nor2
-x104 is_comp_n net4 hi_valid_n net22 nor2
+x110 net25 o_not_full is_head_n[4] net3 nand2
+x107 net3 net26 is_head_p[3] i_push pop_n nand3
+x109 net19 latch_dn_p net17 latch_dn_n nor2
+x104 is_comp_n net20 hi_valid_n net27 nor2
 x111 latch_m_dn_n latch_m_dn_p latch_dn_p push_n nand2
 x112 latch_m_up_n latch_m_up_p i_push latch_dn_n nand2
 x101 i_stall stall_p not
-x180 latch_m_dn_p is_head_p[1] net35 latch_m_up_n is_head_p[0] mux2
-x204 net3 hi_update_p reset_p net12 nor2
-x203 net25 hi_next i_reset_n is_head_n[0] nand2
-x200 net29 net14 is_head_p[0] o_pc[1] hi_valid_n nand3
-x114 net30 o_not_empty is_head_n[0] first_half_n nand2
-x140 latch_m_up_p is_head_p[3] net36 net2 is_head_p[4] mux2
-x141 net37 h_next_p[4] net36 i_reset_n nand2
-x150 latch_m_dn_p net38 is_head_p[4] latch_m_up_p is_head_p[2] net2 is_head_p[3] mux3
-x151 net39 h_next_p[3] net38 i_reset_n nand2
-x160 latch_m_dn_p net40 is_head_p[3] latch_m_up_p is_head_p[1] net2 is_head_p[2] mux3
-x161 net41 h_next_p[2] net40 i_reset_n nand2
-x170 latch_m_dn_p net42 is_head_p[2] latch_m_up_p is_head_p[0] net2 is_head_p[1] mux3
-x171 net43 h_next_p[1] net42 i_reset_n nand2
-x130 net44 net2 latch_m_up_n latch_m_dn_n nand2
-x119[31] net9 o_pc_next[31] pc_add[31] net8 o_pc[31] reset_p i_pc[31] mux3
-x119[30] net9 o_pc_next[30] pc_add[30] net8 o_pc[30] reset_p i_pc[30] mux3
-x119[29] net9 o_pc_next[29] pc_add[29] net8 o_pc[29] reset_p i_pc[29] mux3
-x119[28] net9 o_pc_next[28] pc_add[28] net8 o_pc[28] reset_p i_pc[28] mux3
-x119[27] net9 o_pc_next[27] pc_add[27] net8 o_pc[27] reset_p i_pc[27] mux3
-x119[26] net9 o_pc_next[26] pc_add[26] net8 o_pc[26] reset_p i_pc[26] mux3
-x119[25] net9 o_pc_next[25] pc_add[25] net8 o_pc[25] reset_p i_pc[25] mux3
-x119[24] net9 o_pc_next[24] pc_add[24] net8 o_pc[24] reset_p i_pc[24] mux3
-x119[23] net9 o_pc_next[23] pc_add[23] net8 o_pc[23] reset_p i_pc[23] mux3
-x119[22] net9 o_pc_next[22] pc_add[22] net8 o_pc[22] reset_p i_pc[22] mux3
-x119[21] net9 o_pc_next[21] pc_add[21] net8 o_pc[21] reset_p i_pc[21] mux3
-x119[20] net9 o_pc_next[20] pc_add[20] net8 o_pc[20] reset_p i_pc[20] mux3
-x119[19] net9 o_pc_next[19] pc_add[19] net8 o_pc[19] reset_p i_pc[19] mux3
-x119[18] net9 o_pc_next[18] pc_add[18] net8 o_pc[18] reset_p i_pc[18] mux3
-x119[17] net9 o_pc_next[17] pc_add[17] net8 o_pc[17] reset_p i_pc[17] mux3
-x119[16] net9 o_pc_next[16] pc_add[16] net8 o_pc[16] reset_p i_pc[16] mux3
-x119[15] net9 o_pc_next[15] pc_add[15] net8 o_pc[15] reset_p i_pc[15] mux3
-x119[14] net9 o_pc_next[14] pc_add[14] net8 o_pc[14] reset_p i_pc[14] mux3
-x119[13] net9 o_pc_next[13] pc_add[13] net8 o_pc[13] reset_p i_pc[13] mux3
-x119[12] net9 o_pc_next[12] pc_add[12] net8 o_pc[12] reset_p i_pc[12] mux3
-x119[11] net9 o_pc_next[11] pc_add[11] net8 o_pc[11] reset_p i_pc[11] mux3
-x119[10] net9 o_pc_next[10] pc_add[10] net8 o_pc[10] reset_p i_pc[10] mux3
-x119[9] net9 o_pc_next[9] pc_add[9] net8 o_pc[9] reset_p i_pc[9] mux3
-x119[8] net9 o_pc_next[8] pc_add[8] net8 o_pc[8] reset_p i_pc[8] mux3
-x119[7] net9 o_pc_next[7] pc_add[7] net8 o_pc[7] reset_p i_pc[7] mux3
-x119[6] net9 o_pc_next[6] pc_add[6] net8 o_pc[6] reset_p i_pc[6] mux3
-x119[5] net9 o_pc_next[5] pc_add[5] net8 o_pc[5] reset_p i_pc[5] mux3
-x119[4] net9 o_pc_next[4] pc_add[4] net8 o_pc[4] reset_p i_pc[4] mux3
-x119[3] net9 o_pc_next[3] pc_add[3] net8 o_pc[3] reset_p i_pc[3] mux3
-x119[2] net9 o_pc_next[2] pc_add[2] net8 o_pc[2] reset_p i_pc[2] mux3
-x119[1] net9 o_pc_next[1] pc_add[1] net8 o_pc[1] reset_p i_pc[1] mux3
-x118 net45 net8 i_reset_n net11 nand2
-x117 net46 net9 i_reset_n net10 nand2
-x205 hi_update_p hi_next net13 net12 hi_valid_p mux2
-x188[15] pop_buf_p data_0[31] net27[15] pop_buf_n latch_hi_p[15] mux2
-x188[14] pop_buf_p data_0[30] net27[14] pop_buf_n latch_hi_p[14] mux2
-x188[13] pop_buf_p data_0[29] net27[13] pop_buf_n latch_hi_p[13] mux2
-x188[12] pop_buf_p data_0[28] net27[12] pop_buf_n latch_hi_p[12] mux2
-x188[11] pop_buf_p data_0[27] net27[11] pop_buf_n latch_hi_p[11] mux2
-x188[10] pop_buf_p data_0[26] net27[10] pop_buf_n latch_hi_p[10] mux2
-x188[9] pop_buf_p data_0[25] net27[9] pop_buf_n latch_hi_p[9] mux2
-x188[8] pop_buf_p data_0[24] net27[8] pop_buf_n latch_hi_p[8] mux2
-x188[7] pop_buf_p data_0[23] net27[7] pop_buf_n latch_hi_p[7] mux2
-x188[6] pop_buf_p data_0[22] net27[6] pop_buf_n latch_hi_p[6] mux2
-x188[5] pop_buf_p data_0[21] net27[5] pop_buf_n latch_hi_p[5] mux2
-x188[4] pop_buf_p data_0[20] net27[4] pop_buf_n latch_hi_p[4] mux2
-x188[3] pop_buf_p data_0[19] net27[3] pop_buf_n latch_hi_p[3] mux2
-x188[2] pop_buf_p data_0[18] net27[2] pop_buf_n latch_hi_p[2] mux2
-x188[1] pop_buf_p data_0[17] net27[1] pop_buf_n latch_hi_p[1] mux2
-x188[0] pop_buf_p data_0[16] net27[0] pop_buf_n latch_hi_p[0] mux2
-x181 net35 h_next_p[0] reset_p net23 nor2
+x180 latch_m_dn_p is_head_p[1] net40 latch_m_up_n is_head_p[0] mux2
+x204 net2 hi_update_p reset_p net8 nor2
+x203 net30 hi_next i_reset_n is_head_n[0] nand2
+x200 net34 net10 is_head_p[0] o_pc[1] hi_valid_n nand3
+x114 net35 o_not_empty is_head_n[0] first_half_n nand2
+x140 latch_m_up_p is_head_p[3] net41 net1 is_head_p[4] mux2
+x141 net42 h_next_p[4] net41 i_reset_n nand2
+x150 latch_m_dn_p net43 is_head_p[4] latch_m_up_p is_head_p[2] net1 is_head_p[3] mux3
+x151 net44 h_next_p[3] net43 i_reset_n nand2
+x160 latch_m_dn_p net45 is_head_p[3] latch_m_up_p is_head_p[1] net1 is_head_p[2] mux3
+x161 net46 h_next_p[2] net45 i_reset_n nand2
+x170 latch_m_dn_p net47 is_head_p[2] latch_m_up_p is_head_p[0] net1 is_head_p[1] mux3
+x171 net48 h_next_p[1] net47 i_reset_n nand2
+x130 net49 net1 latch_m_up_n latch_m_dn_n nand2
+x119[31] net5 o_pc_next[31] pc_add[31] net4 o_pc[31] reset_p i_pc[31] mux3
+x119[30] net5 o_pc_next[30] pc_add[30] net4 o_pc[30] reset_p i_pc[30] mux3
+x119[29] net5 o_pc_next[29] pc_add[29] net4 o_pc[29] reset_p i_pc[29] mux3
+x119[28] net5 o_pc_next[28] pc_add[28] net4 o_pc[28] reset_p i_pc[28] mux3
+x119[27] net5 o_pc_next[27] pc_add[27] net4 o_pc[27] reset_p i_pc[27] mux3
+x119[26] net5 o_pc_next[26] pc_add[26] net4 o_pc[26] reset_p i_pc[26] mux3
+x119[25] net5 o_pc_next[25] pc_add[25] net4 o_pc[25] reset_p i_pc[25] mux3
+x119[24] net5 o_pc_next[24] pc_add[24] net4 o_pc[24] reset_p i_pc[24] mux3
+x119[23] net5 o_pc_next[23] pc_add[23] net4 o_pc[23] reset_p i_pc[23] mux3
+x119[22] net5 o_pc_next[22] pc_add[22] net4 o_pc[22] reset_p i_pc[22] mux3
+x119[21] net5 o_pc_next[21] pc_add[21] net4 o_pc[21] reset_p i_pc[21] mux3
+x119[20] net5 o_pc_next[20] pc_add[20] net4 o_pc[20] reset_p i_pc[20] mux3
+x119[19] net5 o_pc_next[19] pc_add[19] net4 o_pc[19] reset_p i_pc[19] mux3
+x119[18] net5 o_pc_next[18] pc_add[18] net4 o_pc[18] reset_p i_pc[18] mux3
+x119[17] net5 o_pc_next[17] pc_add[17] net4 o_pc[17] reset_p i_pc[17] mux3
+x119[16] net5 o_pc_next[16] pc_add[16] net4 o_pc[16] reset_p i_pc[16] mux3
+x119[15] net5 o_pc_next[15] pc_add[15] net4 o_pc[15] reset_p i_pc[15] mux3
+x119[14] net5 o_pc_next[14] pc_add[14] net4 o_pc[14] reset_p i_pc[14] mux3
+x119[13] net5 o_pc_next[13] pc_add[13] net4 o_pc[13] reset_p i_pc[13] mux3
+x119[12] net5 o_pc_next[12] pc_add[12] net4 o_pc[12] reset_p i_pc[12] mux3
+x119[11] net5 o_pc_next[11] pc_add[11] net4 o_pc[11] reset_p i_pc[11] mux3
+x119[10] net5 o_pc_next[10] pc_add[10] net4 o_pc[10] reset_p i_pc[10] mux3
+x119[9] net5 o_pc_next[9] pc_add[9] net4 o_pc[9] reset_p i_pc[9] mux3
+x119[8] net5 o_pc_next[8] pc_add[8] net4 o_pc[8] reset_p i_pc[8] mux3
+x119[7] net5 o_pc_next[7] pc_add[7] net4 o_pc[7] reset_p i_pc[7] mux3
+x119[6] net5 o_pc_next[6] pc_add[6] net4 o_pc[6] reset_p i_pc[6] mux3
+x119[5] net5 o_pc_next[5] pc_add[5] net4 o_pc[5] reset_p i_pc[5] mux3
+x119[4] net5 o_pc_next[4] pc_add[4] net4 o_pc[4] reset_p i_pc[4] mux3
+x119[3] net5 o_pc_next[3] pc_add[3] net4 o_pc[3] reset_p i_pc[3] mux3
+x119[2] net5 o_pc_next[2] pc_add[2] net4 o_pc[2] reset_p i_pc[2] mux3
+x119[1] net5 o_pc_next[1] pc_add[1] net4 o_pc[1] reset_p i_pc[1] mux3
+x118 net50 net4 i_reset_n net7 nand2
+x117 net51 net5 i_reset_n net6 nand2
+x205 hi_update_p hi_next net9 net8 hi_valid_p mux2
+x188[15] pop_buf_p data_0[31] net32[15] pop_buf_n latch_hi_p[15] mux2
+x188[14] pop_buf_p data_0[30] net32[14] pop_buf_n latch_hi_p[14] mux2
+x188[13] pop_buf_p data_0[29] net32[13] pop_buf_n latch_hi_p[13] mux2
+x188[12] pop_buf_p data_0[28] net32[12] pop_buf_n latch_hi_p[12] mux2
+x188[11] pop_buf_p data_0[27] net32[11] pop_buf_n latch_hi_p[11] mux2
+x188[10] pop_buf_p data_0[26] net32[10] pop_buf_n latch_hi_p[10] mux2
+x188[9] pop_buf_p data_0[25] net32[9] pop_buf_n latch_hi_p[9] mux2
+x188[8] pop_buf_p data_0[24] net32[8] pop_buf_n latch_hi_p[8] mux2
+x188[7] pop_buf_p data_0[23] net32[7] pop_buf_n latch_hi_p[7] mux2
+x188[6] pop_buf_p data_0[22] net32[6] pop_buf_n latch_hi_p[6] mux2
+x188[5] pop_buf_p data_0[21] net32[5] pop_buf_n latch_hi_p[5] mux2
+x188[4] pop_buf_p data_0[20] net32[4] pop_buf_n latch_hi_p[4] mux2
+x188[3] pop_buf_p data_0[19] net32[3] pop_buf_n latch_hi_p[3] mux2
+x188[2] pop_buf_p data_0[18] net32[2] pop_buf_n latch_hi_p[2] mux2
+x188[1] pop_buf_p data_0[17] net32[1] pop_buf_n latch_hi_p[1] mux2
+x188[0] pop_buf_p data_0[16] net32[0] pop_buf_n latch_hi_p[0] mux2
+x181 net40 h_next_p[0] reset_p net28 nor2
 x168[31] d1_sl d_next_1[31] data_1[31] d1_sn i_data[31] d1_su data_2[31] mux3
 x168[30] d1_sl d_next_1[30] data_1[30] d1_sn i_data[30] d1_su data_2[30] mux3
 x168[29] d1_sl d_next_1[29] data_1[29] d1_sn i_data[29] d1_su data_2[29] mux3
@@ -447,48 +447,59 @@ x148[3] d3_sl data_3[3] d_next_3[3] d3_sn i_data[3] mux2
 x148[2] d3_sl data_3[2] d_next_3[2] d3_sn i_data[2] mux2
 x148[1] d3_sl data_3[1] d_next_3[1] d3_sn i_data[1] mux2
 x148[0] d3_sl data_3[0] d_next_3[0] d3_sn i_data[0] mux2
-x145 net47 d3_sn net48 net49 nor2
-x143 net50 net47 latch_dn_p is_head_p[4] nand2
-x144 net51 net48 is_head_p[3] latch_up_p nand2
-x146 latch_dn_p net52 d3_sn d3_sl nor2
-x175 net53 d0_sn net54 net55 nor2
-x173 net56 net54 latch_dn_p is_head_p[1] nand2
-x174 net57 net53 is_head_p[0] latch_up_p nand2
-x176 latch_dn_p net58 d0_sn d0_sl nor2
-x177 net59 d0_su net55 latch_dn_p nand2
-x165 net60 d1_sn net61 net62 nor2
-x163 net63 net61 latch_dn_p is_head_p[2] nand2
-x164 net64 net60 is_head_p[1] latch_up_p nand2
-x166 latch_dn_p net65 d1_sn d1_sl nor2
-x167 net66 d1_su net62 latch_dn_p nand2
-x155 net67 d2_sn net68 net69 nor2
-x153 net70 net68 latch_dn_p is_head_p[3] nand2
-x154 net71 net67 is_head_p[2] latch_up_p nand2
-x156 latch_dn_p net72 d2_sn d2_sl nor2
-x157 net73 d2_su net69 latch_dn_p nand2
-x3 pop_p net74 not
-x7 o_pc[1] net75 not
+x145 net52 net11 net53 net15 nor2
+x143 net54 net53 latch_dn_p is_head_p[4] nand2
+x144 net55 net52 is_head_p[3] latch_up_p nand2
+x146 net11 net56 latch_dn_p net57 nor2
+x175 net58 net59 net60 net12 nor2
+x173 net61 net60 latch_dn_p is_head_p[1] nand2
+x174 net62 net58 is_head_p[0] latch_up_p nand2
+x176 net59 net63 latch_dn_p net64 nor2
+x177 net66 net65 latch_dn_p net12 nand2
+x165 net67 net68 net69 net13 nor2
+x163 net70 net69 latch_dn_p is_head_p[2] nand2
+x164 net71 net67 is_head_p[1] latch_up_p nand2
+x166 net68 net72 latch_dn_p net73 nor2
+x167 net75 net74 latch_dn_p net13 nand2
+x155 net76 net77 net78 net14 nor2
+x153 net79 net78 latch_dn_p is_head_p[3] nand2
+x154 net80 net76 is_head_p[2] latch_up_p nand2
+x156 net77 net81 latch_dn_p net82 nor2
+x157 net84 net83 latch_dn_p net14 nand2
+x3 pop_p net85 not
+x7 o_pc[1] net86 not
 x20 clk_n clk_p_d1 not_4
-x21 clk_n_d clk_p_d3 not_4
-x22 clk_n_d clk_p_d4 not_4
+x21 clk_n_d clk_p_d3 not_8
+x22 clk_n_d clk_p_d4 not_8
 x23 clk_n clk_p_d0 not_4
 x24 clk_n clk_p_a not_4
-x6 net76 pc_buf_n[1] not_4
-x5 net75 pc_buf_p[1] not_4
-x1 net74 pop_buf_p not_4
-x2 net77 pop_buf_n not_4
-x4 clk_n_d clk_p_d2 not_4
-x8 clk_n clk_p_h not
+x6 net87 pc_buf_n[1] not_4
+x5 net86 pc_buf_p[1] not_4
+x1 net85 pop_buf_p not_4
+x2 net88 pop_buf_n not_4
+x4 clk_n_d clk_p_d2 not_8
+x8 clk_n clk_p_h not_2
 x115 o_pc[31] o_pc[30] o_pc[29] o_pc[28] o_pc[27] o_pc[26] o_pc[25] o_pc[24] o_pc[23] o_pc[22]
 + o_pc[21] o_pc[20] o_pc[19] o_pc[18] o_pc[17] o_pc[16] o_pc[15] o_pc[14] o_pc[13] o_pc[12] o_pc[11] o_pc[10]
 + o_pc[9] o_pc[8] o_pc[7] o_pc[6] o_pc[5] o_pc[4] o_pc[3] o_pc[2] o_pc[1] is_comp_p is_comp_n pc_add[31]
 + pc_add[30] pc_add[29] pc_add[28] pc_add[27] pc_add[26] pc_add[25] pc_add[24] pc_add[23] pc_add[22] pc_add[21]
 + pc_add[20] pc_add[19] pc_add[18] pc_add[17] pc_add[16] pc_add[15] pc_add[14] pc_add[13] pc_add[12] pc_add[11]
 + pc_add[10] pc_add[9] pc_add[8] pc_add[7] pc_add[6] pc_add[5] pc_add[4] pc_add[3] pc_add[2] pc_add[1] pc_inc
-x11 i_clk clk_n not_2
-x12 i_clk clk_n_d not_2
-x9 pc_n[1] net76 not
-x10 pop_n net77 not
+x9 pc_n[1] net87 not
+x10 pop_n net88 not
+x13 net15 d3_sn not_4
+x11 i_clk clk_n not_4
+x12 i_clk clk_n_d not_4
+x14 net12 d0_sn not_4
+x15 net66 d0_su not_4
+x16 net63 d0_sl not_4
+x17 net13 d1_sn not_4
+x18 net72 d1_sl not_4
+x19 net75 d1_su not_4
+x25 net81 d2_sl not_4
+x26 net14 d2_sn not_4
+x27 net84 d2_su not_4
+x28 net56 d3_sl not_4
 **.ends
 
 * expanding   symbol:  ../../elements/FF/dff.sym # of pins=4
@@ -832,6 +843,84 @@ XM8 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf
 .ends
 
 
+* expanding   symbol:  ../../elements/logic/not_8.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/elements/logic/not_8.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/not_8.sch
+.subckt not_8 A Y
+*.ipin A
+*.opin Y
+XM1 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM6 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM7 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM8 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM9 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM10 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM11 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM12 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM13 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM14 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM15 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM16 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/not_2.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/elements/logic/not_2.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/not_2.sch
+.subckt not_2 A Y
+*.ipin A
+*.opin Y
+XM1 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
 * expanding   symbol:  ../pc_inc/pc_inc.sym # of pins=4
 ** sym_path: /media/FlexRV32/asic/blocks/pc_inc/pc_inc.sym
 ** sch_path: /media/FlexRV32/asic/blocks/pc_inc/pc_inc.sch
@@ -909,27 +998,6 @@ x66 net62 net29 A[30] net28 nand2
 x67 net29 A[31] S[31] xor
 x3 A[1] is_comp_p S[1] xor
 x2 A[2] is_comp_n p[2] xor
-.ends
-
-
-* expanding   symbol:  ../../elements/logic/not_2.sym # of pins=2
-** sym_path: /media/FlexRV32/asic/elements/logic/not_2.sym
-** sch_path: /media/FlexRV32/asic/elements/logic/not_2.sch
-.subckt not_2 A Y
-*.ipin A
-*.opin Y
-XM1 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1
-XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1
-XM3 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1
-XM4 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
-+ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
-+ sa=0 sb=0 sd=0 mult=1
 .ends
 
 

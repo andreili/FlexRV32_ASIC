@@ -1,3 +1,5 @@
 *.ext
 *.raw
 log*.txt
+bin/*
+build/*

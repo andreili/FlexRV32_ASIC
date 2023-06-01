@@ -11,7 +11,7 @@ VVSS VSS 0 PWL 0n 0
 .include simulation/stimuli_rv_fetch_buf.cir
 .options timeint reltol=1e-3 abstol=1e-5
 .options linsol type=belos AZ_tol=1.0e-3
-.tran 1p 50n
+.tran 1p 4n
 .print tran format=raw file=simulation/rv_fetch_buf.spice.raw v(*)
 
 .GLOBAL VCC
