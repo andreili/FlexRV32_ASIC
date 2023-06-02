@@ -1,0 +1,607 @@
+** sch_path: /media/FlexRV32/asic/blocks/rom/rom_dec.sch
+**.subckt rom_dec A[11],A[10],A[9],A[8],A[7],A[6],A[5],A[4],A[3],A[2]
+*+ ROW[255],ROW[254],ROW[253],ROW[252],ROW[251],ROW[250],ROW[249],ROW[248],ROW[247],ROW[246],ROW[245],ROW[244],ROW[243],ROW[242],ROW[241],ROW[240],ROW[239],ROW[238],ROW[237],ROW[236],ROW[235],ROW[234],ROW[233],ROW[232],ROW[231],ROW[230],ROW[229],ROW[228],ROW[227],ROW[226],ROW[225],ROW[224],ROW[223],ROW[222],ROW[221],ROW[220],ROW[219],ROW[218],ROW[217],ROW[216],ROW[215],ROW[214],ROW[213],ROW[212],ROW[211],ROW[210],ROW[209],ROW[208],ROW[207],ROW[206],ROW[205],ROW[204],ROW[203],ROW[202],ROW[201],ROW[200],ROW[199],ROW[198],ROW[197],ROW[196],ROW[195],ROW[194],ROW[193],ROW[192],ROW[191],ROW[190],ROW[189],ROW[188],ROW[187],ROW[186],ROW[185],ROW[184],ROW[183],ROW[182],ROW[181],ROW[180],ROW[179],ROW[178],ROW[177],ROW[176],ROW[175],ROW[174],ROW[173],ROW[172],ROW[171],ROW[170],ROW[169],ROW[168],ROW[167],ROW[166],ROW[165],ROW[164],ROW[163],ROW[162],ROW[161],ROW[160],ROW[159],ROW[158],ROW[157],ROW[156],ROW[155],ROW[154],ROW[153],ROW[152],ROW[151],ROW[150],ROW[149],ROW[148],ROW[147],ROW[146],ROW[145],ROW[144],ROW[143],ROW[142],ROW[141],ROW[140],ROW[139],ROW[138],ROW[137],ROW[136],ROW[135],ROW[134],ROW[133],ROW[132],ROW[131],ROW[130],ROW[129],ROW[128],ROW[127],ROW[126],ROW[125],ROW[124],ROW[123],ROW[122],ROW[121],ROW[120],ROW[119],ROW[118],ROW[117],ROW[116],ROW[115],ROW[114],ROW[113],ROW[112],ROW[111],ROW[110],ROW[109],ROW[108],ROW[107],ROW[106],ROW[105],ROW[104],ROW[103],ROW[102],ROW[101],ROW[100],ROW[99],ROW[98],ROW[97],ROW[96],ROW[95],ROW[94],ROW[93],ROW[92],ROW[91],ROW[90],ROW[89],ROW[88],ROW[87],ROW[86],ROW[85],ROW[84],ROW[83],ROW[82],ROW[81],ROW[80],ROW[79],ROW[78],ROW[77],ROW[76],ROW[75],ROW[74],ROW[73],ROW[72],ROW[71],ROW[70],ROW[69],ROW[68],ROW[67],ROW[66],ROW[65],ROW[64],ROW[63],ROW[62],ROW[61],ROW[60],ROW[59],ROW[58],ROW[57],ROW[56],ROW[55],ROW[54],ROW[53],ROW[52],ROW[51],ROW[50],ROW[49],ROW[48],ROW[47],ROW[46],ROW[45],ROW[44],ROW[43],ROW[42],ROW[41],ROW[40],ROW[39],ROW[38],ROW[37],ROW[36],ROW[35],ROW[34],ROW[33],ROW[32],ROW[31],ROW[30],ROW[29],ROW[28],ROW[27],ROW[26],ROW[25],ROW[24],ROW[23],ROW[22],ROW[21],ROW[20],ROW[19],ROW[18],ROW[17],ROW[16],ROW[15],ROW[14],ROW[13],ROW[12],ROW[11],ROW[10],ROW[9],ROW[8],ROW[7],ROW[6],ROW[5],ROW[4],ROW[3],ROW[2],ROW[1],ROW[0] COL[3],COL[2],COL[1],COL[0]
+*.ipin A[11],A[10],A[9],A[8],A[7],A[6],A[5],A[4],A[3],A[2]
+*.opin
+*+ ROW[255],ROW[254],ROW[253],ROW[252],ROW[251],ROW[250],ROW[249],ROW[248],ROW[247],ROW[246],ROW[245],ROW[244],ROW[243],ROW[242],ROW[241],ROW[240],ROW[239],ROW[238],ROW[237],ROW[236],ROW[235],ROW[234],ROW[233],ROW[232],ROW[231],ROW[230],ROW[229],ROW[228],ROW[227],ROW[226],ROW[225],ROW[224],ROW[223],ROW[222],ROW[221],ROW[220],ROW[219],ROW[218],ROW[217],ROW[216],ROW[215],ROW[214],ROW[213],ROW[212],ROW[211],ROW[210],ROW[209],ROW[208],ROW[207],ROW[206],ROW[205],ROW[204],ROW[203],ROW[202],ROW[201],ROW[200],ROW[199],ROW[198],ROW[197],ROW[196],ROW[195],ROW[194],ROW[193],ROW[192],ROW[191],ROW[190],ROW[189],ROW[188],ROW[187],ROW[186],ROW[185],ROW[184],ROW[183],ROW[182],ROW[181],ROW[180],ROW[179],ROW[178],ROW[177],ROW[176],ROW[175],ROW[174],ROW[173],ROW[172],ROW[171],ROW[170],ROW[169],ROW[168],ROW[167],ROW[166],ROW[165],ROW[164],ROW[163],ROW[162],ROW[161],ROW[160],ROW[159],ROW[158],ROW[157],ROW[156],ROW[155],ROW[154],ROW[153],ROW[152],ROW[151],ROW[150],ROW[149],ROW[148],ROW[147],ROW[146],ROW[145],ROW[144],ROW[143],ROW[142],ROW[141],ROW[140],ROW[139],ROW[138],ROW[137],ROW[136],ROW[135],ROW[134],ROW[133],ROW[132],ROW[131],ROW[130],ROW[129],ROW[128],ROW[127],ROW[126],ROW[125],ROW[124],ROW[123],ROW[122],ROW[121],ROW[120],ROW[119],ROW[118],ROW[117],ROW[116],ROW[115],ROW[114],ROW[113],ROW[112],ROW[111],ROW[110],ROW[109],ROW[108],ROW[107],ROW[106],ROW[105],ROW[104],ROW[103],ROW[102],ROW[101],ROW[100],ROW[99],ROW[98],ROW[97],ROW[96],ROW[95],ROW[94],ROW[93],ROW[92],ROW[91],ROW[90],ROW[89],ROW[88],ROW[87],ROW[86],ROW[85],ROW[84],ROW[83],ROW[82],ROW[81],ROW[80],ROW[79],ROW[78],ROW[77],ROW[76],ROW[75],ROW[74],ROW[73],ROW[72],ROW[71],ROW[70],ROW[69],ROW[68],ROW[67],ROW[66],ROW[65],ROW[64],ROW[63],ROW[62],ROW[61],ROW[60],ROW[59],ROW[58],ROW[57],ROW[56],ROW[55],ROW[54],ROW[53],ROW[52],ROW[51],ROW[50],ROW[49],ROW[48],ROW[47],ROW[46],ROW[45],ROW[44],ROW[43],ROW[42],ROW[41],ROW[40],ROW[39],ROW[38],ROW[37],ROW[36],ROW[35],ROW[34],ROW[33],ROW[32],ROW[31],ROW[30],ROW[29],ROW[28],ROW[27],ROW[26],ROW[25],ROW[24],ROW[23],ROW[22],ROW[21],ROW[20],ROW[19],ROW[18],ROW[17],ROW[16],ROW[15],ROW[14],ROW[13],ROW[12],ROW[11],ROW[10],ROW[9],ROW[8],ROW[7],ROW[6],ROW[5],ROW[4],ROW[3],ROW[2],ROW[1],ROW[0]
+*.opin COL[3],COL[2],COL[1],COL[0]
+x1 A[11] A[10] A[9] A[8] SEL_hi[15] SEL_hi[14] SEL_hi[13] SEL_hi[12] SEL_hi[11] SEL_hi[10] SEL_hi[9]
++ SEL_hi[8] SEL_hi[7] SEL_hi[6] SEL_hi[5] SEL_hi[4] SEL_hi[3] SEL_hi[2] SEL_hi[1] SEL_hi[0] rom_dec_4b
+x3 A[3] A[2] net6[3] net6[2] net6[1] net6[0] rom_dec_2b
+x2 A[7] A[6] A[5] A[4] SEL_lo[15] SEL_lo[14] SEL_lo[13] SEL_lo[12] SEL_lo[11] SEL_lo[10] SEL_lo[9]
++ SEL_lo[8] SEL_lo[7] SEL_lo[6] SEL_lo[5] SEL_lo[4] SEL_lo[3] SEL_lo[2] SEL_lo[1] SEL_lo[0] rom_dec_4b
+x5 SEL_hi[0] ROW[15] ROW[14] ROW[13] ROW[12] ROW[11] ROW[10] ROW[9] ROW[8] ROW[7] ROW[6] ROW[5]
++ ROW[4] ROW[3] ROW[2] ROW[1] ROW[0] net7[15] net7[14] net7[13] net7[12] net7[11] net7[10] net7[9] net7[8]
++ net7[7] net7[6] net7[5] net7[4] net7[3] net7[2] net7[1] net7[0] rom_dec_pref_4b
+x4[15] net2[15] net7[15] not_2
+x4[14] net2[14] net7[14] not_2
+x4[13] net2[13] net7[13] not_2
+x4[12] net2[12] net7[12] not_2
+x4[11] net2[11] net7[11] not_2
+x4[10] net2[10] net7[10] not_2
+x4[9] net2[9] net7[9] not_2
+x4[8] net2[8] net7[8] not_2
+x4[7] net2[7] net7[7] not_2
+x4[6] net2[6] net7[6] not_2
+x4[5] net2[5] net7[5] not_2
+x4[4] net2[4] net7[4] not_2
+x4[3] net2[3] net7[3] not_2
+x4[2] net2[2] net7[2] not_2
+x4[1] net2[1] net7[1] not_2
+x4[0] net2[0] net7[0] not_2
+x4 SEL_hi[1] ROW[31] ROW[30] ROW[29] ROW[28] ROW[27] ROW[26] ROW[25] ROW[24] ROW[23] ROW[22] ROW[21]
++ ROW[20] ROW[19] ROW[18] ROW[17] ROW[16] net8[15] net8[14] net8[13] net8[12] net8[11] net8[10] net8[9]
++ net8[8] net8[7] net8[6] net8[5] net8[4] net8[3] net8[2] net8[1] net8[0] rom_dec_pref_4b
+x5[15] net2[15] net8[15] not_4
+x5[14] net2[14] net8[14] not_4
+x5[13] net2[13] net8[13] not_4
+x5[12] net2[12] net8[12] not_4
+x5[11] net2[11] net8[11] not_4
+x5[10] net2[10] net8[10] not_4
+x5[9] net2[9] net8[9] not_4
+x5[8] net2[8] net8[8] not_4
+x5[7] net2[7] net8[7] not_4
+x5[6] net2[6] net8[6] not_4
+x5[5] net2[5] net8[5] not_4
+x5[4] net2[4] net8[4] not_4
+x5[3] net2[3] net8[3] not_4
+x5[2] net2[2] net8[2] not_4
+x5[1] net2[1] net8[1] not_4
+x5[0] net2[0] net8[0] not_4
+x7 SEL_hi[2] ROW[47] ROW[46] ROW[45] ROW[44] ROW[43] ROW[42] ROW[41] ROW[40] ROW[39] ROW[38] ROW[37]
++ ROW[36] ROW[35] ROW[34] ROW[33] ROW[32] net9[15] net9[14] net9[13] net9[12] net9[11] net9[10] net9[9]
++ net9[8] net9[7] net9[6] net9[5] net9[4] net9[3] net9[2] net9[1] net9[0] rom_dec_pref_4b
+x8[15] net2[15] net9[15] not_4
+x8[14] net2[14] net9[14] not_4
+x8[13] net2[13] net9[13] not_4
+x8[12] net2[12] net9[12] not_4
+x8[11] net2[11] net9[11] not_4
+x8[10] net2[10] net9[10] not_4
+x8[9] net2[9] net9[9] not_4
+x8[8] net2[8] net9[8] not_4
+x8[7] net2[7] net9[7] not_4
+x8[6] net2[6] net9[6] not_4
+x8[5] net2[5] net9[5] not_4
+x8[4] net2[4] net9[4] not_4
+x8[3] net2[3] net9[3] not_4
+x8[2] net2[2] net9[2] not_4
+x8[1] net2[1] net9[1] not_4
+x8[0] net2[0] net9[0] not_4
+x9 SEL_hi[3] ROW[63] ROW[62] ROW[61] ROW[60] ROW[59] ROW[58] ROW[57] ROW[56] ROW[55] ROW[54] ROW[53]
++ ROW[52] ROW[51] ROW[50] ROW[49] ROW[48] net10[15] net10[14] net10[13] net10[12] net10[11] net10[10]
++ net10[9] net10[8] net10[7] net10[6] net10[5] net10[4] net10[3] net10[2] net10[1] net10[0] rom_dec_pref_4b
+x10[15] net2[15] net10[15] not_4
+x10[14] net2[14] net10[14] not_4
+x10[13] net2[13] net10[13] not_4
+x10[12] net2[12] net10[12] not_4
+x10[11] net2[11] net10[11] not_4
+x10[10] net2[10] net10[10] not_4
+x10[9] net2[9] net10[9] not_4
+x10[8] net2[8] net10[8] not_4
+x10[7] net2[7] net10[7] not_4
+x10[6] net2[6] net10[6] not_4
+x10[5] net2[5] net10[5] not_4
+x10[4] net2[4] net10[4] not_4
+x10[3] net2[3] net10[3] not_4
+x10[2] net2[2] net10[2] not_4
+x10[1] net2[1] net10[1] not_4
+x10[0] net2[0] net10[0] not_4
+x8 SEL_hi[4] ROW[79] ROW[78] ROW[77] ROW[76] ROW[75] ROW[74] ROW[73] ROW[72] ROW[71] ROW[70] ROW[69]
++ ROW[68] ROW[67] ROW[66] ROW[65] ROW[64] net11[15] net11[14] net11[13] net11[12] net11[11] net11[10]
++ net11[9] net11[8] net11[7] net11[6] net11[5] net11[4] net11[3] net11[2] net11[1] net11[0] rom_dec_pref_4b
+x9[15] net3[15] net11[15] not_4
+x9[14] net3[14] net11[14] not_4
+x9[13] net3[13] net11[13] not_4
+x9[12] net3[12] net11[12] not_4
+x9[11] net3[11] net11[11] not_4
+x9[10] net3[10] net11[10] not_4
+x9[9] net3[9] net11[9] not_4
+x9[8] net3[8] net11[8] not_4
+x9[7] net3[7] net11[7] not_4
+x9[6] net3[6] net11[6] not_4
+x9[5] net3[5] net11[5] not_4
+x9[4] net3[4] net11[4] not_4
+x9[3] net3[3] net11[3] not_4
+x9[2] net3[2] net11[2] not_4
+x9[1] net3[1] net11[1] not_4
+x9[0] net3[0] net11[0] not_4
+x10 SEL_hi[5] ROW[95] ROW[94] ROW[93] ROW[92] ROW[91] ROW[90] ROW[89] ROW[88] ROW[87] ROW[86]
++ ROW[85] ROW[84] ROW[83] ROW[82] ROW[81] ROW[80] net12[15] net12[14] net12[13] net12[12] net12[11] net12[10]
++ net12[9] net12[8] net12[7] net12[6] net12[5] net12[4] net12[3] net12[2] net12[1] net12[0] rom_dec_pref_4b
+x11[15] net3[15] net12[15] not_4
+x11[14] net3[14] net12[14] not_4
+x11[13] net3[13] net12[13] not_4
+x11[12] net3[12] net12[12] not_4
+x11[11] net3[11] net12[11] not_4
+x11[10] net3[10] net12[10] not_4
+x11[9] net3[9] net12[9] not_4
+x11[8] net3[8] net12[8] not_4
+x11[7] net3[7] net12[7] not_4
+x11[6] net3[6] net12[6] not_4
+x11[5] net3[5] net12[5] not_4
+x11[4] net3[4] net12[4] not_4
+x11[3] net3[3] net12[3] not_4
+x11[2] net3[2] net12[2] not_4
+x11[1] net3[1] net12[1] not_4
+x11[0] net3[0] net12[0] not_4
+x12 SEL_hi[6] ROW[111] ROW[110] ROW[109] ROW[108] ROW[107] ROW[106] ROW[105] ROW[104] ROW[103]
++ ROW[102] ROW[101] ROW[100] ROW[99] ROW[98] ROW[97] ROW[96] net13[15] net13[14] net13[13] net13[12] net13[11]
++ net13[10] net13[9] net13[8] net13[7] net13[6] net13[5] net13[4] net13[3] net13[2] net13[1] net13[0]
++ rom_dec_pref_4b
+x13[15] net3[15] net13[15] not_4
+x13[14] net3[14] net13[14] not_4
+x13[13] net3[13] net13[13] not_4
+x13[12] net3[12] net13[12] not_4
+x13[11] net3[11] net13[11] not_4
+x13[10] net3[10] net13[10] not_4
+x13[9] net3[9] net13[9] not_4
+x13[8] net3[8] net13[8] not_4
+x13[7] net3[7] net13[7] not_4
+x13[6] net3[6] net13[6] not_4
+x13[5] net3[5] net13[5] not_4
+x13[4] net3[4] net13[4] not_4
+x13[3] net3[3] net13[3] not_4
+x13[2] net3[2] net13[2] not_4
+x13[1] net3[1] net13[1] not_4
+x13[0] net3[0] net13[0] not_4
+x14 SEL_hi[7] ROW[127] ROW[126] ROW[125] ROW[124] ROW[123] ROW[122] ROW[121] ROW[120] ROW[119]
++ ROW[118] ROW[117] ROW[116] ROW[115] ROW[114] ROW[113] ROW[112] net14[15] net14[14] net14[13] net14[12]
++ net14[11] net14[10] net14[9] net14[8] net14[7] net14[6] net14[5] net14[4] net14[3] net14[2] net14[1] net14[0]
++ rom_dec_pref_4b
+x15[15] net3[15] net14[15] not_4
+x15[14] net3[14] net14[14] not_4
+x15[13] net3[13] net14[13] not_4
+x15[12] net3[12] net14[12] not_4
+x15[11] net3[11] net14[11] not_4
+x15[10] net3[10] net14[10] not_4
+x15[9] net3[9] net14[9] not_4
+x15[8] net3[8] net14[8] not_4
+x15[7] net3[7] net14[7] not_4
+x15[6] net3[6] net14[6] not_4
+x15[5] net3[5] net14[5] not_4
+x15[4] net3[4] net14[4] not_4
+x15[3] net3[3] net14[3] not_4
+x15[2] net3[2] net14[2] not_4
+x15[1] net3[1] net14[1] not_4
+x15[0] net3[0] net14[0] not_4
+x11 SEL_hi[8] ROW[143] ROW[142] ROW[141] ROW[140] ROW[139] ROW[138] ROW[137] ROW[136] ROW[135]
++ ROW[134] ROW[133] ROW[132] ROW[131] ROW[130] ROW[129] ROW[128] net15[15] net15[14] net15[13] net15[12]
++ net15[11] net15[10] net15[9] net15[8] net15[7] net15[6] net15[5] net15[4] net15[3] net15[2] net15[1] net15[0]
++ rom_dec_pref_4b
+x12[15] net4[15] net15[15] not_4
+x12[14] net4[14] net15[14] not_4
+x12[13] net4[13] net15[13] not_4
+x12[12] net4[12] net15[12] not_4
+x12[11] net4[11] net15[11] not_4
+x12[10] net4[10] net15[10] not_4
+x12[9] net4[9] net15[9] not_4
+x12[8] net4[8] net15[8] not_4
+x12[7] net4[7] net15[7] not_4
+x12[6] net4[6] net15[6] not_4
+x12[5] net4[5] net15[5] not_4
+x12[4] net4[4] net15[4] not_4
+x12[3] net4[3] net15[3] not_4
+x12[2] net4[2] net15[2] not_4
+x12[1] net4[1] net15[1] not_4
+x12[0] net4[0] net15[0] not_4
+x13 SEL_hi[9] ROW[159] ROW[158] ROW[157] ROW[156] ROW[155] ROW[154] ROW[153] ROW[152] ROW[151]
++ ROW[150] ROW[149] ROW[148] ROW[147] ROW[146] ROW[145] ROW[144] net16[15] net16[14] net16[13] net16[12]
++ net16[11] net16[10] net16[9] net16[8] net16[7] net16[6] net16[5] net16[4] net16[3] net16[2] net16[1] net16[0]
++ rom_dec_pref_4b
+x14[15] net4[15] net16[15] not_4
+x14[14] net4[14] net16[14] not_4
+x14[13] net4[13] net16[13] not_4
+x14[12] net4[12] net16[12] not_4
+x14[11] net4[11] net16[11] not_4
+x14[10] net4[10] net16[10] not_4
+x14[9] net4[9] net16[9] not_4
+x14[8] net4[8] net16[8] not_4
+x14[7] net4[7] net16[7] not_4
+x14[6] net4[6] net16[6] not_4
+x14[5] net4[5] net16[5] not_4
+x14[4] net4[4] net16[4] not_4
+x14[3] net4[3] net16[3] not_4
+x14[2] net4[2] net16[2] not_4
+x14[1] net4[1] net16[1] not_4
+x14[0] net4[0] net16[0] not_4
+x15 SEL_hi[10] ROW[175] ROW[174] ROW[173] ROW[172] ROW[171] ROW[170] ROW[169] ROW[168] ROW[167]
++ ROW[166] ROW[165] ROW[164] ROW[163] ROW[162] ROW[161] ROW[160] net17[15] net17[14] net17[13] net17[12]
++ net17[11] net17[10] net17[9] net17[8] net17[7] net17[6] net17[5] net17[4] net17[3] net17[2] net17[1] net17[0]
++ rom_dec_pref_4b
+x16[15] net4[15] net17[15] not_4
+x16[14] net4[14] net17[14] not_4
+x16[13] net4[13] net17[13] not_4
+x16[12] net4[12] net17[12] not_4
+x16[11] net4[11] net17[11] not_4
+x16[10] net4[10] net17[10] not_4
+x16[9] net4[9] net17[9] not_4
+x16[8] net4[8] net17[8] not_4
+x16[7] net4[7] net17[7] not_4
+x16[6] net4[6] net17[6] not_4
+x16[5] net4[5] net17[5] not_4
+x16[4] net4[4] net17[4] not_4
+x16[3] net4[3] net17[3] not_4
+x16[2] net4[2] net17[2] not_4
+x16[1] net4[1] net17[1] not_4
+x16[0] net4[0] net17[0] not_4
+x17 SEL_hi[11] ROW[191] ROW[190] ROW[189] ROW[188] ROW[187] ROW[186] ROW[185] ROW[184] ROW[183]
++ ROW[182] ROW[181] ROW[180] ROW[179] ROW[178] ROW[177] ROW[176] net18[15] net18[14] net18[13] net18[12]
++ net18[11] net18[10] net18[9] net18[8] net18[7] net18[6] net18[5] net18[4] net18[3] net18[2] net18[1] net18[0]
++ rom_dec_pref_4b
+x18[15] net4[15] net18[15] not_4
+x18[14] net4[14] net18[14] not_4
+x18[13] net4[13] net18[13] not_4
+x18[12] net4[12] net18[12] not_4
+x18[11] net4[11] net18[11] not_4
+x18[10] net4[10] net18[10] not_4
+x18[9] net4[9] net18[9] not_4
+x18[8] net4[8] net18[8] not_4
+x18[7] net4[7] net18[7] not_4
+x18[6] net4[6] net18[6] not_4
+x18[5] net4[5] net18[5] not_4
+x18[4] net4[4] net18[4] not_4
+x18[3] net4[3] net18[3] not_4
+x18[2] net4[2] net18[2] not_4
+x18[1] net4[1] net18[1] not_4
+x18[0] net4[0] net18[0] not_4
+x19 SEL_hi[12] ROW[207] ROW[206] ROW[205] ROW[204] ROW[203] ROW[202] ROW[201] ROW[200] ROW[199]
++ ROW[198] ROW[197] ROW[196] ROW[195] ROW[194] ROW[193] ROW[192] net19[15] net19[14] net19[13] net19[12]
++ net19[11] net19[10] net19[9] net19[8] net19[7] net19[6] net19[5] net19[4] net19[3] net19[2] net19[1] net19[0]
++ rom_dec_pref_4b
+x20[15] net5[15] net19[15] not_4
+x20[14] net5[14] net19[14] not_4
+x20[13] net5[13] net19[13] not_4
+x20[12] net5[12] net19[12] not_4
+x20[11] net5[11] net19[11] not_4
+x20[10] net5[10] net19[10] not_4
+x20[9] net5[9] net19[9] not_4
+x20[8] net5[8] net19[8] not_4
+x20[7] net5[7] net19[7] not_4
+x20[6] net5[6] net19[6] not_4
+x20[5] net5[5] net19[5] not_4
+x20[4] net5[4] net19[4] not_4
+x20[3] net5[3] net19[3] not_4
+x20[2] net5[2] net19[2] not_4
+x20[1] net5[1] net19[1] not_4
+x20[0] net5[0] net19[0] not_4
+x21 SEL_hi[13] ROW[223] ROW[222] ROW[221] ROW[220] ROW[219] ROW[218] ROW[217] ROW[216] ROW[215]
++ ROW[214] ROW[213] ROW[212] ROW[211] ROW[210] ROW[209] ROW[208] net20[15] net20[14] net20[13] net20[12]
++ net20[11] net20[10] net20[9] net20[8] net20[7] net20[6] net20[5] net20[4] net20[3] net20[2] net20[1] net20[0]
++ rom_dec_pref_4b
+x22[15] net5[15] net20[15] not_4
+x22[14] net5[14] net20[14] not_4
+x22[13] net5[13] net20[13] not_4
+x22[12] net5[12] net20[12] not_4
+x22[11] net5[11] net20[11] not_4
+x22[10] net5[10] net20[10] not_4
+x22[9] net5[9] net20[9] not_4
+x22[8] net5[8] net20[8] not_4
+x22[7] net5[7] net20[7] not_4
+x22[6] net5[6] net20[6] not_4
+x22[5] net5[5] net20[5] not_4
+x22[4] net5[4] net20[4] not_4
+x22[3] net5[3] net20[3] not_4
+x22[2] net5[2] net20[2] not_4
+x22[1] net5[1] net20[1] not_4
+x22[0] net5[0] net20[0] not_4
+x23 SEL_hi[14] ROW[239] ROW[238] ROW[237] ROW[236] ROW[235] ROW[234] ROW[233] ROW[232] ROW[231]
++ ROW[230] ROW[229] ROW[228] ROW[227] ROW[226] ROW[225] ROW[224] net21[15] net21[14] net21[13] net21[12]
++ net21[11] net21[10] net21[9] net21[8] net21[7] net21[6] net21[5] net21[4] net21[3] net21[2] net21[1] net21[0]
++ rom_dec_pref_4b
+x24[15] net5[15] net21[15] not_4
+x24[14] net5[14] net21[14] not_4
+x24[13] net5[13] net21[13] not_4
+x24[12] net5[12] net21[12] not_4
+x24[11] net5[11] net21[11] not_4
+x24[10] net5[10] net21[10] not_4
+x24[9] net5[9] net21[9] not_4
+x24[8] net5[8] net21[8] not_4
+x24[7] net5[7] net21[7] not_4
+x24[6] net5[6] net21[6] not_4
+x24[5] net5[5] net21[5] not_4
+x24[4] net5[4] net21[4] not_4
+x24[3] net5[3] net21[3] not_4
+x24[2] net5[2] net21[2] not_4
+x24[1] net5[1] net21[1] not_4
+x24[0] net5[0] net21[0] not_4
+x25 SEL_hi[15] ROW[255] ROW[254] ROW[253] ROW[252] ROW[251] ROW[250] ROW[249] ROW[248] ROW[247]
++ ROW[246] ROW[245] ROW[244] ROW[243] ROW[242] ROW[241] ROW[240] net22[15] net22[14] net22[13] net22[12]
++ net22[11] net22[10] net22[9] net22[8] net22[7] net22[6] net22[5] net22[4] net22[3] net22[2] net22[1] net22[0]
++ rom_dec_pref_4b
+x26[15] net5[15] net22[15] not_4
+x26[14] net5[14] net22[14] not_4
+x26[13] net5[13] net22[13] not_4
+x26[12] net5[12] net22[12] not_4
+x26[11] net5[11] net22[11] not_4
+x26[10] net5[10] net22[10] not_4
+x26[9] net5[9] net22[9] not_4
+x26[8] net5[8] net22[8] not_4
+x26[7] net5[7] net22[7] not_4
+x26[6] net5[6] net22[6] not_4
+x26[5] net5[5] net22[5] not_4
+x26[4] net5[4] net22[4] not_4
+x26[3] net5[3] net22[3] not_4
+x26[2] net5[2] net22[2] not_4
+x26[1] net5[1] net22[1] not_4
+x26[0] net5[0] net22[0] not_4
+x1[3] net6[3] COL[3] not
+x1[2] net6[2] COL[2] not
+x1[1] net6[1] COL[1] not
+x1[0] net6[0] COL[0] not
+x2[15] net1[15] net2[15] not_4
+x2[14] net1[14] net2[14] not_4
+x2[13] net1[13] net2[13] not_4
+x2[12] net1[12] net2[12] not_4
+x2[11] net1[11] net2[11] not_4
+x2[10] net1[10] net2[10] not_4
+x2[9] net1[9] net2[9] not_4
+x2[8] net1[8] net2[8] not_4
+x2[7] net1[7] net2[7] not_4
+x2[6] net1[6] net2[6] not_4
+x2[5] net1[5] net2[5] not_4
+x2[4] net1[4] net2[4] not_4
+x2[3] net1[3] net2[3] not_4
+x2[2] net1[2] net2[2] not_4
+x2[1] net1[1] net2[1] not_4
+x2[0] net1[0] net2[0] not_4
+x3[15] net1[15] net3[15] not_4
+x3[14] net1[14] net3[14] not_4
+x3[13] net1[13] net3[13] not_4
+x3[12] net1[12] net3[12] not_4
+x3[11] net1[11] net3[11] not_4
+x3[10] net1[10] net3[10] not_4
+x3[9] net1[9] net3[9] not_4
+x3[8] net1[8] net3[8] not_4
+x3[7] net1[7] net3[7] not_4
+x3[6] net1[6] net3[6] not_4
+x3[5] net1[5] net3[5] not_4
+x3[4] net1[4] net3[4] not_4
+x3[3] net1[3] net3[3] not_4
+x3[2] net1[2] net3[2] not_4
+x3[1] net1[1] net3[1] not_4
+x3[0] net1[0] net3[0] not_4
+x7[15] net1[15] net4[15] not_4
+x7[14] net1[14] net4[14] not_4
+x7[13] net1[13] net4[13] not_4
+x7[12] net1[12] net4[12] not_4
+x7[11] net1[11] net4[11] not_4
+x7[10] net1[10] net4[10] not_4
+x7[9] net1[9] net4[9] not_4
+x7[8] net1[8] net4[8] not_4
+x7[7] net1[7] net4[7] not_4
+x7[6] net1[6] net4[6] not_4
+x7[5] net1[5] net4[5] not_4
+x7[4] net1[4] net4[4] not_4
+x7[3] net1[3] net4[3] not_4
+x7[2] net1[2] net4[2] not_4
+x7[1] net1[1] net4[1] not_4
+x7[0] net1[0] net4[0] not_4
+x6[15] net1[15] net5[15] not_4
+x6[14] net1[14] net5[14] not_4
+x6[13] net1[13] net5[13] not_4
+x6[12] net1[12] net5[12] not_4
+x6[11] net1[11] net5[11] not_4
+x6[10] net1[10] net5[10] not_4
+x6[9] net1[9] net5[9] not_4
+x6[8] net1[8] net5[8] not_4
+x6[7] net1[7] net5[7] not_4
+x6[6] net1[6] net5[6] not_4
+x6[5] net1[5] net5[5] not_4
+x6[4] net1[4] net5[4] not_4
+x6[3] net1[3] net5[3] not_4
+x6[2] net1[2] net5[2] not_4
+x6[1] net1[1] net5[1] not_4
+x6[0] net1[0] net5[0] not_4
+x27[15] SEL_lo[15] net1[15] not_4
+x27[14] SEL_lo[14] net1[14] not_4
+x27[13] SEL_lo[13] net1[13] not_4
+x27[12] SEL_lo[12] net1[12] not_4
+x27[11] SEL_lo[11] net1[11] not_4
+x27[10] SEL_lo[10] net1[10] not_4
+x27[9] SEL_lo[9] net1[9] not_4
+x27[8] SEL_lo[8] net1[8] not_4
+x27[7] SEL_lo[7] net1[7] not_4
+x27[6] SEL_lo[6] net1[6] not_4
+x27[5] SEL_lo[5] net1[5] not_4
+x27[4] SEL_lo[4] net1[4] not_4
+x27[3] SEL_lo[3] net1[3] not_4
+x27[2] SEL_lo[2] net1[2] not_4
+x27[1] SEL_lo[1] net1[1] not_4
+x27[0] SEL_lo[0] net1[0] not_4
+**.ends
+
+* expanding   symbol:  rom_dec_4b.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/blocks/rom/rom_dec_4b.sym
+** sch_path: /media/FlexRV32/asic/blocks/rom/rom_dec_4b.sch
+.subckt rom_dec_4b A[3] A[2] A[1] A[0] SEL[15] SEL[14] SEL[13] SEL[12] SEL[11] SEL[10] SEL[9] SEL[8]
++ SEL[7] SEL[6] SEL[5] SEL[4] SEL[3] SEL[2] SEL[1] SEL[0]
+*.opin
+*+ SEL[15],SEL[14],SEL[13],SEL[12],SEL[11],SEL[10],SEL[9],SEL[8],SEL[7],SEL[6],SEL[5],SEL[4],SEL[3],SEL[2],SEL[1],SEL[0]
+*.ipin A[3],A[2],A[1],A[0]
+x1 A[1] A[0] SEL_lo[3] SEL_lo[2] SEL_lo[1] SEL_lo[0] rom_dec_2b
+x2 A[3] A[2] SEL_hi[3] SEL_hi[2] SEL_hi[1] SEL_hi[0] rom_dec_2b
+x4 SEL_hi[0] SEL_lo[1] SEL[1] rom_nor2
+x3 SEL_hi[0] SEL_lo[0] SEL[0] rom_nor2
+x6 SEL_hi[0] SEL_lo[3] SEL[3] rom_nor2
+x5 SEL_hi[0] SEL_lo[2] SEL[2] rom_nor2
+x7 SEL_hi[1] SEL_lo[1] SEL[5] rom_nor2
+x8 SEL_hi[1] SEL_lo[0] SEL[4] rom_nor2
+x9 SEL_hi[1] SEL_lo[3] SEL[7] rom_nor2
+x10 SEL_hi[1] SEL_lo[2] SEL[6] rom_nor2
+x11 SEL_hi[2] SEL_lo[1] SEL[9] rom_nor2
+x12 SEL_hi[2] SEL_lo[0] SEL[8] rom_nor2
+x13 SEL_hi[2] SEL_lo[3] SEL[11] rom_nor2
+x14 SEL_hi[2] SEL_lo[2] SEL[10] rom_nor2
+x15 SEL_hi[3] SEL_lo[1] SEL[13] rom_nor2
+x16 SEL_hi[3] SEL_lo[0] SEL[12] rom_nor2
+x17 SEL_hi[3] SEL_lo[3] SEL[15] rom_nor2
+x18 SEL_hi[3] SEL_lo[2] SEL[14] rom_nor2
+.ends
+
+
+* expanding   symbol:  rom_dec_2b.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/blocks/rom/rom_dec_2b.sym
+** sch_path: /media/FlexRV32/asic/blocks/rom/rom_dec_2b.sch
+.subckt rom_dec_2b A[1] A[0] SEL_n[3] SEL_n[2] SEL_n[1] SEL_n[0]
+*.ipin A[1],A[0]
+*.opin SEL_n[3],SEL_n[2],SEL_n[1],SEL_n[0]
+x1 SEL_n[0] net1 net3 rom_nand2
+x2 SEL_n[1] net2 net3 rom_nand2
+x3 SEL_n[2] net1 net4 rom_nand2
+x4 SEL_n[3] net2 net4 rom_nand2
+x5 A[0] net1 not
+x6 A[1] net3 not
+x7 net1 net2 not
+x8 net3 net4 not
+.ends
+
+
+* expanding   symbol:  rom_dec_pref_4b.sym # of pins=3
+** sym_path: /media/FlexRV32/asic/blocks/rom/rom_dec_pref_4b.sym
+** sch_path: /media/FlexRV32/asic/blocks/rom/rom_dec_pref_4b.sch
+.subckt rom_dec_pref_4b SEL_hi SEL[15] SEL[14] SEL[13] SEL[12] SEL[11] SEL[10] SEL[9] SEL[8] SEL[7]
++ SEL[6] SEL[5] SEL[4] SEL[3] SEL[2] SEL[1] SEL[0] SEL_lo[15] SEL_lo[14] SEL_lo[13] SEL_lo[12] SEL_lo[11]
++ SEL_lo[10] SEL_lo[9] SEL_lo[8] SEL_lo[7] SEL_lo[6] SEL_lo[5] SEL_lo[4] SEL_lo[3] SEL_lo[2] SEL_lo[1] SEL_lo[0]
+*.opin
+*+ SEL[15],SEL[14],SEL[13],SEL[12],SEL[11],SEL[10],SEL[9],SEL[8],SEL[7],SEL[6],SEL[5],SEL[4],SEL[3],SEL[2],SEL[1],SEL[0]
+*.ipin SEL_hi
+*.ipin
+*+ SEL_lo[15],SEL_lo[14],SEL_lo[13],SEL_lo[12],SEL_lo[11],SEL_lo[10],SEL_lo[9],SEL_lo[8],SEL_lo[7],SEL_lo[6],SEL_lo[5],SEL_lo[4],SEL_lo[3],SEL_lo[2],SEL_lo[1],SEL_lo[0]
+x4 net1 SEL_lo[1] SEL[1] rom_nor2
+x3 net1 SEL_lo[0] SEL[0] rom_nor2
+x7 net1 SEL_lo[3] SEL[3] rom_nor2
+x8 net1 SEL_lo[2] SEL[2] rom_nor2
+x9 net2 SEL_lo[5] SEL[5] rom_nor2
+x10 net2 SEL_lo[4] SEL[4] rom_nor2
+x11 net2 SEL_lo[7] SEL[7] rom_nor2
+x12 net2 SEL_lo[6] SEL[6] rom_nor2
+x13 net3 SEL_lo[9] SEL[9] rom_nor2
+x14 net3 SEL_lo[8] SEL[8] rom_nor2
+x15 net3 SEL_lo[11] SEL[11] rom_nor2
+x16 net3 SEL_lo[10] SEL[10] rom_nor2
+x17 net4 SEL_lo[13] SEL[13] rom_nor2
+x18 net4 SEL_lo[12] SEL[12] rom_nor2
+x19 net4 SEL_lo[15] SEL[15] rom_nor2
+x20 net4 SEL_lo[14] SEL[14] rom_nor2
+x21 SEL_hi net1 not
+x22 SEL_hi net2 not
+x23 SEL_hi net3 not
+x24 SEL_hi net4 not
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/not_2.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/elements/logic/not_2.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/not_2.sch
+.subckt not_2 A Y
+*.ipin A
+*.opin Y
+XM1 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/not_4.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/elements/logic/not_4.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/not_4.sch
+.subckt not_4 A Y
+*.ipin A
+*.opin Y
+XM1 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM4 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM6 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM7 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM8 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/not.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/elements/logic/not.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/not.sch
+.subckt not A Y
+*.ipin A
+*.opin Y
+XM1 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  rom_nor2.sym # of pins=3
+** sym_path: /media/FlexRV32/asic/blocks/rom/rom_nor2.sym
+** sch_path: /media/FlexRV32/asic/blocks/rom/rom_nor2.sch
+.subckt rom_nor2 A B NOR
+*.ipin A
+*.opin NOR
+*.ipin B
+XM4 net1 A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM5 NOR B net1 net1 sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM9 NOR B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM10 NOR A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  ./rom_nand2.sym # of pins=3
+** sym_path: /media/FlexRV32/asic/blocks/rom/rom_nand2.sym
+** sch_path: /media/FlexRV32/asic/blocks/rom/rom_nand2.sch
+.subckt rom_nand2 NAND A B
+*.ipin A
+*.opin NAND
+*.ipin B
+XM2 NAND B VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 NAND A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM6 NAND A p0 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM7 p0 B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+.GLOBAL VCC
+.GLOBAL VSS
+.end

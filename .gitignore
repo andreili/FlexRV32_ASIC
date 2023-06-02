@@ -3,3 +3,6 @@
 log*.txt
 bin/*
 build/*
+*/simulation/*.spice
+*.fst
+*.gtkw

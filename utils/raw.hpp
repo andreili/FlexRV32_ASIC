@@ -61,7 +61,7 @@ public:
             }
             else if (match[1].compare("No. Points") == 0)
             {
-                m_point_count = std::stoi(match[2]);
+                //m_point_count = std::stoi(match[2]);
             }
             else if (match[1].compare("Variables") == 0)
             {
@@ -169,7 +169,7 @@ public:
 private:
     std::ifstream   m_file;
     int             m_var_count;
-    int             m_point_count;
+    //int             m_point_count;
     double          m_time;
     std::list<Variable*> m_vars;
 };

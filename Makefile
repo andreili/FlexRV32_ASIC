@@ -2,6 +2,7 @@ DATE = $(shell date +"%m_%d_%Y_%H_%M")
 BIN_DIR=bin
 BUILD_DIR=build
 exe_ext=
+SIM_NICE=20
 
 #blocks=$(shell cd blocks && find * -maxdepth 0 -type d)
 utils=raw2fst
@@ -16,13 +17,13 @@ default: all
 
 sim_blk_%:
 	@echo "--- Simulate block ($*) ---"
-	cd blocks/$* && Xyce $*_sim.spice -l log_$(DATE).txt &> /dev/null
+	cd blocks/$* && nice -n $(SIM_NICE) Xyce $*_sim.spice -l log_$(DATE).txt &> /dev/null
 
 #%.json:
 #	@echo "--- Convert RAW data to JSON ($*) ---"
 #	python ./scripts/raw2json.py blocks/$*/simulation/$*.spice.raw
 
-%.fst: $(BIN_DIR)/raw2fst
+%.fst: $(BIN_DIR)/raw2fst sim_blk_%
 	@echo "--- Convert RAW data to FST ($*) ---"
 	$(BIN_DIR)/raw2fst blocks/$*/simulation/$*.spice.raw
 

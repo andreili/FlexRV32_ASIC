@@ -13,8 +13,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.85111e-09
-x2=9.31535e-09
+x1=0
+x2=5e-09
 divx=5
 subdivx=1
 node="i_clk
@@ -41,8 +41,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.85111e-09
-x2=9.31535e-09
+x1=0
+x2=5e-09
 divx=5
 subdivx=1
 node="pop_p
@@ -70,8 +70,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.85111e-09
-x2=9.31535e-09
+x1=0
+x2=5e-09
 divx=5
 subdivx=1
 node="reset_p
@@ -99,8 +99,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.85111e-09
-x2=9.31535e-09
+x1=0
+x2=5e-09
 divx=5
 subdivx=1
 node="i_clk
@@ -128,8 +128,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.85111e-09
-x2=9.31535e-09
+x1=0
+x2=5e-09
 divx=5
 subdivx=1
 node="i_clk
@@ -158,8 +158,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=7.85111e-09
-x2=9.31535e-09
+x1=0
+x2=5e-09
 divx=5
 subdivx=1
 
@@ -431,7 +431,7 @@ C {../../elements/logic/not.sym} -160 480 0 0 {name=x102}
 C {devices/ipin.sym} -200 480 0 0 {name=p20 lab=i_push}
 C {devices/lab_pin.sym} -110 480 2 0 {name=p21 sig_type=std_logic lab=push_n}
 C {devices/lab_pin.sym} 2400 960 3 0 {name=p22 sig_type=std_logic lab=pop_p}
-C {devices/lab_pin.sym} 2310 940 2 1 {name=p24 sig_type=std_logic lab=stall_p}
+C {devices/lab_pin.sym} 2310 940 2 1 {name=p24 sig_type=std_logic lab=stall_n}
 C {devices/lab_pin.sym} 2310 960 2 1 {name=p25 sig_type=std_logic lab=is_head_n[0]}
 C {devices/ipin.sym} -200 360 0 0 {name=p26 lab=i_stall}
 C {devices/ipin.sym} -200 400 0 0 {name=p27 lab=i_pc[31:1]}
@@ -555,7 +555,7 @@ C {../../elements/logic/nor2.sym} 2450 1110 2 1 {name=x104}
 C {../../elements/logic/nand2.sym} 2820 1050 2 1 {name=x111}
 C {../../elements/logic/nand2.sym} 2820 1110 0 0 {name=x112}
 C {../../elements/logic/not.sym} -160 360 0 0 {name=x101}
-C {devices/lab_pin.sym} -110 360 2 0 {name=p39 sig_type=std_logic lab=stall_p}
+C {devices/lab_pin.sym} -110 360 2 0 {name=p39 sig_type=std_logic lab=stall_n}
 C {devices/lab_pin.sym} 920 150 2 0 {name=p40 sig_type=std_logic lab=hi_valid_n}
 C {devices/lab_pin.sym} 880 1100 2 0 {name=p205 sig_type=std_logic lab=is_head_n[4]}
 C {../../elements/logic/mux2.sym} 530 430 0 0 {name=x180}
@@ -705,11 +705,11 @@ C {devices/lab_pin.sym} 1720 260 2 1 {name=p140 sig_type=std_logic lab=pc_buf_p[
 C {devices/lab_pin.sym} 2730 210 2 0 {name=p172 sig_type=std_logic lab=pop_buf_n}
 C {devices/lab_pin.sym} 2730 170 2 0 {name=p173 sig_type=std_logic lab=pop_buf_p}
 C {devices/lab_pin.sym} -270 800 1 0 {name=p174 sig_type=std_logic lab=clk_n}
-C {../../elements/logic/not_4.sym} -190 800 0 0 {name=x20}
+C {../../elements/logic/not_8.sym} -190 800 0 0 {name=x20}
 C {../../elements/logic/not_8.sym} -190 880 0 0 {name=x21}
 C {../../elements/logic/not_8.sym} -190 920 0 0 {name=x22}
-C {../../elements/logic/not_4.sym} -190 760 0 0 {name=x23}
-C {../../elements/logic/not_4.sym} -190 720 0 0 {name=x24}
+C {../../elements/logic/not_8.sym} -190 760 0 0 {name=x23}
+C {../../elements/logic/not_8.sym} -190 720 0 0 {name=x24}
 C {../../elements/logic/not_4.sym} 2330 210 0 0 {name=x6}
 C {../../elements/logic/not_4.sym} 2330 170 0 0 {name=x5}
 C {../../elements/logic/not_4.sym} 2680 170 0 0 {name=x1}
