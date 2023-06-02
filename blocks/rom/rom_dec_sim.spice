@@ -10,7 +10,7 @@ VVSS VSS 0 PWL 0n 0
 .include simulation/stimuli_rom_dec.cir
 .options timeint reltol=1e-3 abstol=1e-5
 .options linsol type=belos AZ_tol=1.0e-3
-.tran 1p 1025n
+.tran 1p 20n
 .print tran format=raw file=simulation/rom_dec.spice.raw v(*)
 
 .GLOBAL VCC

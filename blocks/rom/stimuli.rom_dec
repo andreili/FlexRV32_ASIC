@@ -1,6 +1,6 @@
 unit n
 voltage {VCC}
-slope 0.1
+slope 0.025
 format hspice_simple
 buswidth A 12 [ ]
 beginfile stimuli_rom_dec.cir
@@ -12,6 +12,8 @@ s 1
 set A 008
 s 1
 set A 00C
+s 1
+set A FFC
 s 1
 set A 010
 s 1

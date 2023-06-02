@@ -1,0 +1,74 @@
+** sch_path: /media/FlexRV32/asic/blocks/rom/rom_dec_cell.sch
+**.subckt rom_dec_cell COL0[3],COL0[2],COL0[1],COL0[0] ROW[3],ROW[2],ROW[1],ROW[0]
+*+ COL[3],COL[2],COL[1],COL[0] COL1[3],COL1[2],COL1[1],COL1[0] COL2[3],COL2[2],COL2[1],COL2[0] COL3[3],COL3[2],COL3[1],COL3[0]
+*.opin COL0[3],COL0[2],COL0[1],COL0[0]
+*.ipin ROW[3],ROW[2],ROW[1],ROW[0]
+*.ipin COL[3],COL[2],COL[1],COL[0]
+*.opin COL1[3],COL1[2],COL1[1],COL1[0]
+*.opin COL2[3],COL2[2],COL2[1],COL2[0]
+*.opin COL3[3],COL3[2],COL3[1],COL3[0]
+x1 ROW[0] net1 not
+x2 ROW[1] net2 not
+x3 ROW[2] net3 not
+x4 ROW[3] net4 not
+x5 COL[0] net5 not
+x6 COL[1] net6 not
+x7 COL[2] net7 not
+x8 COL[3] net8 not
+x9 COL0[0] net1 net5 rom_nand2
+x10 COL0[1] net2 net5 rom_nand2
+x11 COL0[2] net3 net5 rom_nand2
+x12 COL0[3] net4 net5 rom_nand2
+x13 COL1[0] net1 net6 rom_nand2
+x14 COL1[1] net2 net6 rom_nand2
+x15 COL1[2] net3 net6 rom_nand2
+x16 COL1[3] net4 net6 rom_nand2
+x17 COL2[0] net1 net7 rom_nand2
+x18 COL2[1] net2 net7 rom_nand2
+x19 COL2[2] net3 net7 rom_nand2
+x20 COL2[3] net4 net7 rom_nand2
+x21 COL3[0] net1 net8 rom_nand2
+x22 COL3[1] net2 net8 rom_nand2
+x23 COL3[2] net3 net8 rom_nand2
+x24 COL3[3] net4 net8 rom_nand2
+**.ends
+
+* expanding   symbol:  ../../elements/logic/not.sym # of pins=2
+** sym_path: /media/FlexRV32/asic/elements/logic/not.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/not.sch
+.subckt not A Y
+*.ipin A
+*.opin Y
+XM1 Y A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+
+* expanding   symbol:  rom_nand2.sym # of pins=3
+** sym_path: /media/FlexRV32/asic/blocks/rom/rom_nand2.sym
+** sch_path: /media/FlexRV32/asic/blocks/rom/rom_nand2.sch
+.subckt rom_nand2 NAND A B
+*.ipin A
+*.opin NAND
+*.ipin B
+XM2 NAND B VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM3 NAND A VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM6 NAND A p0 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+XM7 p0 B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.65 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1
+.ends
+
+.GLOBAL VCC
+.GLOBAL VSS
+.end

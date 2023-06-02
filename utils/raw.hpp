@@ -154,7 +154,7 @@ public:
             {
                 name = name.replace(pos, 1, 1, '_');
             }*/
-            if ((pos = name.find(':')) == std::string::npos)
+            //if ((pos = name.find(':')) == std::string::npos)
             {
                 cb(var, name);
             }
