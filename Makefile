@@ -4,14 +4,12 @@ BUILD_DIR=build
 exe_ext=
 SIM_NICE=20
 
-#blocks=$(shell cd blocks && find * -maxdepth 0 -type d)
+blocks=$(shell cd blocks && find * -maxdepth 0 -type d)
 utils=raw2fst
-blocks=rv_fetch_buf
 sim_blks=$(blocks:%=sim_blk_%)
-#json_blks=$(blocks:%=%.json)
 fst_blks=$(blocks:%=%.fst)
+wave_blks=$(blocks:%=wave_%)
 utils_lst=$(utils:%=$(BIN_DIR)/%$(exe_ext))
-#utils_bld=$(utils:%=$(BUILD_DIR)/%$(exe_ext))
 
 default: all
 
@@ -19,13 +17,12 @@ sim_blk_%:
 	@echo "--- Simulate block ($*) ---"
 	cd blocks/$* && nice -n $(SIM_NICE) Xyce $*_sim.spice -l log_$(DATE).txt &> /dev/null
 
-#%.json:
-#	@echo "--- Convert RAW data to JSON ($*) ---"
-#	python ./scripts/raw2json.py blocks/$*/simulation/$*.spice.raw
-
 %.fst: $(BIN_DIR)/raw2fst sim_blk_%
 	@echo "--- Convert RAW data to FST ($*) ---"
 	$(BIN_DIR)/raw2fst blocks/$*/simulation/$*.spice.raw
+
+wave_%: %.fst
+	cd blocks/$* && gtkwave ./simulation/$*.spice.fst  -a ./simulation/$*.gtkw
 
 $(BIN_DIR)/%$(exe_ext): utils/*.?pp
 	@echo "--- Build utils ---"
@@ -34,7 +31,6 @@ $(BIN_DIR)/%$(exe_ext): utils/*.?pp
 	cd $(BUILD_DIR) && DESTDIR=../$(BIN_DIR)/ meson install --no-rebuild --only-changed
 	rm -rf $(BUILD_DIR)
 
-#all: $(sim_blks)
 all: $(fst_blks)
 
 .PHONY: all utils
