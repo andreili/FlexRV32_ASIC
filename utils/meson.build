@@ -31,3 +31,4 @@ configure_file(
 subdir('fst')
 
 executable('raw2fst', 'raw2fst.cpp', link_with: libfst_lib, install: true, install_dir: '/')
+executable('mkrom', 'mkrom.cpp', install: true, install_dir: '/')

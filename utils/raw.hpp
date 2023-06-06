@@ -149,7 +149,7 @@ public:
         for (Variable* var: m_vars)
         {
             std::string name = var->get_name();
-            size_t pos;
+            //size_t pos;
             /*while ((pos = name.find(':')) != std::string::npos)
             {
                 name = name.replace(pos, 1, 1, '_');
