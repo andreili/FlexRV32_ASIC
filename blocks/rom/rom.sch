@@ -80,6 +80,11 @@ C {devices/noconn.sym} 940 120 0 1 {name=l4}
 C {devices/lab_pin.sym} 940 120 2 1 {name=p2 sig_type=std_logic lab=ROW[255:0]}
 C {devices/lab_pin.sym} 940 140 2 1 {name=p3 sig_type=std_logic lab=COL[3:0]}
 C {devices/noconn.sym} 940 140 0 1 {name=l1}
-C {sky130_stdcells/dfxtp_1.sym} 360 130 0 0 {name=x2[9:0] VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/dfxtp_1.sym} 360 130 0 0 {name=x2[9:0]
+VGND=VSS
+VNB=VSS
+VPB=VCC
+VPWR=VCC
+prefix=sky130_fd_sc_hd__ }
 C {devices/lab_pin.sym} 450 120 1 0 {name=p4 sig_type=std_logic lab=A_L[9:0]}
 C {devices/ipin.sym} 270 120 0 0 {name=p5 lab=i_clk}

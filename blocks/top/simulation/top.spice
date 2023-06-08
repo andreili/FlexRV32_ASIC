@@ -71,16 +71,16 @@ x1 ROW[255] ROW[254] ROW[253] ROW[252] ROW[251] ROW[250] ROW[249] ROW[248] ROW[2
 
 
 **** end user architecture code
-x2[9] i_clk A[9] VGND VNB VPB VPWR A_L[9] sky130_fd_sc_hd__dfxtp_1
-x2[8] i_clk A[8] VGND VNB VPB VPWR A_L[8] sky130_fd_sc_hd__dfxtp_1
-x2[7] i_clk A[7] VGND VNB VPB VPWR A_L[7] sky130_fd_sc_hd__dfxtp_1
-x2[6] i_clk A[6] VGND VNB VPB VPWR A_L[6] sky130_fd_sc_hd__dfxtp_1
-x2[5] i_clk A[5] VGND VNB VPB VPWR A_L[5] sky130_fd_sc_hd__dfxtp_1
-x2[4] i_clk A[4] VGND VNB VPB VPWR A_L[4] sky130_fd_sc_hd__dfxtp_1
-x2[3] i_clk A[3] VGND VNB VPB VPWR A_L[3] sky130_fd_sc_hd__dfxtp_1
-x2[2] i_clk A[2] VGND VNB VPB VPWR A_L[2] sky130_fd_sc_hd__dfxtp_1
-x2[1] i_clk A[1] VGND VNB VPB VPWR A_L[1] sky130_fd_sc_hd__dfxtp_1
-x2[0] i_clk A[0] VGND VNB VPB VPWR A_L[0] sky130_fd_sc_hd__dfxtp_1
+x2[9] i_clk A[9] VSS VSS VCC VCC A_L[9] sky130_fd_sc_hd__dfxtp_1
+x2[8] i_clk A[8] VSS VSS VCC VCC A_L[8] sky130_fd_sc_hd__dfxtp_1
+x2[7] i_clk A[7] VSS VSS VCC VCC A_L[7] sky130_fd_sc_hd__dfxtp_1
+x2[6] i_clk A[6] VSS VSS VCC VCC A_L[6] sky130_fd_sc_hd__dfxtp_1
+x2[5] i_clk A[5] VSS VSS VCC VCC A_L[5] sky130_fd_sc_hd__dfxtp_1
+x2[4] i_clk A[4] VSS VSS VCC VCC A_L[4] sky130_fd_sc_hd__dfxtp_1
+x2[3] i_clk A[3] VSS VSS VCC VCC A_L[3] sky130_fd_sc_hd__dfxtp_1
+x2[2] i_clk A[2] VSS VSS VCC VCC A_L[2] sky130_fd_sc_hd__dfxtp_1
+x2[1] i_clk A[1] VSS VSS VCC VCC A_L[1] sky130_fd_sc_hd__dfxtp_1
+x2[0] i_clk A[0] VSS VSS VCC VCC A_L[0] sky130_fd_sc_hd__dfxtp_1
 .ends
 
 
