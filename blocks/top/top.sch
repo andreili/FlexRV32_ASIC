@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 C {../../blocks/rom/rom.sym} 360 220 0 0 {name=x1}
-C {devices/lab_pin.sym} 510 220 2 0 {name=p14 sig_type=std_logic lab=w_wb_rdata[31:0]}
-C {devices/lab_pin.sym} 210 220 2 1 {name=p1 sig_type=std_logic lab=w_wb_addr[11:2]}
+C {devices/lab_pin.sym} 510 210 2 0 {name=p14 sig_type=std_logic lab=w_wb_rdata[31:0]}
+C {devices/lab_pin.sym} 210 230 2 1 {name=p1 sig_type=std_logic lab=w_wb_addr[11:2]}
 C {devices/code.sym} 230 50 0 0 {name=ROM_DATA
 only_toplevel=false
 format="@value"
@@ -23,9 +23,8 @@ Vw_wb_ack w_wb_ack 0 PWL 0n \{VCC\}
 .include ./rv_top_wb.spice
 "
 spice_ignore=false}
-C {devices/ipin.sym} 100 140 0 0 {name=p3 lab=i_clk}
+C {devices/ipin.sym} 210 210 0 0 {name=p3 lab=i_clk}
 C {devices/ipin.sym} 100 170 0 0 {name=p4 lab=i_reset_n}
-C {devices/noconn.sym} 100 140 0 1 {name=l3}
 C {devices/noconn.sym} 100 170 0 1 {name=l4}
 C {devices/lab_pin.sym} 200 270 2 1 {name=p5 sig_type=std_logic lab=w_wb_addr[11:2]}
 C {devices/lab_pin.sym} 200 300 2 1 {name=p6 sig_type=std_logic lab=w_wb_rdata[31:0]}
