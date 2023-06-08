@@ -134,7 +134,7 @@ lab=#net7}
 N 190 100 190 120 {
 lab=#net7}
 C {devices/ipin.sym} 250 40 0 0 {name=p59 lab=A[9:0]}
-C {rom_dec_2b.sym} 330 110 0 0 {name=x3}
+C {../../blocks/rom/rom_dec_2b.sym} 330 110 0 0 {name=x3}
 C {devices/lab_pin.sym} 110 100 2 1 {name=p16 sig_type=std_logic lab=A[1:0]}
 C {devices/lab_pin.sym} 490 100 2 0 {name=p21 sig_type=std_logic lab=COL[3:0]}
 C {devices/lab_pin.sym} 110 220 2 1 {name=p12 sig_type=std_logic lab=A[9:6]}
@@ -160,35 +160,35 @@ C {devices/lab_pin.sym} 1660 80 2 0 {name=p67 sig_type=std_logic lab=ROW[239:224
 C {devices/lab_pin.sym} 1940 80 2 0 {name=p70 sig_type=std_logic lab=ROW[255:240]}
 C {devices/opin.sym} 310 60 0 0 {name=p25 lab=COL[3:0]}
 C {devices/lab_pin.sym} 750 270 2 1 {name=p1 sig_type=std_logic lab=SEL_hi[3:0]}
-C {rom_dec_cell.sym} 1300 300 0 0 {name=x5}
+C {../../blocks/rom/rom_dec_cell.sym} 1300 300 0 0 {name=x5}
 C {devices/lab_pin.sym} 1210 490 3 0 {name=p3 sig_type=std_logic lab=SEL_lo[7:4]}
-C {rom_dec_cell.sym} 1580 300 0 0 {name=x6}
+C {../../blocks/rom/rom_dec_cell.sym} 1580 300 0 0 {name=x6}
 C {devices/lab_pin.sym} 1490 490 3 0 {name=p4 sig_type=std_logic lab=SEL_lo[11:8]}
-C {rom_dec_cell.sym} 1020 300 0 0 {name=x7}
+C {../../blocks/rom/rom_dec_cell.sym} 1020 300 0 0 {name=x7}
 C {devices/lab_pin.sym} 930 490 3 0 {name=p5 sig_type=std_logic lab=SEL_lo[3:0]}
-C {rom_dec_cell.sym} 1860 300 0 0 {name=x8}
+C {../../blocks/rom/rom_dec_cell.sym} 1860 300 0 0 {name=x8}
 C {devices/lab_pin.sym} 1770 490 3 0 {name=p6 sig_type=std_logic lab=SEL_lo[15:12]}
 C {devices/lab_pin.sym} 750 200 2 1 {name=p2 sig_type=std_logic lab=SEL_hi[7:4]}
-C {rom_dec_cell.sym} 1300 230 0 0 {name=x4}
-C {rom_dec_cell.sym} 1580 230 0 0 {name=x9}
-C {rom_dec_cell.sym} 1020 230 0 0 {name=x10}
-C {rom_dec_cell.sym} 1860 230 0 0 {name=x11}
+C {../../blocks/rom/rom_dec_cell.sym} 1300 230 0 0 {name=x4}
+C {../../blocks/rom/rom_dec_cell.sym} 1580 230 0 0 {name=x9}
+C {../../blocks/rom/rom_dec_cell.sym} 1020 230 0 0 {name=x10}
+C {../../blocks/rom/rom_dec_cell.sym} 1860 230 0 0 {name=x11}
 C {devices/lab_pin.sym} 750 130 2 1 {name=p7 sig_type=std_logic lab=SEL_hi[11:8]}
-C {rom_dec_cell.sym} 1300 160 0 0 {name=x12}
-C {rom_dec_cell.sym} 1580 160 0 0 {name=x13}
-C {rom_dec_cell.sym} 1020 160 0 0 {name=x14}
-C {rom_dec_cell.sym} 1860 160 0 0 {name=x15}
+C {../../blocks/rom/rom_dec_cell.sym} 1300 160 0 0 {name=x12}
+C {../../blocks/rom/rom_dec_cell.sym} 1580 160 0 0 {name=x13}
+C {../../blocks/rom/rom_dec_cell.sym} 1020 160 0 0 {name=x14}
+C {../../blocks/rom/rom_dec_cell.sym} 1860 160 0 0 {name=x15}
 C {devices/lab_pin.sym} 750 60 2 1 {name=p8 sig_type=std_logic lab=SEL_hi[15:12]}
-C {rom_dec_cell.sym} 1300 90 0 0 {name=x16}
-C {rom_dec_cell.sym} 1580 90 0 0 {name=x17}
-C {rom_dec_cell.sym} 1020 90 0 0 {name=x18}
-C {rom_dec_cell.sym} 1860 90 0 0 {name=x19}
+C {../../blocks/rom/rom_dec_cell.sym} 1300 90 0 0 {name=x16}
+C {../../blocks/rom/rom_dec_cell.sym} 1580 90 0 0 {name=x17}
+C {../../blocks/rom/rom_dec_cell.sym} 1020 90 0 0 {name=x18}
+C {../../blocks/rom/rom_dec_cell.sym} 1860 90 0 0 {name=x19}
 C {devices/launcher.sym} -180 540 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/rom_dec.spice.raw tran"
 }
-C {rom_dec_4b.sym} 330 170 0 0 {name=x20}
-C {rom_dec_4b.sym} 330 230 0 0 {name=x21}
+C {../../blocks/rom/rom_dec_4b.sym} 330 170 0 0 {name=x20}
+C {../../blocks/rom/rom_dec_4b.sym} 330 230 0 0 {name=x21}
 C {sky130_stdcells/inv_8.sym} 150 100 0 0 {name=x1[1:0]
 VGND=VSS
 VNB=VSS

@@ -1,0 +1,137 @@
+* Generated file, don't change!
+
+.include ../rv_core.spice
+
+.subckt rv_top_wb vccd1 vssd1 i_clk i_reset_n o_wb_we o_wb_sel[0] o_wb_sel[1] o_wb_sel[2] o_wb_sel[3] o_wb_stb i_wb_ack o_wb_cyc
++ o_wb_adr[0] o_wb_adr[1] o_wb_adr[2] o_wb_adr[3] o_wb_adr[4] o_wb_adr[5] o_wb_adr[6] o_wb_adr[7] o_wb_adr[8] o_wb_adr[9] o_wb_adr[10] o_wb_adr[11] o_wb_adr[12] o_wb_adr[13] o_wb_adr[14] o_wb_adr[15] o_wb_adr[16] o_wb_adr[17] o_wb_adr[18] o_wb_adr[19] o_wb_adr[20] o_wb_adr[21] o_wb_adr[22] o_wb_adr[23] o_wb_adr[24] o_wb_adr[25] o_wb_adr[26] o_wb_adr[27] o_wb_adr[28] o_wb_adr[29] o_wb_adr[30] o_wb_adr[31]
++ o_wb_dat[0] o_wb_dat[1] o_wb_dat[2] o_wb_dat[3] o_wb_dat[4] o_wb_dat[5] o_wb_dat[6] o_wb_dat[7] o_wb_dat[8] o_wb_dat[9] o_wb_dat[10] o_wb_dat[11] o_wb_dat[12] o_wb_dat[13] o_wb_dat[14] o_wb_dat[15] o_wb_dat[16] o_wb_dat[17] o_wb_dat[18] o_wb_dat[19] o_wb_dat[20] o_wb_dat[21] o_wb_dat[22] o_wb_dat[23] o_wb_dat[24] o_wb_dat[25] o_wb_dat[26] o_wb_dat[27] o_wb_dat[28] o_wb_dat[29] o_wb_dat[30] o_wb_dat[31]
++ i_wb_dat[0] i_wb_dat[1] i_wb_dat[2] i_wb_dat[3] i_wb_dat[4] i_wb_dat[5] i_wb_dat[6] i_wb_dat[7] i_wb_dat[8] i_wb_dat[9] i_wb_dat[10] i_wb_dat[11] i_wb_dat[12] i_wb_dat[13] i_wb_dat[14] i_wb_dat[15] i_wb_dat[16] i_wb_dat[17] i_wb_dat[18] i_wb_dat[19] i_wb_dat[20] i_wb_dat[21] i_wb_dat[22] i_wb_dat[23] i_wb_dat[24] i_wb_dat[25] i_wb_dat[26] i_wb_dat[27] i_wb_dat[28] i_wb_dat[29] i_wb_dat[30] i_wb_dat[31]
+
+XCore vccd1 vssd1 i_clk i_reset_n
++ csr_oread csr_to_trap csr_clear csr_ebreak csr_read csr_set csr_write csr_imm_sel
++ csr_rdata[0] csr_rdata[1] csr_rdata[2] csr_rdata[3] csr_rdata[4] csr_rdata[5] csr_rdata[6] csr_rdata[7] csr_rdata[8] csr_rdata[9] csr_rdata[10] csr_rdata[11] csr_rdata[12] csr_rdata[13] csr_rdata[14] csr_rdata[15] csr_rdata[16] csr_rdata[17] csr_rdata[18] csr_rdata[19] csr_rdata[20] csr_rdata[21] csr_rdata[22] csr_rdata[23] csr_rdata[24] csr_rdata[25] csr_rdata[26] csr_rdata[27] csr_rdata[28] csr_rdata[29] csr_rdata[30] csr_rdata[31] 
++ ret_addr[1] ret_addr[2] ret_addr[3] ret_addr[4] ret_addr[5] ret_addr[6] ret_addr[7] ret_addr[8] ret_addr[9] ret_addr[10] ret_addr[11] ret_addr[12] ret_addr[13] ret_addr[14] ret_addr[15] 
++ csr_trap_pc[1] csr_trap_pc[2] csr_trap_pc[3] csr_trap_pc[4] csr_trap_pc[5] csr_trap_pc[6] csr_trap_pc[7] csr_trap_pc[8] csr_trap_pc[9] csr_trap_pc[10] csr_trap_pc[11] csr_trap_pc[12] csr_trap_pc[13] csr_trap_pc[14] csr_trap_pc[15] 
++ csr_idx[0] csr_idx[1] csr_idx[2] csr_idx[3] csr_idx[4] csr_idx[5] csr_idx[6] csr_idx[7] csr_idx[8] csr_idx[9] csr_idx[10] csr_idx[11] 
++ csr_imm[0] csr_imm[1] csr_imm[2] csr_imm[3] csr_imm[4] 
++ csr_pc_next[1] csr_pc_next[2] csr_pc_next[3] csr_pc_next[4] csr_pc_next[5] csr_pc_next[6] csr_pc_next[7] csr_pc_next[8] csr_pc_next[9] csr_pc_next[10] csr_pc_next[11] csr_pc_next[12] csr_pc_next[13] csr_pc_next[14] csr_pc_next[15] 
++ reg_rdata1[0] reg_rdata1[1] reg_rdata1[2] reg_rdata1[3] reg_rdata1[4] reg_rdata1[5] reg_rdata1[6] reg_rdata1[7] reg_rdata1[8] reg_rdata1[9] reg_rdata1[10] reg_rdata1[11] reg_rdata1[12] reg_rdata1[13] reg_rdata1[14] reg_rdata1[15] reg_rdata1[16] reg_rdata1[17] reg_rdata1[18] reg_rdata1[19] reg_rdata1[20] reg_rdata1[21] reg_rdata1[22] reg_rdata1[23] reg_rdata1[24] reg_rdata1[25] reg_rdata1[26] reg_rdata1[27] reg_rdata1[28] reg_rdata1[29] reg_rdata1[30] reg_rdata1[31] 
++ data_ack data_req data_write
++ i_wb_dat[0] i_wb_dat[1] i_wb_dat[2] i_wb_dat[3] i_wb_dat[4] i_wb_dat[5] i_wb_dat[6] i_wb_dat[7] i_wb_dat[8] i_wb_dat[9] i_wb_dat[10] i_wb_dat[11] i_wb_dat[12] i_wb_dat[13] i_wb_dat[14] i_wb_dat[15] i_wb_dat[16] i_wb_dat[17] i_wb_dat[18] i_wb_dat[19] i_wb_dat[20] i_wb_dat[21] i_wb_dat[22] i_wb_dat[23] i_wb_dat[24] i_wb_dat[25] i_wb_dat[26] i_wb_dat[27] i_wb_dat[28] i_wb_dat[29] i_wb_dat[30] i_wb_dat[31] 
++ data_addr[0] data_addr[1] data_addr[2] data_addr[3] data_addr[4] data_addr[5] data_addr[6] data_addr[7] data_addr[8] data_addr[9] data_addr[10] data_addr[11] data_addr[12] data_addr[13] data_addr[14] data_addr[15] data_addr[16] data_addr[17] data_addr[18] data_addr[19] data_addr[20] data_addr[21] data_addr[22] data_addr[23] data_addr[24] data_addr[25] data_addr[26] data_addr[27] data_addr[28] data_addr[29] data_addr[30] data_addr[31] 
++ data_sel[0] data_sel[1] data_sel[2] data_sel[3] 
++ o_wb_dat[0] o_wb_dat[1] o_wb_dat[2] o_wb_dat[3] o_wb_dat[4] o_wb_dat[5] o_wb_dat[6] o_wb_dat[7] o_wb_dat[8] o_wb_dat[9] o_wb_dat[10] o_wb_dat[11] o_wb_dat[12] o_wb_dat[13] o_wb_dat[14] o_wb_dat[15] o_wb_dat[16] o_wb_dat[17] o_wb_dat[18] o_wb_dat[19] o_wb_dat[20] o_wb_dat[21] o_wb_dat[22] o_wb_dat[23] o_wb_dat[24] o_wb_dat[25] o_wb_dat[26] o_wb_dat[27] o_wb_dat[28] o_wb_dat[29] o_wb_dat[30] o_wb_dat[31] 
++ instr_ack instr_issued instr_req
++ i_wb_dat[0] i_wb_dat[1] i_wb_dat[2] i_wb_dat[3] i_wb_dat[4] i_wb_dat[5] i_wb_dat[6] i_wb_dat[7] i_wb_dat[8] i_wb_dat[9] i_wb_dat[10] i_wb_dat[11] i_wb_dat[12] i_wb_dat[13] i_wb_dat[14] i_wb_dat[15] i_wb_dat[16] i_wb_dat[17] i_wb_dat[18] i_wb_dat[19] i_wb_dat[20] i_wb_dat[21] i_wb_dat[22] i_wb_dat[23] i_wb_dat[24] i_wb_dat[25] i_wb_dat[26] i_wb_dat[27] i_wb_dat[28] i_wb_dat[29] i_wb_dat[30] i_wb_dat[31] 
++ instr_addr[1] instr_addr[2] instr_addr[3] instr_addr[4] instr_addr[5] instr_addr[6] instr_addr[7] instr_addr[8] instr_addr[9] instr_addr[10] instr_addr[11] instr_addr[12] instr_addr[13] instr_addr[14] instr_addr[15] 
++ rv_core
+
+Vcsr_oread csr_oread 0 PWL 0n 0
+Vcsr_to_trap csr_to_trap 0 PWL 0n 0
+Vret_addr1 ret_addr[1] 0 PWL 0n 0
+Vret_addr2 ret_addr[2] 0 PWL 0n 0
+Vret_addr3 ret_addr[3] 0 PWL 0n 0
+Vret_addr4 ret_addr[4] 0 PWL 0n 0
+Vret_addr5 ret_addr[5] 0 PWL 0n 0
+Vret_addr6 ret_addr[6] 0 PWL 0n 0
+Vret_addr7 ret_addr[7] 0 PWL 0n 0
+Vret_addr8 ret_addr[8] 0 PWL 0n 0
+Vret_addr9 ret_addr[9] 0 PWL 0n 0
+Vret_addr10 ret_addr[10] 0 PWL 0n 0
+Vret_addr11 ret_addr[11] 0 PWL 0n 0
+Vret_addr12 ret_addr[12] 0 PWL 0n 0
+Vret_addr13 ret_addr[13] 0 PWL 0n 0
+Vret_addr14 ret_addr[14] 0 PWL 0n 0
+Vret_addr15 ret_addr[15] 0 PWL 0n 0
+Vcsr_trap_pc1 csr_trap_pc[1] 0 PWL 0n 0
+Vcsr_trap_pc2 csr_trap_pc[2] 0 PWL 0n 0
+Vcsr_trap_pc3 csr_trap_pc[3] 0 PWL 0n 0
+Vcsr_trap_pc4 csr_trap_pc[4] 0 PWL 0n 0
+Vcsr_trap_pc5 csr_trap_pc[5] 0 PWL 0n 0
+Vcsr_trap_pc6 csr_trap_pc[6] 0 PWL 0n 0
+Vcsr_trap_pc7 csr_trap_pc[7] 0 PWL 0n 0
+Vcsr_trap_pc8 csr_trap_pc[8] 0 PWL 0n 0
+Vcsr_trap_pc9 csr_trap_pc[9] 0 PWL 0n 0
+Vcsr_trap_pc10 csr_trap_pc[10] 0 PWL 0n 0
+Vcsr_trap_pc11 csr_trap_pc[11] 0 PWL 0n 0
+Vcsr_trap_pc12 csr_trap_pc[12] 0 PWL 0n 0
+Vcsr_trap_pc13 csr_trap_pc[13] 0 PWL 0n 0
+Vcsr_trap_pc14 csr_trap_pc[14] 0 PWL 0n 0
+Vcsr_trap_pc15 csr_trap_pc[15] 0 PWL 0n 0
+Vcsr_rdata0 csr_rdata[0] 0 PWL 0n 0
+Vcsr_rdata1 csr_rdata[1] 0 PWL 0n 0
+Vcsr_rdata2 csr_rdata[2] 0 PWL 0n 0
+Vcsr_rdata3 csr_rdata[3] 0 PWL 0n 0
+Vcsr_rdata4 csr_rdata[4] 0 PWL 0n 0
+Vcsr_rdata5 csr_rdata[5] 0 PWL 0n 0
+Vcsr_rdata6 csr_rdata[6] 0 PWL 0n 0
+Vcsr_rdata7 csr_rdata[7] 0 PWL 0n 0
+Vcsr_rdata8 csr_rdata[8] 0 PWL 0n 0
+Vcsr_rdata9 csr_rdata[9] 0 PWL 0n 0
+Vcsr_rdata10 csr_rdata[10] 0 PWL 0n 0
+Vcsr_rdata11 csr_rdata[11] 0 PWL 0n 0
+Vcsr_rdata12 csr_rdata[12] 0 PWL 0n 0
+Vcsr_rdata13 csr_rdata[13] 0 PWL 0n 0
+Vcsr_rdata14 csr_rdata[14] 0 PWL 0n 0
+Vcsr_rdata15 csr_rdata[15] 0 PWL 0n 0
+Vcsr_rdata16 csr_rdata[16] 0 PWL 0n 0
+Vcsr_rdata17 csr_rdata[17] 0 PWL 0n 0
+Vcsr_rdata18 csr_rdata[18] 0 PWL 0n 0
+Vcsr_rdata19 csr_rdata[19] 0 PWL 0n 0
+Vcsr_rdata20 csr_rdata[20] 0 PWL 0n 0
+Vcsr_rdata21 csr_rdata[21] 0 PWL 0n 0
+Vcsr_rdata22 csr_rdata[22] 0 PWL 0n 0
+Vcsr_rdata23 csr_rdata[23] 0 PWL 0n 0
+Vcsr_rdata24 csr_rdata[24] 0 PWL 0n 0
+Vcsr_rdata25 csr_rdata[25] 0 PWL 0n 0
+Vcsr_rdata26 csr_rdata[26] 0 PWL 0n 0
+Vcsr_rdata27 csr_rdata[27] 0 PWL 0n 0
+Vcsr_rdata28 csr_rdata[28] 0 PWL 0n 0
+Vcsr_rdata29 csr_rdata[29] 0 PWL 0n 0
+Vcsr_rdata30 csr_rdata[30] 0 PWL 0n 0
+Vcsr_rdata31 csr_rdata[31] 0 PWL 0n 0
+Vo_wb_stb o_wb_stb 0 PWL 0n {VCC}
+Vo_wb_cyc o_wb_cyc 0 PWL 0n {VCC}
+
+XXM0 data_req vssd1 vssd1 vccd1 vccd1 data_nreq sky130_fd_sc_hd__inv_1
+XXM1 i_wb_ack data_nreq instr_req vssd1 vssd1 vccd1 vccd1 instr_ack sky130_fd_sc_hd__and3_1
+XXM2 instr_ack vssd1 vssd1 vccd1 vccd1 instr_nack sky130_fd_sc_hd__inv_1
+XXM3 i_wb_ack instr_nack vssd1 vssd1 vccd1 vccd1 instr_ack sky130_fd_sc_hd__and2_1
+XXM4 data_req data_write vssd1 vssd1 vccd1 vccd1 o_wb_we sky130_fd_sc_hd__and2_1
+XXM5 data_sel vssd1 vssd1 vccd1 vccd1 data_nsel sky130_fd_sc_hd__inv_1
+XXM6 data_nsel data_req vssd1 vssd1 vccd1 vccd1 o_wb_sel sky130_fd_sc_hd__nand2_1
+
+XM0 data_req data_addr[0] vssd1 vssd1 vccd1 vccd1 o_wb_adr[0] sky130_fd_sc_hd__and2_1
+XM1 instr_addr[1] data_addr[1] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[1] sky130_fd_sc_hd__mux2_1
+XM2 instr_addr[2] data_addr[2] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[2] sky130_fd_sc_hd__mux2_1
+XM3 instr_addr[3] data_addr[3] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[3] sky130_fd_sc_hd__mux2_1
+XM4 instr_addr[4] data_addr[4] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[4] sky130_fd_sc_hd__mux2_1
+XM5 instr_addr[5] data_addr[5] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[5] sky130_fd_sc_hd__mux2_1
+XM6 instr_addr[6] data_addr[6] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[6] sky130_fd_sc_hd__mux2_1
+XM7 instr_addr[7] data_addr[7] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[7] sky130_fd_sc_hd__mux2_1
+XM8 instr_addr[8] data_addr[8] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[8] sky130_fd_sc_hd__mux2_1
+XM9 instr_addr[9] data_addr[9] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[9] sky130_fd_sc_hd__mux2_1
+XM10 instr_addr[10] data_addr[10] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[10] sky130_fd_sc_hd__mux2_1
+XM11 instr_addr[11] data_addr[11] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[11] sky130_fd_sc_hd__mux2_1
+XM12 instr_addr[12] data_addr[12] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[12] sky130_fd_sc_hd__mux2_1
+XM13 instr_addr[13] data_addr[13] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[13] sky130_fd_sc_hd__mux2_1
+XM14 instr_addr[14] data_addr[14] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[14] sky130_fd_sc_hd__mux2_1
+XM15 instr_addr[15] data_addr[15] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[15] sky130_fd_sc_hd__mux2_1
+XM16 data_req data_addr[16] vssd1 vssd1 vccd1 vccd1 o_wb_adr[16] sky130_fd_sc_hd__and2_1
+XM17 data_req data_addr[17] vssd1 vssd1 vccd1 vccd1 o_wb_adr[17] sky130_fd_sc_hd__and2_1
+XM18 data_req data_addr[18] vssd1 vssd1 vccd1 vccd1 o_wb_adr[18] sky130_fd_sc_hd__and2_1
+XM19 data_req data_addr[19] vssd1 vssd1 vccd1 vccd1 o_wb_adr[19] sky130_fd_sc_hd__and2_1
+XM20 data_req data_addr[20] vssd1 vssd1 vccd1 vccd1 o_wb_adr[20] sky130_fd_sc_hd__and2_1
+XM21 data_req data_addr[21] vssd1 vssd1 vccd1 vccd1 o_wb_adr[21] sky130_fd_sc_hd__and2_1
+XM22 data_req data_addr[22] vssd1 vssd1 vccd1 vccd1 o_wb_adr[22] sky130_fd_sc_hd__and2_1
+XM23 data_req data_addr[23] vssd1 vssd1 vccd1 vccd1 o_wb_adr[23] sky130_fd_sc_hd__and2_1
+XM24 data_req data_addr[24] vssd1 vssd1 vccd1 vccd1 o_wb_adr[24] sky130_fd_sc_hd__and2_1
+XM25 data_req data_addr[25] vssd1 vssd1 vccd1 vccd1 o_wb_adr[25] sky130_fd_sc_hd__and2_1
+XM26 data_req data_addr[26] vssd1 vssd1 vccd1 vccd1 o_wb_adr[26] sky130_fd_sc_hd__and2_1
+XM27 data_req data_addr[27] vssd1 vssd1 vccd1 vccd1 o_wb_adr[27] sky130_fd_sc_hd__and2_1
+XM28 data_req data_addr[28] vssd1 vssd1 vccd1 vccd1 o_wb_adr[28] sky130_fd_sc_hd__and2_1
+XM29 data_req data_addr[29] vssd1 vssd1 vccd1 vccd1 o_wb_adr[29] sky130_fd_sc_hd__and2_1
+XM30 data_req data_addr[30] vssd1 vssd1 vccd1 vccd1 o_wb_adr[30] sky130_fd_sc_hd__and2_1
+XM31 data_req data_addr[31] vssd1 vssd1 vccd1 vccd1 o_wb_adr[31] sky130_fd_sc_hd__and2_1
+
+.ends

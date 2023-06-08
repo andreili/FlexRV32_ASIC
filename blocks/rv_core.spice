@@ -1,0 +1,179 @@
+* Generated file, don't change!
+
+.subckt rv_core
++ vccd1 vssd1 i_clk i_reset_n
++ i_csr_read i_csr_to_trap o_csr_clear o_csr_ebreak o_csr_read o_csr_set o_csr_write o_csr_imm_sel
++ i_csr_data[0] i_csr_data[1] i_csr_data[2] i_csr_data[3] i_csr_data[4] i_csr_data[5] i_csr_data[6] i_csr_data[7] i_csr_data[8] i_csr_data[9] i_csr_data[10] i_csr_data[11] i_csr_data[12] i_csr_data[13] i_csr_data[14] i_csr_data[15] i_csr_data[16] i_csr_data[17] i_csr_data[18] i_csr_data[19] i_csr_data[20] i_csr_data[21] i_csr_data[22] i_csr_data[23] i_csr_data[24] i_csr_data[25] i_csr_data[26] i_csr_data[27] i_csr_data[28] i_csr_data[29] i_csr_data[30] i_csr_data[31] 
++ i_csr_ret_addr[1] i_csr_ret_addr[2] i_csr_ret_addr[3] i_csr_ret_addr[4] i_csr_ret_addr[5] i_csr_ret_addr[6] i_csr_ret_addr[7] i_csr_ret_addr[8] i_csr_ret_addr[9] i_csr_ret_addr[10] i_csr_ret_addr[11] i_csr_ret_addr[12] i_csr_ret_addr[13] i_csr_ret_addr[14] i_csr_ret_addr[15] 
++ i_csr_trap_pc[1] i_csr_trap_pc[2] i_csr_trap_pc[3] i_csr_trap_pc[4] i_csr_trap_pc[5] i_csr_trap_pc[6] i_csr_trap_pc[7] i_csr_trap_pc[8] i_csr_trap_pc[9] i_csr_trap_pc[10] i_csr_trap_pc[11] i_csr_trap_pc[12] i_csr_trap_pc[13] i_csr_trap_pc[14] i_csr_trap_pc[15] 
++ o_csr_idx[0] o_csr_idx[1] o_csr_idx[2] o_csr_idx[3] o_csr_idx[4] o_csr_idx[5] o_csr_idx[6] o_csr_idx[7] o_csr_idx[8] o_csr_idx[9] o_csr_idx[10] o_csr_idx[11] 
++ o_csr_imm[0] o_csr_imm[1] o_csr_imm[2] o_csr_imm[3] o_csr_imm[4] 
++ o_csr_pc_next[1] o_csr_pc_next[2] o_csr_pc_next[3] o_csr_pc_next[4] o_csr_pc_next[5] o_csr_pc_next[6] o_csr_pc_next[7] o_csr_pc_next[8] o_csr_pc_next[9] o_csr_pc_next[10] o_csr_pc_next[11] o_csr_pc_next[12] o_csr_pc_next[13] o_csr_pc_next[14] o_csr_pc_next[15] 
++ o_reg_rdata1[0] o_reg_rdata1[1] o_reg_rdata1[2] o_reg_rdata1[3] o_reg_rdata1[4] o_reg_rdata1[5] o_reg_rdata1[6] o_reg_rdata1[7] o_reg_rdata1[8] o_reg_rdata1[9] o_reg_rdata1[10] o_reg_rdata1[11] o_reg_rdata1[12] o_reg_rdata1[13] o_reg_rdata1[14] o_reg_rdata1[15] o_reg_rdata1[16] o_reg_rdata1[17] o_reg_rdata1[18] o_reg_rdata1[19] o_reg_rdata1[20] o_reg_rdata1[21] o_reg_rdata1[22] o_reg_rdata1[23] o_reg_rdata1[24] o_reg_rdata1[25] o_reg_rdata1[26] o_reg_rdata1[27] o_reg_rdata1[28] o_reg_rdata1[29] o_reg_rdata1[30] o_reg_rdata1[31] 
++ i_data_ack o_data_req o_data_write
++ i_data_rdata[0] i_data_rdata[1] i_data_rdata[2] i_data_rdata[3] i_data_rdata[4] i_data_rdata[5] i_data_rdata[6] i_data_rdata[7] i_data_rdata[8] i_data_rdata[9] i_data_rdata[10] i_data_rdata[11] i_data_rdata[12] i_data_rdata[13] i_data_rdata[14] i_data_rdata[15] i_data_rdata[16] i_data_rdata[17] i_data_rdata[18] i_data_rdata[19] i_data_rdata[20] i_data_rdata[21] i_data_rdata[22] i_data_rdata[23] i_data_rdata[24] i_data_rdata[25] i_data_rdata[26] i_data_rdata[27] i_data_rdata[28] i_data_rdata[29] i_data_rdata[30] i_data_rdata[31] 
++ o_data_addr[0] o_data_addr[1] o_data_addr[2] o_data_addr[3] o_data_addr[4] o_data_addr[5] o_data_addr[6] o_data_addr[7] o_data_addr[8] o_data_addr[9] o_data_addr[10] o_data_addr[11] o_data_addr[12] o_data_addr[13] o_data_addr[14] o_data_addr[15] o_data_addr[16] o_data_addr[17] o_data_addr[18] o_data_addr[19] o_data_addr[20] o_data_addr[21] o_data_addr[22] o_data_addr[23] o_data_addr[24] o_data_addr[25] o_data_addr[26] o_data_addr[27] o_data_addr[28] o_data_addr[29] o_data_addr[30] o_data_addr[31] 
++ o_data_sel[0] o_data_sel[1] o_data_sel[2] o_data_sel[3] 
++ o_data_wdata[0] o_data_wdata[1] o_data_wdata[2] o_data_wdata[3] o_data_wdata[4] o_data_wdata[5] o_data_wdata[6] o_data_wdata[7] o_data_wdata[8] o_data_wdata[9] o_data_wdata[10] o_data_wdata[11] o_data_wdata[12] o_data_wdata[13] o_data_wdata[14] o_data_wdata[15] o_data_wdata[16] o_data_wdata[17] o_data_wdata[18] o_data_wdata[19] o_data_wdata[20] o_data_wdata[21] o_data_wdata[22] o_data_wdata[23] o_data_wdata[24] o_data_wdata[25] o_data_wdata[26] o_data_wdata[27] o_data_wdata[28] o_data_wdata[29] o_data_wdata[30] o_data_wdata[31] 
++ i_instr_ack o_instr_issued o_instr_req
++ i_instr_data[0] i_instr_data[1] i_instr_data[2] i_instr_data[3] i_instr_data[4] i_instr_data[5] i_instr_data[6] i_instr_data[7] i_instr_data[8] i_instr_data[9] i_instr_data[10] i_instr_data[11] i_instr_data[12] i_instr_data[13] i_instr_data[14] i_instr_data[15] i_instr_data[16] i_instr_data[17] i_instr_data[18] i_instr_data[19] i_instr_data[20] i_instr_data[21] i_instr_data[22] i_instr_data[23] i_instr_data[24] i_instr_data[25] i_instr_data[26] i_instr_data[27] i_instr_data[28] i_instr_data[29] i_instr_data[30] i_instr_data[31] 
++ o_instr_addr[1] o_instr_addr[2] o_instr_addr[3] o_instr_addr[4] o_instr_addr[5] o_instr_addr[6] o_instr_addr[7] o_instr_addr[8] o_instr_addr[9] o_instr_addr[10] o_instr_addr[11] o_instr_addr[12] o_instr_addr[13] o_instr_addr[14] o_instr_addr[15] 
+
+Xu_st1_fetch i_clk i_reset_n fetch_stall
++ alu2_pc_select alu2_to_trap
++ alu2_pc_target[1] alu2_pc_target[2] alu2_pc_target[3] alu2_pc_target[4] alu2_pc_target[5] alu2_pc_target[6] alu2_pc_target[7] alu2_pc_target[8] alu2_pc_target[9] alu2_pc_target[10] alu2_pc_target[11] alu2_pc_target[12] alu2_pc_target[13] alu2_pc_target[14] alu2_pc_target[15] 
++ i_csr_trap_pc[1] i_csr_trap_pc[2] i_csr_trap_pc[3] i_csr_trap_pc[4] i_csr_trap_pc[5] i_csr_trap_pc[6] i_csr_trap_pc[7] i_csr_trap_pc[8] i_csr_trap_pc[9] i_csr_trap_pc[10] i_csr_trap_pc[11] i_csr_trap_pc[12] i_csr_trap_pc[13] i_csr_trap_pc[14] i_csr_trap_pc[15] 
++ i_instr_ack o_instr_req
++ i_instr_data[0] i_instr_data[1] i_instr_data[2] i_instr_data[3] i_instr_data[4] i_instr_data[5] i_instr_data[6] i_instr_data[7] i_instr_data[8] i_instr_data[9] i_instr_data[10] i_instr_data[11] i_instr_data[12] i_instr_data[13] i_instr_data[14] i_instr_data[15] i_instr_data[16] i_instr_data[17] i_instr_data[18] i_instr_data[19] i_instr_data[20] i_instr_data[21] i_instr_data[22] i_instr_data[23] i_instr_data[24] i_instr_data[25] i_instr_data[26] i_instr_data[27] i_instr_data[28] i_instr_data[29] i_instr_data[30] i_instr_data[31] 
++ o_instr_addr[1] o_instr_addr[2] o_instr_addr[3] o_instr_addr[4] o_instr_addr[5] o_instr_addr[6] o_instr_addr[7] o_instr_addr[8] o_instr_addr[9] o_instr_addr[10] o_instr_addr[11] o_instr_addr[12] o_instr_addr[13] o_instr_addr[14] o_instr_addr[15] 
++ fetch_pc_change fetch_ready
++ fetch_pc[1] fetch_pc[2] fetch_pc[3] fetch_pc[4] fetch_pc[5] fetch_pc[6] fetch_pc[7] fetch_pc[8] fetch_pc[9] fetch_pc[10] fetch_pc[11] fetch_pc[12] fetch_pc[13] fetch_pc[14] fetch_pc[15] 
++ fetch_pc_next[1] fetch_pc_next[2] fetch_pc_next[3] fetch_pc_next[4] fetch_pc_next[5] fetch_pc_next[6] fetch_pc_next[7] fetch_pc_next[8] fetch_pc_next[9] fetch_pc_next[10] fetch_pc_next[11] fetch_pc_next[12] fetch_pc_next[13] fetch_pc_next[14] fetch_pc_next[15] 
++ fetch_instruction[0] fetch_instruction[1] fetch_instruction[2] fetch_instruction[3] fetch_instruction[4] fetch_instruction[5] fetch_instruction[6] fetch_instruction[7] fetch_instruction[8] fetch_instruction[9] fetch_instruction[10] fetch_instruction[11] fetch_instruction[12] fetch_instruction[13] fetch_instruction[14] fetch_instruction[15] fetch_instruction[16] fetch_instruction[17] fetch_instruction[18] fetch_instruction[19] fetch_instruction[20] fetch_instruction[21] fetch_instruction[22] fetch_instruction[23] fetch_instruction[24] fetch_instruction[25] fetch_instruction[26] fetch_instruction[27] fetch_instruction[28] fetch_instruction[29] fetch_instruction[30] fetch_instruction[31] 
++ vccd1 vssd1 rv_fetch
+
+Xu_st2_decode i_clk decode_flush
++ fetch_instruction[0] fetch_instruction[1] fetch_instruction[2] fetch_instruction[3] fetch_instruction[4] fetch_instruction[5] fetch_instruction[6] fetch_instruction[7] fetch_instruction[8] fetch_instruction[9] fetch_instruction[10] fetch_instruction[11] fetch_instruction[12] fetch_instruction[13] fetch_instruction[14] fetch_instruction[15] fetch_instruction[16] fetch_instruction[17] fetch_instruction[18] fetch_instruction[19] fetch_instruction[20] fetch_instruction[21] fetch_instruction[22] fetch_instruction[23] fetch_instruction[24] fetch_instruction[25] fetch_instruction[26] fetch_instruction[27] fetch_instruction[28] fetch_instruction[29] fetch_instruction[30] fetch_instruction[31] 
++ fetch_pc[1] fetch_pc[2] fetch_pc[3] fetch_pc[4] fetch_pc[5] fetch_pc[6] fetch_pc[7] fetch_pc[8] fetch_pc[9] fetch_pc[10] fetch_pc[11] fetch_pc[12] fetch_pc[13] fetch_pc[14] fetch_pc[15] 
++ fetch_pc_next[1] fetch_pc_next[2] fetch_pc_next[3] fetch_pc_next[4] fetch_pc_next[5] fetch_pc_next[6] fetch_pc_next[7] fetch_pc_next[8] fetch_pc_next[9] fetch_pc_next[10] fetch_pc_next[11] fetch_pc_next[12] fetch_pc_next[13] fetch_pc_next[14] fetch_pc_next[15] 
++ fetch_ready decode_stall
++ o_csr_idx[0] o_csr_idx[1] o_csr_idx[2] o_csr_idx[3] o_csr_idx[4] o_csr_idx[5] o_csr_idx[6] o_csr_idx[7] o_csr_idx[8] o_csr_idx[9] o_csr_idx[10] o_csr_idx[11] 
++ o_csr_imm[0] o_csr_imm[1] o_csr_imm[2] o_csr_imm[3] o_csr_imm[4] 
++ o_csr_pc_next[1] o_csr_pc_next[2] o_csr_pc_next[3] o_csr_pc_next[4] o_csr_pc_next[5] o_csr_pc_next[6] o_csr_pc_next[7] o_csr_pc_next[8] o_csr_pc_next[9] o_csr_pc_next[10] o_csr_pc_next[11] o_csr_pc_next[12] o_csr_pc_next[13] o_csr_pc_next[14] o_csr_pc_next[15] 
++ o_csr_clear o_csr_ebreak o_csr_read o_csr_set o_csr_write o_csr_imm_sel
++ decode_imm_i[0] decode_imm_i[1] decode_imm_i[2] decode_imm_i[3] decode_imm_i[4] decode_imm_i[5] decode_imm_i[6] decode_imm_i[7] decode_imm_i[8] decode_imm_i[9] decode_imm_i[10] decode_imm_i[11] decode_imm_i[12] decode_imm_i[13] decode_imm_i[14] decode_imm_i[15] decode_imm_i[16] decode_imm_i[17] decode_imm_i[18] decode_imm_i[19] decode_imm_i[20] decode_imm_i[21] decode_imm_i[22] decode_imm_i[23] decode_imm_i[24] decode_imm_i[25] decode_imm_i[26] decode_imm_i[27] decode_imm_i[28] decode_imm_i[29] decode_imm_i[30] decode_imm_i[31] 
++ decode_alu_ctrl[0] decode_alu_ctrl[1] decode_alu_ctrl[2] decode_alu_ctrl[3] decode_alu_ctrl[4] 
++ decode_funct3[0] decode_funct3[1] decode_funct3[2] 
++ decode_reg_write decode_op1_src decode_op2_src decode_inst_branch decode_inst_csr_req decode_inst_jal decode_inst_jalr decode_inst_mret decode_inst_store decode_inst_supported
++ decode_pc[1] decode_pc[2] decode_pc[3] decode_pc[4] decode_pc[5] decode_pc[6] decode_pc[7] decode_pc[8] decode_pc[9] decode_pc[10] decode_pc[11] decode_pc[12] decode_pc[13] decode_pc[14] decode_pc[15] 
++ decode_pc_next[1] decode_pc_next[2] decode_pc_next[3] decode_pc_next[4] decode_pc_next[5] decode_pc_next[6] decode_pc_next[7] decode_pc_next[8] decode_pc_next[9] decode_pc_next[10] decode_pc_next[11] decode_pc_next[12] decode_pc_next[13] decode_pc_next[14] decode_pc_next[15] 
++ decode_rd[0] decode_rd[1] decode_rd[2] decode_rd[3] decode_rd[4] 
++ decode_rs1[0] decode_rs1[1] decode_rs1[2] decode_rs1[3] decode_rs1[4] 
++ decode_rs2[0] decode_rs2[1] decode_rs2[2] decode_rs2[3] decode_rs2[4] 
++ decode_res_src[0] decode_res_src[1] decode_res_src[2] 
++ vccd1 vssd1 rv_decode
+
+Xu_dhz i_clk 
++ alu1_rs1[0] alu1_rs1[1] alu1_rs1[2] alu1_rs1[3] alu1_rs1[4] 
++ alu1_rs2[0] alu1_rs2[1] alu1_rs2[2] alu1_rs2[3] alu1_rs2[4] 
++ alu2_rd[0] alu2_rd[1] alu2_rd[2] alu2_rd[3] alu2_rd[4] 
++ write_rd[0] write_rd[1] write_rd[2] write_rd[3] write_rd[4] 
++ alu2_reg_write write_op 
++ reg_rdata1[0] reg_rdata1[1] reg_rdata1[2] reg_rdata1[3] reg_rdata1[4] reg_rdata1[5] reg_rdata1[6] reg_rdata1[7] reg_rdata1[8] reg_rdata1[9] reg_rdata1[10] reg_rdata1[11] reg_rdata1[12] reg_rdata1[13] reg_rdata1[14] reg_rdata1[15] reg_rdata1[16] reg_rdata1[17] reg_rdata1[18] reg_rdata1[19] reg_rdata1[20] reg_rdata1[21] reg_rdata1[22] reg_rdata1[23] reg_rdata1[24] reg_rdata1[25] reg_rdata1[26] reg_rdata1[27] reg_rdata1[28] reg_rdata1[29] reg_rdata1[30] reg_rdata1[31] 
++ reg_rdata2[0] reg_rdata2[1] reg_rdata2[2] reg_rdata2[3] reg_rdata2[4] reg_rdata2[5] reg_rdata2[6] reg_rdata2[7] reg_rdata2[8] reg_rdata2[9] reg_rdata2[10] reg_rdata2[11] reg_rdata2[12] reg_rdata2[13] reg_rdata2[14] reg_rdata2[15] reg_rdata2[16] reg_rdata2[17] reg_rdata2[18] reg_rdata2[19] reg_rdata2[20] reg_rdata2[21] reg_rdata2[22] reg_rdata2[23] reg_rdata2[24] reg_rdata2[25] reg_rdata2[26] reg_rdata2[27] reg_rdata2[28] reg_rdata2[29] reg_rdata2[30] reg_rdata2[31] 
++ alu2_result[0] alu2_result[1] alu2_result[2] alu2_result[3] alu2_result[4] alu2_result[5] alu2_result[6] alu2_result[7] alu2_result[8] alu2_result[9] alu2_result[10] alu2_result[11] alu2_result[12] alu2_result[13] alu2_result[14] alu2_result[15] alu2_result[16] alu2_result[17] alu2_result[18] alu2_result[19] alu2_result[20] alu2_result[21] alu2_result[22] alu2_result[23] alu2_result[24] alu2_result[25] alu2_result[26] alu2_result[27] alu2_result[28] alu2_result[29] alu2_result[30] alu2_result[31] 
++ write_data[0] write_data[1] write_data[2] write_data[3] write_data[4] write_data[5] write_data[6] write_data[7] write_data[8] write_data[9] write_data[10] write_data[11] write_data[12] write_data[13] write_data[14] write_data[15] write_data[16] write_data[17] write_data[18] write_data[19] write_data[20] write_data[21] write_data[22] write_data[23] write_data[24] write_data[25] write_data[26] write_data[27] write_data[28] write_data[29] write_data[30] write_data[31] 
++ o_reg_rdata1[0] o_reg_rdata1[1] o_reg_rdata1[2] o_reg_rdata1[3] o_reg_rdata1[4] o_reg_rdata1[5] o_reg_rdata1[6] o_reg_rdata1[7] o_reg_rdata1[8] o_reg_rdata1[9] o_reg_rdata1[10] o_reg_rdata1[11] o_reg_rdata1[12] o_reg_rdata1[13] o_reg_rdata1[14] o_reg_rdata1[15] o_reg_rdata1[16] o_reg_rdata1[17] o_reg_rdata1[18] o_reg_rdata1[19] o_reg_rdata1[20] o_reg_rdata1[21] o_reg_rdata1[22] o_reg_rdata1[23] o_reg_rdata1[24] o_reg_rdata1[25] o_reg_rdata1[26] o_reg_rdata1[27] o_reg_rdata1[28] o_reg_rdata1[29] o_reg_rdata1[30] o_reg_rdata1[31] 
++ dh_data2[0] dh_data2[1] dh_data2[2] dh_data2[3] dh_data2[4] dh_data2[5] dh_data2[6] dh_data2[7] dh_data2[8] dh_data2[9] dh_data2[10] dh_data2[11] dh_data2[12] dh_data2[13] dh_data2[14] dh_data2[15] dh_data2[16] dh_data2[17] dh_data2[18] dh_data2[19] dh_data2[20] dh_data2[21] dh_data2[22] dh_data2[23] dh_data2[24] dh_data2[25] dh_data2[26] dh_data2[27] dh_data2[28] dh_data2[29] dh_data2[30] dh_data2[31] 
++ dh_alu2_result[0] dh_alu2_result[1] dh_alu2_result[2] dh_alu2_result[3] dh_alu2_result[4] dh_alu2_result[5] dh_alu2_result[6] dh_alu2_result[7] dh_alu2_result[8] dh_alu2_result[9] dh_alu2_result[10] dh_alu2_result[11] dh_alu2_result[12] dh_alu2_result[13] dh_alu2_result[14] dh_alu2_result[15] dh_alu2_result[16] dh_alu2_result[17] dh_alu2_result[18] dh_alu2_result[19] dh_alu2_result[20] dh_alu2_result[21] dh_alu2_result[22] dh_alu2_result[23] dh_alu2_result[24] dh_alu2_result[25] dh_alu2_result[26] dh_alu2_result[27] dh_alu2_result[28] dh_alu2_result[29] dh_alu2_result[30] dh_alu2_result[31] 
++ dh_write_data[0] dh_write_data[1] dh_write_data[2] dh_write_data[3] dh_write_data[4] dh_write_data[5] dh_write_data[6] dh_write_data[7] dh_write_data[8] dh_write_data[9] dh_write_data[10] dh_write_data[11] dh_write_data[12] dh_write_data[13] dh_write_data[14] dh_write_data[15] dh_write_data[16] dh_write_data[17] dh_write_data[18] dh_write_data[19] dh_write_data[20] dh_write_data[21] dh_write_data[22] dh_write_data[23] dh_write_data[24] dh_write_data[25] dh_write_data[26] dh_write_data[27] dh_write_data[28] dh_write_data[29] dh_write_data[30] dh_write_data[31] 
++ dh_data2_alu2[0] dh_data2_alu2[1] dh_data2_alu2[2] dh_data2_alu2[3] dh_data2_alu2[4] dh_data2_alu2[5] dh_data2_alu2[6] dh_data2_alu2[7] dh_data2_alu2[8] dh_data2_alu2[9] dh_data2_alu2[10] dh_data2_alu2[11] dh_data2_alu2[12] dh_data2_alu2[13] dh_data2_alu2[14] dh_data2_alu2[15] dh_data2_alu2[16] dh_data2_alu2[17] dh_data2_alu2[18] dh_data2_alu2[19] dh_data2_alu2[20] dh_data2_alu2[21] dh_data2_alu2[22] dh_data2_alu2[23] dh_data2_alu2[24] dh_data2_alu2[25] dh_data2_alu2[26] dh_data2_alu2[27] dh_data2_alu2[28] dh_data2_alu2[29] dh_data2_alu2[30] dh_data2_alu2[31] 
++ vccd1 vssd1 rv_hazard
+
+Xu_st3_alu1 i_clk i_reset_n alu1_flush alu1_stall
++ decode_pc[1] decode_pc[2] decode_pc[3] decode_pc[4] decode_pc[5] decode_pc[6] decode_pc[7] decode_pc[8] decode_pc[9] decode_pc[10] decode_pc[11] decode_pc[12] decode_pc[13] decode_pc[14] decode_pc[15] 
++ decode_pc_next[1] decode_pc_next[2] decode_pc_next[3] decode_pc_next[4] decode_pc_next[5] decode_pc_next[6] decode_pc_next[7] decode_pc_next[8] decode_pc_next[9] decode_pc_next[10] decode_pc_next[11] decode_pc_next[12] decode_pc_next[13] decode_pc_next[14] decode_pc_next[15] 
++ decode_rd[0] decode_rd[1] decode_rd[2] decode_rd[3] decode_rd[4] 
++ decode_rs1[0] decode_rs1[1] decode_rs1[2] decode_rs1[3] decode_rs1[4] 
++ decode_rs2[0] decode_rs2[1] decode_rs2[2] decode_rs2[3] decode_rs2[4] 
++ decode_res_src[0] decode_res_src[1] decode_res_src[2] 
++ decode_imm_i[0] decode_imm_i[1] decode_imm_i[2] decode_imm_i[3] decode_imm_i[4] decode_imm_i[5] decode_imm_i[6] decode_imm_i[7] decode_imm_i[8] decode_imm_i[9] decode_imm_i[10] decode_imm_i[11] decode_imm_i[12] decode_imm_i[13] decode_imm_i[14] decode_imm_i[15] decode_imm_i[16] decode_imm_i[17] decode_imm_i[18] decode_imm_i[19] decode_imm_i[20] decode_imm_i[21] decode_imm_i[22] decode_imm_i[23] decode_imm_i[24] decode_imm_i[25] decode_imm_i[26] decode_imm_i[27] decode_imm_i[28] decode_imm_i[29] decode_imm_i[30] decode_imm_i[31] 
++ decode_alu_ctrl[0] decode_alu_ctrl[1] decode_alu_ctrl[2] decode_alu_ctrl[3] decode_alu_ctrl[4] 
++ decode_funct3[0] decode_funct3[1] decode_funct3[2] 
++ decode_reg_write decode_op1_src decode_op2_src decode_inst_mret i_csr_to_trap
++ decode_inst_jal decode_inst_jalr decode_inst_branch decode_inst_store 
++ i_csr_ret_addr[1] i_csr_ret_addr[2] i_csr_ret_addr[3] i_csr_ret_addr[4] i_csr_ret_addr[5] i_csr_ret_addr[6] i_csr_ret_addr[7] i_csr_ret_addr[8] i_csr_ret_addr[9] i_csr_ret_addr[10] i_csr_ret_addr[11] i_csr_ret_addr[12] i_csr_ret_addr[13] i_csr_ret_addr[14] i_csr_ret_addr[15] 
++ o_reg_rdata1[0] o_reg_rdata1[1] o_reg_rdata1[2] o_reg_rdata1[3] o_reg_rdata1[4] o_reg_rdata1[5] o_reg_rdata1[6] o_reg_rdata1[7] o_reg_rdata1[8] o_reg_rdata1[9] o_reg_rdata1[10] o_reg_rdata1[11] o_reg_rdata1[12] o_reg_rdata1[13] o_reg_rdata1[14] o_reg_rdata1[15] o_reg_rdata1[16] o_reg_rdata1[17] o_reg_rdata1[18] o_reg_rdata1[19] o_reg_rdata1[20] o_reg_rdata1[21] o_reg_rdata1[22] o_reg_rdata1[23] o_reg_rdata1[24] o_reg_rdata1[25] o_reg_rdata1[26] o_reg_rdata1[27] o_reg_rdata1[28] o_reg_rdata1[29] o_reg_rdata1[30] o_reg_rdata1[31] 
++ dh_data2[0] dh_data2[1] dh_data2[2] dh_data2[3] dh_data2[4] dh_data2[5] dh_data2[6] dh_data2[7] dh_data2[8] dh_data2[9] dh_data2[10] dh_data2[11] dh_data2[12] dh_data2[13] dh_data2[14] dh_data2[15] dh_data2[16] dh_data2[17] dh_data2[18] dh_data2[19] dh_data2[20] dh_data2[21] dh_data2[22] dh_data2[23] dh_data2[24] dh_data2[25] dh_data2[26] dh_data2[27] dh_data2[28] dh_data2[29] dh_data2[30] dh_data2[31] 
++ alu1_op1[0] alu1_op1[1] alu1_op1[2] alu1_op1[3] alu1_op1[4] alu1_op1[5] alu1_op1[6] alu1_op1[7] alu1_op1[8] alu1_op1[9] alu1_op1[10] alu1_op1[11] alu1_op1[12] alu1_op1[13] alu1_op1[14] alu1_op1[15] alu1_op1[16] alu1_op1[17] alu1_op1[18] alu1_op1[19] alu1_op1[20] alu1_op1[21] alu1_op1[22] alu1_op1[23] alu1_op1[24] alu1_op1[25] alu1_op1[26] alu1_op1[27] alu1_op1[28] alu1_op1[29] alu1_op1[30] alu1_op1[31] 
++ alu1_op2[0] alu1_op2[1] alu1_op2[2] alu1_op2[3] alu1_op2[4] alu1_op2[5] alu1_op2[6] alu1_op2[7] alu1_op2[8] alu1_op2[9] alu1_op2[10] alu1_op2[11] alu1_op2[12] alu1_op2[13] alu1_op2[14] alu1_op2[15] alu1_op2[16] alu1_op2[17] alu1_op2[18] alu1_op2[19] alu1_op2[20] alu1_op2[21] alu1_op2[22] alu1_op2[23] alu1_op2[24] alu1_op2[25] alu1_op2[26] alu1_op2[27] alu1_op2[28] alu1_op2[29] alu1_op2[30] alu1_op2[31] 
++ alu1_store alu1_reg_write alu1_inst_jal_jalr alu1_inst_branch alu1_to_trap
++ alu1_alu_ctrl[0] alu1_alu_ctrl[1] alu1_alu_ctrl[2] alu1_alu_ctrl[3] alu1_alu_ctrl[4] 
++ alu1_rs1[0] alu1_rs1[1] alu1_rs1[2] alu1_rs1[3] alu1_rs1[4] 
++ alu1_rs2[0] alu1_rs2[1] alu1_rs2[2] alu1_rs2[3] alu1_rs2[4] 
++ alu1_rd[0] alu1_rd[1] alu1_rd[2] alu1_rd[3] alu1_rd[4] 
++ alu1_pc[1] alu1_pc[2] alu1_pc[3] alu1_pc[4] alu1_pc[5] alu1_pc[6] alu1_pc[7] alu1_pc[8] alu1_pc[9] alu1_pc[10] alu1_pc[11] alu1_pc[12] alu1_pc[13] alu1_pc[14] alu1_pc[15] 
++ alu1_pc_next[1] alu1_pc_next[2] alu1_pc_next[3] alu1_pc_next[4] alu1_pc_next[5] alu1_pc_next[6] alu1_pc_next[7] alu1_pc_next[8] alu1_pc_next[9] alu1_pc_next[10] alu1_pc_next[11] alu1_pc_next[12] alu1_pc_next[13] alu1_pc_next[14] alu1_pc_next[15] 
++ alu1_pc_target[1] alu1_pc_target[2] alu1_pc_target[3] alu1_pc_target[4] alu1_pc_target[5] alu1_pc_target[6] alu1_pc_target[7] alu1_pc_target[8] alu1_pc_target[9] alu1_pc_target[10] alu1_pc_target[11] alu1_pc_target[12] alu1_pc_target[13] alu1_pc_target[14] alu1_pc_target[15] 
++ alu1_res_src[0] alu1_res_src[1] alu1_res_src[2] 
++ alu1_funct3[0] alu1_funct3[1] alu1_funct3[2] 
++ vccd1 vssd1 rv_alu1
+
+Xu_st4_alu2 i_clk i_reset_n alu2_flush
++ alu1_store alu1_reg_write alu1_inst_jal_jalr alu1_inst_branch alu1_to_trap
++ alu1_op1[0] alu1_op1[1] alu1_op1[2] alu1_op1[3] alu1_op1[4] alu1_op1[5] alu1_op1[6] alu1_op1[7] alu1_op1[8] alu1_op1[9] alu1_op1[10] alu1_op1[11] alu1_op1[12] alu1_op1[13] alu1_op1[14] alu1_op1[15] alu1_op1[16] alu1_op1[17] alu1_op1[18] alu1_op1[19] alu1_op1[20] alu1_op1[21] alu1_op1[22] alu1_op1[23] alu1_op1[24] alu1_op1[25] alu1_op1[26] alu1_op1[27] alu1_op1[28] alu1_op1[29] alu1_op1[30] alu1_op1[31] 
++ alu1_op2[0] alu1_op2[1] alu1_op2[2] alu1_op2[3] alu1_op2[4] alu1_op2[5] alu1_op2[6] alu1_op2[7] alu1_op2[8] alu1_op2[9] alu1_op2[10] alu1_op2[11] alu1_op2[12] alu1_op2[13] alu1_op2[14] alu1_op2[15] alu1_op2[16] alu1_op2[17] alu1_op2[18] alu1_op2[19] alu1_op2[20] alu1_op2[21] alu1_op2[22] alu1_op2[23] alu1_op2[24] alu1_op2[25] alu1_op2[26] alu1_op2[27] alu1_op2[28] alu1_op2[29] alu1_op2[30] alu1_op2[31] 
++ alu1_rd[0] alu1_rd[1] alu1_rd[2] alu1_rd[3] alu1_rd[4] 
++ alu1_pc[1] alu1_pc[2] alu1_pc[3] alu1_pc[4] alu1_pc[5] alu1_pc[6] alu1_pc[7] alu1_pc[8] alu1_pc[9] alu1_pc[10] alu1_pc[11] alu1_pc[12] alu1_pc[13] alu1_pc[14] alu1_pc[15] 
++ alu1_pc_next[1] alu1_pc_next[2] alu1_pc_next[3] alu1_pc_next[4] alu1_pc_next[5] alu1_pc_next[6] alu1_pc_next[7] alu1_pc_next[8] alu1_pc_next[9] alu1_pc_next[10] alu1_pc_next[11] alu1_pc_next[12] alu1_pc_next[13] alu1_pc_next[14] alu1_pc_next[15] 
++ alu1_pc_target[1] alu1_pc_target[2] alu1_pc_target[3] alu1_pc_target[4] alu1_pc_target[5] alu1_pc_target[6] alu1_pc_target[7] alu1_pc_target[8] alu1_pc_target[9] alu1_pc_target[10] alu1_pc_target[11] alu1_pc_target[12] alu1_pc_target[13] alu1_pc_target[14] alu1_pc_target[15] 
++ alu1_res_src[0] alu1_res_src[1] alu1_res_src[2] 
++ alu1_funct3[0] alu1_funct3[1] alu1_funct3[2] 
++ alu1_alu_ctrl[0] alu1_alu_ctrl[1] alu1_alu_ctrl[2] alu1_alu_ctrl[3] alu1_alu_ctrl[4] 
++ dh_data2_alu2[0] dh_data2_alu2[1] dh_data2_alu2[2] dh_data2_alu2[3] dh_data2_alu2[4] dh_data2_alu2[5] dh_data2_alu2[6] dh_data2_alu2[7] dh_data2_alu2[8] dh_data2_alu2[9] dh_data2_alu2[10] dh_data2_alu2[11] dh_data2_alu2[12] dh_data2_alu2[13] dh_data2_alu2[14] dh_data2_alu2[15] dh_data2_alu2[16] dh_data2_alu2[17] dh_data2_alu2[18] dh_data2_alu2[19] dh_data2_alu2[20] dh_data2_alu2[21] dh_data2_alu2[22] dh_data2_alu2[23] dh_data2_alu2[24] dh_data2_alu2[25] dh_data2_alu2[26] dh_data2_alu2[27] dh_data2_alu2[28] dh_data2_alu2[29] dh_data2_alu2[30] dh_data2_alu2[31] 
++ i_csr_read
++ i_csr_data[0] i_csr_data[1] i_csr_data[2] i_csr_data[3] i_csr_data[4] i_csr_data[5] i_csr_data[6] i_csr_data[7] i_csr_data[8] i_csr_data[9] i_csr_data[10] i_csr_data[11] i_csr_data[12] i_csr_data[13] i_csr_data[14] i_csr_data[15] i_csr_data[16] i_csr_data[17] i_csr_data[18] i_csr_data[19] i_csr_data[20] i_csr_data[21] i_csr_data[22] i_csr_data[23] i_csr_data[24] i_csr_data[25] i_csr_data[26] i_csr_data[27] i_csr_data[28] i_csr_data[29] i_csr_data[30] i_csr_data[31] 
++ alu2_pc_select alu2_to_trap
++ alu2_result[0] alu2_result[1] alu2_result[2] alu2_result[3] alu2_result[4] alu2_result[5] alu2_result[6] alu2_result[7] alu2_result[8] alu2_result[9] alu2_result[10] alu2_result[11] alu2_result[12] alu2_result[13] alu2_result[14] alu2_result[15] alu2_result[16] alu2_result[17] alu2_result[18] alu2_result[19] alu2_result[20] alu2_result[21] alu2_result[22] alu2_result[23] alu2_result[24] alu2_result[25] alu2_result[26] alu2_result[27] alu2_result[28] alu2_result[29] alu2_result[30] alu2_result[31] 
++ o_data_addr[0] o_data_addr[1] o_data_addr[2] o_data_addr[3] o_data_addr[4] o_data_addr[5] o_data_addr[6] o_data_addr[7] o_data_addr[8] o_data_addr[9] o_data_addr[10] o_data_addr[11] o_data_addr[12] o_data_addr[13] o_data_addr[14] o_data_addr[15] o_data_addr[16] o_data_addr[17] o_data_addr[18] o_data_addr[19] o_data_addr[20] o_data_addr[21] o_data_addr[22] o_data_addr[23] o_data_addr[24] o_data_addr[25] o_data_addr[26] o_data_addr[27] o_data_addr[28] o_data_addr[29] o_data_addr[30] o_data_addr[31] 
++ o_data_write alu2_reg_write alu2_ready
++ alu2_rd[0] alu2_rd[1] alu2_rd[2] alu2_rd[3] alu2_rd[4] 
++ alu2_pc_target[1] alu2_pc_target[2] alu2_pc_target[3] alu2_pc_target[4] alu2_pc_target[5] alu2_pc_target[6] alu2_pc_target[7] alu2_pc_target[8] alu2_pc_target[9] alu2_pc_target[10] alu2_pc_target[11] alu2_pc_target[12] alu2_pc_target[13] alu2_pc_target[14] alu2_pc_target[15] 
++ alu2_res_src[2]
++ o_data_wdata[0] o_data_wdata[1] o_data_wdata[2] o_data_wdata[3] o_data_wdata[4] o_data_wdata[5] o_data_wdata[6] o_data_wdata[7] o_data_wdata[8] o_data_wdata[9] o_data_wdata[10] o_data_wdata[11] o_data_wdata[12] o_data_wdata[13] o_data_wdata[14] o_data_wdata[15] o_data_wdata[16] o_data_wdata[17] o_data_wdata[18] o_data_wdata[19] o_data_wdata[20] o_data_wdata[21] o_data_wdata[22] o_data_wdata[23] o_data_wdata[24] o_data_wdata[25] o_data_wdata[26] o_data_wdata[27] o_data_wdata[28] o_data_wdata[29] o_data_wdata[30] o_data_wdata[31] 
++ o_data_sel[0] o_data_sel[1] o_data_sel[2] o_data_sel[3] 
++ alu2_funct3[0] alu2_funct3[1] alu2_funct3[2] 
++ vccd1 vssd1 rv_alu2
+
+XXM0 alu2_ready vssd1 vssd1 vccd1 vccd1 alu2_nready sky130_fd_sc_hd__inv_1
+
+Xu_st5_write i_clk alu2_nready
++ alu2_funct3[0] alu2_funct3[1] alu2_funct3[2] 
++ dh_alu2_result[0] dh_alu2_result[1] dh_alu2_result[2] dh_alu2_result[3] dh_alu2_result[4] dh_alu2_result[5] dh_alu2_result[6] dh_alu2_result[7] dh_alu2_result[8] dh_alu2_result[9] dh_alu2_result[10] dh_alu2_result[11] dh_alu2_result[12] dh_alu2_result[13] dh_alu2_result[14] dh_alu2_result[15] dh_alu2_result[16] dh_alu2_result[17] dh_alu2_result[18] dh_alu2_result[19] dh_alu2_result[20] dh_alu2_result[21] dh_alu2_result[22] dh_alu2_result[23] dh_alu2_result[24] dh_alu2_result[25] dh_alu2_result[26] dh_alu2_result[27] dh_alu2_result[28] dh_alu2_result[29] dh_alu2_result[30] dh_alu2_result[31] 
++ alu2_reg_write write_op
++ alu2_rd[0] alu2_rd[1] alu2_rd[2] alu2_rd[3] alu2_rd[4] 
++ alu2_res_src[2]
++ i_data_rdata[0] i_data_rdata[1] i_data_rdata[2] i_data_rdata[3] i_data_rdata[4] i_data_rdata[5] i_data_rdata[6] i_data_rdata[7] i_data_rdata[8] i_data_rdata[9] i_data_rdata[10] i_data_rdata[11] i_data_rdata[12] i_data_rdata[13] i_data_rdata[14] i_data_rdata[15] i_data_rdata[16] i_data_rdata[17] i_data_rdata[18] i_data_rdata[19] i_data_rdata[20] i_data_rdata[21] i_data_rdata[22] i_data_rdata[23] i_data_rdata[24] i_data_rdata[25] i_data_rdata[26] i_data_rdata[27] i_data_rdata[28] i_data_rdata[29] i_data_rdata[30] i_data_rdata[31] 
++ write_data[0] write_data[1] write_data[2] write_data[3] write_data[4] write_data[5] write_data[6] write_data[7] write_data[8] write_data[9] write_data[10] write_data[11] write_data[12] write_data[13] write_data[14] write_data[15] write_data[16] write_data[17] write_data[18] write_data[19] write_data[20] write_data[21] write_data[22] write_data[23] write_data[24] write_data[25] write_data[26] write_data[27] write_data[28] write_data[29] write_data[30] write_data[31] 
++ write_rd[0] write_rd[1] write_rd[2] write_rd[3] write_rd[4] 
++ vccd1 vssd1 rv_write
+
+Xu_regs i_clk i_reset_n alu2_ready write_op
++ decode_rs1[0] decode_rs1[1] decode_rs1[2] decode_rs1[3] decode_rs1[4] 
++ decode_rs2[0] decode_rs2[1] decode_rs2[2] decode_rs2[3] decode_rs2[4] 
++ write_rd[0] write_rd[1] write_rd[2] write_rd[3] write_rd[4] 
++ dh_write_data[0] dh_write_data[1] dh_write_data[2] dh_write_data[3] dh_write_data[4] dh_write_data[5] dh_write_data[6] dh_write_data[7] dh_write_data[8] dh_write_data[9] dh_write_data[10] dh_write_data[11] dh_write_data[12] dh_write_data[13] dh_write_data[14] dh_write_data[15] dh_write_data[16] dh_write_data[17] dh_write_data[18] dh_write_data[19] dh_write_data[20] dh_write_data[21] dh_write_data[22] dh_write_data[23] dh_write_data[24] dh_write_data[25] dh_write_data[26] dh_write_data[27] dh_write_data[28] dh_write_data[29] dh_write_data[30] dh_write_data[31] 
++ reg_rdata1[0] reg_rdata1[1] reg_rdata1[2] reg_rdata1[3] reg_rdata1[4] reg_rdata1[5] reg_rdata1[6] reg_rdata1[7] reg_rdata1[8] reg_rdata1[9] reg_rdata1[10] reg_rdata1[11] reg_rdata1[12] reg_rdata1[13] reg_rdata1[14] reg_rdata1[15] reg_rdata1[16] reg_rdata1[17] reg_rdata1[18] reg_rdata1[19] reg_rdata1[20] reg_rdata1[21] reg_rdata1[22] reg_rdata1[23] reg_rdata1[24] reg_rdata1[25] reg_rdata1[26] reg_rdata1[27] reg_rdata1[28] reg_rdata1[29] reg_rdata1[30] reg_rdata1[31] 
++ reg_rdata2[0] reg_rdata2[1] reg_rdata2[2] reg_rdata2[3] reg_rdata2[4] reg_rdata2[5] reg_rdata2[6] reg_rdata2[7] reg_rdata2[8] reg_rdata2[9] reg_rdata2[10] reg_rdata2[11] reg_rdata2[12] reg_rdata2[13] reg_rdata2[14] reg_rdata2[15] reg_rdata2[16] reg_rdata2[17] reg_rdata2[18] reg_rdata2[19] reg_rdata2[20] reg_rdata2[21] reg_rdata2[22] reg_rdata2[23] reg_rdata2[24] reg_rdata2[25] reg_rdata2[26] reg_rdata2[27] reg_rdata2[28] reg_rdata2[29] reg_rdata2[30] reg_rdata2[31] 
++ vccd1 vssd1 rv_regs
+
+Xu_ctrl i_clk i_reset_n
++ fetch_pc_change decode_inst_supported alu2_ready
++ alu1_res_src[2]
++ ctrl_need_pause fetch_stall decode_flush decode_stall
++ alu1_flush alu1_stall alu2_flush inv_inst
++ decode_rs1[0] decode_rs1[1] decode_rs1[2] decode_rs1[3] decode_rs1[4] 
++ decode_rs2[0] decode_rs2[1] decode_rs2[2] decode_rs2[3] decode_rs2[4] 
++ alu1_rd[0] alu1_rd[1] alu1_rd[2] alu1_rd[3] alu1_rd[4] 
++ vccd1 vssd1 rv_ctrl
+
+
+* Glue logic
+XXM1 alu1_inst_jal_jalr alu1_inst_branch decode_inst_csr_req vssd1 vssd1 vccd1 vccd1 ctrl_need_pause sky130_fd_sc_hd__o21a_1
+XXM2 alu2_res_src[2] o_data_write vssd1 vssd1 vccd1 vccd1 o_data_req sky130_fd_sc_hd__or2_1
+XXM3 o_data_req alu2_reg_write vssd1 vssd1 vccd1 vccd1 o_instr_issued sky130_fd_sc_hd__or2_1
+
+
+
+
+
+
+.ends
+.include openlane/rv_fetch.spice
+.include openlane/rv_decode.spice
+.include openlane/rv_hazard.spice
+.include openlane/rv_alu1.spice
+.include openlane/rv_alu2.spice
+.include openlane/rv_write.spice
+.include openlane/rv_regs.spice
+.include openlane/rv_ctrl.spice

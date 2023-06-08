@@ -27,12 +27,12 @@ netlist_%:
 	cd blocks/$* && xschem --rcfile ${PDK_ROOT}/${PDK}/libs.tech/xschem/xschemrc --spice --netlist_path ./simulation/ --netlist $*.sch -x -q
 
 sim_blk_%: $(utils_lst) netlist_%
-ifeq (,$(findstring $*,rom))
+ifneq (,$(findstring $*,rom))
 	@echo "--- Convert binary file for ROM ---"
-	./BIN_DIR/mkrom 4 256 ../fw/test/out/riscv.bin
+	./$(BIN_DIR)/mkrom 4 256 ../fw/test/out/riscv.bin
 endif
 	@echo "--- Simulate block ($*) ---"
-	cd blocks/$* && nice -n $(SIM_NICE) Xyce $*_sim.spice -l log_$(DATE).txt -o ./simulation/$*.lis &> /dev/null
+	cd blocks/$* && time nice -n $(SIM_NICE) Xyce $*_sim.spice -l log_$(DATE).txt &> /dev/null
 
 %.fst: $(BIN_DIR)/raw2fst sim_blk_%
 	@echo "--- Convert RAW data to FST ($*) ---"

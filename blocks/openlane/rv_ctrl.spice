@@ -1,0 +1,62 @@
+* NGSPICE file created from rv_ctrl.ext - technology: sky130A
+
+.subckt rv_ctrl
++ i_clk i_reset_n
++ i_pc_change i_decode_inst_sup i_alu2_ready
++ i_alu1_mem_rd
++ i_need_pause o_fetch_stall o_decode_flush o_decode_stall
++ o_alu1_flush o_alu1_stall o_alu2_flush o_inv_inst
++ i_decode_rs1[0] i_decode_rs1[1] i_decode_rs1[2] i_decode_rs1[3] i_decode_rs1[4] 
++ i_decode_rs2[0] i_decode_rs2[1] i_decode_rs2[2] i_decode_rs2[3] i_decode_rs2[4] 
++ i_alu1_rd[0] i_alu1_rd[1] i_alu1_rd[2] i_alu1_rd[3] i_alu1_rd[4] 
++ vccd1 vssd1
+X_66_ o_decode_stall vssd1 vssd1 vccd1 vccd1 o_fetch_stall sky130_fd_sc_hd__buf_2
+X_49_ _12_ _19_ _21_ vssd1 vssd1 vccd1 vccd1 _22_ sky130_fd_sc_hd__a21o_1
+X_65_ o_alu2_flush vssd1 vssd1 vccd1 vccd1 o_decode_flush sky130_fd_sc_hd__buf_2
+X_48_ i_alu1_rd[2] _20_ i_alu1_mem_rd vssd1 vssd1 vccd1 vccd1 _21_ sky130_fd_sc_hd__o21ai_1
+X_64_ clknet_1_0__leaf_i_clk _01_ vssd1 vssd1 vccd1 vccd1 inst_sup\[1\] sky130_fd_sc_hd__dfxtp_1
+X_47_ i_alu1_rd[1] i_alu1_rd[0] i_alu1_rd[3] i_alu1_rd[4] vssd1 vssd1 vccd1 vccd1
++ _20_ sky130_fd_sc_hd__or4_1
+X_63_ clknet_1_1__leaf_i_clk _00_ vssd1 vssd1 vccd1 vccd1 inst_sup\[0\] sky130_fd_sc_hd__dfxtp_1
+X_46_ _13_ _16_ _17_ _18_ vssd1 vssd1 vccd1 vccd1 _19_ sky130_fd_sc_hd__or4b_1
+X_29_ i_decode_rs1[2] vssd1 vssd1 vccd1 vccd1 _02_ sky130_fd_sc_hd__inv_2
+X_62_ inst_sup\[1\] o_decode_stall _28_ vssd1 vssd1 vccd1 vccd1 _01_ sky130_fd_sc_hd__a21o_1
+X_45_ _04_ i_decode_rs2[1] _14_ i_alu1_rd[2] vssd1 vssd1 vccd1 vccd1 _18_ sky130_fd_sc_hd__o22a_1
+Xclkbuf_0_i_clk i_clk vssd1 vssd1 vccd1 vccd1 clknet_0_i_clk sky130_fd_sc_hd__clkbuf_16
+X_61_ inst_sup\[0\] i_alu2_ready _22_ _23_ o_alu2_flush vssd1 vssd1 vccd1 vccd1 _28_
++ sky130_fd_sc_hd__a41o_1
+X_44_ i_alu1_rd[3] i_decode_rs2[3] vssd1 vssd1 vccd1 vccd1 _17_ sky130_fd_sc_hd__xor2_1
+X_60_ inst_sup\[0\] o_decode_stall _27_ vssd1 vssd1 vccd1 vccd1 _00_ sky130_fd_sc_hd__a21o_1
+X_43_ _04_ i_decode_rs2[1] _14_ i_alu1_rd[2] _15_ vssd1 vssd1 vccd1 vccd1 _16_ sky130_fd_sc_hd__a221o_1
+X_42_ i_alu1_rd[4] i_decode_rs2[4] vssd1 vssd1 vccd1 vccd1 _15_ sky130_fd_sc_hd__xor2_1
+X_41_ i_decode_rs2[2] vssd1 vssd1 vccd1 vccd1 _14_ sky130_fd_sc_hd__inv_2
+X_40_ i_alu1_rd[0] i_decode_rs2[0] vssd1 vssd1 vccd1 vccd1 _13_ sky130_fd_sc_hd__xor2_1
+X_59_ i_decode_inst_sup i_alu2_ready _22_ _23_ o_alu2_flush vssd1 vssd1 vccd1 vccd1
++ _27_ sky130_fd_sc_hd__a41o_1
+X_58_ _26_ vssd1 vssd1 vccd1 vccd1 o_alu1_flush sky130_fd_sc_hd__buf_2
+X_57_ o_alu2_flush _25_ vssd1 vssd1 vccd1 vccd1 _26_ sky130_fd_sc_hd__or2_1
+X_56_ _22_ _23_ o_alu1_stall vssd1 vssd1 vccd1 vccd1 _25_ sky130_fd_sc_hd__a21oi_1
+X_39_ _03_ _05_ _09_ _11_ vssd1 vssd1 vccd1 vccd1 _12_ sky130_fd_sc_hd__or4b_1
+X_55_ _24_ vssd1 vssd1 vccd1 vccd1 o_alu2_flush sky130_fd_sc_hd__clkbuf_4
+X_38_ _06_ i_decode_rs1[3] i_decode_rs1[4] _07_ _10_ vssd1 vssd1 vccd1 vccd1 _11_
++ sky130_fd_sc_hd__o221a_1
+X_54_ i_pc_change i_reset_n vssd1 vssd1 vccd1 vccd1 _24_ sky130_fd_sc_hd__or2b_1
+X_37_ i_decode_rs1[1] i_alu1_rd[1] vssd1 vssd1 vccd1 vccd1 _10_ sky130_fd_sc_hd__or2b_1
+X_53_ inst_sup\[1\] vssd1 vssd1 vccd1 vccd1 o_inv_inst sky130_fd_sc_hd__inv_2
+X_36_ _06_ i_decode_rs1[3] i_decode_rs1[4] _07_ _08_ vssd1 vssd1 vccd1 vccd1 _09_
++ sky130_fd_sc_hd__a221o_1
+Xclkbuf_1_1__f_i_clk clknet_0_i_clk vssd1 vssd1 vccd1 vccd1 clknet_1_1__leaf_i_clk
++ sky130_fd_sc_hd__clkbuf_16
+X_52_ i_alu2_ready vssd1 vssd1 vccd1 vccd1 o_alu1_stall sky130_fd_sc_hd__inv_2
+X_35_ i_alu1_rd[0] i_decode_rs1[0] vssd1 vssd1 vccd1 vccd1 _08_ sky130_fd_sc_hd__xor2_1
+X_51_ i_alu2_ready _22_ _23_ vssd1 vssd1 vccd1 vccd1 o_decode_stall sky130_fd_sc_hd__nand3_4
+X_34_ i_alu1_rd[4] vssd1 vssd1 vccd1 vccd1 _07_ sky130_fd_sc_hd__inv_2
+X_50_ i_need_pause i_reset_n vssd1 vssd1 vccd1 vccd1 _23_ sky130_fd_sc_hd__nor2b_2
+X_33_ i_alu1_rd[3] vssd1 vssd1 vccd1 vccd1 _06_ sky130_fd_sc_hd__inv_2
+X_32_ _04_ i_decode_rs1[1] _02_ i_alu1_rd[2] vssd1 vssd1 vccd1 vccd1 _05_ sky130_fd_sc_hd__a22o_1
+X_31_ i_alu1_rd[1] vssd1 vssd1 vccd1 vccd1 _04_ sky130_fd_sc_hd__inv_2
+X_30_ i_alu1_rd[2] _02_ vssd1 vssd1 vccd1 vccd1 _03_ sky130_fd_sc_hd__nor2_1
+Xclkbuf_1_0__f_i_clk clknet_0_i_clk vssd1 vssd1 vccd1 vccd1 clknet_1_0__leaf_i_clk
++ sky130_fd_sc_hd__clkbuf_16
+.ends
+
