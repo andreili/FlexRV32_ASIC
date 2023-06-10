@@ -9,6 +9,13 @@ enum class EVarType
     CURRENT,
 };
 
+enum class EVarValue
+{
+    ONE,
+    ZED,
+    ZERO,
+};
+
 bool is_digit(char c)
 {
     return std::isdigit(c);
@@ -77,6 +84,7 @@ public:
         m_type = type;
     }
     std::string& get_name() { return m_name; }
+    void set_name(std::string name) { m_name = name; }
     int get_idx() { return m_idx; }
     static bool cmp(const Variable* v1, const Variable* v2)
     {

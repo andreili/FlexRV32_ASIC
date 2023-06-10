@@ -106,15 +106,21 @@ public:
             else
             {
                 var_type = EVarType::CURRENT;
+                continue;
             }
             var = new Variable(idx, match[3], var_type);
             m_vars.push_back(var);
+        }
+        m_values.resize(m_vars.size());
+        for (size_t i=0 ; i<m_vars.size() ; ++i)
+        {
+            m_values[i] = EVarValue::ZERO;
         }
         std::cout << "Parsed " << m_var_count << " variables." << std::endl;
         return true;
     }
     bool read_values_line(std::function<void(uint64_t)> cb_time,
-                          std::function<void(Variable*,const char*)> cb)
+                          std::function<void(Variable*,EVarValue)> cb)
     {
         double* values = new double[m_var_count];
         m_file.read((char*)values, sizeof(uint64_t) * m_var_count);
@@ -127,36 +133,75 @@ public:
         for (Variable* var : m_vars)
         {
             int idx = var->get_idx();
+            EVarValue value;
             if (values[idx] < 0.45)
             {
-                cb(var, "0");
+                value = EVarValue::ZERO;
             }
             else if (values[idx] > 1.35)
             {
-                cb(var, "1");
+                value = EVarValue::ONE;
             }
             else
             {
-                cb(var, "Z");
+                value = EVarValue::ZED;
+            }
+            if (m_values[idx] != value)
+            {
+                cb(var, value);
+                m_values[idx] = value;
             }
         }
         delete[] values;
         return true;
     }
-    void variable_sort(std::function<void(Variable*,std::string)> cb)
+    void variable_sort(std::function<void(Variable*,std::string)> cb_add_var,
+                       std::function<void()> cb_upscope,
+                       std::function<void(std::string&)> cb_scope)
     {
         m_vars.sort(Variable::cmp);
+
+        const std::regex reg_parents("([[:alnum:]_\\[\\]]+)\\.");
+        std::smatch match;
+        int depth = 0;
         for (Variable* var: m_vars)
         {
+            size_t pos;
             std::string name = var->get_name();
-            //size_t pos;
-            /*while ((pos = name.find(':')) != std::string::npos)
+            if ((pos = name.find('#')) == std::string::npos)
             {
-                name = name.replace(pos, 1, 1, '_');
-            }*/
-            //if ((pos = name.find(':')) == std::string::npos)
-            {
-                cb(var, name);
+                while (depth)
+                {
+                    cb_upscope();
+                    --depth;
+                }
+                while ((pos = name.find('\\')) != std::string::npos)
+                {
+                    name = name.erase(pos, 1);
+                }
+                while ((pos = name.find(':')) != std::string::npos)
+                {
+                    name[pos] = '.';
+                }
+                std::string name_scope = "TOP";
+                auto it = std::sregex_token_iterator(name.begin(), name.end(), reg_parents, -1);
+                for (std::sregex_iterator it = std::sregex_iterator(name.begin(), name.end(), reg_parents);
+                    it != std::sregex_iterator(); it++)
+                {
+                    ++depth;
+                    match = *it;
+                    name_scope = match[1];
+                    cb_scope(name_scope);
+                    pos = match.position(1);
+                }
+                if (depth == 0)
+                {
+                    cb_add_var(var, name);
+                }
+                else
+                {
+                    cb_add_var(var, name.substr(pos + name_scope.length() + 1));
+                }
             }
         }
     }
@@ -172,4 +217,5 @@ private:
     //int             m_point_count;
     double          m_time;
     std::list<Variable*> m_vars;
+    std::deque<EVarValue> m_values;
 };

@@ -31,7 +31,8 @@ int main(int argc, char** argv)
     FSTWriter* writer = new FSTWriter();
     writer->open(fst_fn.c_str());
 
-    raw->variable_sort(writer->add_variable);
+    raw->variable_sort(writer->add_variable, writer->upscope, writer->scope);
+    std::cout << "Signals sorting and filtering finished\n";
 
     int lines = 0;
     do

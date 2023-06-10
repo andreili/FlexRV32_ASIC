@@ -35,16 +35,36 @@ public:
         fstWriterSetUpscope(m_fst);
         fstWriterSetScope(m_fst, FST_ST_VCD_SCOPE, "M3", NULL);*/
     }
+    static void upscope()
+    {
+        fstWriterSetUpscope(m_instance->m_fst);
+    }
+    static void scope(std::string &name)
+    {
+        fstWriterSetScope(m_instance->m_fst, FST_ST_VCD_SCOPE, name.c_str(), NULL);
+    }
     static void add_variable(Variable* var, std::string name)
     {
         m_instance->m_vars[var->get_idx()] = fstWriterCreateVar(m_instance->m_fst,
             FST_VT_SV_BIT, FST_VD_IMPLICIT, 1, name.c_str(), 0);
+        fstWriterEmitValueChange(m_instance->m_fst, m_instance->m_vars[var->get_idx()], "0");
     }
-    static void variable_value_add(Variable* var, const char* value)
+    static void variable_value_add(Variable* var, EVarValue value)
     {
         if (m_instance->m_vars.count(var->get_idx()) > 0)
         {
-            fstWriterEmitValueChange(m_instance->m_fst, m_instance->m_vars[var->get_idx()], value);
+            switch (value)
+            {
+            case EVarValue::ZERO:
+                fstWriterEmitValueChange(m_instance->m_fst, m_instance->m_vars[var->get_idx()], "0");
+                break;
+            case EVarValue::ONE:
+                fstWriterEmitValueChange(m_instance->m_fst, m_instance->m_vars[var->get_idx()], "1");
+                break;
+            case EVarValue::ZED:
+                fstWriterEmitValueChange(m_instance->m_fst, m_instance->m_vars[var->get_idx()], "Z");
+                break;
+            }
         }
     }
     static void time_change(uint64_t new_time)
