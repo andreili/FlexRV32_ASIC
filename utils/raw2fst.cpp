@@ -31,6 +31,7 @@ int main(int argc, char** argv)
     FSTWriter* writer = new FSTWriter();
     writer->open(fst_fn.c_str());
 
+    writer->time_change(0);
     raw->variable_sort(writer->add_variable, writer->upscope, writer->scope);
     std::cout << "Signals sorting and filtering finished\n";
 
@@ -45,6 +46,7 @@ int main(int argc, char** argv)
         ++lines;
     } while (true);
     std::cout << "Readed " << lines << " points." << std::endl;
+
     raw->close();
     delete writer;
     delete raw;

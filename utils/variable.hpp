@@ -1,12 +1,14 @@
 #pragma once
 
 #include <string>
+#include <list>
 
 enum class EVarType
 {
     TIME,
     VOLTAGE,
     CURRENT,
+    NONE,
 };
 
 enum class EVarValue
@@ -41,11 +43,11 @@ bool numeric_string_compare(const std::string& s1, const std::string& s2)
         int cmp = ss1.compare(ss2);
         if (cmp != 0)
         {
-            return (cmp > 0);
+            return (cmp <= 0);
         }
         if ((it1_1 == s1.end()) || (it2_1 == s2.end()))
         {
-            return false;
+            return true;
         }
         // find a char after a number
         std::string::const_iterator it1_2 = std::find_if(it1_1, s1.end(), is_not_digit);
@@ -61,17 +63,17 @@ bool numeric_string_compare(const std::string& s1, const std::string& s2)
 
         if (n1 < n2)
         {
-            return true;
+            return false;
         }
         else if (n1 > n2)
         {
-            return false;
+            return true;
         }
 
         pos1 = it1_2 - s1.begin();
         pos2 = it2_2 - s2.begin();
     }
-    return false;
+    return true;
 }
 
 class Variable
@@ -79,19 +81,100 @@ class Variable
 public:
     Variable(int idx, std::string name, EVarType type)
     {
+        size_t pos;
+        while ((pos = name.find('\\')) != std::string::npos)
+        {
+            name = name.erase(pos, 1);
+        }
+        while ((pos = name.find(':')) != std::string::npos)
+        {
+            name[pos] = '.';
+        }
         m_idx = idx;
         m_name = name;
+        m_short_name = name;
         m_type = type;
+        m_parent = nullptr;
+        m_childs.clear();
     }
     std::string& get_name() { return m_name; }
     void set_name(std::string name) { m_name = name; }
     int get_idx() { return m_idx; }
     static bool cmp(const Variable* v1, const Variable* v2)
     {
-        return !numeric_string_compare(v1->m_name, v2->m_name);
+        return numeric_string_compare(v1->m_name, v2->m_name);
+    }
+    void add_to_tree(Variable* var, std::string& name)
+    {
+        static const std::regex reg_parents("([[:alnum:]_\\[\\]]+)\\.");
+        std::sregex_iterator it = std::sregex_iterator(name.begin(), name.end(), reg_parents);
+        if (std::sregex_iterator() == it)
+        {
+            // signal name
+            var->m_short_name = name;
+            m_childs.push_back(var);
+        }
+        else
+        {
+            // new level
+            std::smatch match = *it;
+            std::string node_name = match[1];
+            std::string rem_name = name.substr(node_name.size() + 1);
+            // find exists node
+            for (Variable* child : m_childs)
+            {
+                if (child->m_name.compare(node_name) == 0)
+                {
+                    child->add_to_tree(var, rem_name);
+                    child->m_parent = this;
+                    return;
+                }
+            }
+            // not exists - add
+            Variable* child = new Variable(-1, node_name, EVarType::NONE);
+            m_childs.push_back(child);
+            child->m_parent = this;
+            child->add_to_tree(var, rem_name);
+        }
+    }
+    void walk_tree(std::function<void(Variable*,std::string)> cb_add_var,
+                   std::function<void()> cb_upscope,
+                   std::function<void(std::string&)> cb_scope)
+    {
+        if (m_idx == -1)
+        {
+            cb_scope(m_short_name);
+            for (Variable* var : m_childs)
+            {
+                var->walk_tree(cb_add_var, cb_upscope, cb_scope);
+            }
+            if ((nullptr != m_parent) && (!m_parent->is_last_child(this)))
+            {
+                cb_upscope();
+            }
+        }
+        else
+        {
+            cb_add_var(this, m_short_name);
+        }
+    }
+    bool is_last_child(Variable* var)
+    {
+        if (m_childs.back() != var)
+        {
+            return false;
+        }
+        if (nullptr != m_parent)
+        {
+            return m_parent->is_last_child(this);
+        }
+        return true;
     }
 private:
     int         m_idx;
     std::string m_name;
+    std::string m_short_name;
     EVarType    m_type;
+    Variable*   m_parent;
+    std::list<Variable*> m_childs;
 };

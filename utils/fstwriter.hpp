@@ -22,18 +22,9 @@ public:
     void open(const char* fn)
     {
         m_fst = fstWriterCreate(fn, 1);
-        fstWriterSetPackType(m_fst, FST_WR_PT_LZ4);
-        //fstWriterSetTimescaleFromString(m_fst, "1ps");
+        fstWriterSetPackType(m_fst, FST_WR_PT_ZLIB);
         fstWriterSetTimescale(m_fst, -13);
         fstWriterSetUpscope(m_fst);
-        fstWriterSetScope(m_fst, FST_ST_VCD_SCOPE, "TOP", NULL);
-        /*fstWriterSetScope(m_fst, FST_ST_VCD_SCOPE, "M1", NULL);
-        fstWriterSetScope(m_fst, FST_ST_VCD_SCOPE, "M2", NULL);
-        fstWriterSetScope(m_fst, FST_ST_VCD_SCOPE, "M22", NULL);
-        fstWriterSetUpscope(m_fst);
-        fstWriterSetUpscope(m_fst);
-        fstWriterSetUpscope(m_fst);
-        fstWriterSetScope(m_fst, FST_ST_VCD_SCOPE, "M3", NULL);*/
     }
     static void upscope()
     {

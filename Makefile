@@ -2,7 +2,6 @@ DATE = $(shell date +"%m_%d_%Y_%H_%M")
 BIN_DIR=bin
 BUILD_DIR=build
 exe_ext=
-SIM_NICE=20
 
 PDK_ROOT=/media/ASIC/caravel_FlexRV32/dependencies/pdks
 PDK=sky130A
@@ -32,14 +31,15 @@ ifneq (,$(findstring $*,rom))
 	./$(BIN_DIR)/mkrom 4 256 ../fw/test/out/riscv.bin
 endif
 	@echo "--- Simulate block ($*) ---"
-	cd blocks/$* && time nice -n $(SIM_NICE) Xyce $*_sim.spice -l log_$(DATE).txt &> /dev/null
+	./cgr.sh &
+	cd blocks/$* &&  Xyce $*_sim.spice -l log_$(DATE).txt &> /dev/null
 
 %.fst: $(BIN_DIR)/raw2fst sim_blk_%
 	@echo "--- Convert RAW data to FST ($*) ---"
 	$(BIN_DIR)/raw2fst blocks/$*/simulation/$*.spice.raw
 
 wave_%: %.fst
-	cd blocks/$* && gtkwave ./simulation/$*.spice.fst  -a ./simulation/$*.gtkw
+	cd blocks/$* && gtkwave ./simulation/$*.spice.fst -6 -7 -a ./simulation/$*.gtkw --rcfile=../sim/gtkwaverc
 
 $(BIN_DIR)/%$(exe_ext): utils/*.?pp
 	@echo "--- Build utils ---"

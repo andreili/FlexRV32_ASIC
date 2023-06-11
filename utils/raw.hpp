@@ -17,6 +17,7 @@ public:
     {
         m_vars.clear();
         m_time = 0.0;
+        m_top = new Variable(-1, "TOP", EVarType::NONE);
     }
     ~RAW()
     {
@@ -128,8 +129,6 @@ public:
         {
             return false;
         }
-        m_time = values[0];
-        cb_time(std::round(m_time * 1000.0*1000.0*1000.0*1000.0*10.0));
         for (Variable* var : m_vars)
         {
             int idx = var->get_idx();
@@ -152,6 +151,8 @@ public:
                 m_values[idx] = value;
             }
         }
+        m_time = values[0];
+        cb_time(std::round(m_time * 1000.0*1000.0*1000.0*1000.0*10.0));
         delete[] values;
         return true;
     }
@@ -160,50 +161,15 @@ public:
                        std::function<void(std::string&)> cb_scope)
     {
         m_vars.sort(Variable::cmp);
-
-        const std::regex reg_parents("([[:alnum:]_\\[\\]]+)\\.");
-        std::smatch match;
-        int depth = 0;
         for (Variable* var: m_vars)
         {
-            size_t pos;
             std::string name = var->get_name();
-            if ((pos = name.find('#')) == std::string::npos)
+            if ((name.find('#')) == std::string::npos)
             {
-                while (depth)
-                {
-                    cb_upscope();
-                    --depth;
-                }
-                while ((pos = name.find('\\')) != std::string::npos)
-                {
-                    name = name.erase(pos, 1);
-                }
-                while ((pos = name.find(':')) != std::string::npos)
-                {
-                    name[pos] = '.';
-                }
-                std::string name_scope = "TOP";
-                auto it = std::sregex_token_iterator(name.begin(), name.end(), reg_parents, -1);
-                for (std::sregex_iterator it = std::sregex_iterator(name.begin(), name.end(), reg_parents);
-                    it != std::sregex_iterator(); it++)
-                {
-                    ++depth;
-                    match = *it;
-                    name_scope = match[1];
-                    cb_scope(name_scope);
-                    pos = match.position(1);
-                }
-                if (depth == 0)
-                {
-                    cb_add_var(var, name);
-                }
-                else
-                {
-                    cb_add_var(var, name.substr(pos + name_scope.length() + 1));
-                }
+                m_top->add_to_tree(var, name);
             }
         }
+        m_top->walk_tree(cb_add_var, cb_upscope, cb_scope);
     }
     void close()
     {
@@ -216,6 +182,7 @@ private:
     int             m_var_count;
     //int             m_point_count;
     double          m_time;
+    Variable*       m_top;
     std::list<Variable*> m_vars;
     std::deque<EVarValue> m_values;
 };
