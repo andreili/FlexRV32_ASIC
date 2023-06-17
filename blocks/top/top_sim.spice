@@ -6,15 +6,16 @@
 .param VCC=1.8
 
 VVCC VCC 0 PWL 0ns 0 1ns 0 1.1ns {VCC}
-Vi_clk i_clk 0 PULSE 0 {VCC} 0 20ps 20ps 4960ps 10000ps
-Vi_reset_n i_reset_n 0 PWL 0ns 0 22ns 0 22.1ns {VCC}
+Vi_clk i_clk 0 PULSE 0 {VCC} 0 20ps 20ps 2460ps 5000ps
+Vi_reset_n i_reset_n 0 PWL 0ns 0 8ns 0 8.1ns {VCC}
 VVSS VSS 0 PWL 0n 0
 
 .OPTIONS MEASURE MEASFAIL=1
-.OPTIONS LINSOL type=klu
+.OPTIONS LINSOL type=klu2 AZ_tol=1.0e-3 TR_PARTITION=1 TR_PARTITION_TYPE=GRAPH
 .OPTIONS TIMEINT RELTOL=1e-3 ABSTOL=1e-5 method=gear
+.OPTIONS DIST STRATEGY=2
 
-.tran 1p 1000n
+.tran 1p 100n
 .print tran format=raw file=simulation/top.spice.raw v(*) i(*)
 
 .meas tran power avg par('(-1*v(VCC)*I(VVCC))') from=1.4n to=999n

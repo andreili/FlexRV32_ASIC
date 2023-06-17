@@ -19,7 +19,16 @@
 + i_instr_data[0] i_instr_data[1] i_instr_data[2] i_instr_data[3] i_instr_data[4] i_instr_data[5] i_instr_data[6] i_instr_data[7] i_instr_data[8] i_instr_data[9] i_instr_data[10] i_instr_data[11] i_instr_data[12] i_instr_data[13] i_instr_data[14] i_instr_data[15] i_instr_data[16] i_instr_data[17] i_instr_data[18] i_instr_data[19] i_instr_data[20] i_instr_data[21] i_instr_data[22] i_instr_data[23] i_instr_data[24] i_instr_data[25] i_instr_data[26] i_instr_data[27] i_instr_data[28] i_instr_data[29] i_instr_data[30] i_instr_data[31] 
 + o_instr_addr[1] o_instr_addr[2] o_instr_addr[3] o_instr_addr[4] o_instr_addr[5] o_instr_addr[6] o_instr_addr[7] o_instr_addr[8] o_instr_addr[9] o_instr_addr[10] o_instr_addr[11] o_instr_addr[12] o_instr_addr[13] o_instr_addr[14] o_instr_addr[15] 
 
-Xu_st1_fetch i_clk i_reset_n fetch_stall
+Xclk_buf_n i_clk vssd1 vssd1 vccd1 vccd1 clk_n sky130_fd_sc_hd__inv_1
+Xclk_buf[0] clk_n vssd1 vssd1 vccd1 vccd1 clk_p[0] sky130_fd_sc_hd__inv_1
+Xclk_buf[1] clk_n vssd1 vssd1 vccd1 vccd1 clk_p[1] sky130_fd_sc_hd__inv_1
+Xclk_buf[2] clk_n vssd1 vssd1 vccd1 vccd1 clk_p[2] sky130_fd_sc_hd__inv_1
+
+Xreset_buf_n i_reset_n vssd1 vssd1 vccd1 vccd1 reset_p sky130_fd_sc_hd__inv_1
+Xreset_buf[0] clk_n vssd1 vssd1 vccd1 vccd1 reset_n[0] sky130_fd_sc_hd__inv_1
+Xreset_buf[1] clk_n vssd1 vssd1 vccd1 vccd1 reset_n[1] sky130_fd_sc_hd__inv_1
+
+Xu_st1_fetch clk_p[0] reset_n[0] fetch_stall
 + alu2_pc_select alu2_to_trap
 + alu2_pc_target[1] alu2_pc_target[2] alu2_pc_target[3] alu2_pc_target[4] alu2_pc_target[5] alu2_pc_target[6] alu2_pc_target[7] alu2_pc_target[8] alu2_pc_target[9] alu2_pc_target[10] alu2_pc_target[11] alu2_pc_target[12] alu2_pc_target[13] alu2_pc_target[14] alu2_pc_target[15] 
 + i_csr_trap_pc[1] i_csr_trap_pc[2] i_csr_trap_pc[3] i_csr_trap_pc[4] i_csr_trap_pc[5] i_csr_trap_pc[6] i_csr_trap_pc[7] i_csr_trap_pc[8] i_csr_trap_pc[9] i_csr_trap_pc[10] i_csr_trap_pc[11] i_csr_trap_pc[12] i_csr_trap_pc[13] i_csr_trap_pc[14] i_csr_trap_pc[15] 
@@ -32,7 +41,7 @@ Xu_st1_fetch i_clk i_reset_n fetch_stall
 + fetch_instruction[0] fetch_instruction[1] fetch_instruction[2] fetch_instruction[3] fetch_instruction[4] fetch_instruction[5] fetch_instruction[6] fetch_instruction[7] fetch_instruction[8] fetch_instruction[9] fetch_instruction[10] fetch_instruction[11] fetch_instruction[12] fetch_instruction[13] fetch_instruction[14] fetch_instruction[15] fetch_instruction[16] fetch_instruction[17] fetch_instruction[18] fetch_instruction[19] fetch_instruction[20] fetch_instruction[21] fetch_instruction[22] fetch_instruction[23] fetch_instruction[24] fetch_instruction[25] fetch_instruction[26] fetch_instruction[27] fetch_instruction[28] fetch_instruction[29] fetch_instruction[30] fetch_instruction[31] 
 + vccd1 vssd1 rv_fetch
 
-Xu_st2_decode i_clk decode_flush
+Xu_st2_decode clk_p[0] decode_flush
 + fetch_instruction[0] fetch_instruction[1] fetch_instruction[2] fetch_instruction[3] fetch_instruction[4] fetch_instruction[5] fetch_instruction[6] fetch_instruction[7] fetch_instruction[8] fetch_instruction[9] fetch_instruction[10] fetch_instruction[11] fetch_instruction[12] fetch_instruction[13] fetch_instruction[14] fetch_instruction[15] fetch_instruction[16] fetch_instruction[17] fetch_instruction[18] fetch_instruction[19] fetch_instruction[20] fetch_instruction[21] fetch_instruction[22] fetch_instruction[23] fetch_instruction[24] fetch_instruction[25] fetch_instruction[26] fetch_instruction[27] fetch_instruction[28] fetch_instruction[29] fetch_instruction[30] fetch_instruction[31] 
 + fetch_pc[1] fetch_pc[2] fetch_pc[3] fetch_pc[4] fetch_pc[5] fetch_pc[6] fetch_pc[7] fetch_pc[8] fetch_pc[9] fetch_pc[10] fetch_pc[11] fetch_pc[12] fetch_pc[13] fetch_pc[14] fetch_pc[15] 
 + fetch_pc_next[1] fetch_pc_next[2] fetch_pc_next[3] fetch_pc_next[4] fetch_pc_next[5] fetch_pc_next[6] fetch_pc_next[7] fetch_pc_next[8] fetch_pc_next[9] fetch_pc_next[10] fetch_pc_next[11] fetch_pc_next[12] fetch_pc_next[13] fetch_pc_next[14] fetch_pc_next[15] 
@@ -53,7 +62,7 @@ Xu_st2_decode i_clk decode_flush
 + decode_res_src[0] decode_res_src[1] decode_res_src[2] 
 + vccd1 vssd1 rv_decode
 
-Xu_dhz i_clk 
+Xu_dhz clk_p[0] 
 + alu1_rs1[0] alu1_rs1[1] alu1_rs1[2] alu1_rs1[3] alu1_rs1[4] 
 + alu1_rs2[0] alu1_rs2[1] alu1_rs2[2] alu1_rs2[3] alu1_rs2[4] 
 + alu2_rd[0] alu2_rd[1] alu2_rd[2] alu2_rd[3] alu2_rd[4] 
@@ -70,7 +79,7 @@ Xu_dhz i_clk
 + dh_data2_alu2[0] dh_data2_alu2[1] dh_data2_alu2[2] dh_data2_alu2[3] dh_data2_alu2[4] dh_data2_alu2[5] dh_data2_alu2[6] dh_data2_alu2[7] dh_data2_alu2[8] dh_data2_alu2[9] dh_data2_alu2[10] dh_data2_alu2[11] dh_data2_alu2[12] dh_data2_alu2[13] dh_data2_alu2[14] dh_data2_alu2[15] dh_data2_alu2[16] dh_data2_alu2[17] dh_data2_alu2[18] dh_data2_alu2[19] dh_data2_alu2[20] dh_data2_alu2[21] dh_data2_alu2[22] dh_data2_alu2[23] dh_data2_alu2[24] dh_data2_alu2[25] dh_data2_alu2[26] dh_data2_alu2[27] dh_data2_alu2[28] dh_data2_alu2[29] dh_data2_alu2[30] dh_data2_alu2[31] 
 + vccd1 vssd1 rv_hazard
 
-Xu_st3_alu1 i_clk i_reset_n alu1_flush alu1_stall
+Xu_st3_alu1 clk_p[1] reset_n[0] alu1_flush alu1_stall
 + decode_pc[1] decode_pc[2] decode_pc[3] decode_pc[4] decode_pc[5] decode_pc[6] decode_pc[7] decode_pc[8] decode_pc[9] decode_pc[10] decode_pc[11] decode_pc[12] decode_pc[13] decode_pc[14] decode_pc[15] 
 + decode_pc_next[1] decode_pc_next[2] decode_pc_next[3] decode_pc_next[4] decode_pc_next[5] decode_pc_next[6] decode_pc_next[7] decode_pc_next[8] decode_pc_next[9] decode_pc_next[10] decode_pc_next[11] decode_pc_next[12] decode_pc_next[13] decode_pc_next[14] decode_pc_next[15] 
 + decode_rd[0] decode_rd[1] decode_rd[2] decode_rd[3] decode_rd[4] 
@@ -99,7 +108,7 @@ Xu_st3_alu1 i_clk i_reset_n alu1_flush alu1_stall
 + alu1_funct3[0] alu1_funct3[1] alu1_funct3[2] 
 + vccd1 vssd1 rv_alu1
 
-Xu_st4_alu2 i_clk i_reset_n alu2_flush
+Xu_st4_alu2 clk_p[1] reset_n[0] alu2_flush
 + alu1_store alu1_reg_write alu1_inst_jal_jalr alu1_inst_branch alu1_to_trap
 + alu1_op1[0] alu1_op1[1] alu1_op1[2] alu1_op1[3] alu1_op1[4] alu1_op1[5] alu1_op1[6] alu1_op1[7] alu1_op1[8] alu1_op1[9] alu1_op1[10] alu1_op1[11] alu1_op1[12] alu1_op1[13] alu1_op1[14] alu1_op1[15] alu1_op1[16] alu1_op1[17] alu1_op1[18] alu1_op1[19] alu1_op1[20] alu1_op1[21] alu1_op1[22] alu1_op1[23] alu1_op1[24] alu1_op1[25] alu1_op1[26] alu1_op1[27] alu1_op1[28] alu1_op1[29] alu1_op1[30] alu1_op1[31] 
 + alu1_op2[0] alu1_op2[1] alu1_op2[2] alu1_op2[3] alu1_op2[4] alu1_op2[5] alu1_op2[6] alu1_op2[7] alu1_op2[8] alu1_op2[9] alu1_op2[10] alu1_op2[11] alu1_op2[12] alu1_op2[13] alu1_op2[14] alu1_op2[15] alu1_op2[16] alu1_op2[17] alu1_op2[18] alu1_op2[19] alu1_op2[20] alu1_op2[21] alu1_op2[22] alu1_op2[23] alu1_op2[24] alu1_op2[25] alu1_op2[26] alu1_op2[27] alu1_op2[28] alu1_op2[29] alu1_op2[30] alu1_op2[31] 
@@ -127,7 +136,7 @@ Xu_st4_alu2 i_clk i_reset_n alu2_flush
 
 XXM0 alu2_ready vssd1 vssd1 vccd1 vccd1 alu2_nready sky130_fd_sc_hd__inv_1
 
-Xu_st5_write i_clk alu2_nready
+Xu_st5_write clk_p[1] alu2_nready
 + alu2_funct3[0] alu2_funct3[1] alu2_funct3[2] 
 + dh_alu2_result[0] dh_alu2_result[1] dh_alu2_result[2] dh_alu2_result[3] dh_alu2_result[4] dh_alu2_result[5] dh_alu2_result[6] dh_alu2_result[7] dh_alu2_result[8] dh_alu2_result[9] dh_alu2_result[10] dh_alu2_result[11] dh_alu2_result[12] dh_alu2_result[13] dh_alu2_result[14] dh_alu2_result[15] dh_alu2_result[16] dh_alu2_result[17] dh_alu2_result[18] dh_alu2_result[19] dh_alu2_result[20] dh_alu2_result[21] dh_alu2_result[22] dh_alu2_result[23] dh_alu2_result[24] dh_alu2_result[25] dh_alu2_result[26] dh_alu2_result[27] dh_alu2_result[28] dh_alu2_result[29] dh_alu2_result[30] dh_alu2_result[31] 
 + alu2_reg_write write_op
@@ -138,7 +147,7 @@ Xu_st5_write i_clk alu2_nready
 + write_rd[0] write_rd[1] write_rd[2] write_rd[3] write_rd[4] 
 + vccd1 vssd1 rv_write
 
-Xu_regs i_clk i_reset_n alu2_ready write_op
+Xu_regs clk_p[2] reset_n[1] alu2_ready write_op
 + decode_rs1[0] decode_rs1[1] decode_rs1[2] decode_rs1[3] decode_rs1[4] 
 + decode_rs2[0] decode_rs2[1] decode_rs2[2] decode_rs2[3] decode_rs2[4] 
 + write_rd[0] write_rd[1] write_rd[2] write_rd[3] write_rd[4] 
@@ -147,7 +156,7 @@ Xu_regs i_clk i_reset_n alu2_ready write_op
 + reg_rdata2[0] reg_rdata2[1] reg_rdata2[2] reg_rdata2[3] reg_rdata2[4] reg_rdata2[5] reg_rdata2[6] reg_rdata2[7] reg_rdata2[8] reg_rdata2[9] reg_rdata2[10] reg_rdata2[11] reg_rdata2[12] reg_rdata2[13] reg_rdata2[14] reg_rdata2[15] reg_rdata2[16] reg_rdata2[17] reg_rdata2[18] reg_rdata2[19] reg_rdata2[20] reg_rdata2[21] reg_rdata2[22] reg_rdata2[23] reg_rdata2[24] reg_rdata2[25] reg_rdata2[26] reg_rdata2[27] reg_rdata2[28] reg_rdata2[29] reg_rdata2[30] reg_rdata2[31] 
 + vccd1 vssd1 rv_regs
 
-Xu_ctrl i_clk i_reset_n
+Xu_ctrl clk_p[2] reset_n[1]
 + fetch_pc_change decode_inst_supported alu2_ready
 + alu1_res_src[2]
 + ctrl_need_pause fetch_stall decode_flush decode_stall
@@ -163,8 +172,9 @@ XXM1 alu1_inst_jal_jalr alu1_inst_branch decode_inst_csr_req vssd1 vssd1 vccd1 v
 XXM2 alu2_res_src[2] o_data_write vssd1 vssd1 vccd1 vccd1 o_data_req sky130_fd_sc_hd__or2_1
 XXM3 o_data_req alu2_reg_write vssd1 vssd1 vccd1 vccd1 o_instr_issued sky130_fd_sc_hd__or2_1
 
-
-
+* TODO:
+*  clk_p[1] -> CSR
+*  reset_n[1] -> CSR
 
 
 

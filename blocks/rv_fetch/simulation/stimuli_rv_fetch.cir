@@ -1,0 +1,138 @@
+************************************** 
+* SPICE STIMULI FILE 
+* generated from 
+************************************** 
+
+Vi_instruction[0] i_instruction[0] 0 PWL 0n 0 7n 0 7.1n {VCC} 9n {VCC} 9.1n 0 11n 
++0 11.1n {VCC} 13n {VCC} 13.1n 0 15n 0 15.1n {VCC} 17n {VCC} 17.1n 0 
++27n 0 27.1n {VCC} 29n {VCC} 29.1n 0 31n 0 31.1n {VCC} 
+Vi_stall i_stall 0 PWL 0n {VCC} 
+Vi_pc_target[25] i_pc_target[25] 0 PWL 0n {VCC} 
+Vi_instruction[26] i_instruction[26] 0 PWL 0n 0 13n 0 13.1n {VCC} 29n {VCC} 29.1n 0 33n 
++0 33.1n {VCC} 
+Vi_pc_trap[19] i_pc_trap[19] 0 PWL 0n {VCC} 
+Vi_pc_trap[21] i_pc_trap[21] 0 PWL 0n {VCC} 
+Vi_instruction[2] i_instruction[2] 0 PWL 0n 0 13n 0 13.1n {VCC} 29n {VCC} 29.1n 0 33n 
++0 33.1n {VCC} 
+Vi_pc_target[27] i_pc_target[27] 0 PWL 0n {VCC} 
+Vi_pc_trap[1] i_pc_trap[1] 0 PWL 0n 0 
+Vi_instruction[28] i_instruction[28] 0 PWL 0n 0 33n 0 33.1n {VCC} 
+Vi_instruction[30] i_instruction[30] 0 PWL 0n 0 33n 0 33.1n {VCC} 
+Vi_pc_trap[23] i_pc_trap[23] 0 PWL 0n {VCC} 
+Vi_instruction[4] i_instruction[4] 0 PWL 0n 0 33n 0 33.1n {VCC} 
+Vi_pc_target[29] i_pc_target[29] 0 PWL 0n {VCC} 
+Vi_pc_target[31] i_pc_target[31] 0 PWL 0n {VCC} 
+Vi_pc_trap[3] i_pc_trap[3] 0 PWL 0n 0 
+Vi_pc_target[10] i_pc_target[10] 0 PWL 0n 0 
+Vi_pc_trap[25] i_pc_trap[25] 0 PWL 0n {VCC} 
+Vi_instruction[6] i_instruction[6] 0 PWL 0n 0 33n 0 33.1n {VCC} 
+Vi_instruction[11] i_instruction[11] 0 PWL 0n 0 7n 0 7.1n {VCC} 9n {VCC} 9.1n 0 11n 
++0 11.1n {VCC} 17n {VCC} 17.1n 0 31n 0 31.1n {VCC} 
+Vi_pc_trap[5] i_pc_trap[5] 0 PWL 0n 0 
+Vi_pc_target[12] i_pc_target[12] 0 PWL 0n 0 
+Vi_pc_trap[27] i_pc_trap[27] 0 PWL 0n {VCC} 
+Vi_instruction[8] i_instruction[8] 0 PWL 0n 0 9n 0 9.1n {VCC} 13n {VCC} 13.1n 0 17n 
++0 17.1n {VCC} 29n {VCC} 29.1n 0 33n 0 33.1n {VCC} 
+Vi_instruction[13] i_instruction[13] 0 PWL 0n 0 9n 0 9.1n {VCC} 27n {VCC} 27.1n 0 29n 
++0 29.1n {VCC} 31n {VCC} 31.1n 0 33n 0 33.1n {VCC} 
+Vi_pc_trap[7] i_pc_trap[7] 0 PWL 0n 0 
+Vi_pc_target[1] i_pc_target[1] 0 PWL 0n 0 
+Vi_pc_target[14] i_pc_target[14] 0 PWL 0n 0 
+Vi_pc_trap[31] i_pc_trap[31] 0 PWL 0n {VCC} 
+Vi_pc_trap[29] i_pc_trap[29] 0 PWL 0n {VCC} 
+Vi_instruction[15] i_instruction[15] 0 PWL 0n 0 9n 0 9.1n {VCC} 17n {VCC} 17.1n 0 31n 
++0 31.1n {VCC} 
+Vi_pc_trap[10] i_pc_trap[10] 0 PWL 0n {VCC} 
+Vi_pc_trap[9] i_pc_trap[9] 0 PWL 0n {VCC} 
+Vi_pc_target[3] i_pc_target[3] 0 PWL 0n 0 
+Vi_pc_target[16] i_pc_target[16] 0 PWL 0n {VCC} 
+Vi_pc_select i_pc_select 0 PWL 0n 0 41n 0 41.1n {VCC} 45n {VCC} 45.1n 0 
+Vi_instruction[17] i_instruction[17] 0 PWL 0n 0 7n 0 7.1n {VCC} 9n {VCC} 9.1n 0 11n 
++0 11.1n {VCC} 27n {VCC} 27.1n 0 29n 0 29.1n {VCC} 31n {VCC} 31.1n 0 
++33n 0 33.1n {VCC} 
+Vi_pc_trap[12] i_pc_trap[12] 0 PWL 0n {VCC} 
+Vi_pc_target[5] i_pc_target[5] 0 PWL 0n 0 
+Vi_pc_target[18] i_pc_target[18] 0 PWL 0n {VCC} 
+Vi_pc_target[20] i_pc_target[20] 0 PWL 0n {VCC} 
+Vi_instruction[19] i_instruction[19] 0 PWL 0n 0 7n 0 7.1n {VCC} 9n {VCC} 9.1n 0 11n 
++0 11.1n {VCC} 17n {VCC} 17.1n 0 31n 0 31.1n {VCC} 
+Vi_instruction[21] i_instruction[21] 0 PWL 0n 0 9n 0 9.1n {VCC} 27n {VCC} 27.1n 0 29n 
++0 29.1n {VCC} 31n {VCC} 31.1n 0 33n 0 33.1n {VCC} 
+Vi_pc_trap[14] i_pc_trap[14] 0 PWL 0n {VCC} 
+Vi_pc_target[7] i_pc_target[7] 0 PWL 0n 0 
+Vi_pc_target[22] i_pc_target[22] 0 PWL 0n {VCC} 
+Vi_instruction[23] i_instruction[23] 0 PWL 0n 0 9n 0 9.1n {VCC} 17n {VCC} 17.1n 0 31n 
++0 31.1n {VCC} 
+Vi_pc_trap[16] i_pc_trap[16] 0 PWL 0n {VCC} 
+Vi_pc_target[9] i_pc_target[9] 0 PWL 0n 0 
+Vi_pc_target[24] i_pc_target[24] 0 PWL 0n {VCC} 
+Vi_instruction[25] i_instruction[25] 0 PWL 0n 0 9n 0 9.1n {VCC} 13n {VCC} 13.1n 0 17n 
++0 17.1n {VCC} 29n {VCC} 29.1n 0 33n 0 33.1n {VCC} 
+Vi_pc_trap[18] i_pc_trap[18] 0 PWL 0n {VCC} 
+Vi_pc_trap[20] i_pc_trap[20] 0 PWL 0n {VCC} 
+Vi_instruction[1] i_instruction[1] 0 PWL 0n 0 9n 0 9.1n {VCC} 13n {VCC} 13.1n 0 17n 
++0 17.1n {VCC} 29n {VCC} 29.1n 0 33n 0 33.1n {VCC} 
+Vi_pc_target[26] i_pc_target[26] 0 PWL 0n {VCC} 
+Vi_pc_trap[0] i_pc_trap[0] 0 PWL 0n 0 
+Vi_instruction[27] i_instruction[27] 0 PWL 0n 0 29n 0 29.1n {VCC} 
+Vi_pc_trap[22] i_pc_trap[22] 0 PWL 0n {VCC} 
+Vi_instruction[3] i_instruction[3] 0 PWL 0n 0 29n 0 29.1n {VCC} 
+Vi_ack i_ack 0 PWL 0n 0 7n 0 7.1n {VCC} 15n {VCC} 15.1n 0 25n 
++0 25.1n {VCC} 33n {VCC} 33.1n 0 
+Vi_pc_target[28] i_pc_target[28] 0 PWL 0n {VCC} 
+Vi_pc_target[30] i_pc_target[30] 0 PWL 0n {VCC} 
+Vi_pc_trap[2] i_pc_trap[2] 0 PWL 0n 0 
+Vi_instruction[29] i_instruction[29] 0 PWL 0n 0 33n 0 33.1n {VCC} 
+Vi_instruction[31] i_instruction[31] 0 PWL 0n 0 33n 0 33.1n {VCC} 
+Vi_pc_trap[24] i_pc_trap[24] 0 PWL 0n {VCC} 
+Vi_instruction[5] i_instruction[5] 0 PWL 0n 0 33n 0 33.1n {VCC} 
+Vi_instruction[10] i_instruction[10] 0 PWL 0n 0 9n 0 9.1n {VCC} 13n {VCC} 13.1n 0 15n 
++0 15.1n {VCC} 17n {VCC} 17.1n 0 27n 0 27.1n {VCC} 29n {VCC} 29.1n 0 
++33n 0 33.1n {VCC} 
+Vi_pc_trap[4] i_pc_trap[4] 0 PWL 0n 0 
+Vi_pc_target[11] i_pc_target[11] 0 PWL 0n 0 
+Vi_pc_trap[26] i_pc_trap[26] 0 PWL 0n {VCC} 
+Vi_ebreak i_ebreak 0 PWL 0n 0 
+Vi_instruction[7] i_instruction[7] 0 PWL 0n 0 33n 0 33.1n {VCC} 
+Vi_instruction[12] i_instruction[12] 0 PWL 0n 0 7n 0 7.1n {VCC} 13n {VCC} 13.1n 0 17n 
++0 17.1n {VCC} 29n {VCC} 29.1n 0 33n 0 33.1n {VCC} 
+Vi_reset_n i_reset_n 0 PWL 0n 0 5n 0 5.1n {VCC} 
+Vi_pc_trap[6] i_pc_trap[6] 0 PWL 0n 0 
+Vi_pc_target[0] i_pc_target[0] 0 PWL 0n 0 
+Vi_pc_target[13] i_pc_target[13] 0 PWL 0n 0 
+Vi_pc_trap[30] i_pc_trap[30] 0 PWL 0n {VCC} 
+Vi_pc_trap[28] i_pc_trap[28] 0 PWL 0n {VCC} 
+Vi_instruction[9] i_instruction[9] 0 PWL 0n 0 7n 0 7.1n {VCC} 9n {VCC} 9.1n 0 11n 
++0 11.1n {VCC} 27n {VCC} 27.1n 0 29n 0 29.1n {VCC} 31n {VCC} 31.1n 0 
++33n 0 33.1n {VCC} 
+Vi_instruction[14] i_instruction[14] 0 PWL 0n 0 7n 0 7.1n {VCC} 13n {VCC} 13.1n 0 15n 
++0 15.1n {VCC} 17n {VCC} 17.1n 0 27n 0 27.1n {VCC} 29n {VCC} 29.1n 0 
++33n 0 33.1n {VCC} 
+Vi_pc_trap[8] i_pc_trap[8] 0 PWL 0n {VCC} 
+Vi_pc_target[2] i_pc_target[2] 0 PWL 0n 0 
+Vi_pc_target[15] i_pc_target[15] 0 PWL 0n 0 
+Vi_instruction[16] i_instruction[16] 0 PWL 0n 0 9n 0 9.1n {VCC} 13n {VCC} 13.1n 0 17n 
++0 17.1n {VCC} 29n {VCC} 29.1n 0 33n 0 33.1n {VCC} 
+Vi_pc_trap[11] i_pc_trap[11] 0 PWL 0n {VCC} 
+Vi_pc_target[4] i_pc_target[4] 0 PWL 0n {VCC} 
+Vi_pc_target[17] i_pc_target[17] 0 PWL 0n {VCC} 
+Vi_instruction[18] i_instruction[18] 0 PWL 0n 0 9n 0 9.1n {VCC} 13n {VCC} 13.1n 0 15n 
++0 15.1n {VCC} 17n {VCC} 17.1n 0 27n 0 27.1n {VCC} 29n {VCC} 29.1n 0 
++33n 0 33.1n {VCC} 
+Vi_instruction[20] i_instruction[20] 0 PWL 0n 0 7n 0 7.1n {VCC} 13n {VCC} 13.1n 0 17n 
++0 17.1n {VCC} 29n {VCC} 29.1n 0 33n 0 33.1n {VCC} 
+Vi_pc_trap[13] i_pc_trap[13] 0 PWL 0n {VCC} 
+Vi_pc_target[6] i_pc_target[6] 0 PWL 0n 0 
+Vi_pc_target[19] i_pc_target[19] 0 PWL 0n {VCC} 
+Vi_pc_target[21] i_pc_target[21] 0 PWL 0n {VCC} 
+Vi_instruction[22] i_instruction[22] 0 PWL 0n 0 7n 0 7.1n {VCC} 13n {VCC} 13.1n 0 15n 
++0 15.1n {VCC} 17n {VCC} 17.1n 0 27n 0 27.1n {VCC} 29n {VCC} 29.1n 0 
++33n 0 33.1n {VCC} 
+Vi_pc_trap[15] i_pc_trap[15] 0 PWL 0n {VCC} 
+Vi_pc_target[8] i_pc_target[8] 0 PWL 0n 0 
+Vi_pc_target[23] i_pc_target[23] 0 PWL 0n {VCC} 
+Vi_instruction[24] i_instruction[24] 0 PWL 0n 0 7n 0 7.1n {VCC} 9n {VCC} 9.1n 0 11n 
++0 11.1n {VCC} 13n {VCC} 13.1n 0 15n 0 15.1n {VCC} 17n {VCC} 17.1n 0 
++27n 0 27.1n {VCC} 29n {VCC} 29.1n 0 31n 0 31.1n {VCC} 
+Vi_pc_trap[17] i_pc_trap[17] 0 PWL 0n {VCC} 
+

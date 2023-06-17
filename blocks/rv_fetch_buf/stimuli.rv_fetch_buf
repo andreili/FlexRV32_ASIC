@@ -16,50 +16,50 @@ set i_push 0
 s 5
 
 set i_reset_n {VCC}
-s 2
+s 4
 
 set i_data 015a_5a01
 set i_push {VCC}
-s 2
+s 4
 
 set i_data 02f5_f502
-s 2
+s 4
 
 set i_data 03ff_ff03
-s 2
+s 4
 
 set i_data 04aa_aa04
-s 2
+s 4
 
 set i_data 05ee_ee05
 set i_stall 0
-s 2
+s 4
 
 set i_data 0633_3306
 set i_push 0
-s 8
+s 16
 
 set i_push {VCC}
-s 2
+s 4
 
 set i_data 0755_5507
-s 2
+s 4
 
 set i_data 0822_2208
-s 2
+s 4
 
 set i_data 0988_8809
-s 2
+s 4
 
 set i_push 0
 set i_data ffff_ffff
-s 8
+s 16
 
 set i_reset_n 0
 set i_pc 0fff_ffff
-s 4
+s 8
 
 set i_reset_n {VCC}
-s 2
+s 4
 
 endfile

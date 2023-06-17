@@ -15,31 +15,35 @@ utils=raw2fst mkrom
 netlists=$(blocks:%=netlist_%)
 sim_blks=$(blocks:%=sim_blk_%)
 fst_blks=$(blocks:%=%.fst)
+sch_blks=$(blocks:%=%.sch)
 wave_blks=$(blocks:%=wave_%)
 clean_blks=$(blocks:%=clean_%)
 utils_lst=$(utils:%=$(BIN_DIR)/%$(exe_ext))
 
 default: all
 
+%.sch:
+	cd blocks/$* && xschem --rcfile ${PDK_ROOT}/${PDK}/libs.tech/xschem/xschemrc $*.sch
+
 netlist_%:
 	@echo "--- Generate SPICE netlist ($*) ---"
 	cd blocks/$* && xschem --rcfile ${PDK_ROOT}/${PDK}/libs.tech/xschem/xschemrc --spice --netlist_path ./simulation/ --netlist $*.sch -x -q
 
 sim_blk_%: $(utils_lst) netlist_%
-ifneq (,$(findstring $*,rom))
+ifeq (,$(findstring $*,rom))
 	@echo "--- Convert binary file for ROM ---"
 	./$(BIN_DIR)/mkrom 4 256 ../fw/test/out/riscv.bin
 endif
 	@echo "--- Simulate block ($*) ---"
 	./cgr.sh &
-	cd blocks/$* &&  Xyce $*_sim.spice -l log_$(DATE).txt &> /dev/null
+	cd blocks/$* && Xyce $*_sim.spice -l log_$(DATE).txt &> /dev/null
 
 %.fst: $(BIN_DIR)/raw2fst sim_blk_%
 	@echo "--- Convert RAW data to FST ($*) ---"
 	$(BIN_DIR)/raw2fst blocks/$*/simulation/$*.spice.raw
 
 wave_%: %.fst
-	cd blocks/$* && gtkwave ./simulation/$*.spice.fst -6 -7 -a ./simulation/$*.gtkw --rcfile=../sim/gtkwaverc
+	cd blocks/$* && gtkwave ./simulation/$*.spice.fst -6 -7 -a ./simulation/$*.gtkw --rcfile=../../../sim/gtkwaverc
 
 $(BIN_DIR)/%$(exe_ext): utils/*.?pp
 	@echo "--- Build utils ---"
@@ -49,7 +53,7 @@ $(BIN_DIR)/%$(exe_ext): utils/*.?pp
 	rm -rf $(BUILD_DIR)
 
 clean_%:
-	rm -f blocks/$*/simulation/*.{fst,raw,spice}
+	rm -f blocks/$*/simulation/*.{fst,raw,spice,v}
 	rm -f blocks/$*/*.txt
 
 clean: $(clean_blks)

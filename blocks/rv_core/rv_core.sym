@@ -1,0 +1,106 @@
+v {xschem version=3.4.0 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -200 130 -200 {}
+L 4 -130 180 130 180 {}
+L 4 -130 -200 -130 180 {}
+L 4 130 -200 130 180 {}
+L 4 130 -170 150 -170 {}
+L 4 -150 -170 -130 -170 {}
+L 4 130 -150 150 -150 {}
+L 4 -150 -150 -130 -150 {}
+L 4 -150 -130 -130 -130 {}
+L 4 130 -130 150 -130 {}
+L 4 130 -110 150 -110 {}
+L 4 -150 -110 -130 -110 {}
+L 4 130 -90 150 -90 {}
+L 4 -150 -90 -130 -90 {}
+L 4 -150 -70 -130 -70 {}
+L 4 130 -70 150 -70 {}
+L 4 130 -50 150 -50 {}
+L 4 -150 -50 -130 -50 {}
+L 4 130 -30 150 -30 {}
+L 4 130 -10 150 -10 {}
+L 4 130 10 150 10 {}
+L 4 130 30 150 30 {}
+L 4 130 50 150 50 {}
+L 4 -150 -30 -130 -30 {}
+L 4 130 70 150 70 {}
+L 4 -150 -10 -130 -10 {}
+L 4 130 90 150 90 {}
+L 4 130 110 150 110 {}
+L 4 130 130 150 130 {}
+L 4 130 150 150 150 {}
+L 4 -150 10 -130 10 {}
+L 4 130 170 150 170 {}
+L 4 -150 30 -130 30 {}
+L 4 130 -190 150 -190 {}
+B 5 147.5 -172.5 152.5 -167.5 {name=o_csr_clear dir=out}
+B 5 -152.5 -172.5 -147.5 -167.5 {name=i_clk dir=in}
+B 5 147.5 -152.5 152.5 -147.5 {name=o_csr_ebreak dir=out}
+B 5 -152.5 -152.5 -147.5 -147.5 {name=i_reset_n dir=in}
+B 5 -152.5 -132.5 -147.5 -127.5 {name=i_csr_read dir=in}
+B 5 147.5 -132.5 152.5 -127.5 {name=o_csr_read dir=out}
+B 5 147.5 -112.5 152.5 -107.5 {name=o_csr_set dir=out}
+B 5 -152.5 -112.5 -147.5 -107.5 {name=i_csr_to_trap dir=in}
+B 5 147.5 -92.5 152.5 -87.5 {name=o_csr_write dir=out}
+B 5 -152.5 -92.5 -147.5 -87.5 {name=i_csr_data[31:0] dir=in}
+B 5 -152.5 -72.5 -147.5 -67.5 {name=i_csr_ret_adr[31:1] dir=in}
+B 5 147.5 -72.5 152.5 -67.5 {name=o_csr_imm_sel dir=out}
+B 5 147.5 -52.5 152.5 -47.5 {name=o_csr_idx[11:0] dir=out}
+B 5 -152.5 -52.5 -147.5 -47.5 {name=i_csr_trap_pc[31:1] dir=in}
+B 5 147.5 -32.5 152.5 -27.5 {name=o_csr_imm[4:0] dir=out}
+B 5 147.5 -12.5 152.5 -7.5 {name=o_csr_pc_next[31:1] dir=out}
+B 5 147.5 7.5 152.5 12.5 {name=o_reg_rdata1[31:0] dir=out}
+B 5 147.5 27.5 152.5 32.5 {name=o_instr_issued dir=out}
+B 5 147.5 47.5 152.5 52.5 {name=o_data_req dir=out}
+B 5 -152.5 -32.5 -147.5 -27.5 {name=i_data_ack dir=in}
+B 5 147.5 67.5 152.5 72.5 {name=o_data_write dir=out}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=i_data_rdata[31:0] dir=in}
+B 5 147.5 87.5 152.5 92.5 {name=o_data_adr[31:0] dir=out}
+B 5 147.5 107.5 152.5 112.5 {name=o_data_sel[3:0] dir=out}
+B 5 147.5 127.5 152.5 132.5 {name=o_data_wdata[31:0] dir=out}
+B 5 147.5 147.5 152.5 152.5 {name=o_instr_req dir=out}
+B 5 -152.5 7.5 -147.5 12.5 {name=i_instr_ack dir=in}
+B 5 147.5 167.5 152.5 172.5 {name=o_instr_adr[31:1] dir=out}
+B 5 -152.5 27.5 -147.5 32.5 {name=i_instr_rdata[31:0] dir=in}
+B 5 147.5 -192.5 152.5 -187.5 {name=o_csr_masked dir=out}
+T {@symname} -49.5 -6 0 0 0.3 0.3 {}
+T {@name} 135 -222 0 0 0.2 0.2 {}
+T {o_csr_clear} 125 -174 0 1 0.2 0.2 {}
+T {i_clk} -125 -174 0 0 0.2 0.2 {}
+T {o_csr_ebreak} 125 -154 0 1 0.2 0.2 {}
+T {i_reset_n} -125 -154 0 0 0.2 0.2 {}
+T {i_csr_read} -125 -134 0 0 0.2 0.2 {}
+T {o_csr_read} 125 -134 0 1 0.2 0.2 {}
+T {o_csr_set} 125 -114 0 1 0.2 0.2 {}
+T {i_csr_to_trap} -125 -114 0 0 0.2 0.2 {}
+T {o_csr_write} 125 -94 0 1 0.2 0.2 {}
+T {i_csr_data[31:0]} -125 -94 0 0 0.2 0.2 {}
+T {i_csr_ret_adr[31:1]} -125 -74 0 0 0.2 0.2 {}
+T {o_csr_imm_sel} 125 -74 0 1 0.2 0.2 {}
+T {o_csr_idx[11:0]} 125 -54 0 1 0.2 0.2 {}
+T {i_csr_trap_pc[31:1]} -125 -54 0 0 0.2 0.2 {}
+T {o_csr_imm[4:0]} 125 -34 0 1 0.2 0.2 {}
+T {o_csr_pc_next[31:1]} 125 -14 0 1 0.2 0.2 {}
+T {o_reg_rdata1[31:0]} 125 6 0 1 0.2 0.2 {}
+T {o_instr_issued} 125 26 0 1 0.2 0.2 {}
+T {o_data_req} 125 46 0 1 0.2 0.2 {}
+T {i_data_ack} -125 -34 0 0 0.2 0.2 {}
+T {o_data_write} 125 66 0 1 0.2 0.2 {}
+T {i_data_rdata[31:0]} -125 -14 0 0 0.2 0.2 {}
+T {o_data_adr[31:0]} 125 86 0 1 0.2 0.2 {}
+T {o_data_sel[3:0]} 125 106 0 1 0.2 0.2 {}
+T {o_data_wdata[31:0]} 125 126 0 1 0.2 0.2 {}
+T {o_instr_req} 125 146 0 1 0.2 0.2 {}
+T {i_instr_ack} -125 6 0 0 0.2 0.2 {}
+T {o_instr_adr[31:1]} 125 166 0 1 0.2 0.2 {}
+T {i_instr_rdata[31:0]} -125 26 0 0 0.2 0.2 {}
+T {o_csr_masked} 125 -194 0 1 0.2 0.2 {}

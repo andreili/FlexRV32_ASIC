@@ -8,14 +8,13 @@ VVCC VCC 0 PWL 0ns 0 1ns 0 1.1ns {VCC}
 VVSS VSS 0 PWL 0n 0
 
 .include simulation/stimuli_rom.cir
-*.options timeint reltol=1e-3 abstol=1e-5
-*.options linsol type=belos AZ_tol=1.0e-3
 
 .OPTIONS MEASURE MEASFAIL=1
-.OPTIONS LINSOL type=klu
+*.OPTIONS LINSOL type=AztecOO AZ_tol=1.0e-3 TR_PARTITION=1
 .OPTIONS TIMEINT RELTOL=1e-3 ABSTOL=1e-5 method=gear
+.OPTIONS DIST STRATEGY=2
 
-.tran 1p 20n
+.tran 1p 200n
 .print tran format=raw file=simulation/rom.spice.raw v(*) i(*)
 
 *.meas tran rd_v_0[*] find v(rd[*]) at=1.8n
