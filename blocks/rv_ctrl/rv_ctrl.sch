@@ -44,3 +44,5 @@ C {devices/ipin.sym} 200 180 0 0 {name=p14 lab=i_decode_rs2[4:0]}
 C {devices/noconn.sym} 200 180 0 1 {name=l14}
 C {devices/ipin.sym} 200 200 0 0 {name=p16 lab=i_alu1_rd[4:0]}
 C {devices/noconn.sym} 200 200 0 1 {name=l15}
+C {devices/opin.sym} 440 160 0 0 {name=p17 lab=o_write_flush}
+C {devices/noconn.sym} 440 160 0 0 {name=l16}

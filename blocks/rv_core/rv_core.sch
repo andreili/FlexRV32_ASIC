@@ -167,20 +167,16 @@ N 350 970 350 1440 {
 lab=alu2_to_trap}
 N 350 970 380 970 {
 lab=alu2_to_trap}
-N 2430 950 2430 970 {
-lab=#net34}
-N 2250 970 2350 970 {
-lab=#net35}
 N 2250 1050 2250 1070 {
 lab=o_data_write}
 N 2250 910 2430 910 {
 lab=alu2_res_src[2:0]}
 N 2250 890 2430 890 {
-lab=#net36}
+lab=#net35}
 N 2250 870 2430 870 {
-lab=#net37}
+lab=#net36}
 N 2250 830 2430 830 {
-lab=#net38}
+lab=#net37}
 N 2430 630 2430 810 {
 lab=clk_p[1]}
 N 260 630 2430 630 {
@@ -190,89 +186,77 @@ lab=o_data_write}
 N 2540 1030 2540 1090 {
 lab=o_data_req}
 N 2430 870 2520 870 {
-lab=#net37}
+lab=#net36}
 N 2520 870 2520 1130 {
-lab=#net37}
+lab=#net36}
 N 2520 1130 2540 1130 {
-lab=#net37}
+lab=#net36}
 N 1540 740 1600 740 {
 lab=o_reg_rdata1[31:0]}
 N 1700 520 2730 520 {
-lab=#net39}
+lab=#net38}
 N 2730 520 2730 810 {
-lab=#net39}
+lab=#net38}
 N 1700 500 2260 500 {
-lab=#net37}
+lab=#net36}
 N 2260 500 2260 870 {
-lab=#net37}
+lab=#net36}
 N 1700 480 2740 480 {
-lab=#net40}
+lab=#net39}
 N 2740 480 2740 850 {
-lab=#net40}
+lab=#net39}
 N 1700 460 2270 460 {
-lab=#net36}
-N 2270 460 2270 890 {
-lab=#net36}
-N 2420 850 2430 850 {
-lab=#net41}
-N 2420 420 2420 850 {
-lab=#net41}
-N 1700 420 2420 420 {
-lab=#net41}
-N 2250 850 2280 850 {
-lab=#net42}
-N 2280 380 2280 850 {
-lab=#net42}
-N 1700 380 2280 380 {
-lab=#net42}
-N 1700 400 2750 400 {
-lab=#net43}
-N 2750 400 2750 830 {
-lab=#net43}
-N 2730 830 2750 830 {
-lab=#net43}
-N 2730 850 2740 850 {
-lab=#net40}
-N 2280 970 2280 1500 {
 lab=#net35}
+N 2270 460 2270 890 {
+lab=#net35}
+N 2420 850 2430 850 {
+lab=#net40}
+N 2420 420 2420 850 {
+lab=#net40}
+N 1700 420 2420 420 {
+lab=#net40}
+N 2250 850 2280 850 {
+lab=#net41}
+N 2280 380 2280 850 {
+lab=#net41}
+N 1700 380 2280 380 {
+lab=#net41}
+N 1700 400 2750 400 {
+lab=#net42}
+N 2750 400 2750 830 {
+lab=#net42}
+N 2730 830 2750 830 {
+lab=#net42}
+N 2730 850 2740 850 {
+lab=#net39}
+N 2280 970 2280 1500 {
+lab=#net34}
 N 1150 1190 1250 1190 {
-lab=#net44}
+lab=#net43}
 N 1250 1190 1250 1500 {
-lab=#net44}
+lab=#net43}
 N 1150 1210 1240 1210 {
-lab=#net45}
+lab=#net44}
 N 1240 1210 1240 1340 {
-lab=#net45}
-N 1240 1340 1500 1340 {
-lab=#net45}
+lab=#net44}
 N 1800 440 1800 1130 {
-lab=#net46}
+lab=#net45}
 N 1700 440 1800 440 {
-lab=#net46}
+lab=#net45}
 N 1800 1130 1950 1130 {
-lab=#net46}
-N 1540 1320 1540 1340 {
-lab=#net24}
-N 1540 1320 1720 1320 {
-lab=#net24}
-N 1720 950 1720 1320 {
-lab=#net24}
-N 1580 1340 1740 1340 {
-lab=#net25}
-N 1740 970 1740 1340 {
-lab=#net25}
+lab=#net45}
 N 1400 1270 1400 1500 {
-lab=#net47}
+lab=#net46}
 N 1380 1250 1400 1250 {
-lab=#net48}
+lab=#net47}
 N 1380 1250 1380 1500 {
-lab=#net48}
+lab=#net47}
 N 830 1370 830 1500 {
-lab=#net49}
+lab=#net48}
 N 830 1370 850 1370 {
-lab=#net49}
+lab=#net48}
 N 850 1390 850 1500 {
-lab=o_csr_masked}
+lab=#net49}
 N 1950 1190 1950 1500 {
 lab=#net50}
 N 1330 580 1330 1500 {
@@ -296,21 +280,48 @@ lab=#net3}
 N 1000 890 1150 890 {
 lab=#net3}
 N 1710 290 1710 500 {
-lab=#net37}
+lab=#net36}
 N 1700 290 1710 290 {
-lab=#net37}
+lab=#net36}
 N 1720 270 1720 480 {
-lab=#net40}
+lab=#net39}
 N 1700 270 1720 270 {
-lab=#net40}
+lab=#net39}
 N 200 950 380 950 {
 lab=i_csr_trap_pc[31:1]}
 N 1700 250 2300 250 {
-lab=#net35}
+lab=#net34}
 N 2300 250 2300 970 {
-lab=#net35}
+lab=#net34}
 N 1760 930 1760 1500 {
 lab=#net23}
+N 790 1390 850 1390 {
+lab=#net49}
+N 790 1370 790 1390 {
+lab=#net49}
+N 1240 1340 1480 1340 {
+lab=#net44}
+N 1520 1300 1520 1340 {
+lab=#net24}
+N 1520 1300 1720 1300 {
+lab=#net24}
+N 1720 950 1720 1300 {
+lab=#net24}
+N 1740 970 1740 1320 {
+lab=#net25}
+N 1560 1320 1740 1320 {
+lab=#net25}
+N 1560 1320 1560 1340 {
+lab=#net25}
+N 1600 1340 2100 1340 {
+lab=#net52}
+N 2100 1020 2100 1340 {
+lab=#net52}
+N 2100 1020 2250 1020 {
+lab=#net52}
+N 2430 950 2430 1500 {
+lab=#net53}
+N 2250 970 2300 970 {}
 C {devices/ipin.sym} 100 680 0 0 {name=p1 lab=i_clk}
 C {devices/ipin.sym} 100 790 0 0 {name=p2 lab=i_reset_n}
 C {devices/ipin.sym} 1950 1150 0 0 {name=p3 lab=i_csr_read}
@@ -364,20 +375,20 @@ C {devices/lab_pin.sym} 680 910 0 1 {name=p45 sig_type=std_logic lab=fetch_pc[31
 C {devices/lab_pin.sym} 680 930 0 1 {name=p46 sig_type=std_logic lab=fetch_pc_next[31:1]}
 C {devices/lab_pin.sym} 680 950 0 1 {name=p47 sig_type=std_logic lab=fetch_ready}
 C {../../blocks/rv_decode/rv_decode.sym} 1000 1120 0 0 {name=x2}
-C {devices/opin.sym} 850 1460 0 0 {name=p67 lab=o_csr_masked}
+C {devices/opin.sym} 810 1250 3 0 {name=p67 lab=o_csr_masked}
 C {../../blocks/rv_alu1/rv_alu1.sym} 1550 1040 0 0 {name=x3}
 C {../../blocks/rv_regs/rv_regs.sym} 1550 300 0 0 {name=x4}
 C {../../blocks/rv_hazard/rv_hazard.sym} 1550 460 0 0 {name=x5}
 C {../../blocks/rv_alu2/rv_alu2.sym} 2100 1000 0 0 {name=x6}
 C {../../blocks/rv_write/rv_write.sym} 2580 880 0 0 {name=x7}
-C {sky130_stdcells/inv_1.sym} 2390 970 0 0 {name=x200 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 2250 910 0 1 {name=p72 sig_type=std_logic lab=alu2_res_src[2:0]}
 C {sky130_stdcells/or2_1.sym} 2480 1030 0 0 {name=x201 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 2420 1010 0 0 {name=p73 sig_type=std_logic lab=alu2_res_src[2]}
 C {sky130_stdcells/or2_1.sym} 2600 1110 0 0 {name=x202 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/noconn.sym} 250 390 0 1 {name=l4}
 C {../../blocks/rv_ctrl/rv_ctrl.sym} 2270 1620 0 0 {name=x8}
-C {sky130_stdcells/o21a_1.sym} 1540 1420 1 0 {name=x9 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
+C {sky130_stdcells/o31a_1.sym} 1540 1420 1 0 {name=x203 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 1700 1050 0 1 {name=p38 sig_type=std_logic lab=alu1_res_src[2:0]}
 C {devices/lab_pin.sym} 1740 1500 3 1 {name=p42 sig_type=std_logic lab=alu1_res_src[2]}
-C {devices/noconn.sym} 2310 1610 0 1 {name=l1}
+C {devices/noconn.sym} 2470 1610 0 1 {name=l1}
+C {sky130_stdcells/or2_1.sym} 810 1310 3 0 {name=x204 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }

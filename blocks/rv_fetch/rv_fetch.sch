@@ -307,7 +307,7 @@ C {devices/lab_pin.sym} 180 380 0 0 {name=p22 sig_type=std_logic lab=o_cyc}
 C {devices/lab_pin.sym} 300 360 1 0 {name=p23 sig_type=std_logic lab=move_pc}
 C {sky130_stdcells/or2_1.sym} 240 450 0 0 {name=x201 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 180 430 0 0 {name=p24 sig_type=std_logic lab=i_ebreak}
-C {devices/lab_pin.sym} 180 470 0 0 {name=p25 sig_type=std_logic lab=i_pc_select}
+C {devices/lab_pin.sym} 180 470 0 0 {name=p25 sig_type=std_logic lab=pc_select}
 C {devices/lab_pin.sym} 300 450 3 0 {name=p26 sig_type=std_logic lab=o_pc_change}
 C {sky130_stdcells/or3b_1.sym} 450 360 2 1 {name=x202 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 390 320 0 0 {name=p29 sig_type=std_logic lab=i_reset_n}
@@ -325,12 +325,12 @@ C {devices/lab_pin.sym} 950 90 2 0 {name=p35 sig_type=std_logic lab=reset_p[0]}
 C {sky130_stdcells/inv_1.sym} 1360 280 0 0 {name=x206[2:0] VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 1320 280 2 1 {name=p34 sig_type=std_logic lab=reset_p[0]}
 C {devices/lab_pin.sym} 1100 320 0 0 {name=p38 sig_type=std_logic lab=i_ebreak}
-C {devices/lab_pin.sym} 1100 360 0 0 {name=p39 sig_type=std_logic lab=i_pc_select}
+C {devices/lab_pin.sym} 1100 360 0 0 {name=p39 sig_type=std_logic lab=pc_select}
 C {sky130_stdcells/nor2_1.sym} 930 400 0 0 {name=x208 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
-C {devices/lab_pin.sym} 870 420 0 0 {name=p40 sig_type=std_logic lab=i_pc_select}
+C {devices/lab_pin.sym} 870 420 0 0 {name=p40 sig_type=std_logic lab=pc_select}
 C {devices/lab_pin.sym} 870 380 0 0 {name=p41 sig_type=std_logic lab=i_ebreak}
 C {devices/lab_pin.sym} 1100 340 0 0 {name=p42 sig_type=std_logic lab=i_pc_trap[31:1]}
-C {devices/lab_pin.sym} 1100 380 0 0 {name=p43 sig_type=std_logic lab=i_pc_target[31:1]}
+C {devices/lab_pin.sym} 1100 380 0 0 {name=p43 sig_type=std_logic lab=pc_target[31:1]}
 C {devices/lab_pin.sym} 1100 420 0 0 {name=p44 sig_type=std_logic lab=pc_sum[31:1]}
 C {sky130_stdcells/dfxtp_1.sym} 1340 500 0 0 {name=x210[31:1] VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 950 530 0 0 {name=p45 sig_type=std_logic lab=pc_next_sel[31:1]}
@@ -613,9 +613,9 @@ C {devices/lab_pin.sym} 580 150 2 0 {name=p146 sig_type=std_logic lab=clk_p1[8:0
 C {sky130_stdcells/inv_1.sym} 540 210 0 0 {name=x103[26:0] VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 500 210 2 1 {name=p19 sig_type=std_logic lab=clk_p1[8:0]}
 C {devices/lab_pin.sym} 580 210 2 0 {name=p54 sig_type=std_logic lab=clk_n2[26:0]}
-C {sky130_stdcells/inv_1.sym} 540 270 0 0 {name=x104[71:0] VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
+C {sky130_stdcells/inv_1.sym} 540 270 0 0 {name=x104[80:0] VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 500 270 2 1 {name=p59 sig_type=std_logic lab=clk_n2[26:0]}
-C {devices/lab_pin.sym} 580 270 2 0 {name=p60 sig_type=std_logic lab=clk_p3[71:0]}
+C {devices/lab_pin.sym} 580 270 2 0 {name=p60 sig_type=std_logic lab=clk_p3[80:0]}
 C {devices/lab_pin.sym} 290 650 2 1 {name=p53 sig_type=std_logic lab=clk_p3[0]}
 C {devices/lab_pin.sym} 660 1350 2 1 {name=p63 sig_type=std_logic lab=clk_p3[10]}
 C {devices/lab_pin.sym} 1100 1420 2 1 {name=p76 sig_type=std_logic lab=clk_p3[10]}
@@ -652,3 +652,11 @@ C {sky130_stdcells/inv_1.sym} 1170 730 0 0 {name=x305[2:0] VGND=VSS VNB=VSS VPB=
 C {sky130_stdcells/inv_1.sym} 720 960 0 0 {name=x515 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 680 930 0 1 {name=p156 sig_type=std_logic lab=full}
 C {devices/lab_pin.sym} 170 710 0 0 {name=p202 sig_type=std_logic lab=o_cyc}
+C {sky130_stdcells/dfxtp_1.sym} 1260 100 0 0 {name=x120 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
+C {devices/lab_pin.sym} 1170 110 0 0 {name=p203 sig_type=std_logic lab=i_pc_select}
+C {devices/lab_pin.sym} 1350 90 0 1 {name=p206 sig_type=std_logic lab=pc_select}
+C {sky130_stdcells/dfxtp_1.sym} 1260 160 0 0 {name=x121[31:1] VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
+C {devices/lab_pin.sym} 1170 170 0 0 {name=p207 sig_type=std_logic lab=i_pc_target[31:1]}
+C {devices/lab_pin.sym} 1350 150 0 1 {name=p212 sig_type=std_logic lab=pc_target[31:1]}
+C {devices/lab_pin.sym} 1170 150 2 1 {name=p222 sig_type=std_logic lab=clk_p3[80:72]}
+C {devices/lab_pin.sym} 1170 90 2 1 {name=p225 sig_type=std_logic lab=clk_p3[72]}

@@ -30,7 +30,7 @@ netlist_%:
 	cd blocks/$* && xschem --rcfile ${PDK_ROOT}/${PDK}/libs.tech/xschem/xschemrc --spice --netlist_path ./simulation/ --netlist $*.sch -x -q
 	cd blocks/$* && xschem --rcfile ${PDK_ROOT}/${PDK}/libs.tech/xschem/xschemrc --verilog --netlist_path ./simulation/ --netlist $*.sch -x -q
 	cd blocks/$* && sed -i 's/sky130_fd_sc_h[ds]__\([[:alnum:]]\+\)_[[:digit:]]\+/cell_\1/g' ./simulation/$*.v
-	cd blocks/$* && sed -i '0,/\(module [[:graph:]]\+\)/s//`timescale 1ps\/1ps\n\/* verilator lint_off DECLFILENAME *\/\n\1_sch/' ./simulation/$*.v
+	cd blocks/$* && sed -i '0,/\(module [[:graph:]]\+\)/s//`timescale 1ps\/1ps\n\/* verilator lint_off DECLFILENAME *\/\n\/* verilator lint_off UNUSEDSIGNAL *\/\n\1_sch/' ./simulation/$*.v
 	mv blocks/$*/simulation/$*.v blocks/$*/simulation/$*_sch.v
 
 sim_blk_%: $(utils_lst) netlist_%

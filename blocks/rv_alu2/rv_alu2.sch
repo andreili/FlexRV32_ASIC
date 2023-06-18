@@ -76,3 +76,7 @@ C {devices/opin.sym} 360 200 0 0 {name=p25 lab=o_wsel[3:0]}
 C {devices/noconn.sym} 360 200 0 0 {name=l17}
 C {devices/opin.sym} 360 260 0 0 {name=p26 lab=o_ready}
 C {devices/noconn.sym} 360 260 0 0 {name=l18}
+C {devices/ipin.sym} 130 400 0 0 {name=p27 lab=i_flush}
+C {devices/noconn.sym} 130 400 0 1 {name=l19}
+C {devices/opin.sym} 360 280 0 0 {name=p28 lab=o_instr_jal_jalr_branch}
+C {devices/noconn.sym} 360 280 0 0 {name=l20}
