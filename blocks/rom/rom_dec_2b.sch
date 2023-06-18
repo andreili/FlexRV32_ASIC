@@ -39,22 +39,22 @@ C {sky130_stdcells/nand2_1.sym} 400 140 0 0 {name=x1
 VGND=VSS
 VNB=VSS
 VPB=VCC
-VPWR=VCC}
+VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {sky130_stdcells/nand2_1.sym} 400 220 0 0 {name=x2
 VGND=VSS
 VNB=VSS
 VPB=VCC
-VPWR=VCC}
+VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {sky130_stdcells/nand2_1.sym} 400 300 0 0 {name=x3
 VGND=VSS
 VNB=VSS
 VPB=VCC
-VPWR=VCC}
+VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {sky130_stdcells/nand2_1.sym} 400 380 0 0 {name=x4
 VGND=VSS
 VNB=VSS
 VPB=VCC
-VPWR=VCC}
+VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 230 120 2 1 {name=p2 sig_type=std_logic lab=An[1]}
 C {devices/lab_pin.sym} 240 320 2 1 {name=p6 sig_type=std_logic lab=An[0]}
 C {devices/lab_pin.sym} 310 280 2 1 {name=p8 sig_type=std_logic lab=Ap[1]}

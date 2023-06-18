@@ -1,488 +1,469 @@
 * NGSPICE file created from rv_hazard.ext - technology: sky130A
 
-.subckt rv_hazard 
-+ i_clk 
-+ i_alu_rs1[0] i_alu_rs1[1] i_alu_rs1[2] i_alu_rs1[3] i_alu_rs1[4] 
-+ i_alu_rs2[0] i_alu_rs2[1] i_alu_rs2[2] i_alu_rs2[3] i_alu_rs2[4] 
-+ i_alu2_rd[0] i_alu2_rd[1] i_alu2_rd[2] i_alu2_rd[3] i_alu2_rd[4] 
-+ i_write_rd[0] i_write_rd[1] i_write_rd[2] i_write_rd[3] i_write_rd[4] 
-+ i_alu2_reg_write i_write_reg_write 
-+ i_reg_data1[0] i_reg_data1[1] i_reg_data1[2] i_reg_data1[3] i_reg_data1[4] i_reg_data1[5] i_reg_data1[6] i_reg_data1[7] i_reg_data1[8] i_reg_data1[9] i_reg_data1[10] i_reg_data1[11] i_reg_data1[12] i_reg_data1[13] i_reg_data1[14] i_reg_data1[15] i_reg_data1[16] i_reg_data1[17] i_reg_data1[18] i_reg_data1[19] i_reg_data1[20] i_reg_data1[21] i_reg_data1[22] i_reg_data1[23] i_reg_data1[24] i_reg_data1[25] i_reg_data1[26] i_reg_data1[27] i_reg_data1[28] i_reg_data1[29] i_reg_data1[30] i_reg_data1[31] 
-+ i_reg_data2[0] i_reg_data2[1] i_reg_data2[2] i_reg_data2[3] i_reg_data2[4] i_reg_data2[5] i_reg_data2[6] i_reg_data2[7] i_reg_data2[8] i_reg_data2[9] i_reg_data2[10] i_reg_data2[11] i_reg_data2[12] i_reg_data2[13] i_reg_data2[14] i_reg_data2[15] i_reg_data2[16] i_reg_data2[17] i_reg_data2[18] i_reg_data2[19] i_reg_data2[20] i_reg_data2[21] i_reg_data2[22] i_reg_data2[23] i_reg_data2[24] i_reg_data2[25] i_reg_data2[26] i_reg_data2[27] i_reg_data2[28] i_reg_data2[29] i_reg_data2[30] i_reg_data2[31] 
-+ i_alu2_data[0] i_alu2_data[1] i_alu2_data[2] i_alu2_data[3] i_alu2_data[4] i_alu2_data[5] i_alu2_data[6] i_alu2_data[7] i_alu2_data[8] i_alu2_data[9] i_alu2_data[10] i_alu2_data[11] i_alu2_data[12] i_alu2_data[13] i_alu2_data[14] i_alu2_data[15] i_alu2_data[16] i_alu2_data[17] i_alu2_data[18] i_alu2_data[19] i_alu2_data[20] i_alu2_data[21] i_alu2_data[22] i_alu2_data[23] i_alu2_data[24] i_alu2_data[25] i_alu2_data[26] i_alu2_data[27] i_alu2_data[28] i_alu2_data[29] i_alu2_data[30] i_alu2_data[31] 
-+ i_wr_data[0] i_wr_data[1] i_wr_data[2] i_wr_data[3] i_wr_data[4] i_wr_data[5] i_wr_data[6] i_wr_data[7] i_wr_data[8] i_wr_data[9] i_wr_data[10] i_wr_data[11] i_wr_data[12] i_wr_data[13] i_wr_data[14] i_wr_data[15] i_wr_data[16] i_wr_data[17] i_wr_data[18] i_wr_data[19] i_wr_data[20] i_wr_data[21] i_wr_data[22] i_wr_data[23] i_wr_data[24] i_wr_data[25] i_wr_data[26] i_wr_data[27] i_wr_data[28] i_wr_data[29] i_wr_data[30] i_wr_data[31] 
-+ o_data1[0] o_data1[1] o_data1[2] o_data1[3] o_data1[4] o_data1[5] o_data1[6] o_data1[7] o_data1[8] o_data1[9] o_data1[10] o_data1[11] o_data1[12] o_data1[13] o_data1[14] o_data1[15] o_data1[16] o_data1[17] o_data1[18] o_data1[19] o_data1[20] o_data1[21] o_data1[22] o_data1[23] o_data1[24] o_data1[25] o_data1[26] o_data1[27] o_data1[28] o_data1[29] o_data1[30] o_data1[31] 
-+ o_data2[0] o_data2[1] o_data2[2] o_data2[3] o_data2[4] o_data2[5] o_data2[6] o_data2[7] o_data2[8] o_data2[9] o_data2[10] o_data2[11] o_data2[12] o_data2[13] o_data2[14] o_data2[15] o_data2[16] o_data2[17] o_data2[18] o_data2[19] o_data2[20] o_data2[21] o_data2[22] o_data2[23] o_data2[24] o_data2[25] o_data2[26] o_data2[27] o_data2[28] o_data2[29] o_data2[30] o_data2[31] 
-+ o_alu2_data[0] o_alu2_data[1] o_alu2_data[2] o_alu2_data[3] o_alu2_data[4] o_alu2_data[5] o_alu2_data[6] o_alu2_data[7] o_alu2_data[8] o_alu2_data[9] o_alu2_data[10] o_alu2_data[11] o_alu2_data[12] o_alu2_data[13] o_alu2_data[14] o_alu2_data[15] o_alu2_data[16] o_alu2_data[17] o_alu2_data[18] o_alu2_data[19] o_alu2_data[20] o_alu2_data[21] o_alu2_data[22] o_alu2_data[23] o_alu2_data[24] o_alu2_data[25] o_alu2_data[26] o_alu2_data[27] o_alu2_data[28] o_alu2_data[29] o_alu2_data[30] o_alu2_data[31] 
-+ o_write_data[0] o_write_data[1] o_write_data[2] o_write_data[3] o_write_data[4] o_write_data[5] o_write_data[6] o_write_data[7] o_write_data[8] o_write_data[9] o_write_data[10] o_write_data[11] o_write_data[12] o_write_data[13] o_write_data[14] o_write_data[15] o_write_data[16] o_write_data[17] o_write_data[18] o_write_data[19] o_write_data[20] o_write_data[21] o_write_data[22] o_write_data[23] o_write_data[24] o_write_data[25] o_write_data[26] o_write_data[27] o_write_data[28] o_write_data[29] o_write_data[30] o_write_data[31] 
-+ o_data2_ex[0] o_data2_ex[1] o_data2_ex[2] o_data2_ex[3] o_data2_ex[4] o_data2_ex[5] o_data2_ex[6] o_data2_ex[7] o_data2_ex[8] o_data2_ex[9] o_data2_ex[10] o_data2_ex[11] o_data2_ex[12] o_data2_ex[13] o_data2_ex[14] o_data2_ex[15] o_data2_ex[16] o_data2_ex[17] o_data2_ex[18] o_data2_ex[19] o_data2_ex[20] o_data2_ex[21] o_data2_ex[22] o_data2_ex[23] o_data2_ex[24] o_data2_ex[25] o_data2_ex[26] o_data2_ex[27] o_data2_ex[28] o_data2_ex[29] o_data2_ex[30] o_data2_ex[31] 
-+ vccd1 vssd1
-X_501_ i_wr_data[27] vssd1 vssd1 vccd1 vccd1 o_write_data[27] sky130_fd_sc_hd__buf_2
-X_432_ i_alu2_data[22] vssd1 vssd1 vccd1 vccd1 o_alu2_data[22] sky130_fd_sc_hd__buf_2
-X_363_ wr_back_data\[23\] _138_ _139_ i_reg_data1[23] _149_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[23] sky130_fd_sc_hd__a221o_4
-X_294_ i_alu2_data[25] _104_ _105_ i_wr_data[25] vssd1 vssd1 vccd1 vccd1 _111_ sky130_fd_sc_hd__a22o_1
-X_415_ i_alu2_data[5] vssd1 vssd1 vccd1 vccd1 o_alu2_data[5] sky130_fd_sc_hd__buf_2
-X_346_ _032_ vssd1 vssd1 vccd1 vccd1 _140_ sky130_fd_sc_hd__buf_2
-X_277_ i_reg_data2[18] _088_ _089_ wr_back_data\[18\] _100_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[18] sky130_fd_sc_hd__a221o_4
-X_200_ i_alu_rs2[1] i_alu_rs2[0] i_alu_rs2[2] i_alu_rs2[4] vssd1 vssd1 vccd1 vccd1
-+ _042_ sky130_fd_sc_hd__or4_1
-X_329_ wr_back_data\[8\] _124_ _125_ i_reg_data1[8] _130_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[8] sky130_fd_sc_hd__a221o_4
-X_500_ i_wr_data[26] vssd1 vssd1 vccd1 vccd1 o_write_data[26] sky130_fd_sc_hd__buf_2
-X_431_ i_alu2_data[21] vssd1 vssd1 vccd1 vccd1 o_alu2_data[21] sky130_fd_sc_hd__buf_2
-X_362_ i_alu2_data[23] _140_ _141_ i_wr_data[23] vssd1 vssd1 vccd1 vccd1 _149_ sky130_fd_sc_hd__a22o_1
-X_293_ i_reg_data2[24] _102_ _103_ wr_back_data\[24\] _110_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[24] sky130_fd_sc_hd__a221o_4
-X_414_ i_alu2_data[4] vssd1 vssd1 vccd1 vccd1 o_alu2_data[4] sky130_fd_sc_hd__buf_2
-X_345_ _033_ vssd1 vssd1 vccd1 vccd1 _139_ sky130_fd_sc_hd__buf_4
-X_276_ i_alu2_data[18] _090_ _091_ i_wr_data[18] vssd1 vssd1 vccd1 vccd1 _100_ sky130_fd_sc_hd__a22o_1
-X_328_ i_alu2_data[8] _126_ _127_ i_wr_data[8] vssd1 vssd1 vccd1 vccd1 _130_ sky130_fd_sc_hd__a22o_1
-X_259_ _076_ vssd1 vssd1 vccd1 vccd1 _091_ sky130_fd_sc_hd__buf_2
-X_430_ i_alu2_data[20] vssd1 vssd1 vccd1 vccd1 o_alu2_data[20] sky130_fd_sc_hd__buf_2
-X_361_ wr_back_data\[22\] _138_ _139_ i_reg_data1[22] _148_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[22] sky130_fd_sc_hd__a221o_4
-X_292_ i_alu2_data[24] _104_ _105_ i_wr_data[24] vssd1 vssd1 vccd1 vccd1 _110_ sky130_fd_sc_hd__a22o_1
-X_413_ i_alu2_data[3] vssd1 vssd1 vccd1 vccd1 o_alu2_data[3] sky130_fd_sc_hd__buf_2
-X_344_ _029_ vssd1 vssd1 vccd1 vccd1 _138_ sky130_fd_sc_hd__buf_4
-X_275_ i_reg_data2[17] _088_ _089_ wr_back_data\[17\] _099_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[17] sky130_fd_sc_hd__a221o_4
-X_327_ wr_back_data\[7\] _124_ _125_ i_reg_data1[7] _129_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[7] sky130_fd_sc_hd__a221o_4
-X_258_ _051_ vssd1 vssd1 vccd1 vccd1 _090_ sky130_fd_sc_hd__buf_2
-X_189_ _032_ vssd1 vssd1 vccd1 vccd1 _035_ sky130_fd_sc_hd__buf_2
-X_360_ i_alu2_data[22] _140_ _141_ i_wr_data[22] vssd1 vssd1 vccd1 vccd1 _148_ sky130_fd_sc_hd__a22o_1
-X_291_ i_reg_data2[23] _102_ _103_ wr_back_data\[23\] _109_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[23] sky130_fd_sc_hd__a221o_4
-X_489_ i_wr_data[15] vssd1 vssd1 vccd1 vccd1 o_write_data[15] sky130_fd_sc_hd__buf_2
-X_412_ i_alu2_data[2] vssd1 vssd1 vccd1 vccd1 o_alu2_data[2] sky130_fd_sc_hd__buf_2
-X_343_ wr_back_data\[15\] _124_ _125_ i_reg_data1[15] _137_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[15] sky130_fd_sc_hd__a221o_4
-X_274_ i_alu2_data[17] _090_ _091_ i_wr_data[17] vssd1 vssd1 vccd1 vccd1 _099_ sky130_fd_sc_hd__a22o_1
-X_326_ i_alu2_data[7] _126_ _127_ i_wr_data[7] vssd1 vssd1 vccd1 vccd1 _129_ sky130_fd_sc_hd__a22o_1
-X_257_ _073_ vssd1 vssd1 vccd1 vccd1 _089_ sky130_fd_sc_hd__buf_4
-X_188_ _033_ vssd1 vssd1 vccd1 vccd1 _034_ sky130_fd_sc_hd__buf_4
-X_309_ wr_back_data\[0\] _030_ _034_ i_reg_data1[0] _118_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[0] sky130_fd_sc_hd__a221o_4
-X_290_ i_alu2_data[23] _104_ _105_ i_wr_data[23] vssd1 vssd1 vccd1 vccd1 _109_ sky130_fd_sc_hd__a22o_1
-X_488_ i_wr_data[14] vssd1 vssd1 vccd1 vccd1 o_write_data[14] sky130_fd_sc_hd__buf_2
-X_411_ i_alu2_data[1] vssd1 vssd1 vccd1 vccd1 o_alu2_data[1] sky130_fd_sc_hd__buf_2
-X_342_ i_alu2_data[15] _126_ _127_ i_wr_data[15] vssd1 vssd1 vccd1 vccd1 _137_ sky130_fd_sc_hd__a22o_1
-X_273_ i_reg_data2[16] _088_ _089_ wr_back_data\[16\] _098_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[16] sky130_fd_sc_hd__a221o_4
-X_325_ wr_back_data\[6\] _124_ _125_ i_reg_data1[6] _128_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[6] sky130_fd_sc_hd__a221o_4
-X_256_ _071_ vssd1 vssd1 vccd1 vccd1 _088_ sky130_fd_sc_hd__buf_4
-X_187_ _032_ _016_ _027_ vssd1 vssd1 vccd1 vccd1 _033_ sky130_fd_sc_hd__nor3_2
-X_308_ i_alu2_data[0] _035_ _037_ i_wr_data[0] vssd1 vssd1 vccd1 vccd1 _118_ sky130_fd_sc_hd__a22o_1
-X_239_ i_reg_data2[1] _072_ _074_ wr_back_data\[1\] _079_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[1] sky130_fd_sc_hd__a221o_4
-Xclkbuf_0_i_clk i_clk vssd1 vssd1 vccd1 vccd1 clknet_0_i_clk sky130_fd_sc_hd__clkbuf_16
-X_487_ i_wr_data[13] vssd1 vssd1 vccd1 vccd1 o_write_data[13] sky130_fd_sc_hd__buf_2
-X_410_ i_alu2_data[0] vssd1 vssd1 vccd1 vccd1 o_alu2_data[0] sky130_fd_sc_hd__buf_2
-X_341_ wr_back_data\[14\] _124_ _125_ i_reg_data1[14] _136_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[14] sky130_fd_sc_hd__a221o_4
-X_272_ i_alu2_data[16] _090_ _091_ i_wr_data[16] vssd1 vssd1 vccd1 vccd1 _098_ sky130_fd_sc_hd__a22o_1
-X_324_ i_alu2_data[6] _126_ _127_ i_wr_data[6] vssd1 vssd1 vccd1 vccd1 _128_ sky130_fd_sc_hd__a22o_1
-X_255_ i_reg_data2[9] _072_ _074_ wr_back_data\[9\] _087_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[9] sky130_fd_sc_hd__a221o_4
-X_186_ _031_ vssd1 vssd1 vccd1 vccd1 _032_ sky130_fd_sc_hd__clkbuf_2
-X_307_ i_reg_data2[31] _071_ _073_ wr_back_data\[31\] _117_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[31] sky130_fd_sc_hd__a221o_4
-X_238_ i_alu2_data[1] _075_ _077_ i_wr_data[1] vssd1 vssd1 vccd1 vccd1 _079_ sky130_fd_sc_hd__a22o_1
-X_169_ _011_ _012_ _013_ _014_ vssd1 vssd1 vccd1 vccd1 _015_ sky130_fd_sc_hd__and4_1
-X_486_ i_wr_data[12] vssd1 vssd1 vccd1 vccd1 o_write_data[12] sky130_fd_sc_hd__buf_2
-X_340_ i_alu2_data[14] _126_ _127_ i_wr_data[14] vssd1 vssd1 vccd1 vccd1 _136_ sky130_fd_sc_hd__a22o_1
-X_271_ i_reg_data2[15] _088_ _089_ wr_back_data\[15\] _097_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[15] sky130_fd_sc_hd__a221o_4
-X_469_ o_data2[27] vssd1 vssd1 vccd1 vccd1 o_data2_ex[27] sky130_fd_sc_hd__buf_2
-X_323_ _036_ vssd1 vssd1 vccd1 vccd1 _127_ sky130_fd_sc_hd__buf_2
-X_254_ i_alu2_data[9] _075_ _077_ i_wr_data[9] vssd1 vssd1 vccd1 vccd1 _087_ sky130_fd_sc_hd__a22o_1
-X_185_ _003_ _007_ vssd1 vssd1 vccd1 vccd1 _031_ sky130_fd_sc_hd__and2_1
-X_306_ i_alu2_data[31] _051_ _076_ i_wr_data[31] vssd1 vssd1 vccd1 vccd1 _117_ sky130_fd_sc_hd__a22o_1
-X_237_ i_reg_data2[0] _072_ _074_ wr_back_data\[0\] _078_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[0] sky130_fd_sc_hd__a221o_4
-X_168_ i_write_rd[1] i_alu_rs1[1] vssd1 vssd1 vccd1 vccd1 _014_ sky130_fd_sc_hd__xnor2_1
-X_485_ i_wr_data[11] vssd1 vssd1 vccd1 vccd1 o_write_data[11] sky130_fd_sc_hd__buf_2
-X_270_ i_alu2_data[15] _090_ _091_ i_wr_data[15] vssd1 vssd1 vccd1 vccd1 _097_ sky130_fd_sc_hd__a22o_1
-X_468_ o_data2[26] vssd1 vssd1 vccd1 vccd1 o_data2_ex[26] sky130_fd_sc_hd__buf_2
-X_399_ clknet_2_3__leaf_i_clk i_wr_data[27] vssd1 vssd1 vccd1 vccd1 wr_back_data\[27\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_322_ _032_ vssd1 vssd1 vccd1 vccd1 _126_ sky130_fd_sc_hd__buf_2
-X_253_ i_reg_data2[8] _072_ _074_ wr_back_data\[8\] _086_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[8] sky130_fd_sc_hd__a221o_4
-X_184_ _029_ vssd1 vssd1 vccd1 vccd1 _030_ sky130_fd_sc_hd__buf_4
-X_305_ i_reg_data2[30] _071_ _073_ wr_back_data\[30\] _116_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[30] sky130_fd_sc_hd__a221o_4
-X_236_ i_alu2_data[0] _075_ _077_ i_wr_data[0] vssd1 vssd1 vccd1 vccd1 _078_ sky130_fd_sc_hd__a22o_1
-X_167_ i_write_rd[3] i_alu_rs1[3] vssd1 vssd1 vccd1 vccd1 _013_ sky130_fd_sc_hd__xnor2_1
-X_219_ i_alu_rs2[0] vssd1 vssd1 vccd1 vccd1 _061_ sky130_fd_sc_hd__inv_2
-X_484_ i_wr_data[10] vssd1 vssd1 vccd1 vccd1 o_write_data[10] sky130_fd_sc_hd__buf_2
-X_467_ o_data2[25] vssd1 vssd1 vccd1 vccd1 o_data2_ex[25] sky130_fd_sc_hd__buf_2
-X_398_ clknet_2_3__leaf_i_clk i_wr_data[26] vssd1 vssd1 vccd1 vccd1 wr_back_data\[26\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_321_ _033_ vssd1 vssd1 vccd1 vccd1 _125_ sky130_fd_sc_hd__buf_4
-X_252_ i_alu2_data[8] _075_ _077_ i_wr_data[8] vssd1 vssd1 vccd1 vccd1 _086_ sky130_fd_sc_hd__a22o_1
-X_183_ _028_ vssd1 vssd1 vccd1 vccd1 _029_ sky130_fd_sc_hd__clkbuf_2
-X_304_ i_alu2_data[30] _051_ _076_ i_wr_data[30] vssd1 vssd1 vccd1 vccd1 _116_ sky130_fd_sc_hd__a22o_1
-X_235_ _076_ vssd1 vssd1 vccd1 vccd1 _077_ sky130_fd_sc_hd__buf_2
-X_166_ i_write_rd[2] i_alu_rs1[2] vssd1 vssd1 vccd1 vccd1 _012_ sky130_fd_sc_hd__xnor2_1
-X_218_ i_alu_rs2[0] _020_ _022_ i_alu_rs2[2] vssd1 vssd1 vccd1 vccd1 _060_ sky130_fd_sc_hd__a22o_1
-X_483_ i_wr_data[9] vssd1 vssd1 vccd1 vccd1 o_write_data[9] sky130_fd_sc_hd__buf_2
-X_466_ o_data2[24] vssd1 vssd1 vccd1 vccd1 o_data2_ex[24] sky130_fd_sc_hd__buf_2
-X_397_ clknet_2_1__leaf_i_clk i_wr_data[25] vssd1 vssd1 vccd1 vccd1 wr_back_data\[25\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_320_ _029_ vssd1 vssd1 vccd1 vccd1 _124_ sky130_fd_sc_hd__buf_4
-X_251_ i_reg_data2[7] _072_ _074_ wr_back_data\[7\] _085_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[7] sky130_fd_sc_hd__a221o_4
-X_182_ _008_ _017_ _027_ vssd1 vssd1 vccd1 vccd1 _028_ sky130_fd_sc_hd__and3_1
-X_449_ o_data2[7] vssd1 vssd1 vccd1 vccd1 o_data2_ex[7] sky130_fd_sc_hd__buf_2
-X_303_ i_reg_data2[29] _102_ _103_ wr_back_data\[29\] _115_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[29] sky130_fd_sc_hd__a221o_4
-X_234_ _051_ _058_ vssd1 vssd1 vccd1 vccd1 _076_ sky130_fd_sc_hd__nor2_1
-X_165_ i_write_rd[0] i_alu_rs1[0] vssd1 vssd1 vccd1 vccd1 _011_ sky130_fd_sc_hd__xnor2_1
-Xclkbuf_2_2__f_i_clk clknet_0_i_clk vssd1 vssd1 vccd1 vccd1 clknet_2_2__leaf_i_clk
-+ sky130_fd_sc_hd__clkbuf_16
-X_217_ i_alu_rs2[2] vssd1 vssd1 vccd1 vccd1 _059_ sky130_fd_sc_hd__inv_2
-X_482_ i_wr_data[8] vssd1 vssd1 vccd1 vccd1 o_write_data[8] sky130_fd_sc_hd__buf_2
-X_465_ o_data2[23] vssd1 vssd1 vccd1 vccd1 o_data2_ex[23] sky130_fd_sc_hd__buf_2
-X_396_ clknet_2_1__leaf_i_clk i_wr_data[24] vssd1 vssd1 vccd1 vccd1 wr_back_data\[24\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_250_ i_alu2_data[7] _075_ _077_ i_wr_data[7] vssd1 vssd1 vccd1 vccd1 _085_ sky130_fd_sc_hd__a22o_1
-X_181_ _018_ i_alu_rs1[4] _009_ _021_ _026_ vssd1 vssd1 vccd1 vccd1 _027_ sky130_fd_sc_hd__o2111a_1
-X_448_ o_data2[6] vssd1 vssd1 vccd1 vccd1 o_data2_ex[6] sky130_fd_sc_hd__buf_2
-X_379_ clknet_2_0__leaf_i_clk i_wr_data[7] vssd1 vssd1 vccd1 vccd1 wr_back_data\[7\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_302_ i_alu2_data[29] _104_ _105_ i_wr_data[29] vssd1 vssd1 vccd1 vccd1 _115_ sky130_fd_sc_hd__a22o_1
-X_233_ _051_ vssd1 vssd1 vccd1 vccd1 _075_ sky130_fd_sc_hd__buf_2
-X_164_ i_write_rd[4] i_alu_rs1[4] vssd1 vssd1 vccd1 vccd1 _010_ sky130_fd_sc_hd__xnor2_1
-X_216_ _043_ _052_ _057_ i_write_reg_write vssd1 vssd1 vccd1 vccd1 _058_ sky130_fd_sc_hd__or4b_1
-X_481_ i_wr_data[7] vssd1 vssd1 vccd1 vccd1 o_write_data[7] sky130_fd_sc_hd__buf_2
-X_464_ o_data2[22] vssd1 vssd1 vccd1 vccd1 o_data2_ex[22] sky130_fd_sc_hd__buf_2
-X_395_ clknet_2_3__leaf_i_clk i_wr_data[23] vssd1 vssd1 vccd1 vccd1 wr_back_data\[23\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_180_ wr_back_rd\[3\] _019_ _024_ _025_ wr_back_op vssd1 vssd1 vccd1 vccd1 _026_
-+ sky130_fd_sc_hd__o2111a_1
-X_447_ o_data2[5] vssd1 vssd1 vccd1 vccd1 o_data2_ex[5] sky130_fd_sc_hd__buf_2
-X_378_ clknet_2_1__leaf_i_clk i_wr_data[6] vssd1 vssd1 vccd1 vccd1 wr_back_data\[6\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_301_ i_reg_data2[28] _102_ _103_ wr_back_data\[28\] _114_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[28] sky130_fd_sc_hd__a221o_4
-X_232_ _073_ vssd1 vssd1 vccd1 vccd1 _074_ sky130_fd_sc_hd__buf_4
-X_163_ i_alu_rs1[3] _000_ vssd1 vssd1 vccd1 vccd1 _009_ sky130_fd_sc_hd__or2_1
-X_215_ _053_ _054_ _055_ _056_ vssd1 vssd1 vccd1 vccd1 _057_ sky130_fd_sc_hd__or4_1
-X_480_ i_wr_data[6] vssd1 vssd1 vccd1 vccd1 o_write_data[6] sky130_fd_sc_hd__buf_2
-X_463_ o_data2[21] vssd1 vssd1 vccd1 vccd1 o_data2_ex[21] sky130_fd_sc_hd__buf_2
-X_394_ clknet_2_1__leaf_i_clk i_wr_data[22] vssd1 vssd1 vccd1 vccd1 wr_back_data\[22\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_446_ o_data2[4] vssd1 vssd1 vccd1 vccd1 o_data2_ex[4] sky130_fd_sc_hd__buf_2
-X_377_ clknet_2_3__leaf_i_clk i_wr_data[5] vssd1 vssd1 vccd1 vccd1 wr_back_data\[5\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_300_ i_alu2_data[28] _104_ _105_ i_wr_data[28] vssd1 vssd1 vccd1 vccd1 _114_ sky130_fd_sc_hd__a22o_1
-X_231_ _051_ _069_ _058_ vssd1 vssd1 vccd1 vccd1 _073_ sky130_fd_sc_hd__nor3b_2
-X_162_ _003_ _007_ vssd1 vssd1 vccd1 vccd1 _008_ sky130_fd_sc_hd__nand2_1
-X_429_ i_alu2_data[19] vssd1 vssd1 vccd1 vccd1 o_alu2_data[19] sky130_fd_sc_hd__buf_2
-X_214_ i_alu_rs2[0] i_write_rd[0] vssd1 vssd1 vccd1 vccd1 _056_ sky130_fd_sc_hd__xor2_1
-X_462_ o_data2[20] vssd1 vssd1 vccd1 vccd1 o_data2_ex[20] sky130_fd_sc_hd__buf_2
-X_393_ clknet_2_3__leaf_i_clk i_wr_data[21] vssd1 vssd1 vccd1 vccd1 wr_back_data\[21\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_445_ o_data2[3] vssd1 vssd1 vccd1 vccd1 o_data2_ex[3] sky130_fd_sc_hd__buf_2
-X_376_ clknet_2_1__leaf_i_clk i_wr_data[4] vssd1 vssd1 vccd1 vccd1 wr_back_data\[4\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_230_ _071_ vssd1 vssd1 vccd1 vccd1 _072_ sky130_fd_sc_hd__buf_4
-X_161_ i_alu2_reg_write _004_ _005_ _006_ vssd1 vssd1 vccd1 vccd1 _007_ sky130_fd_sc_hd__and4_1
-X_428_ i_alu2_data[18] vssd1 vssd1 vccd1 vccd1 o_alu2_data[18] sky130_fd_sc_hd__buf_2
-X_359_ wr_back_data\[21\] _138_ _139_ i_reg_data1[21] _147_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[21] sky130_fd_sc_hd__a221o_4
-X_213_ i_alu_rs2[2] i_write_rd[2] vssd1 vssd1 vccd1 vccd1 _055_ sky130_fd_sc_hd__xor2_1
-X_461_ o_data2[19] vssd1 vssd1 vccd1 vccd1 o_data2_ex[19] sky130_fd_sc_hd__buf_2
-X_392_ clknet_2_2__leaf_i_clk i_wr_data[20] vssd1 vssd1 vccd1 vccd1 wr_back_data\[20\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_444_ o_data2[2] vssd1 vssd1 vccd1 vccd1 o_data2_ex[2] sky130_fd_sc_hd__buf_2
-X_375_ clknet_2_1__leaf_i_clk i_wr_data[3] vssd1 vssd1 vccd1 vccd1 wr_back_data\[3\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_160_ i_alu2_rd[1] i_alu_rs1[1] vssd1 vssd1 vccd1 vccd1 _006_ sky130_fd_sc_hd__xnor2_1
-X_427_ i_alu2_data[17] vssd1 vssd1 vccd1 vccd1 o_alu2_data[17] sky130_fd_sc_hd__buf_2
-X_358_ i_alu2_data[21] _140_ _141_ i_wr_data[21] vssd1 vssd1 vccd1 vccd1 _147_ sky130_fd_sc_hd__a22o_1
-X_289_ i_reg_data2[22] _102_ _103_ wr_back_data\[22\] _108_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[22] sky130_fd_sc_hd__a221o_4
-X_212_ i_alu_rs2[3] i_write_rd[3] vssd1 vssd1 vccd1 vccd1 _054_ sky130_fd_sc_hd__xor2_1
-X_460_ o_data2[18] vssd1 vssd1 vccd1 vccd1 o_data2_ex[18] sky130_fd_sc_hd__buf_2
-X_391_ clknet_2_2__leaf_i_clk i_wr_data[19] vssd1 vssd1 vccd1 vccd1 wr_back_data\[19\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_443_ o_data2[1] vssd1 vssd1 vccd1 vccd1 o_data2_ex[1] sky130_fd_sc_hd__buf_2
-X_374_ clknet_2_2__leaf_i_clk i_wr_data[2] vssd1 vssd1 vccd1 vccd1 wr_back_data\[2\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_426_ i_alu2_data[16] vssd1 vssd1 vccd1 vccd1 o_alu2_data[16] sky130_fd_sc_hd__buf_2
-X_357_ wr_back_data\[20\] _138_ _139_ i_reg_data1[20] _146_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[20] sky130_fd_sc_hd__a221o_4
-X_288_ i_alu2_data[22] _104_ _105_ i_wr_data[22] vssd1 vssd1 vccd1 vccd1 _108_ sky130_fd_sc_hd__a22o_1
-X_211_ i_alu_rs2[1] i_write_rd[1] vssd1 vssd1 vccd1 vccd1 _053_ sky130_fd_sc_hd__xor2_1
-X_409_ clknet_2_1__leaf_i_clk i_write_reg_write vssd1 vssd1 vccd1 vccd1 wr_back_op
-+ sky130_fd_sc_hd__dfxtp_1
-X_390_ clknet_2_1__leaf_i_clk i_wr_data[18] vssd1 vssd1 vccd1 vccd1 wr_back_data\[18\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_442_ o_data2[0] vssd1 vssd1 vccd1 vccd1 o_data2_ex[0] sky130_fd_sc_hd__buf_2
-X_373_ clknet_2_0__leaf_i_clk i_wr_data[1] vssd1 vssd1 vccd1 vccd1 wr_back_data\[1\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_425_ i_alu2_data[15] vssd1 vssd1 vccd1 vccd1 o_alu2_data[15] sky130_fd_sc_hd__buf_2
-X_356_ i_alu2_data[20] _140_ _141_ i_wr_data[20] vssd1 vssd1 vccd1 vccd1 _146_ sky130_fd_sc_hd__a22o_1
-X_287_ i_reg_data2[21] _102_ _103_ wr_back_data\[21\] _107_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[21] sky130_fd_sc_hd__a221o_4
-X_210_ i_alu_rs2[4] i_write_rd[4] vssd1 vssd1 vccd1 vccd1 _052_ sky130_fd_sc_hd__xor2_1
-X_408_ clknet_2_0__leaf_i_clk i_write_rd[4] vssd1 vssd1 vccd1 vccd1 wr_back_rd\[4\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_339_ wr_back_data\[13\] _124_ _125_ i_reg_data1[13] _135_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[13] sky130_fd_sc_hd__a221o_4
-X_441_ i_alu2_data[31] vssd1 vssd1 vccd1 vccd1 o_alu2_data[31] sky130_fd_sc_hd__buf_2
-X_372_ clknet_2_3__leaf_i_clk i_wr_data[0] vssd1 vssd1 vccd1 vccd1 wr_back_data\[0\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_424_ i_alu2_data[14] vssd1 vssd1 vccd1 vccd1 o_alu2_data[14] sky130_fd_sc_hd__buf_2
-X_355_ wr_back_data\[19\] _138_ _139_ i_reg_data1[19] _145_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[19] sky130_fd_sc_hd__a221o_4
-X_286_ i_alu2_data[21] _104_ _105_ i_wr_data[21] vssd1 vssd1 vccd1 vccd1 _107_ sky130_fd_sc_hd__a22o_1
-X_407_ clknet_2_2__leaf_i_clk i_write_rd[3] vssd1 vssd1 vccd1 vccd1 wr_back_rd\[3\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_338_ i_alu2_data[13] _126_ _127_ i_wr_data[13] vssd1 vssd1 vccd1 vccd1 _135_ sky130_fd_sc_hd__a22o_1
-X_269_ i_reg_data2[14] _088_ _089_ wr_back_data\[14\] _096_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[14] sky130_fd_sc_hd__a221o_4
-X_440_ i_alu2_data[30] vssd1 vssd1 vccd1 vccd1 o_alu2_data[30] sky130_fd_sc_hd__buf_2
-X_371_ wr_back_data\[27\] _029_ _033_ i_reg_data1[27] _153_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[27] sky130_fd_sc_hd__a221o_4
-X_423_ i_alu2_data[13] vssd1 vssd1 vccd1 vccd1 o_alu2_data[13] sky130_fd_sc_hd__buf_2
-X_354_ i_alu2_data[19] _140_ _141_ i_wr_data[19] vssd1 vssd1 vccd1 vccd1 _145_ sky130_fd_sc_hd__a22o_1
-X_285_ i_reg_data2[20] _102_ _103_ wr_back_data\[20\] _106_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[20] sky130_fd_sc_hd__a221o_4
-X_406_ clknet_2_3__leaf_i_clk i_write_rd[2] vssd1 vssd1 vccd1 vccd1 wr_back_rd\[2\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_337_ wr_back_data\[12\] _124_ _125_ i_reg_data1[12] _134_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[12] sky130_fd_sc_hd__a221o_4
-X_268_ i_alu2_data[14] _090_ _091_ i_wr_data[14] vssd1 vssd1 vccd1 vccd1 _096_ sky130_fd_sc_hd__a22o_1
-X_199_ wr_back_data\[31\] _030_ _034_ i_reg_data1[31] _041_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[31] sky130_fd_sc_hd__a221o_4
-X_370_ i_alu2_data[27] _032_ _036_ i_wr_data[27] vssd1 vssd1 vccd1 vccd1 _153_ sky130_fd_sc_hd__a22o_1
-X_499_ i_wr_data[25] vssd1 vssd1 vccd1 vccd1 o_write_data[25] sky130_fd_sc_hd__buf_2
-X_422_ i_alu2_data[12] vssd1 vssd1 vccd1 vccd1 o_alu2_data[12] sky130_fd_sc_hd__buf_2
-X_353_ wr_back_data\[18\] _138_ _139_ i_reg_data1[18] _144_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[18] sky130_fd_sc_hd__a221o_4
-X_284_ i_alu2_data[20] _104_ _105_ i_wr_data[20] vssd1 vssd1 vccd1 vccd1 _106_ sky130_fd_sc_hd__a22o_1
-X_405_ clknet_2_0__leaf_i_clk i_write_rd[1] vssd1 vssd1 vccd1 vccd1 wr_back_rd\[1\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_336_ i_alu2_data[12] _126_ _127_ i_wr_data[12] vssd1 vssd1 vccd1 vccd1 _134_ sky130_fd_sc_hd__a22o_1
-X_267_ i_reg_data2[13] _088_ _089_ wr_back_data\[13\] _095_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[13] sky130_fd_sc_hd__a221o_4
-X_198_ i_alu2_data[31] _035_ _037_ i_wr_data[31] vssd1 vssd1 vccd1 vccd1 _041_ sky130_fd_sc_hd__a22o_1
-X_319_ wr_back_data\[5\] _030_ _034_ i_reg_data1[5] _123_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[5] sky130_fd_sc_hd__a221o_4
-Xclkbuf_2_1__f_i_clk clknet_0_i_clk vssd1 vssd1 vccd1 vccd1 clknet_2_1__leaf_i_clk
-+ sky130_fd_sc_hd__clkbuf_16
-X_498_ i_wr_data[24] vssd1 vssd1 vccd1 vccd1 o_write_data[24] sky130_fd_sc_hd__buf_2
-X_421_ i_alu2_data[11] vssd1 vssd1 vccd1 vccd1 o_alu2_data[11] sky130_fd_sc_hd__buf_2
-X_352_ i_alu2_data[18] _140_ _141_ i_wr_data[18] vssd1 vssd1 vccd1 vccd1 _144_ sky130_fd_sc_hd__a22o_1
-X_283_ _076_ vssd1 vssd1 vccd1 vccd1 _105_ sky130_fd_sc_hd__buf_2
-X_404_ clknet_2_2__leaf_i_clk i_write_rd[0] vssd1 vssd1 vccd1 vccd1 wr_back_rd\[0\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_335_ wr_back_data\[11\] _124_ _125_ i_reg_data1[11] _133_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[11] sky130_fd_sc_hd__a221o_4
-X_266_ i_alu2_data[13] _090_ _091_ i_wr_data[13] vssd1 vssd1 vccd1 vccd1 _095_ sky130_fd_sc_hd__a22o_1
-X_197_ wr_back_data\[30\] _030_ _034_ i_reg_data1[30] _040_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[30] sky130_fd_sc_hd__a221o_4
-X_318_ i_alu2_data[5] _035_ _037_ i_wr_data[5] vssd1 vssd1 vccd1 vccd1 _123_ sky130_fd_sc_hd__a22o_1
-X_249_ i_reg_data2[6] _072_ _074_ wr_back_data\[6\] _084_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[6] sky130_fd_sc_hd__a221o_4
-X_497_ i_wr_data[23] vssd1 vssd1 vccd1 vccd1 o_write_data[23] sky130_fd_sc_hd__buf_2
-X_420_ i_alu2_data[10] vssd1 vssd1 vccd1 vccd1 o_alu2_data[10] sky130_fd_sc_hd__buf_2
-X_351_ wr_back_data\[17\] _138_ _139_ i_reg_data1[17] _143_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[17] sky130_fd_sc_hd__a221o_4
-X_282_ _051_ vssd1 vssd1 vccd1 vccd1 _104_ sky130_fd_sc_hd__buf_2
-X_403_ clknet_2_0__leaf_i_clk i_wr_data[31] vssd1 vssd1 vccd1 vccd1 wr_back_data\[31\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_334_ i_alu2_data[11] _126_ _127_ i_wr_data[11] vssd1 vssd1 vccd1 vccd1 _133_ sky130_fd_sc_hd__a22o_1
-X_265_ i_reg_data2[12] _088_ _089_ wr_back_data\[12\] _094_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[12] sky130_fd_sc_hd__a221o_4
-X_196_ i_alu2_data[30] _035_ _037_ i_wr_data[30] vssd1 vssd1 vccd1 vccd1 _040_ sky130_fd_sc_hd__a22o_1
-X_317_ wr_back_data\[4\] _030_ _034_ i_reg_data1[4] _122_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[4] sky130_fd_sc_hd__a221o_4
-X_248_ i_alu2_data[6] _075_ _077_ i_wr_data[6] vssd1 vssd1 vccd1 vccd1 _084_ sky130_fd_sc_hd__a22o_1
-X_179_ _018_ i_alu_rs1[4] i_alu_rs1[2] _022_ vssd1 vssd1 vccd1 vccd1 _025_ sky130_fd_sc_hd__o2bb2a_1
-X_496_ i_wr_data[22] vssd1 vssd1 vccd1 vccd1 o_write_data[22] sky130_fd_sc_hd__buf_2
-X_350_ i_alu2_data[17] _140_ _141_ i_wr_data[17] vssd1 vssd1 vccd1 vccd1 _143_ sky130_fd_sc_hd__a22o_1
-X_281_ _073_ vssd1 vssd1 vccd1 vccd1 _103_ sky130_fd_sc_hd__buf_4
-X_479_ i_wr_data[5] vssd1 vssd1 vccd1 vccd1 o_write_data[5] sky130_fd_sc_hd__buf_2
-X_402_ clknet_2_2__leaf_i_clk i_wr_data[30] vssd1 vssd1 vccd1 vccd1 wr_back_data\[30\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_333_ wr_back_data\[10\] _124_ _125_ i_reg_data1[10] _132_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[10] sky130_fd_sc_hd__a221o_4
-X_264_ i_alu2_data[12] _090_ _091_ i_wr_data[12] vssd1 vssd1 vccd1 vccd1 _094_ sky130_fd_sc_hd__a22o_1
-X_195_ wr_back_data\[29\] _030_ _034_ i_reg_data1[29] _039_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[29] sky130_fd_sc_hd__a221o_4
-X_316_ i_alu2_data[4] _035_ _037_ i_wr_data[4] vssd1 vssd1 vccd1 vccd1 _122_ sky130_fd_sc_hd__a22o_1
-X_247_ i_reg_data2[5] _072_ _074_ wr_back_data\[5\] _083_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[5] sky130_fd_sc_hd__a221o_4
-X_178_ _020_ i_alu_rs1[0] i_alu_rs1[2] _022_ _023_ vssd1 vssd1 vccd1 vccd1 _024_ sky130_fd_sc_hd__a221oi_1
-X_495_ i_wr_data[21] vssd1 vssd1 vccd1 vccd1 o_write_data[21] sky130_fd_sc_hd__buf_2
-X_280_ _071_ vssd1 vssd1 vccd1 vccd1 _102_ sky130_fd_sc_hd__buf_4
-X_478_ i_wr_data[4] vssd1 vssd1 vccd1 vccd1 o_write_data[4] sky130_fd_sc_hd__buf_2
-X_401_ clknet_2_1__leaf_i_clk i_wr_data[29] vssd1 vssd1 vccd1 vccd1 wr_back_data\[29\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_332_ i_alu2_data[10] _126_ _127_ i_wr_data[10] vssd1 vssd1 vccd1 vccd1 _132_ sky130_fd_sc_hd__a22o_1
-X_263_ i_reg_data2[11] _088_ _089_ wr_back_data\[11\] _093_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[11] sky130_fd_sc_hd__a221o_4
-X_194_ i_alu2_data[29] _035_ _037_ i_wr_data[29] vssd1 vssd1 vccd1 vccd1 _039_ sky130_fd_sc_hd__a22o_1
-X_315_ wr_back_data\[3\] _030_ _034_ i_reg_data1[3] _121_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[3] sky130_fd_sc_hd__a221o_4
-X_246_ i_alu2_data[5] _075_ _077_ i_wr_data[5] vssd1 vssd1 vccd1 vccd1 _083_ sky130_fd_sc_hd__a22o_1
-X_177_ wr_back_rd\[1\] i_alu_rs1[1] vssd1 vssd1 vccd1 vccd1 _023_ sky130_fd_sc_hd__xor2_1
-X_229_ _070_ vssd1 vssd1 vccd1 vccd1 _071_ sky130_fd_sc_hd__clkbuf_2
-X_494_ i_wr_data[20] vssd1 vssd1 vccd1 vccd1 o_write_data[20] sky130_fd_sc_hd__buf_2
-X_477_ i_wr_data[3] vssd1 vssd1 vccd1 vccd1 o_write_data[3] sky130_fd_sc_hd__buf_2
-X_400_ clknet_2_1__leaf_i_clk i_wr_data[28] vssd1 vssd1 vccd1 vccd1 wr_back_data\[28\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_331_ wr_back_data\[9\] _124_ _125_ i_reg_data1[9] _131_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[9] sky130_fd_sc_hd__a221o_4
-X_262_ i_alu2_data[11] _090_ _091_ i_wr_data[11] vssd1 vssd1 vccd1 vccd1 _093_ sky130_fd_sc_hd__a22o_1
-X_193_ wr_back_data\[28\] _030_ _034_ i_reg_data1[28] _038_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[28] sky130_fd_sc_hd__a221o_4
-X_314_ i_alu2_data[3] _035_ _037_ i_wr_data[3] vssd1 vssd1 vccd1 vccd1 _121_ sky130_fd_sc_hd__a22o_1
-X_245_ i_reg_data2[4] _072_ _074_ wr_back_data\[4\] _082_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[4] sky130_fd_sc_hd__a221o_4
-X_176_ wr_back_rd\[2\] vssd1 vssd1 vccd1 vccd1 _022_ sky130_fd_sc_hd__inv_2
-X_228_ _051_ _058_ _069_ vssd1 vssd1 vccd1 vccd1 _070_ sky130_fd_sc_hd__and3b_1
-X_159_ i_alu2_rd[4] i_alu_rs1[4] vssd1 vssd1 vccd1 vccd1 _005_ sky130_fd_sc_hd__xnor2_1
-X_493_ i_wr_data[19] vssd1 vssd1 vccd1 vccd1 o_write_data[19] sky130_fd_sc_hd__buf_2
-X_476_ i_wr_data[2] vssd1 vssd1 vccd1 vccd1 o_write_data[2] sky130_fd_sc_hd__buf_2
-X_330_ i_alu2_data[9] _126_ _127_ i_wr_data[9] vssd1 vssd1 vccd1 vccd1 _131_ sky130_fd_sc_hd__a22o_1
-X_261_ i_reg_data2[10] _088_ _089_ wr_back_data\[10\] _092_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[10] sky130_fd_sc_hd__a221o_4
-X_192_ i_alu2_data[28] _035_ _037_ i_wr_data[28] vssd1 vssd1 vccd1 vccd1 _038_ sky130_fd_sc_hd__a22o_1
-X_459_ o_data2[17] vssd1 vssd1 vccd1 vccd1 o_data2_ex[17] sky130_fd_sc_hd__buf_2
-X_313_ wr_back_data\[2\] _030_ _034_ i_reg_data1[2] _120_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[2] sky130_fd_sc_hd__a221o_4
-X_244_ i_alu2_data[4] _075_ _077_ i_wr_data[4] vssd1 vssd1 vccd1 vccd1 _082_ sky130_fd_sc_hd__a22o_1
-X_175_ _019_ wr_back_rd\[3\] _020_ i_alu_rs1[0] vssd1 vssd1 vccd1 vccd1 _021_ sky130_fd_sc_hd__o2bb2a_1
-X_227_ _059_ wr_back_rd\[2\] _060_ _068_ vssd1 vssd1 vccd1 vccd1 _069_ sky130_fd_sc_hd__a211o_1
-X_158_ i_alu2_rd[0] i_alu_rs1[0] vssd1 vssd1 vccd1 vccd1 _004_ sky130_fd_sc_hd__xnor2_1
-X_492_ i_wr_data[18] vssd1 vssd1 vccd1 vccd1 o_write_data[18] sky130_fd_sc_hd__buf_2
-X_475_ i_wr_data[1] vssd1 vssd1 vccd1 vccd1 o_write_data[1] sky130_fd_sc_hd__buf_2
-X_260_ i_alu2_data[10] _090_ _091_ i_wr_data[10] vssd1 vssd1 vccd1 vccd1 _092_ sky130_fd_sc_hd__a22o_1
-X_191_ _036_ vssd1 vssd1 vccd1 vccd1 _037_ sky130_fd_sc_hd__buf_2
-X_458_ o_data2[16] vssd1 vssd1 vccd1 vccd1 o_data2_ex[16] sky130_fd_sc_hd__buf_2
-X_389_ clknet_2_1__leaf_i_clk i_wr_data[17] vssd1 vssd1 vccd1 vccd1 wr_back_data\[17\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_312_ i_alu2_data[2] _035_ _037_ i_wr_data[2] vssd1 vssd1 vccd1 vccd1 _120_ sky130_fd_sc_hd__a22o_1
-X_243_ i_reg_data2[3] _072_ _074_ wr_back_data\[3\] _081_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[3] sky130_fd_sc_hd__a221o_4
-X_174_ wr_back_rd\[0\] vssd1 vssd1 vccd1 vccd1 _020_ sky130_fd_sc_hd__inv_2
-X_226_ _043_ _064_ _066_ _067_ vssd1 vssd1 vccd1 vccd1 _068_ sky130_fd_sc_hd__or4_1
-X_157_ i_alu_rs1[3] _000_ _001_ _002_ vssd1 vssd1 vccd1 vccd1 _003_ sky130_fd_sc_hd__o211a_1
-X_209_ _050_ vssd1 vssd1 vccd1 vccd1 _051_ sky130_fd_sc_hd__clkbuf_2
-X_491_ i_wr_data[17] vssd1 vssd1 vccd1 vccd1 o_write_data[17] sky130_fd_sc_hd__buf_2
-X_474_ i_wr_data[0] vssd1 vssd1 vccd1 vccd1 o_write_data[0] sky130_fd_sc_hd__buf_2
-X_190_ _008_ _016_ vssd1 vssd1 vccd1 vccd1 _036_ sky130_fd_sc_hd__and2_1
-X_457_ o_data2[15] vssd1 vssd1 vccd1 vccd1 o_data2_ex[15] sky130_fd_sc_hd__buf_2
-X_388_ clknet_2_2__leaf_i_clk i_wr_data[16] vssd1 vssd1 vccd1 vccd1 wr_back_data\[16\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_311_ wr_back_data\[1\] _030_ _034_ i_reg_data1[1] _119_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[1] sky130_fd_sc_hd__a221o_4
-X_242_ i_alu2_data[3] _075_ _077_ i_wr_data[3] vssd1 vssd1 vccd1 vccd1 _081_ sky130_fd_sc_hd__a22o_1
-X_173_ i_alu_rs1[3] vssd1 vssd1 vccd1 vccd1 _019_ sky130_fd_sc_hd__inv_2
-X_225_ _065_ wr_back_rd\[4\] wr_back_op vssd1 vssd1 vccd1 vccd1 _067_ sky130_fd_sc_hd__o21ai_1
-X_156_ i_alu2_rd[2] i_alu_rs1[2] vssd1 vssd1 vccd1 vccd1 _002_ sky130_fd_sc_hd__xnor2_1
-X_208_ _043_ _044_ _049_ i_alu2_reg_write vssd1 vssd1 vccd1 vccd1 _050_ sky130_fd_sc_hd__and4b_1
-X_490_ i_wr_data[16] vssd1 vssd1 vccd1 vccd1 o_write_data[16] sky130_fd_sc_hd__buf_2
-X_473_ o_data2[31] vssd1 vssd1 vccd1 vccd1 o_data2_ex[31] sky130_fd_sc_hd__buf_2
-X_456_ o_data2[14] vssd1 vssd1 vccd1 vccd1 o_data2_ex[14] sky130_fd_sc_hd__buf_2
-X_387_ clknet_2_1__leaf_i_clk i_wr_data[15] vssd1 vssd1 vccd1 vccd1 wr_back_data\[15\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_310_ i_alu2_data[1] _035_ _037_ i_wr_data[1] vssd1 vssd1 vccd1 vccd1 _119_ sky130_fd_sc_hd__a22o_1
-X_241_ i_reg_data2[2] _072_ _074_ wr_back_data\[2\] _080_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[2] sky130_fd_sc_hd__a221o_4
-X_172_ wr_back_rd\[4\] vssd1 vssd1 vccd1 vccd1 _018_ sky130_fd_sc_hd__inv_2
-X_439_ i_alu2_data[29] vssd1 vssd1 vccd1 vccd1 o_alu2_data[29] sky130_fd_sc_hd__buf_2
-X_224_ i_alu_rs2[1] _062_ wr_back_rd\[4\] _065_ vssd1 vssd1 vccd1 vccd1 _066_ sky130_fd_sc_hd__a2bb2o_1
-X_155_ i_alu2_rd[3] i_alu_rs1[3] vssd1 vssd1 vccd1 vccd1 _001_ sky130_fd_sc_hd__xnor2_1
-X_207_ _045_ _046_ _047_ _048_ vssd1 vssd1 vccd1 vccd1 _049_ sky130_fd_sc_hd__and4_1
-X_472_ o_data2[30] vssd1 vssd1 vccd1 vccd1 o_data2_ex[30] sky130_fd_sc_hd__buf_2
-X_455_ o_data2[13] vssd1 vssd1 vccd1 vccd1 o_data2_ex[13] sky130_fd_sc_hd__buf_2
-X_386_ clknet_2_3__leaf_i_clk i_wr_data[14] vssd1 vssd1 vccd1 vccd1 wr_back_data\[14\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_240_ i_alu2_data[2] _075_ _077_ i_wr_data[2] vssd1 vssd1 vccd1 vccd1 _080_ sky130_fd_sc_hd__a22o_1
-X_171_ _016_ vssd1 vssd1 vccd1 vccd1 _017_ sky130_fd_sc_hd__clkinv_2
-X_438_ i_alu2_data[28] vssd1 vssd1 vccd1 vccd1 o_alu2_data[28] sky130_fd_sc_hd__buf_2
-X_369_ wr_back_data\[26\] _029_ _033_ i_reg_data1[26] _152_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[26] sky130_fd_sc_hd__a221o_4
-X_223_ i_alu_rs2[4] vssd1 vssd1 vccd1 vccd1 _065_ sky130_fd_sc_hd__inv_2
-X_154_ i_alu_rs1[1] i_alu_rs1[0] i_alu_rs1[2] i_alu_rs1[4] vssd1 vssd1 vccd1 vccd1
-+ _000_ sky130_fd_sc_hd__or4_1
-X_206_ i_alu_rs2[0] i_alu2_rd[0] vssd1 vssd1 vccd1 vccd1 _048_ sky130_fd_sc_hd__xnor2_1
-X_471_ o_data2[29] vssd1 vssd1 vccd1 vccd1 o_data2_ex[29] sky130_fd_sc_hd__buf_2
-X_454_ o_data2[12] vssd1 vssd1 vccd1 vccd1 o_data2_ex[12] sky130_fd_sc_hd__buf_2
-X_385_ clknet_2_0__leaf_i_clk i_wr_data[13] vssd1 vssd1 vccd1 vccd1 wr_back_data\[13\]
-+ sky130_fd_sc_hd__dfxtp_2
-X_170_ i_write_reg_write _009_ _010_ _015_ vssd1 vssd1 vccd1 vccd1 _016_ sky130_fd_sc_hd__and4_1
-X_437_ i_alu2_data[27] vssd1 vssd1 vccd1 vccd1 o_alu2_data[27] sky130_fd_sc_hd__buf_2
-X_368_ i_alu2_data[26] _032_ _036_ i_wr_data[26] vssd1 vssd1 vccd1 vccd1 _152_ sky130_fd_sc_hd__a22o_1
-X_299_ i_reg_data2[27] _102_ _103_ wr_back_data\[27\] _113_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[27] sky130_fd_sc_hd__a221o_4
-X_222_ _061_ wr_back_rd\[0\] _062_ i_alu_rs2[1] _063_ vssd1 vssd1 vccd1 vccd1 _064_
-+ sky130_fd_sc_hd__a221o_1
-Xclkbuf_2_0__f_i_clk clknet_0_i_clk vssd1 vssd1 vccd1 vccd1 clknet_2_0__leaf_i_clk
-+ sky130_fd_sc_hd__clkbuf_16
-X_205_ i_alu_rs2[2] i_alu2_rd[2] vssd1 vssd1 vccd1 vccd1 _047_ sky130_fd_sc_hd__xnor2_1
-X_470_ o_data2[28] vssd1 vssd1 vccd1 vccd1 o_data2_ex[28] sky130_fd_sc_hd__buf_2
-X_453_ o_data2[11] vssd1 vssd1 vccd1 vccd1 o_data2_ex[11] sky130_fd_sc_hd__buf_2
-X_384_ clknet_2_2__leaf_i_clk i_wr_data[12] vssd1 vssd1 vccd1 vccd1 wr_back_data\[12\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_505_ i_wr_data[31] vssd1 vssd1 vccd1 vccd1 o_write_data[31] sky130_fd_sc_hd__buf_2
-X_436_ i_alu2_data[26] vssd1 vssd1 vccd1 vccd1 o_alu2_data[26] sky130_fd_sc_hd__buf_2
-X_367_ wr_back_data\[25\] _138_ _139_ i_reg_data1[25] _151_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[25] sky130_fd_sc_hd__a221o_4
-X_298_ i_alu2_data[27] _104_ _105_ i_wr_data[27] vssd1 vssd1 vccd1 vccd1 _113_ sky130_fd_sc_hd__a22o_1
-X_221_ i_alu_rs2[3] wr_back_rd\[3\] vssd1 vssd1 vccd1 vccd1 _063_ sky130_fd_sc_hd__xor2_1
-X_419_ i_alu2_data[9] vssd1 vssd1 vccd1 vccd1 o_alu2_data[9] sky130_fd_sc_hd__buf_2
-X_204_ i_alu_rs2[3] i_alu2_rd[3] vssd1 vssd1 vccd1 vccd1 _046_ sky130_fd_sc_hd__xnor2_1
-X_452_ o_data2[10] vssd1 vssd1 vccd1 vccd1 o_data2_ex[10] sky130_fd_sc_hd__buf_2
-X_383_ clknet_2_0__leaf_i_clk i_wr_data[11] vssd1 vssd1 vccd1 vccd1 wr_back_data\[11\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_504_ i_wr_data[30] vssd1 vssd1 vccd1 vccd1 o_write_data[30] sky130_fd_sc_hd__buf_2
-X_435_ i_alu2_data[25] vssd1 vssd1 vccd1 vccd1 o_alu2_data[25] sky130_fd_sc_hd__buf_2
-X_366_ i_alu2_data[25] _140_ _141_ i_wr_data[25] vssd1 vssd1 vccd1 vccd1 _151_ sky130_fd_sc_hd__a22o_1
-X_297_ i_reg_data2[26] _102_ _103_ wr_back_data\[26\] _112_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[26] sky130_fd_sc_hd__a221o_4
-X_220_ wr_back_rd\[1\] vssd1 vssd1 vccd1 vccd1 _062_ sky130_fd_sc_hd__inv_2
-X_418_ i_alu2_data[8] vssd1 vssd1 vccd1 vccd1 o_alu2_data[8] sky130_fd_sc_hd__buf_2
-X_349_ wr_back_data\[16\] _138_ _139_ i_reg_data1[16] _142_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[16] sky130_fd_sc_hd__a221o_4
-X_203_ i_alu_rs2[1] i_alu2_rd[1] vssd1 vssd1 vccd1 vccd1 _045_ sky130_fd_sc_hd__xnor2_1
-X_451_ o_data2[9] vssd1 vssd1 vccd1 vccd1 o_data2_ex[9] sky130_fd_sc_hd__buf_2
-X_382_ clknet_2_0__leaf_i_clk i_wr_data[10] vssd1 vssd1 vccd1 vccd1 wr_back_data\[10\]
-+ sky130_fd_sc_hd__dfxtp_1
-X_503_ i_wr_data[29] vssd1 vssd1 vccd1 vccd1 o_write_data[29] sky130_fd_sc_hd__buf_2
-X_434_ i_alu2_data[24] vssd1 vssd1 vccd1 vccd1 o_alu2_data[24] sky130_fd_sc_hd__buf_2
-X_365_ wr_back_data\[24\] _138_ _139_ i_reg_data1[24] _150_ vssd1 vssd1 vccd1 vccd1
-+ o_data1[24] sky130_fd_sc_hd__a221o_4
-X_296_ i_alu2_data[26] _104_ _105_ i_wr_data[26] vssd1 vssd1 vccd1 vccd1 _112_ sky130_fd_sc_hd__a22o_1
-X_417_ i_alu2_data[7] vssd1 vssd1 vccd1 vccd1 o_alu2_data[7] sky130_fd_sc_hd__buf_2
-X_348_ i_alu2_data[16] _140_ _141_ i_wr_data[16] vssd1 vssd1 vccd1 vccd1 _142_ sky130_fd_sc_hd__a22o_1
-X_279_ i_reg_data2[19] _088_ _089_ wr_back_data\[19\] _101_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[19] sky130_fd_sc_hd__a221o_4
-X_202_ i_alu_rs2[4] i_alu2_rd[4] vssd1 vssd1 vccd1 vccd1 _044_ sky130_fd_sc_hd__xnor2_1
-X_450_ o_data2[8] vssd1 vssd1 vccd1 vccd1 o_data2_ex[8] sky130_fd_sc_hd__buf_2
-X_381_ clknet_2_0__leaf_i_clk i_wr_data[9] vssd1 vssd1 vccd1 vccd1 wr_back_data\[9\]
-+ sky130_fd_sc_hd__dfxtp_2
-Xclkbuf_2_3__f_i_clk clknet_0_i_clk vssd1 vssd1 vccd1 vccd1 clknet_2_3__leaf_i_clk
-+ sky130_fd_sc_hd__clkbuf_16
-X_502_ i_wr_data[28] vssd1 vssd1 vccd1 vccd1 o_write_data[28] sky130_fd_sc_hd__buf_2
-X_433_ i_alu2_data[23] vssd1 vssd1 vccd1 vccd1 o_alu2_data[23] sky130_fd_sc_hd__buf_2
-X_364_ i_alu2_data[24] _140_ _141_ i_wr_data[24] vssd1 vssd1 vccd1 vccd1 _150_ sky130_fd_sc_hd__a22o_1
-X_295_ i_reg_data2[25] _102_ _103_ wr_back_data\[25\] _111_ vssd1 vssd1 vccd1 vccd1
-+ o_data2[25] sky130_fd_sc_hd__a221o_4
-X_416_ i_alu2_data[6] vssd1 vssd1 vccd1 vccd1 o_alu2_data[6] sky130_fd_sc_hd__buf_2
-X_347_ _036_ vssd1 vssd1 vccd1 vccd1 _141_ sky130_fd_sc_hd__buf_2
-X_278_ i_alu2_data[19] _090_ _091_ i_wr_data[19] vssd1 vssd1 vccd1 vccd1 _101_ sky130_fd_sc_hd__a22o_1
-X_201_ i_alu_rs2[3] _042_ vssd1 vssd1 vccd1 vccd1 _043_ sky130_fd_sc_hd__nor2_1
-X_380_ clknet_2_1__leaf_i_clk i_wr_data[8] vssd1 vssd1 vccd1 vccd1 wr_back_data\[8\]
-+ sky130_fd_sc_hd__dfxtp_1
-.ends
-
+X_501_ i_wr_data[27] VSS VSS VCC VCC o_write_data[27] sky130_fd_sc_hs__buf_2
+X_432_ i_alu2_data[22] VSS VSS VCC VCC o_alu2_data[22] sky130_fd_sc_hs__buf_2
+X_363_ wr_back_data\[23\] _138_ _139_ i_reg_data1[23] _149_ VSS VSS VCC VCC
++ o_data1[23] sky130_fd_sc_hs__a221o_4
+X_294_ i_alu2_data[25] _104_ _105_ i_wr_data[25] VSS VSS VCC VCC _111_ sky130_fd_sc_hs__a22o_1
+X_415_ i_alu2_data[5] VSS VSS VCC VCC o_alu2_data[5] sky130_fd_sc_hs__buf_2
+X_346_ _032_ VSS VSS VCC VCC _140_ sky130_fd_sc_hs__buf_2
+X_277_ i_reg_data2[18] _088_ _089_ wr_back_data\[18\] _100_ VSS VSS VCC VCC
++ o_data2[18] sky130_fd_sc_hs__a221o_4
+X_200_ i_alu_rs2[1] i_alu_rs2[0] i_alu_rs2[2] i_alu_rs2[4] VSS VSS VCC VCC
++ _042_ sky130_fd_sc_hs__or4_1
+X_329_ wr_back_data\[8\] _124_ _125_ i_reg_data1[8] _130_ VSS VSS VCC VCC
++ o_data1[8] sky130_fd_sc_hs__a221o_4
+X_500_ i_wr_data[26] VSS VSS VCC VCC o_write_data[26] sky130_fd_sc_hs__buf_2
+X_431_ i_alu2_data[21] VSS VSS VCC VCC o_alu2_data[21] sky130_fd_sc_hs__buf_2
+X_362_ i_alu2_data[23] _140_ _141_ i_wr_data[23] VSS VSS VCC VCC _149_ sky130_fd_sc_hs__a22o_1
+X_293_ i_reg_data2[24] _102_ _103_ wr_back_data\[24\] _110_ VSS VSS VCC VCC
++ o_data2[24] sky130_fd_sc_hs__a221o_4
+X_414_ i_alu2_data[4] VSS VSS VCC VCC o_alu2_data[4] sky130_fd_sc_hs__buf_2
+X_345_ _033_ VSS VSS VCC VCC _139_ sky130_fd_sc_hs__buf_4
+X_276_ i_alu2_data[18] _090_ _091_ i_wr_data[18] VSS VSS VCC VCC _100_ sky130_fd_sc_hs__a22o_1
+X_328_ i_alu2_data[8] _126_ _127_ i_wr_data[8] VSS VSS VCC VCC _130_ sky130_fd_sc_hs__a22o_1
+X_259_ _076_ VSS VSS VCC VCC _091_ sky130_fd_sc_hs__buf_2
+X_430_ i_alu2_data[20] VSS VSS VCC VCC o_alu2_data[20] sky130_fd_sc_hs__buf_2
+X_361_ wr_back_data\[22\] _138_ _139_ i_reg_data1[22] _148_ VSS VSS VCC VCC
++ o_data1[22] sky130_fd_sc_hs__a221o_4
+X_292_ i_alu2_data[24] _104_ _105_ i_wr_data[24] VSS VSS VCC VCC _110_ sky130_fd_sc_hs__a22o_1
+X_413_ i_alu2_data[3] VSS VSS VCC VCC o_alu2_data[3] sky130_fd_sc_hs__buf_2
+X_344_ _029_ VSS VSS VCC VCC _138_ sky130_fd_sc_hs__buf_4
+X_275_ i_reg_data2[17] _088_ _089_ wr_back_data\[17\] _099_ VSS VSS VCC VCC
++ o_data2[17] sky130_fd_sc_hs__a221o_4
+X_327_ wr_back_data\[7\] _124_ _125_ i_reg_data1[7] _129_ VSS VSS VCC VCC
++ o_data1[7] sky130_fd_sc_hs__a221o_4
+X_258_ _051_ VSS VSS VCC VCC _090_ sky130_fd_sc_hs__buf_2
+X_189_ _032_ VSS VSS VCC VCC _035_ sky130_fd_sc_hs__buf_2
+X_360_ i_alu2_data[22] _140_ _141_ i_wr_data[22] VSS VSS VCC VCC _148_ sky130_fd_sc_hs__a22o_1
+X_291_ i_reg_data2[23] _102_ _103_ wr_back_data\[23\] _109_ VSS VSS VCC VCC
++ o_data2[23] sky130_fd_sc_hs__a221o_4
+X_489_ i_wr_data[15] VSS VSS VCC VCC o_write_data[15] sky130_fd_sc_hs__buf_2
+X_412_ i_alu2_data[2] VSS VSS VCC VCC o_alu2_data[2] sky130_fd_sc_hs__buf_2
+X_343_ wr_back_data\[15\] _124_ _125_ i_reg_data1[15] _137_ VSS VSS VCC VCC
++ o_data1[15] sky130_fd_sc_hs__a221o_4
+X_274_ i_alu2_data[17] _090_ _091_ i_wr_data[17] VSS VSS VCC VCC _099_ sky130_fd_sc_hs__a22o_1
+X_326_ i_alu2_data[7] _126_ _127_ i_wr_data[7] VSS VSS VCC VCC _129_ sky130_fd_sc_hs__a22o_1
+X_257_ _073_ VSS VSS VCC VCC _089_ sky130_fd_sc_hs__buf_4
+X_188_ _033_ VSS VSS VCC VCC _034_ sky130_fd_sc_hs__buf_4
+X_309_ wr_back_data\[0\] _030_ _034_ i_reg_data1[0] _118_ VSS VSS VCC VCC
++ o_data1[0] sky130_fd_sc_hs__a221o_4
+X_290_ i_alu2_data[23] _104_ _105_ i_wr_data[23] VSS VSS VCC VCC _109_ sky130_fd_sc_hs__a22o_1
+X_488_ i_wr_data[14] VSS VSS VCC VCC o_write_data[14] sky130_fd_sc_hs__buf_2
+X_411_ i_alu2_data[1] VSS VSS VCC VCC o_alu2_data[1] sky130_fd_sc_hs__buf_2
+X_342_ i_alu2_data[15] _126_ _127_ i_wr_data[15] VSS VSS VCC VCC _137_ sky130_fd_sc_hs__a22o_1
+X_273_ i_reg_data2[16] _088_ _089_ wr_back_data\[16\] _098_ VSS VSS VCC VCC
++ o_data2[16] sky130_fd_sc_hs__a221o_4
+X_325_ wr_back_data\[6\] _124_ _125_ i_reg_data1[6] _128_ VSS VSS VCC VCC
++ o_data1[6] sky130_fd_sc_hs__a221o_4
+X_256_ _071_ VSS VSS VCC VCC _088_ sky130_fd_sc_hs__buf_4
+X_187_ _032_ _016_ _027_ VSS VSS VCC VCC _033_ sky130_fd_sc_hs__nor3_2
+X_308_ i_alu2_data[0] _035_ _037_ i_wr_data[0] VSS VSS VCC VCC _118_ sky130_fd_sc_hs__a22o_1
+X_239_ i_reg_data2[1] _072_ _074_ wr_back_data\[1\] _079_ VSS VSS VCC VCC
++ o_data2[1] sky130_fd_sc_hs__a221o_4
+Xclkbuf_0_i_clk i_clk VSS VSS VCC VCC clknet_0_i_clk sky130_fd_sc_hs__clkbuf_16
+X_487_ i_wr_data[13] VSS VSS VCC VCC o_write_data[13] sky130_fd_sc_hs__buf_2
+X_410_ i_alu2_data[0] VSS VSS VCC VCC o_alu2_data[0] sky130_fd_sc_hs__buf_2
+X_341_ wr_back_data\[14\] _124_ _125_ i_reg_data1[14] _136_ VSS VSS VCC VCC
++ o_data1[14] sky130_fd_sc_hs__a221o_4
+X_272_ i_alu2_data[16] _090_ _091_ i_wr_data[16] VSS VSS VCC VCC _098_ sky130_fd_sc_hs__a22o_1
+X_324_ i_alu2_data[6] _126_ _127_ i_wr_data[6] VSS VSS VCC VCC _128_ sky130_fd_sc_hs__a22o_1
+X_255_ i_reg_data2[9] _072_ _074_ wr_back_data\[9\] _087_ VSS VSS VCC VCC
++ o_data2[9] sky130_fd_sc_hs__a221o_4
+X_186_ _031_ VSS VSS VCC VCC _032_ sky130_fd_sc_hs__clkbuf_2
+X_307_ i_reg_data2[31] _071_ _073_ wr_back_data\[31\] _117_ VSS VSS VCC VCC
++ o_data2[31] sky130_fd_sc_hs__a221o_4
+X_238_ i_alu2_data[1] _075_ _077_ i_wr_data[1] VSS VSS VCC VCC _079_ sky130_fd_sc_hs__a22o_1
+X_169_ _011_ _012_ _013_ _014_ VSS VSS VCC VCC _015_ sky130_fd_sc_hs__and4_1
+X_486_ i_wr_data[12] VSS VSS VCC VCC o_write_data[12] sky130_fd_sc_hs__buf_2
+X_340_ i_alu2_data[14] _126_ _127_ i_wr_data[14] VSS VSS VCC VCC _136_ sky130_fd_sc_hs__a22o_1
+X_271_ i_reg_data2[15] _088_ _089_ wr_back_data\[15\] _097_ VSS VSS VCC VCC
++ o_data2[15] sky130_fd_sc_hs__a221o_4
+X_469_ o_data2[27] VSS VSS VCC VCC o_data2_ex[27] sky130_fd_sc_hs__buf_2
+X_323_ _036_ VSS VSS VCC VCC _127_ sky130_fd_sc_hs__buf_2
+X_254_ i_alu2_data[9] _075_ _077_ i_wr_data[9] VSS VSS VCC VCC _087_ sky130_fd_sc_hs__a22o_1
+X_185_ _003_ _007_ VSS VSS VCC VCC _031_ sky130_fd_sc_hs__and2_1
+X_306_ i_alu2_data[31] _051_ _076_ i_wr_data[31] VSS VSS VCC VCC _117_ sky130_fd_sc_hs__a22o_1
+X_237_ i_reg_data2[0] _072_ _074_ wr_back_data\[0\] _078_ VSS VSS VCC VCC
++ o_data2[0] sky130_fd_sc_hs__a221o_4
+X_168_ i_write_rd[1] i_alu_rs1[1] VSS VSS VCC VCC _014_ sky130_fd_sc_hs__xnor2_1
+X_485_ i_wr_data[11] VSS VSS VCC VCC o_write_data[11] sky130_fd_sc_hs__buf_2
+X_270_ i_alu2_data[15] _090_ _091_ i_wr_data[15] VSS VSS VCC VCC _097_ sky130_fd_sc_hs__a22o_1
+X_468_ o_data2[26] VSS VSS VCC VCC o_data2_ex[26] sky130_fd_sc_hs__buf_2
+X_399_ clknet_2_3__leaf_i_clk i_wr_data[27] VSS VSS VCC VCC wr_back_data\[27\]
++ sky130_fd_sc_hs__dfxtp_1
+X_322_ _032_ VSS VSS VCC VCC _126_ sky130_fd_sc_hs__buf_2
+X_253_ i_reg_data2[8] _072_ _074_ wr_back_data\[8\] _086_ VSS VSS VCC VCC
++ o_data2[8] sky130_fd_sc_hs__a221o_4
+X_184_ _029_ VSS VSS VCC VCC _030_ sky130_fd_sc_hs__buf_4
+X_305_ i_reg_data2[30] _071_ _073_ wr_back_data\[30\] _116_ VSS VSS VCC VCC
++ o_data2[30] sky130_fd_sc_hs__a221o_4
+X_236_ i_alu2_data[0] _075_ _077_ i_wr_data[0] VSS VSS VCC VCC _078_ sky130_fd_sc_hs__a22o_1
+X_167_ i_write_rd[3] i_alu_rs1[3] VSS VSS VCC VCC _013_ sky130_fd_sc_hs__xnor2_1
+X_219_ i_alu_rs2[0] VSS VSS VCC VCC _061_ sky130_fd_sc_hs__inv_2
+X_484_ i_wr_data[10] VSS VSS VCC VCC o_write_data[10] sky130_fd_sc_hs__buf_2
+X_467_ o_data2[25] VSS VSS VCC VCC o_data2_ex[25] sky130_fd_sc_hs__buf_2
+X_398_ clknet_2_3__leaf_i_clk i_wr_data[26] VSS VSS VCC VCC wr_back_data\[26\]
++ sky130_fd_sc_hs__dfxtp_1
+X_321_ _033_ VSS VSS VCC VCC _125_ sky130_fd_sc_hs__buf_4
+X_252_ i_alu2_data[8] _075_ _077_ i_wr_data[8] VSS VSS VCC VCC _086_ sky130_fd_sc_hs__a22o_1
+X_183_ _028_ VSS VSS VCC VCC _029_ sky130_fd_sc_hs__clkbuf_2
+X_304_ i_alu2_data[30] _051_ _076_ i_wr_data[30] VSS VSS VCC VCC _116_ sky130_fd_sc_hs__a22o_1
+X_235_ _076_ VSS VSS VCC VCC _077_ sky130_fd_sc_hs__buf_2
+X_166_ i_write_rd[2] i_alu_rs1[2] VSS VSS VCC VCC _012_ sky130_fd_sc_hs__xnor2_1
+X_218_ i_alu_rs2[0] _020_ _022_ i_alu_rs2[2] VSS VSS VCC VCC _060_ sky130_fd_sc_hs__a22o_1
+X_483_ i_wr_data[9] VSS VSS VCC VCC o_write_data[9] sky130_fd_sc_hs__buf_2
+X_466_ o_data2[24] VSS VSS VCC VCC o_data2_ex[24] sky130_fd_sc_hs__buf_2
+X_397_ clknet_2_1__leaf_i_clk i_wr_data[25] VSS VSS VCC VCC wr_back_data\[25\]
++ sky130_fd_sc_hs__dfxtp_1
+X_320_ _029_ VSS VSS VCC VCC _124_ sky130_fd_sc_hs__buf_4
+X_251_ i_reg_data2[7] _072_ _074_ wr_back_data\[7\] _085_ VSS VSS VCC VCC
++ o_data2[7] sky130_fd_sc_hs__a221o_4
+X_182_ _008_ _017_ _027_ VSS VSS VCC VCC _028_ sky130_fd_sc_hs__and3_1
+X_449_ o_data2[7] VSS VSS VCC VCC o_data2_ex[7] sky130_fd_sc_hs__buf_2
+X_303_ i_reg_data2[29] _102_ _103_ wr_back_data\[29\] _115_ VSS VSS VCC VCC
++ o_data2[29] sky130_fd_sc_hs__a221o_4
+X_234_ _051_ _058_ VSS VSS VCC VCC _076_ sky130_fd_sc_hs__nor2_1
+X_165_ i_write_rd[0] i_alu_rs1[0] VSS VSS VCC VCC _011_ sky130_fd_sc_hs__xnor2_1
+Xclkbuf_2_2__f_i_clk clknet_0_i_clk VSS VSS VCC VCC clknet_2_2__leaf_i_clk
++ sky130_fd_sc_hs__clkbuf_16
+X_217_ i_alu_rs2[2] VSS VSS VCC VCC _059_ sky130_fd_sc_hs__inv_2
+X_482_ i_wr_data[8] VSS VSS VCC VCC o_write_data[8] sky130_fd_sc_hs__buf_2
+X_465_ o_data2[23] VSS VSS VCC VCC o_data2_ex[23] sky130_fd_sc_hs__buf_2
+X_396_ clknet_2_1__leaf_i_clk i_wr_data[24] VSS VSS VCC VCC wr_back_data\[24\]
++ sky130_fd_sc_hs__dfxtp_2
+X_250_ i_alu2_data[7] _075_ _077_ i_wr_data[7] VSS VSS VCC VCC _085_ sky130_fd_sc_hs__a22o_1
+X_181_ _018_ i_alu_rs1[4] _009_ _021_ _026_ VSS VSS VCC VCC _027_ sky130_fd_sc_hs__o2111a_1
+X_448_ o_data2[6] VSS VSS VCC VCC o_data2_ex[6] sky130_fd_sc_hs__buf_2
+X_379_ clknet_2_0__leaf_i_clk i_wr_data[7] VSS VSS VCC VCC wr_back_data\[7\]
++ sky130_fd_sc_hs__dfxtp_1
+X_302_ i_alu2_data[29] _104_ _105_ i_wr_data[29] VSS VSS VCC VCC _115_ sky130_fd_sc_hs__a22o_1
+X_233_ _051_ VSS VSS VCC VCC _075_ sky130_fd_sc_hs__buf_2
+X_164_ i_write_rd[4] i_alu_rs1[4] VSS VSS VCC VCC _010_ sky130_fd_sc_hs__xnor2_1
+X_216_ _043_ _052_ _057_ i_write_reg_write VSS VSS VCC VCC _058_ sky130_fd_sc_hs__or4b_1
+X_481_ i_wr_data[7] VSS VSS VCC VCC o_write_data[7] sky130_fd_sc_hs__buf_2
+X_464_ o_data2[22] VSS VSS VCC VCC o_data2_ex[22] sky130_fd_sc_hs__buf_2
+X_395_ clknet_2_3__leaf_i_clk i_wr_data[23] VSS VSS VCC VCC wr_back_data\[23\]
++ sky130_fd_sc_hs__dfxtp_1
+X_180_ wr_back_rd\[3\] _019_ _024_ _025_ wr_back_op VSS VSS VCC VCC _026_
++ sky130_fd_sc_hs__o2111a_1
+X_447_ o_data2[5] VSS VSS VCC VCC o_data2_ex[5] sky130_fd_sc_hs__buf_2
+X_378_ clknet_2_1__leaf_i_clk i_wr_data[6] VSS VSS VCC VCC wr_back_data\[6\]
++ sky130_fd_sc_hs__dfxtp_2
+X_301_ i_reg_data2[28] _102_ _103_ wr_back_data\[28\] _114_ VSS VSS VCC VCC
++ o_data2[28] sky130_fd_sc_hs__a221o_4
+X_232_ _073_ VSS VSS VCC VCC _074_ sky130_fd_sc_hs__buf_4
+X_163_ i_alu_rs1[3] _000_ VSS VSS VCC VCC _009_ sky130_fd_sc_hs__or2_1
+X_215_ _053_ _054_ _055_ _056_ VSS VSS VCC VCC _057_ sky130_fd_sc_hs__or4_1
+X_480_ i_wr_data[6] VSS VSS VCC VCC o_write_data[6] sky130_fd_sc_hs__buf_2
+X_463_ o_data2[21] VSS VSS VCC VCC o_data2_ex[21] sky130_fd_sc_hs__buf_2
+X_394_ clknet_2_1__leaf_i_clk i_wr_data[22] VSS VSS VCC VCC wr_back_data\[22\]
++ sky130_fd_sc_hs__dfxtp_1
+X_446_ o_data2[4] VSS VSS VCC VCC o_data2_ex[4] sky130_fd_sc_hs__buf_2
+X_377_ clknet_2_3__leaf_i_clk i_wr_data[5] VSS VSS VCC VCC wr_back_data\[5\]
++ sky130_fd_sc_hs__dfxtp_1
+X_300_ i_alu2_data[28] _104_ _105_ i_wr_data[28] VSS VSS VCC VCC _114_ sky130_fd_sc_hs__a22o_1
+X_231_ _051_ _069_ _058_ VSS VSS VCC VCC _073_ sky130_fd_sc_hs__nor3b_2
+X_162_ _003_ _007_ VSS VSS VCC VCC _008_ sky130_fd_sc_hs__nand2_1
+X_429_ i_alu2_data[19] VSS VSS VCC VCC o_alu2_data[19] sky130_fd_sc_hs__buf_2
+X_214_ i_alu_rs2[0] i_write_rd[0] VSS VSS VCC VCC _056_ sky130_fd_sc_hs__xor2_1
+X_462_ o_data2[20] VSS VSS VCC VCC o_data2_ex[20] sky130_fd_sc_hs__buf_2
+X_393_ clknet_2_3__leaf_i_clk i_wr_data[21] VSS VSS VCC VCC wr_back_data\[21\]
++ sky130_fd_sc_hs__dfxtp_1
+X_445_ o_data2[3] VSS VSS VCC VCC o_data2_ex[3] sky130_fd_sc_hs__buf_2
+X_376_ clknet_2_1__leaf_i_clk i_wr_data[4] VSS VSS VCC VCC wr_back_data\[4\]
++ sky130_fd_sc_hs__dfxtp_1
+X_230_ _071_ VSS VSS VCC VCC _072_ sky130_fd_sc_hs__buf_4
+X_161_ i_alu2_reg_write _004_ _005_ _006_ VSS VSS VCC VCC _007_ sky130_fd_sc_hs__and4_1
+X_428_ i_alu2_data[18] VSS VSS VCC VCC o_alu2_data[18] sky130_fd_sc_hs__buf_2
+X_359_ wr_back_data\[21\] _138_ _139_ i_reg_data1[21] _147_ VSS VSS VCC VCC
++ o_data1[21] sky130_fd_sc_hs__a221o_4
+X_213_ i_alu_rs2[2] i_write_rd[2] VSS VSS VCC VCC _055_ sky130_fd_sc_hs__xor2_1
+X_461_ o_data2[19] VSS VSS VCC VCC o_data2_ex[19] sky130_fd_sc_hs__buf_2
+X_392_ clknet_2_2__leaf_i_clk i_wr_data[20] VSS VSS VCC VCC wr_back_data\[20\]
++ sky130_fd_sc_hs__dfxtp_2
+X_444_ o_data2[2] VSS VSS VCC VCC o_data2_ex[2] sky130_fd_sc_hs__buf_2
+X_375_ clknet_2_1__leaf_i_clk i_wr_data[3] VSS VSS VCC VCC wr_back_data\[3\]
++ sky130_fd_sc_hs__dfxtp_2
+X_160_ i_alu2_rd[1] i_alu_rs1[1] VSS VSS VCC VCC _006_ sky130_fd_sc_hs__xnor2_1
+X_427_ i_alu2_data[17] VSS VSS VCC VCC o_alu2_data[17] sky130_fd_sc_hs__buf_2
+X_358_ i_alu2_data[21] _140_ _141_ i_wr_data[21] VSS VSS VCC VCC _147_ sky130_fd_sc_hs__a22o_1
+X_289_ i_reg_data2[22] _102_ _103_ wr_back_data\[22\] _108_ VSS VSS VCC VCC
++ o_data2[22] sky130_fd_sc_hs__a221o_4
+X_212_ i_alu_rs2[3] i_write_rd[3] VSS VSS VCC VCC _054_ sky130_fd_sc_hs__xor2_1
+X_460_ o_data2[18] VSS VSS VCC VCC o_data2_ex[18] sky130_fd_sc_hs__buf_2
+X_391_ clknet_2_2__leaf_i_clk i_wr_data[19] VSS VSS VCC VCC wr_back_data\[19\]
++ sky130_fd_sc_hs__dfxtp_1
+X_443_ o_data2[1] VSS VSS VCC VCC o_data2_ex[1] sky130_fd_sc_hs__buf_2
+X_374_ clknet_2_2__leaf_i_clk i_wr_data[2] VSS VSS VCC VCC wr_back_data\[2\]
++ sky130_fd_sc_hs__dfxtp_1
+X_426_ i_alu2_data[16] VSS VSS VCC VCC o_alu2_data[16] sky130_fd_sc_hs__buf_2
+X_357_ wr_back_data\[20\] _138_ _139_ i_reg_data1[20] _146_ VSS VSS VCC VCC
++ o_data1[20] sky130_fd_sc_hs__a221o_4
+X_288_ i_alu2_data[22] _104_ _105_ i_wr_data[22] VSS VSS VCC VCC _108_ sky130_fd_sc_hs__a22o_1
+X_211_ i_alu_rs2[1] i_write_rd[1] VSS VSS VCC VCC _053_ sky130_fd_sc_hs__xor2_1
+X_409_ clknet_2_1__leaf_i_clk i_write_reg_write VSS VSS VCC VCC wr_back_op
++ sky130_fd_sc_hs__dfxtp_1
+X_390_ clknet_2_1__leaf_i_clk i_wr_data[18] VSS VSS VCC VCC wr_back_data\[18\]
++ sky130_fd_sc_hs__dfxtp_1
+X_442_ o_data2[0] VSS VSS VCC VCC o_data2_ex[0] sky130_fd_sc_hs__buf_2
+X_373_ clknet_2_0__leaf_i_clk i_wr_data[1] VSS VSS VCC VCC wr_back_data\[1\]
++ sky130_fd_sc_hs__dfxtp_1
+X_425_ i_alu2_data[15] VSS VSS VCC VCC o_alu2_data[15] sky130_fd_sc_hs__buf_2
+X_356_ i_alu2_data[20] _140_ _141_ i_wr_data[20] VSS VSS VCC VCC _146_ sky130_fd_sc_hs__a22o_1
+X_287_ i_reg_data2[21] _102_ _103_ wr_back_data\[21\] _107_ VSS VSS VCC VCC
++ o_data2[21] sky130_fd_sc_hs__a221o_4
+X_210_ i_alu_rs2[4] i_write_rd[4] VSS VSS VCC VCC _052_ sky130_fd_sc_hs__xor2_1
+X_408_ clknet_2_0__leaf_i_clk i_write_rd[4] VSS VSS VCC VCC wr_back_rd\[4\]
++ sky130_fd_sc_hs__dfxtp_2
+X_339_ wr_back_data\[13\] _124_ _125_ i_reg_data1[13] _135_ VSS VSS VCC VCC
++ o_data1[13] sky130_fd_sc_hs__a221o_4
+X_441_ i_alu2_data[31] VSS VSS VCC VCC o_alu2_data[31] sky130_fd_sc_hs__buf_2
+X_372_ clknet_2_3__leaf_i_clk i_wr_data[0] VSS VSS VCC VCC wr_back_data\[0\]
++ sky130_fd_sc_hs__dfxtp_1
+X_424_ i_alu2_data[14] VSS VSS VCC VCC o_alu2_data[14] sky130_fd_sc_hs__buf_2
+X_355_ wr_back_data\[19\] _138_ _139_ i_reg_data1[19] _145_ VSS VSS VCC VCC
++ o_data1[19] sky130_fd_sc_hs__a221o_4
+X_286_ i_alu2_data[21] _104_ _105_ i_wr_data[21] VSS VSS VCC VCC _107_ sky130_fd_sc_hs__a22o_1
+X_407_ clknet_2_2__leaf_i_clk i_write_rd[3] VSS VSS VCC VCC wr_back_rd\[3\]
++ sky130_fd_sc_hs__dfxtp_1
+X_338_ i_alu2_data[13] _126_ _127_ i_wr_data[13] VSS VSS VCC VCC _135_ sky130_fd_sc_hs__a22o_1
+X_269_ i_reg_data2[14] _088_ _089_ wr_back_data\[14\] _096_ VSS VSS VCC VCC
++ o_data2[14] sky130_fd_sc_hs__a221o_4
+X_440_ i_alu2_data[30] VSS VSS VCC VCC o_alu2_data[30] sky130_fd_sc_hs__buf_2
+X_371_ wr_back_data\[27\] _029_ _033_ i_reg_data1[27] _153_ VSS VSS VCC VCC
++ o_data1[27] sky130_fd_sc_hs__a221o_4
+X_423_ i_alu2_data[13] VSS VSS VCC VCC o_alu2_data[13] sky130_fd_sc_hs__buf_2
+X_354_ i_alu2_data[19] _140_ _141_ i_wr_data[19] VSS VSS VCC VCC _145_ sky130_fd_sc_hs__a22o_1
+X_285_ i_reg_data2[20] _102_ _103_ wr_back_data\[20\] _106_ VSS VSS VCC VCC
++ o_data2[20] sky130_fd_sc_hs__a221o_4
+X_406_ clknet_2_3__leaf_i_clk i_write_rd[2] VSS VSS VCC VCC wr_back_rd\[2\]
++ sky130_fd_sc_hs__dfxtp_1
+X_337_ wr_back_data\[12\] _124_ _125_ i_reg_data1[12] _134_ VSS VSS VCC VCC
++ o_data1[12] sky130_fd_sc_hs__a221o_4
+X_268_ i_alu2_data[14] _090_ _091_ i_wr_data[14] VSS VSS VCC VCC _096_ sky130_fd_sc_hs__a22o_1
+X_199_ wr_back_data\[31\] _030_ _034_ i_reg_data1[31] _041_ VSS VSS VCC VCC
++ o_data1[31] sky130_fd_sc_hs__a221o_4
+X_370_ i_alu2_data[27] _032_ _036_ i_wr_data[27] VSS VSS VCC VCC _153_ sky130_fd_sc_hs__a22o_1
+X_499_ i_wr_data[25] VSS VSS VCC VCC o_write_data[25] sky130_fd_sc_hs__buf_2
+X_422_ i_alu2_data[12] VSS VSS VCC VCC o_alu2_data[12] sky130_fd_sc_hs__buf_2
+X_353_ wr_back_data\[18\] _138_ _139_ i_reg_data1[18] _144_ VSS VSS VCC VCC
++ o_data1[18] sky130_fd_sc_hs__a221o_4
+X_284_ i_alu2_data[20] _104_ _105_ i_wr_data[20] VSS VSS VCC VCC _106_ sky130_fd_sc_hs__a22o_1
+X_405_ clknet_2_0__leaf_i_clk i_write_rd[1] VSS VSS VCC VCC wr_back_rd\[1\]
++ sky130_fd_sc_hs__dfxtp_2
+X_336_ i_alu2_data[12] _126_ _127_ i_wr_data[12] VSS VSS VCC VCC _134_ sky130_fd_sc_hs__a22o_1
+X_267_ i_reg_data2[13] _088_ _089_ wr_back_data\[13\] _095_ VSS VSS VCC VCC
++ o_data2[13] sky130_fd_sc_hs__a221o_4
+X_198_ i_alu2_data[31] _035_ _037_ i_wr_data[31] VSS VSS VCC VCC _041_ sky130_fd_sc_hs__a22o_1
+X_319_ wr_back_data\[5\] _030_ _034_ i_reg_data1[5] _123_ VSS VSS VCC VCC
++ o_data1[5] sky130_fd_sc_hs__a221o_4
+Xclkbuf_2_1__f_i_clk clknet_0_i_clk VSS VSS VCC VCC clknet_2_1__leaf_i_clk
++ sky130_fd_sc_hs__clkbuf_16
+X_498_ i_wr_data[24] VSS VSS VCC VCC o_write_data[24] sky130_fd_sc_hs__buf_2
+X_421_ i_alu2_data[11] VSS VSS VCC VCC o_alu2_data[11] sky130_fd_sc_hs__buf_2
+X_352_ i_alu2_data[18] _140_ _141_ i_wr_data[18] VSS VSS VCC VCC _144_ sky130_fd_sc_hs__a22o_1
+X_283_ _076_ VSS VSS VCC VCC _105_ sky130_fd_sc_hs__buf_2
+X_404_ clknet_2_2__leaf_i_clk i_write_rd[0] VSS VSS VCC VCC wr_back_rd\[0\]
++ sky130_fd_sc_hs__dfxtp_2
+X_335_ wr_back_data\[11\] _124_ _125_ i_reg_data1[11] _133_ VSS VSS VCC VCC
++ o_data1[11] sky130_fd_sc_hs__a221o_4
+X_266_ i_alu2_data[13] _090_ _091_ i_wr_data[13] VSS VSS VCC VCC _095_ sky130_fd_sc_hs__a22o_1
+X_197_ wr_back_data\[30\] _030_ _034_ i_reg_data1[30] _040_ VSS VSS VCC VCC
++ o_data1[30] sky130_fd_sc_hs__a221o_4
+X_318_ i_alu2_data[5] _035_ _037_ i_wr_data[5] VSS VSS VCC VCC _123_ sky130_fd_sc_hs__a22o_1
+X_249_ i_reg_data2[6] _072_ _074_ wr_back_data\[6\] _084_ VSS VSS VCC VCC
++ o_data2[6] sky130_fd_sc_hs__a221o_4
+X_497_ i_wr_data[23] VSS VSS VCC VCC o_write_data[23] sky130_fd_sc_hs__buf_2
+X_420_ i_alu2_data[10] VSS VSS VCC VCC o_alu2_data[10] sky130_fd_sc_hs__buf_2
+X_351_ wr_back_data\[17\] _138_ _139_ i_reg_data1[17] _143_ VSS VSS VCC VCC
++ o_data1[17] sky130_fd_sc_hs__a221o_4
+X_282_ _051_ VSS VSS VCC VCC _104_ sky130_fd_sc_hs__buf_2
+X_403_ clknet_2_0__leaf_i_clk i_wr_data[31] VSS VSS VCC VCC wr_back_data\[31\]
++ sky130_fd_sc_hs__dfxtp_2
+X_334_ i_alu2_data[11] _126_ _127_ i_wr_data[11] VSS VSS VCC VCC _133_ sky130_fd_sc_hs__a22o_1
+X_265_ i_reg_data2[12] _088_ _089_ wr_back_data\[12\] _094_ VSS VSS VCC VCC
++ o_data2[12] sky130_fd_sc_hs__a221o_4
+X_196_ i_alu2_data[30] _035_ _037_ i_wr_data[30] VSS VSS VCC VCC _040_ sky130_fd_sc_hs__a22o_1
+X_317_ wr_back_data\[4\] _030_ _034_ i_reg_data1[4] _122_ VSS VSS VCC VCC
++ o_data1[4] sky130_fd_sc_hs__a221o_4
+X_248_ i_alu2_data[6] _075_ _077_ i_wr_data[6] VSS VSS VCC VCC _084_ sky130_fd_sc_hs__a22o_1
+X_179_ _018_ i_alu_rs1[4] i_alu_rs1[2] _022_ VSS VSS VCC VCC _025_ sky130_fd_sc_hs__o2bb2a_1
+X_496_ i_wr_data[22] VSS VSS VCC VCC o_write_data[22] sky130_fd_sc_hs__buf_2
+X_350_ i_alu2_data[17] _140_ _141_ i_wr_data[17] VSS VSS VCC VCC _143_ sky130_fd_sc_hs__a22o_1
+X_281_ _073_ VSS VSS VCC VCC _103_ sky130_fd_sc_hs__buf_4
+X_479_ i_wr_data[5] VSS VSS VCC VCC o_write_data[5] sky130_fd_sc_hs__buf_2
+X_402_ clknet_2_2__leaf_i_clk i_wr_data[30] VSS VSS VCC VCC wr_back_data\[30\]
++ sky130_fd_sc_hs__dfxtp_2
+X_333_ wr_back_data\[10\] _124_ _125_ i_reg_data1[10] _132_ VSS VSS VCC VCC
++ o_data1[10] sky130_fd_sc_hs__a221o_4
+X_264_ i_alu2_data[12] _090_ _091_ i_wr_data[12] VSS VSS VCC VCC _094_ sky130_fd_sc_hs__a22o_1
+X_195_ wr_back_data\[29\] _030_ _034_ i_reg_data1[29] _039_ VSS VSS VCC VCC
++ o_data1[29] sky130_fd_sc_hs__a221o_4
+X_316_ i_alu2_data[4] _035_ _037_ i_wr_data[4] VSS VSS VCC VCC _122_ sky130_fd_sc_hs__a22o_1
+X_247_ i_reg_data2[5] _072_ _074_ wr_back_data\[5\] _083_ VSS VSS VCC VCC
++ o_data2[5] sky130_fd_sc_hs__a221o_4
+X_178_ _020_ i_alu_rs1[0] i_alu_rs1[2] _022_ _023_ VSS VSS VCC VCC _024_ sky130_fd_sc_hs__a221oi_1
+X_495_ i_wr_data[21] VSS VSS VCC VCC o_write_data[21] sky130_fd_sc_hs__buf_2
+X_280_ _071_ VSS VSS VCC VCC _102_ sky130_fd_sc_hs__buf_4
+X_478_ i_wr_data[4] VSS VSS VCC VCC o_write_data[4] sky130_fd_sc_hs__buf_2
+X_401_ clknet_2_1__leaf_i_clk i_wr_data[29] VSS VSS VCC VCC wr_back_data\[29\]
++ sky130_fd_sc_hs__dfxtp_1
+X_332_ i_alu2_data[10] _126_ _127_ i_wr_data[10] VSS VSS VCC VCC _132_ sky130_fd_sc_hs__a22o_1
+X_263_ i_reg_data2[11] _088_ _089_ wr_back_data\[11\] _093_ VSS VSS VCC VCC
++ o_data2[11] sky130_fd_sc_hs__a221o_4
+X_194_ i_alu2_data[29] _035_ _037_ i_wr_data[29] VSS VSS VCC VCC _039_ sky130_fd_sc_hs__a22o_1
+X_315_ wr_back_data\[3\] _030_ _034_ i_reg_data1[3] _121_ VSS VSS VCC VCC
++ o_data1[3] sky130_fd_sc_hs__a221o_4
+X_246_ i_alu2_data[5] _075_ _077_ i_wr_data[5] VSS VSS VCC VCC _083_ sky130_fd_sc_hs__a22o_1
+X_177_ wr_back_rd\[1\] i_alu_rs1[1] VSS VSS VCC VCC _023_ sky130_fd_sc_hs__xor2_1
+X_229_ _070_ VSS VSS VCC VCC _071_ sky130_fd_sc_hs__clkbuf_2
+X_494_ i_wr_data[20] VSS VSS VCC VCC o_write_data[20] sky130_fd_sc_hs__buf_2
+X_477_ i_wr_data[3] VSS VSS VCC VCC o_write_data[3] sky130_fd_sc_hs__buf_2
+X_400_ clknet_2_1__leaf_i_clk i_wr_data[28] VSS VSS VCC VCC wr_back_data\[28\]
++ sky130_fd_sc_hs__dfxtp_1
+X_331_ wr_back_data\[9\] _124_ _125_ i_reg_data1[9] _131_ VSS VSS VCC VCC
++ o_data1[9] sky130_fd_sc_hs__a221o_4
+X_262_ i_alu2_data[11] _090_ _091_ i_wr_data[11] VSS VSS VCC VCC _093_ sky130_fd_sc_hs__a22o_1
+X_193_ wr_back_data\[28\] _030_ _034_ i_reg_data1[28] _038_ VSS VSS VCC VCC
++ o_data1[28] sky130_fd_sc_hs__a221o_4
+X_314_ i_alu2_data[3] _035_ _037_ i_wr_data[3] VSS VSS VCC VCC _121_ sky130_fd_sc_hs__a22o_1
+X_245_ i_reg_data2[4] _072_ _074_ wr_back_data\[4\] _082_ VSS VSS VCC VCC
++ o_data2[4] sky130_fd_sc_hs__a221o_4
+X_176_ wr_back_rd\[2\] VSS VSS VCC VCC _022_ sky130_fd_sc_hs__inv_2
+X_228_ _051_ _058_ _069_ VSS VSS VCC VCC _070_ sky130_fd_sc_hs__and3b_1
+X_159_ i_alu2_rd[4] i_alu_rs1[4] VSS VSS VCC VCC _005_ sky130_fd_sc_hs__xnor2_1
+X_493_ i_wr_data[19] VSS VSS VCC VCC o_write_data[19] sky130_fd_sc_hs__buf_2
+X_476_ i_wr_data[2] VSS VSS VCC VCC o_write_data[2] sky130_fd_sc_hs__buf_2
+X_330_ i_alu2_data[9] _126_ _127_ i_wr_data[9] VSS VSS VCC VCC _131_ sky130_fd_sc_hs__a22o_1
+X_261_ i_reg_data2[10] _088_ _089_ wr_back_data\[10\] _092_ VSS VSS VCC VCC
++ o_data2[10] sky130_fd_sc_hs__a221o_4
+X_192_ i_alu2_data[28] _035_ _037_ i_wr_data[28] VSS VSS VCC VCC _038_ sky130_fd_sc_hs__a22o_1
+X_459_ o_data2[17] VSS VSS VCC VCC o_data2_ex[17] sky130_fd_sc_hs__buf_2
+X_313_ wr_back_data\[2\] _030_ _034_ i_reg_data1[2] _120_ VSS VSS VCC VCC
++ o_data1[2] sky130_fd_sc_hs__a221o_4
+X_244_ i_alu2_data[4] _075_ _077_ i_wr_data[4] VSS VSS VCC VCC _082_ sky130_fd_sc_hs__a22o_1
+X_175_ _019_ wr_back_rd\[3\] _020_ i_alu_rs1[0] VSS VSS VCC VCC _021_ sky130_fd_sc_hs__o2bb2a_1
+X_227_ _059_ wr_back_rd\[2\] _060_ _068_ VSS VSS VCC VCC _069_ sky130_fd_sc_hs__a211o_1
+X_158_ i_alu2_rd[0] i_alu_rs1[0] VSS VSS VCC VCC _004_ sky130_fd_sc_hs__xnor2_1
+X_492_ i_wr_data[18] VSS VSS VCC VCC o_write_data[18] sky130_fd_sc_hs__buf_2
+X_475_ i_wr_data[1] VSS VSS VCC VCC o_write_data[1] sky130_fd_sc_hs__buf_2
+X_260_ i_alu2_data[10] _090_ _091_ i_wr_data[10] VSS VSS VCC VCC _092_ sky130_fd_sc_hs__a22o_1
+X_191_ _036_ VSS VSS VCC VCC _037_ sky130_fd_sc_hs__buf_2
+X_458_ o_data2[16] VSS VSS VCC VCC o_data2_ex[16] sky130_fd_sc_hs__buf_2
+X_389_ clknet_2_1__leaf_i_clk i_wr_data[17] VSS VSS VCC VCC wr_back_data\[17\]
++ sky130_fd_sc_hs__dfxtp_1
+X_312_ i_alu2_data[2] _035_ _037_ i_wr_data[2] VSS VSS VCC VCC _120_ sky130_fd_sc_hs__a22o_1
+X_243_ i_reg_data2[3] _072_ _074_ wr_back_data\[3\] _081_ VSS VSS VCC VCC
++ o_data2[3] sky130_fd_sc_hs__a221o_4
+X_174_ wr_back_rd\[0\] VSS VSS VCC VCC _020_ sky130_fd_sc_hs__inv_2
+X_226_ _043_ _064_ _066_ _067_ VSS VSS VCC VCC _068_ sky130_fd_sc_hs__or4_1
+X_157_ i_alu_rs1[3] _000_ _001_ _002_ VSS VSS VCC VCC _003_ sky130_fd_sc_hs__o211a_1
+X_209_ _050_ VSS VSS VCC VCC _051_ sky130_fd_sc_hs__clkbuf_2
+X_491_ i_wr_data[17] VSS VSS VCC VCC o_write_data[17] sky130_fd_sc_hs__buf_2
+X_474_ i_wr_data[0] VSS VSS VCC VCC o_write_data[0] sky130_fd_sc_hs__buf_2
+X_190_ _008_ _016_ VSS VSS VCC VCC _036_ sky130_fd_sc_hs__and2_1
+X_457_ o_data2[15] VSS VSS VCC VCC o_data2_ex[15] sky130_fd_sc_hs__buf_2
+X_388_ clknet_2_2__leaf_i_clk i_wr_data[16] VSS VSS VCC VCC wr_back_data\[16\]
++ sky130_fd_sc_hs__dfxtp_2
+X_311_ wr_back_data\[1\] _030_ _034_ i_reg_data1[1] _119_ VSS VSS VCC VCC
++ o_data1[1] sky130_fd_sc_hs__a221o_4
+X_242_ i_alu2_data[3] _075_ _077_ i_wr_data[3] VSS VSS VCC VCC _081_ sky130_fd_sc_hs__a22o_1
+X_173_ i_alu_rs1[3] VSS VSS VCC VCC _019_ sky130_fd_sc_hs__inv_2
+X_225_ _065_ wr_back_rd\[4\] wr_back_op VSS VSS VCC VCC _067_ sky130_fd_sc_hs__o21ai_1
+X_156_ i_alu2_rd[2] i_alu_rs1[2] VSS VSS VCC VCC _002_ sky130_fd_sc_hs__xnor2_1
+X_208_ _043_ _044_ _049_ i_alu2_reg_write VSS VSS VCC VCC _050_ sky130_fd_sc_hs__and4b_1
+X_490_ i_wr_data[16] VSS VSS VCC VCC o_write_data[16] sky130_fd_sc_hs__buf_2
+X_473_ o_data2[31] VSS VSS VCC VCC o_data2_ex[31] sky130_fd_sc_hs__buf_2
+X_456_ o_data2[14] VSS VSS VCC VCC o_data2_ex[14] sky130_fd_sc_hs__buf_2
+X_387_ clknet_2_1__leaf_i_clk i_wr_data[15] VSS VSS VCC VCC wr_back_data\[15\]
++ sky130_fd_sc_hs__dfxtp_1
+X_310_ i_alu2_data[1] _035_ _037_ i_wr_data[1] VSS VSS VCC VCC _119_ sky130_fd_sc_hs__a22o_1
+X_241_ i_reg_data2[2] _072_ _074_ wr_back_data\[2\] _080_ VSS VSS VCC VCC
++ o_data2[2] sky130_fd_sc_hs__a221o_4
+X_172_ wr_back_rd\[4\] VSS VSS VCC VCC _018_ sky130_fd_sc_hs__inv_2
+X_439_ i_alu2_data[29] VSS VSS VCC VCC o_alu2_data[29] sky130_fd_sc_hs__buf_2
+X_224_ i_alu_rs2[1] _062_ wr_back_rd\[4\] _065_ VSS VSS VCC VCC _066_ sky130_fd_sc_hs__a2bb2o_1
+X_155_ i_alu2_rd[3] i_alu_rs1[3] VSS VSS VCC VCC _001_ sky130_fd_sc_hs__xnor2_1
+X_207_ _045_ _046_ _047_ _048_ VSS VSS VCC VCC _049_ sky130_fd_sc_hs__and4_1
+X_472_ o_data2[30] VSS VSS VCC VCC o_data2_ex[30] sky130_fd_sc_hs__buf_2
+X_455_ o_data2[13] VSS VSS VCC VCC o_data2_ex[13] sky130_fd_sc_hs__buf_2
+X_386_ clknet_2_3__leaf_i_clk i_wr_data[14] VSS VSS VCC VCC wr_back_data\[14\]
++ sky130_fd_sc_hs__dfxtp_1
+X_240_ i_alu2_data[2] _075_ _077_ i_wr_data[2] VSS VSS VCC VCC _080_ sky130_fd_sc_hs__a22o_1
+X_171_ _016_ VSS VSS VCC VCC _017_ sky130_fd_sc_hs__clkinv_2
+X_438_ i_alu2_data[28] VSS VSS VCC VCC o_alu2_data[28] sky130_fd_sc_hs__buf_2
+X_369_ wr_back_data\[26\] _029_ _033_ i_reg_data1[26] _152_ VSS VSS VCC VCC
++ o_data1[26] sky130_fd_sc_hs__a221o_4
+X_223_ i_alu_rs2[4] VSS VSS VCC VCC _065_ sky130_fd_sc_hs__inv_2
+X_154_ i_alu_rs1[1] i_alu_rs1[0] i_alu_rs1[2] i_alu_rs1[4] VSS VSS VCC VCC
++ _000_ sky130_fd_sc_hs__or4_1
+X_206_ i_alu_rs2[0] i_alu2_rd[0] VSS VSS VCC VCC _048_ sky130_fd_sc_hs__xnor2_1
+X_471_ o_data2[29] VSS VSS VCC VCC o_data2_ex[29] sky130_fd_sc_hs__buf_2
+X_454_ o_data2[12] VSS VSS VCC VCC o_data2_ex[12] sky130_fd_sc_hs__buf_2
+X_385_ clknet_2_0__leaf_i_clk i_wr_data[13] VSS VSS VCC VCC wr_back_data\[13\]
++ sky130_fd_sc_hs__dfxtp_2
+X_170_ i_write_reg_write _009_ _010_ _015_ VSS VSS VCC VCC _016_ sky130_fd_sc_hs__and4_1
+X_437_ i_alu2_data[27] VSS VSS VCC VCC o_alu2_data[27] sky130_fd_sc_hs__buf_2
+X_368_ i_alu2_data[26] _032_ _036_ i_wr_data[26] VSS VSS VCC VCC _152_ sky130_fd_sc_hs__a22o_1
+X_299_ i_reg_data2[27] _102_ _103_ wr_back_data\[27\] _113_ VSS VSS VCC VCC
++ o_data2[27] sky130_fd_sc_hs__a221o_4
+X_222_ _061_ wr_back_rd\[0\] _062_ i_alu_rs2[1] _063_ VSS VSS VCC VCC _064_
++ sky130_fd_sc_hs__a221o_1
+Xclkbuf_2_0__f_i_clk clknet_0_i_clk VSS VSS VCC VCC clknet_2_0__leaf_i_clk
++ sky130_fd_sc_hs__clkbuf_16
+X_205_ i_alu_rs2[2] i_alu2_rd[2] VSS VSS VCC VCC _047_ sky130_fd_sc_hs__xnor2_1
+X_470_ o_data2[28] VSS VSS VCC VCC o_data2_ex[28] sky130_fd_sc_hs__buf_2
+X_453_ o_data2[11] VSS VSS VCC VCC o_data2_ex[11] sky130_fd_sc_hs__buf_2
+X_384_ clknet_2_2__leaf_i_clk i_wr_data[12] VSS VSS VCC VCC wr_back_data\[12\]
++ sky130_fd_sc_hs__dfxtp_1
+X_505_ i_wr_data[31] VSS VSS VCC VCC o_write_data[31] sky130_fd_sc_hs__buf_2
+X_436_ i_alu2_data[26] VSS VSS VCC VCC o_alu2_data[26] sky130_fd_sc_hs__buf_2
+X_367_ wr_back_data\[25\] _138_ _139_ i_reg_data1[25] _151_ VSS VSS VCC VCC
++ o_data1[25] sky130_fd_sc_hs__a221o_4
+X_298_ i_alu2_data[27] _104_ _105_ i_wr_data[27] VSS VSS VCC VCC _113_ sky130_fd_sc_hs__a22o_1
+X_221_ i_alu_rs2[3] wr_back_rd\[3\] VSS VSS VCC VCC _063_ sky130_fd_sc_hs__xor2_1
+X_419_ i_alu2_data[9] VSS VSS VCC VCC o_alu2_data[9] sky130_fd_sc_hs__buf_2
+X_204_ i_alu_rs2[3] i_alu2_rd[3] VSS VSS VCC VCC _046_ sky130_fd_sc_hs__xnor2_1
+X_452_ o_data2[10] VSS VSS VCC VCC o_data2_ex[10] sky130_fd_sc_hs__buf_2
+X_383_ clknet_2_0__leaf_i_clk i_wr_data[11] VSS VSS VCC VCC wr_back_data\[11\]
++ sky130_fd_sc_hs__dfxtp_1
+X_504_ i_wr_data[30] VSS VSS VCC VCC o_write_data[30] sky130_fd_sc_hs__buf_2
+X_435_ i_alu2_data[25] VSS VSS VCC VCC o_alu2_data[25] sky130_fd_sc_hs__buf_2
+X_366_ i_alu2_data[25] _140_ _141_ i_wr_data[25] VSS VSS VCC VCC _151_ sky130_fd_sc_hs__a22o_1
+X_297_ i_reg_data2[26] _102_ _103_ wr_back_data\[26\] _112_ VSS VSS VCC VCC
++ o_data2[26] sky130_fd_sc_hs__a221o_4
+X_220_ wr_back_rd\[1\] VSS VSS VCC VCC _062_ sky130_fd_sc_hs__inv_2
+X_418_ i_alu2_data[8] VSS VSS VCC VCC o_alu2_data[8] sky130_fd_sc_hs__buf_2
+X_349_ wr_back_data\[16\] _138_ _139_ i_reg_data1[16] _142_ VSS VSS VCC VCC
++ o_data1[16] sky130_fd_sc_hs__a221o_4
+X_203_ i_alu_rs2[1] i_alu2_rd[1] VSS VSS VCC VCC _045_ sky130_fd_sc_hs__xnor2_1
+X_451_ o_data2[9] VSS VSS VCC VCC o_data2_ex[9] sky130_fd_sc_hs__buf_2
+X_382_ clknet_2_0__leaf_i_clk i_wr_data[10] VSS VSS VCC VCC wr_back_data\[10\]
++ sky130_fd_sc_hs__dfxtp_1
+X_503_ i_wr_data[29] VSS VSS VCC VCC o_write_data[29] sky130_fd_sc_hs__buf_2
+X_434_ i_alu2_data[24] VSS VSS VCC VCC o_alu2_data[24] sky130_fd_sc_hs__buf_2
+X_365_ wr_back_data\[24\] _138_ _139_ i_reg_data1[24] _150_ VSS VSS VCC VCC
++ o_data1[24] sky130_fd_sc_hs__a221o_4
+X_296_ i_alu2_data[26] _104_ _105_ i_wr_data[26] VSS VSS VCC VCC _112_ sky130_fd_sc_hs__a22o_1
+X_417_ i_alu2_data[7] VSS VSS VCC VCC o_alu2_data[7] sky130_fd_sc_hs__buf_2
+X_348_ i_alu2_data[16] _140_ _141_ i_wr_data[16] VSS VSS VCC VCC _142_ sky130_fd_sc_hs__a22o_1
+X_279_ i_reg_data2[19] _088_ _089_ wr_back_data\[19\] _101_ VSS VSS VCC VCC
++ o_data2[19] sky130_fd_sc_hs__a221o_4
+X_202_ i_alu_rs2[4] i_alu2_rd[4] VSS VSS VCC VCC _044_ sky130_fd_sc_hs__xnor2_1
+X_450_ o_data2[8] VSS VSS VCC VCC o_data2_ex[8] sky130_fd_sc_hs__buf_2
+X_381_ clknet_2_0__leaf_i_clk i_wr_data[9] VSS VSS VCC VCC wr_back_data\[9\]
++ sky130_fd_sc_hs__dfxtp_2
+Xclkbuf_2_3__f_i_clk clknet_0_i_clk VSS VSS VCC VCC clknet_2_3__leaf_i_clk
++ sky130_fd_sc_hs__clkbuf_16
+X_502_ i_wr_data[28] VSS VSS VCC VCC o_write_data[28] sky130_fd_sc_hs__buf_2
+X_433_ i_alu2_data[23] VSS VSS VCC VCC o_alu2_data[23] sky130_fd_sc_hs__buf_2
+X_364_ i_alu2_data[24] _140_ _141_ i_wr_data[24] VSS VSS VCC VCC _150_ sky130_fd_sc_hs__a22o_1
+X_295_ i_reg_data2[25] _102_ _103_ wr_back_data\[25\] _111_ VSS VSS VCC VCC
++ o_data2[25] sky130_fd_sc_hs__a221o_4
+X_416_ i_alu2_data[6] VSS VSS VCC VCC o_alu2_data[6] sky130_fd_sc_hs__buf_2
+X_347_ _036_ VSS VSS VCC VCC _141_ sky130_fd_sc_hs__buf_2
+X_278_ i_alu2_data[19] _090_ _091_ i_wr_data[19] VSS VSS VCC VCC _101_ sky130_fd_sc_hs__a22o_1
+X_201_ i_alu_rs2[3] _042_ VSS VSS VCC VCC _043_ sky130_fd_sc_hs__nor2_1
+X_380_ clknet_2_1__leaf_i_clk i_wr_data[8] VSS VSS VCC VCC wr_back_data\[8\]
++ sky130_fd_sc_hs__dfxtp_1

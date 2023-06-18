@@ -55,9 +55,9 @@ int main(int argc, char** argv)
     }*/
 
     f_spice << "* Selection buffer\n";
-    f_spice << "xSELBUF0 SEL VSS VSS VCC VCC SEL0 sky130_fd_sc_hd__inv_1\n";
-    f_spice << "xSELBUF1 SEL0 VSS VSS VCC VCC SEL1 sky130_fd_sc_hd__inv_2\n";
-    f_spice << "xSELBUF2 SEL1 VSS VSS VCC VCC SEL2 sky130_fd_sc_hd__inv_8\n";
+    f_spice << "xSELBUF0 SEL VSS VSS VCC VCC SEL0 sky130_fd_sc_hs__inv_1\n";
+    f_spice << "xSELBUF1 SEL0 VSS VSS VCC VCC SEL1 sky130_fd_sc_hs__inv_2\n";
+    f_spice << "xSELBUF2 SEL1 VSS VSS VCC VCC SEL2 sky130_fd_sc_hs__inv_8\n";
 
     f_spice << "* Bitlines pull-up\n";
     for (int i=0 ; i<col_cnt ; ++i)
@@ -95,12 +95,12 @@ int main(int argc, char** argv)
                 if (j == 0)
                 {
                     f_spice << "xBUF" << j << "_" << k << "[" << i << "] " << wl_names[j] << "[" << i <<
-                        "] VSS VSS VCC VCC " << wl_names[j+1] << k << "[" << i << "] sky130_fd_sc_hd__inv_2\n";
+                        "] VSS VSS VCC VCC " << wl_names[j+1] << k << "[" << i << "] sky130_fd_sc_hs__inv_2\n";
                 }
                 else
                 {
                     f_spice << "xBUF" << j << "_" << k << "[" << i << "] " << wl_names[j] << (k / 4) << "[" << i <<
-                        "] VSS VSS VCC VCC " << wl_names[j+1] << k << "[" << i << "] sky130_fd_sc_hd__inv_2\n";
+                        "] VSS VSS VCC VCC " << wl_names[j+1] << k << "[" << i << "] sky130_fd_sc_hs__inv_2\n";
                 }
             }
             buf_cnt *= 4;
@@ -114,13 +114,13 @@ int main(int argc, char** argv)
     f_spice << "* Column driver buffers\n";
     for (int i=0 ; i<col_cnt ; ++i)
     {
-        f_spice << "xCBUF0[" << i << "] " << col_names[0] << "[" << i << "] VSS VSS VCC VCC " << col_names[1] << "_n[" << i << "] sky130_fd_sc_hd__inv_1\n";
+        f_spice << "xCBUF0[" << i << "] " << col_names[0] << "[" << i << "] VSS VSS VCC VCC " << col_names[1] << "_n[" << i << "] sky130_fd_sc_hs__inv_1\n";
         for (int j=0 ; j<4 ; ++j)
         {
             f_spice << "xCBUF0p" << j << "[" << i << "] " << col_names[1] << "_n[" << i << "] VSS VSS VCC VCC " <<
-                col_names[2] << j << "_p[" << i << "] sky130_fd_sc_hd__inv_1\n";
+                col_names[2] << j << "_p[" << i << "] sky130_fd_sc_hs__inv_1\n";
             f_spice << "xCBUF0n" << j << "[" << i << "] " << col_names[2] << j << "_p[" << i << "] VSS VSS VCC VCC " <<
-                col_names[2] << j << "_n[" << i << "] sky130_fd_sc_hd__inv_1\n";
+                col_names[2] << j << "_n[" << i << "] sky130_fd_sc_hs__inv_1\n";
         }
     }
 
@@ -168,7 +168,7 @@ int main(int argc, char** argv)
     f_spice << "* Out invertors\n";
     for (int i=0 ; i<32 ; ++i)
     {
-        f_spice << "xRBUF[" << i << "] RD_M[" << i << "] VSS VSS VCC VCC RD[" << i << "] sky130_fd_sc_hd__inv_1\n";
+        f_spice << "xRBUF[" << i << "] RD_M[" << i << "] VSS VSS VCC VCC RD[" << i << "] sky130_fd_sc_hs__inv_1\n";
     }
 
     uint32_t used_addr = addr * col_cnt;

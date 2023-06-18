@@ -1,0 +1,1847 @@
+** sch_path: /media/FlexRV32/asic/blocks/rv_core_wb/rv_core_wb.sch
+**.subckt rv_core_wb i_clk i_reset_n i_wb_ack o_wb_we
+*+ o_wb_sel[3],o_wb_sel[2],o_wb_sel[1],o_wb_sel[0] o_wb_stb o_wb_cyc
+*+ o_wb_adr[31],o_wb_adr[30],o_wb_adr[29],o_wb_adr[28],o_wb_adr[27],o_wb_adr[26],o_wb_adr[25],o_wb_adr[24],o_wb_adr[23],o_wb_adr[22],o_wb_adr[21],o_wb_adr[20],o_wb_adr[19],o_wb_adr[18],o_wb_adr[17],o_wb_adr[16],o_wb_adr[15],o_wb_adr[14],o_wb_adr[13],o_wb_adr[12],o_wb_adr[11],o_wb_adr[10],o_wb_adr[9],o_wb_adr[8],o_wb_adr[7],o_wb_adr[6],o_wb_adr[5],o_wb_adr[4],o_wb_adr[3],o_wb_adr[2],o_wb_adr[1],o_wb_adr[0]
+*+ o_wb_dat[31],o_wb_dat[30],o_wb_dat[29],o_wb_dat[28],o_wb_dat[27],o_wb_dat[26],o_wb_dat[25],o_wb_dat[24],o_wb_dat[23],o_wb_dat[22],o_wb_dat[21],o_wb_dat[20],o_wb_dat[19],o_wb_dat[18],o_wb_dat[17],o_wb_dat[16],o_wb_dat[15],o_wb_dat[14],o_wb_dat[13],o_wb_dat[12],o_wb_dat[11],o_wb_dat[10],o_wb_dat[9],o_wb_dat[8],o_wb_dat[7],o_wb_dat[6],o_wb_dat[5],o_wb_dat[4],o_wb_dat[3],o_wb_dat[2],o_wb_dat[1],o_wb_dat[0]
+*+ i_wb_dat[31],i_wb_dat[30],i_wb_dat[29],i_wb_dat[28],i_wb_dat[27],i_wb_dat[26],i_wb_dat[25],i_wb_dat[24],i_wb_dat[23],i_wb_dat[22],i_wb_dat[21],i_wb_dat[20],i_wb_dat[19],i_wb_dat[18],i_wb_dat[17],i_wb_dat[16],i_wb_dat[15],i_wb_dat[14],i_wb_dat[13],i_wb_dat[12],i_wb_dat[11],i_wb_dat[10],i_wb_dat[9],i_wb_dat[8],i_wb_dat[7],i_wb_dat[6],i_wb_dat[5],i_wb_dat[4],i_wb_dat[3],i_wb_dat[2],i_wb_dat[1],i_wb_dat[0]
+*.ipin i_clk
+*.ipin i_reset_n
+*.ipin i_wb_ack
+*.opin o_wb_we
+*.opin o_wb_sel[3],o_wb_sel[2],o_wb_sel[1],o_wb_sel[0]
+*.opin o_wb_stb
+*.opin o_wb_cyc
+*.opin
+*+ o_wb_adr[31],o_wb_adr[30],o_wb_adr[29],o_wb_adr[28],o_wb_adr[27],o_wb_adr[26],o_wb_adr[25],o_wb_adr[24],o_wb_adr[23],o_wb_adr[22],o_wb_adr[21],o_wb_adr[20],o_wb_adr[19],o_wb_adr[18],o_wb_adr[17],o_wb_adr[16],o_wb_adr[15],o_wb_adr[14],o_wb_adr[13],o_wb_adr[12],o_wb_adr[11],o_wb_adr[10],o_wb_adr[9],o_wb_adr[8],o_wb_adr[7],o_wb_adr[6],o_wb_adr[5],o_wb_adr[4],o_wb_adr[3],o_wb_adr[2],o_wb_adr[1],o_wb_adr[0]
+*.opin
+*+ o_wb_dat[31],o_wb_dat[30],o_wb_dat[29],o_wb_dat[28],o_wb_dat[27],o_wb_dat[26],o_wb_dat[25],o_wb_dat[24],o_wb_dat[23],o_wb_dat[22],o_wb_dat[21],o_wb_dat[20],o_wb_dat[19],o_wb_dat[18],o_wb_dat[17],o_wb_dat[16],o_wb_dat[15],o_wb_dat[14],o_wb_dat[13],o_wb_dat[12],o_wb_dat[11],o_wb_dat[10],o_wb_dat[9],o_wb_dat[8],o_wb_dat[7],o_wb_dat[6],o_wb_dat[5],o_wb_dat[4],o_wb_dat[3],o_wb_dat[2],o_wb_dat[1],o_wb_dat[0]
+*.ipin
+*+ i_wb_dat[31],i_wb_dat[30],i_wb_dat[29],i_wb_dat[28],i_wb_dat[27],i_wb_dat[26],i_wb_dat[25],i_wb_dat[24],i_wb_dat[23],i_wb_dat[22],i_wb_dat[21],i_wb_dat[20],i_wb_dat[19],i_wb_dat[18],i_wb_dat[17],i_wb_dat[16],i_wb_dat[15],i_wb_dat[14],i_wb_dat[13],i_wb_dat[12],i_wb_dat[11],i_wb_dat[10],i_wb_dat[9],i_wb_dat[8],i_wb_dat[7],i_wb_dat[6],i_wb_dat[5],i_wb_dat[4],i_wb_dat[3],i_wb_dat[2],i_wb_dat[1],i_wb_dat[0]
+x1 net8 i_clk net9 i_reset_n VCC net10 net11 VCC net12 VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC
++ VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC
++ VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC
++ net13 net14 net14 net14 net14 net14 net14 net14 net14 net14 net14 net14 net14 VCC VCC VCC VCC VCC VCC VCC
++ VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC VCC net15
++ net15 net15 net15 net15 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16
++ net16 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16 net16
++ net16 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17
++ net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net17 net18
++ net3 net5 net6 i_wb_dat[31] i_wb_dat[30] i_wb_dat[29] i_wb_dat[28] i_wb_dat[27] i_wb_dat[26]
++ i_wb_dat[25] i_wb_dat[24] i_wb_dat[23] i_wb_dat[22] i_wb_dat[21] i_wb_dat[20] i_wb_dat[19] i_wb_dat[18]
++ i_wb_dat[17] i_wb_dat[16] i_wb_dat[15] i_wb_dat[14] i_wb_dat[13] i_wb_dat[12] i_wb_dat[11] i_wb_dat[10]
++ i_wb_dat[9] i_wb_dat[8] i_wb_dat[7] i_wb_dat[6] i_wb_dat[5] i_wb_dat[4] i_wb_dat[3] i_wb_dat[2] i_wb_dat[1]
++ i_wb_dat[0] data_addr[31] data_addr[30] data_addr[29] data_addr[28] data_addr[27] data_addr[26] data_addr[25]
++ data_addr[24] data_addr[23] data_addr[22] data_addr[21] data_addr[20] data_addr[19] data_addr[18] data_addr[17]
++ data_addr[16] data_addr[15] data_addr[14] data_addr[13] data_addr[12] data_addr[11] data_addr[10] data_addr[9]
++ data_addr[8] data_addr[7] data_addr[6] data_addr[5] data_addr[4] data_addr[3] data_addr[2] data_addr[1]
++ data_addr[0] net7[3] net7[2] net7[1] net7[0] o_wb_dat[31] o_wb_dat[30] o_wb_dat[29] o_wb_dat[28] o_wb_dat[27]
++ o_wb_dat[26] o_wb_dat[25] o_wb_dat[24] o_wb_dat[23] o_wb_dat[22] o_wb_dat[21] o_wb_dat[20] o_wb_dat[19]
++ o_wb_dat[18] o_wb_dat[17] o_wb_dat[16] o_wb_dat[15] o_wb_dat[14] o_wb_dat[13] o_wb_dat[12] o_wb_dat[11]
++ o_wb_dat[10] o_wb_dat[9] o_wb_dat[8] o_wb_dat[7] o_wb_dat[6] o_wb_dat[5] o_wb_dat[4] o_wb_dat[3] o_wb_dat[2]
++ o_wb_dat[1] o_wb_dat[0] net2 net4 instr_addr[31] instr_addr[30] instr_addr[29] instr_addr[28] instr_addr[27]
++ instr_addr[26] instr_addr[25] instr_addr[24] instr_addr[23] instr_addr[22] instr_addr[21] instr_addr[20]
++ instr_addr[19] instr_addr[18] instr_addr[17] instr_addr[16] instr_addr[15] instr_addr[14] instr_addr[13]
++ instr_addr[12] instr_addr[11] instr_addr[10] instr_addr[9] instr_addr[8] instr_addr[7] instr_addr[6] instr_addr[5]
++ instr_addr[4] instr_addr[3] instr_addr[2] instr_addr[1] i_wb_dat[31] i_wb_dat[30] i_wb_dat[29] i_wb_dat[28]
++ i_wb_dat[27] i_wb_dat[26] i_wb_dat[25] i_wb_dat[24] i_wb_dat[23] i_wb_dat[22] i_wb_dat[21] i_wb_dat[20]
++ i_wb_dat[19] i_wb_dat[18] i_wb_dat[17] i_wb_dat[16] i_wb_dat[15] i_wb_dat[14] i_wb_dat[13] i_wb_dat[12]
++ i_wb_dat[11] i_wb_dat[10] i_wb_dat[9] i_wb_dat[8] i_wb_dat[7] i_wb_dat[6] i_wb_dat[5] i_wb_dat[4] i_wb_dat[3]
++ i_wb_dat[2] i_wb_dat[1] i_wb_dat[0] net19 rv_core
+x2 net20 net1 VSS VSS VCC VCC net5 sky130_fd_sc_hs__and2_1
+x3 i_wb_ack VSS VSS VCC VCC net20 sky130_fd_sc_hs__inv_1
+x4 i_wb_ack net21 net2 VSS VSS VCC VCC net1 sky130_fd_sc_hs__nand3_1
+x5 net3 VSS VSS VCC VCC net21 sky130_fd_sc_hs__inv_1
+x6 net1 VSS VSS VCC VCC net4 sky130_fd_sc_hs__inv_1
+x7 net3 net6 VSS VSS VCC VCC o_wb_we sky130_fd_sc_hs__and2_1
+x8[3] net7[3] VSS VSS VCC VCC net22[3] sky130_fd_sc_hs__inv_1
+x8[2] net7[2] VSS VSS VCC VCC net22[2] sky130_fd_sc_hs__inv_1
+x8[1] net7[1] VSS VSS VCC VCC net22[1] sky130_fd_sc_hs__inv_1
+x8[0] net7[0] VSS VSS VCC VCC net22[0] sky130_fd_sc_hs__inv_1
+x7[3] net3 net22[3] VSS VSS VCC VCC o_wb_sel[3] sky130_fd_sc_hs__nand2_1
+x7[2] net3 net22[2] VSS VSS VCC VCC o_wb_sel[2] sky130_fd_sc_hs__nand2_1
+x7[1] net3 net22[1] VSS VSS VCC VCC o_wb_sel[1] sky130_fd_sc_hs__nand2_1
+x7[0] net3 net22[0] VSS VSS VCC VCC o_wb_sel[0] sky130_fd_sc_hs__nand2_1
+x8 net3 VSS VSS VCC VCC net23 sky130_fd_sc_hs__inv_1
+x10[3] net23 VSS VSS VCC VCC data_req[3] sky130_fd_sc_hs__inv_1
+x10[2] net23 VSS VSS VCC VCC data_req[2] sky130_fd_sc_hs__inv_1
+x10[1] net23 VSS VSS VCC VCC data_req[1] sky130_fd_sc_hs__inv_1
+x10[0] net23 VSS VSS VCC VCC data_req[0] sky130_fd_sc_hs__inv_1
+x9 data_addr[0] data_req[3] VSS VSS VCC VCC o_wb_adr[0] sky130_fd_sc_hs__and2_1
+x11[31] instr_addr[31] data_addr[31] data_req[3] VSS VSS VCC VCC o_wb_adr[31]
++ sky130_fd_sc_hs__mux2_1
+x11[30] instr_addr[30] data_addr[30] data_req[2] VSS VSS VCC VCC o_wb_adr[30]
++ sky130_fd_sc_hs__mux2_1
+x11[29] instr_addr[29] data_addr[29] data_req[1] VSS VSS VCC VCC o_wb_adr[29]
++ sky130_fd_sc_hs__mux2_1
+x11[28] instr_addr[28] data_addr[28] data_req[0] VSS VSS VCC VCC o_wb_adr[28]
++ sky130_fd_sc_hs__mux2_1
+x11[27] instr_addr[27] data_addr[27] data_req[3] VSS VSS VCC VCC o_wb_adr[27]
++ sky130_fd_sc_hs__mux2_1
+x11[26] instr_addr[26] data_addr[26] data_req[2] VSS VSS VCC VCC o_wb_adr[26]
++ sky130_fd_sc_hs__mux2_1
+x11[25] instr_addr[25] data_addr[25] data_req[1] VSS VSS VCC VCC o_wb_adr[25]
++ sky130_fd_sc_hs__mux2_1
+x11[24] instr_addr[24] data_addr[24] data_req[0] VSS VSS VCC VCC o_wb_adr[24]
++ sky130_fd_sc_hs__mux2_1
+x11[23] instr_addr[23] data_addr[23] data_req[3] VSS VSS VCC VCC o_wb_adr[23]
++ sky130_fd_sc_hs__mux2_1
+x11[22] instr_addr[22] data_addr[22] data_req[2] VSS VSS VCC VCC o_wb_adr[22]
++ sky130_fd_sc_hs__mux2_1
+x11[21] instr_addr[21] data_addr[21] data_req[1] VSS VSS VCC VCC o_wb_adr[21]
++ sky130_fd_sc_hs__mux2_1
+x11[20] instr_addr[20] data_addr[20] data_req[0] VSS VSS VCC VCC o_wb_adr[20]
++ sky130_fd_sc_hs__mux2_1
+x11[19] instr_addr[19] data_addr[19] data_req[3] VSS VSS VCC VCC o_wb_adr[19]
++ sky130_fd_sc_hs__mux2_1
+x11[18] instr_addr[18] data_addr[18] data_req[2] VSS VSS VCC VCC o_wb_adr[18]
++ sky130_fd_sc_hs__mux2_1
+x11[17] instr_addr[17] data_addr[17] data_req[1] VSS VSS VCC VCC o_wb_adr[17]
++ sky130_fd_sc_hs__mux2_1
+x11[16] instr_addr[16] data_addr[16] data_req[0] VSS VSS VCC VCC o_wb_adr[16]
++ sky130_fd_sc_hs__mux2_1
+x11[15] instr_addr[15] data_addr[15] data_req[3] VSS VSS VCC VCC o_wb_adr[15]
++ sky130_fd_sc_hs__mux2_1
+x11[14] instr_addr[14] data_addr[14] data_req[2] VSS VSS VCC VCC o_wb_adr[14]
++ sky130_fd_sc_hs__mux2_1
+x11[13] instr_addr[13] data_addr[13] data_req[1] VSS VSS VCC VCC o_wb_adr[13]
++ sky130_fd_sc_hs__mux2_1
+x11[12] instr_addr[12] data_addr[12] data_req[0] VSS VSS VCC VCC o_wb_adr[12]
++ sky130_fd_sc_hs__mux2_1
+x11[11] instr_addr[11] data_addr[11] data_req[3] VSS VSS VCC VCC o_wb_adr[11]
++ sky130_fd_sc_hs__mux2_1
+x11[10] instr_addr[10] data_addr[10] data_req[2] VSS VSS VCC VCC o_wb_adr[10]
++ sky130_fd_sc_hs__mux2_1
+x11[9] instr_addr[9] data_addr[9] data_req[1] VSS VSS VCC VCC o_wb_adr[9] sky130_fd_sc_hs__mux2_1
+x11[8] instr_addr[8] data_addr[8] data_req[0] VSS VSS VCC VCC o_wb_adr[8] sky130_fd_sc_hs__mux2_1
+x11[7] instr_addr[7] data_addr[7] data_req[3] VSS VSS VCC VCC o_wb_adr[7] sky130_fd_sc_hs__mux2_1
+x11[6] instr_addr[6] data_addr[6] data_req[2] VSS VSS VCC VCC o_wb_adr[6] sky130_fd_sc_hs__mux2_1
+x11[5] instr_addr[5] data_addr[5] data_req[1] VSS VSS VCC VCC o_wb_adr[5] sky130_fd_sc_hs__mux2_1
+x11[4] instr_addr[4] data_addr[4] data_req[0] VSS VSS VCC VCC o_wb_adr[4] sky130_fd_sc_hs__mux2_1
+x11[3] instr_addr[3] data_addr[3] data_req[3] VSS VSS VCC VCC o_wb_adr[3] sky130_fd_sc_hs__mux2_1
+x11[2] instr_addr[2] data_addr[2] data_req[2] VSS VSS VCC VCC o_wb_adr[2] sky130_fd_sc_hs__mux2_1
+x11[1] instr_addr[1] data_addr[1] data_req[1] VSS VSS VCC VCC o_wb_adr[1] sky130_fd_sc_hs__mux2_1
+**.ends
+
+* expanding   symbol:  ../../blocks/rv_core/rv_core.sym # of pins=30
+** sym_path: /media/FlexRV32/asic/blocks/rv_core/rv_core.sym
+** sch_path: /media/FlexRV32/asic/blocks/rv_core/rv_core.sch
+.subckt rv_core o_csr_clear i_clk o_csr_ebreak i_reset_n i_csr_read o_csr_read o_csr_set
++ i_csr_to_trap o_csr_write i_csr_data[31] i_csr_data[30] i_csr_data[29] i_csr_data[28] i_csr_data[27]
++ i_csr_data[26] i_csr_data[25] i_csr_data[24] i_csr_data[23] i_csr_data[22] i_csr_data[21] i_csr_data[20]
++ i_csr_data[19] i_csr_data[18] i_csr_data[17] i_csr_data[16] i_csr_data[15] i_csr_data[14] i_csr_data[13]
++ i_csr_data[12] i_csr_data[11] i_csr_data[10] i_csr_data[9] i_csr_data[8] i_csr_data[7] i_csr_data[6] i_csr_data[5]
++ i_csr_data[4] i_csr_data[3] i_csr_data[2] i_csr_data[1] i_csr_data[0] i_csr_ret_adr[31] i_csr_ret_adr[30]
++ i_csr_ret_adr[29] i_csr_ret_adr[28] i_csr_ret_adr[27] i_csr_ret_adr[26] i_csr_ret_adr[25] i_csr_ret_adr[24]
++ i_csr_ret_adr[23] i_csr_ret_adr[22] i_csr_ret_adr[21] i_csr_ret_adr[20] i_csr_ret_adr[19] i_csr_ret_adr[18]
++ i_csr_ret_adr[17] i_csr_ret_adr[16] i_csr_ret_adr[15] i_csr_ret_adr[14] i_csr_ret_adr[13] i_csr_ret_adr[12]
++ i_csr_ret_adr[11] i_csr_ret_adr[10] i_csr_ret_adr[9] i_csr_ret_adr[8] i_csr_ret_adr[7] i_csr_ret_adr[6]
++ i_csr_ret_adr[5] i_csr_ret_adr[4] i_csr_ret_adr[3] i_csr_ret_adr[2] i_csr_ret_adr[1] o_csr_imm_sel o_csr_idx[11]
++ o_csr_idx[10] o_csr_idx[9] o_csr_idx[8] o_csr_idx[7] o_csr_idx[6] o_csr_idx[5] o_csr_idx[4] o_csr_idx[3]
++ o_csr_idx[2] o_csr_idx[1] o_csr_idx[0] i_csr_trap_pc[31] i_csr_trap_pc[30] i_csr_trap_pc[29] i_csr_trap_pc[28]
++ i_csr_trap_pc[27] i_csr_trap_pc[26] i_csr_trap_pc[25] i_csr_trap_pc[24] i_csr_trap_pc[23] i_csr_trap_pc[22]
++ i_csr_trap_pc[21] i_csr_trap_pc[20] i_csr_trap_pc[19] i_csr_trap_pc[18] i_csr_trap_pc[17] i_csr_trap_pc[16]
++ i_csr_trap_pc[15] i_csr_trap_pc[14] i_csr_trap_pc[13] i_csr_trap_pc[12] i_csr_trap_pc[11] i_csr_trap_pc[10]
++ i_csr_trap_pc[9] i_csr_trap_pc[8] i_csr_trap_pc[7] i_csr_trap_pc[6] i_csr_trap_pc[5] i_csr_trap_pc[4]
++ i_csr_trap_pc[3] i_csr_trap_pc[2] i_csr_trap_pc[1] o_csr_imm[4] o_csr_imm[3] o_csr_imm[2] o_csr_imm[1] o_csr_imm[0]
++ o_csr_pc_next[31] o_csr_pc_next[30] o_csr_pc_next[29] o_csr_pc_next[28] o_csr_pc_next[27] o_csr_pc_next[26]
++ o_csr_pc_next[25] o_csr_pc_next[24] o_csr_pc_next[23] o_csr_pc_next[22] o_csr_pc_next[21] o_csr_pc_next[20]
++ o_csr_pc_next[19] o_csr_pc_next[18] o_csr_pc_next[17] o_csr_pc_next[16] o_csr_pc_next[15] o_csr_pc_next[14]
++ o_csr_pc_next[13] o_csr_pc_next[12] o_csr_pc_next[11] o_csr_pc_next[10] o_csr_pc_next[9] o_csr_pc_next[8]
++ o_csr_pc_next[7] o_csr_pc_next[6] o_csr_pc_next[5] o_csr_pc_next[4] o_csr_pc_next[3] o_csr_pc_next[2]
++ o_csr_pc_next[1] o_reg_rdata1[31] o_reg_rdata1[30] o_reg_rdata1[29] o_reg_rdata1[28] o_reg_rdata1[27]
++ o_reg_rdata1[26] o_reg_rdata1[25] o_reg_rdata1[24] o_reg_rdata1[23] o_reg_rdata1[22] o_reg_rdata1[21]
++ o_reg_rdata1[20] o_reg_rdata1[19] o_reg_rdata1[18] o_reg_rdata1[17] o_reg_rdata1[16] o_reg_rdata1[15]
++ o_reg_rdata1[14] o_reg_rdata1[13] o_reg_rdata1[12] o_reg_rdata1[11] o_reg_rdata1[10] o_reg_rdata1[9] o_reg_rdata1[8]
++ o_reg_rdata1[7] o_reg_rdata1[6] o_reg_rdata1[5] o_reg_rdata1[4] o_reg_rdata1[3] o_reg_rdata1[2] o_reg_rdata1[1]
++ o_reg_rdata1[0] o_instr_issued o_data_req i_data_ack o_data_write i_data_rdata[31] i_data_rdata[30]
++ i_data_rdata[29] i_data_rdata[28] i_data_rdata[27] i_data_rdata[26] i_data_rdata[25] i_data_rdata[24]
++ i_data_rdata[23] i_data_rdata[22] i_data_rdata[21] i_data_rdata[20] i_data_rdata[19] i_data_rdata[18]
++ i_data_rdata[17] i_data_rdata[16] i_data_rdata[15] i_data_rdata[14] i_data_rdata[13] i_data_rdata[12]
++ i_data_rdata[11] i_data_rdata[10] i_data_rdata[9] i_data_rdata[8] i_data_rdata[7] i_data_rdata[6] i_data_rdata[5]
++ i_data_rdata[4] i_data_rdata[3] i_data_rdata[2] i_data_rdata[1] i_data_rdata[0] o_data_adr[31] o_data_adr[30]
++ o_data_adr[29] o_data_adr[28] o_data_adr[27] o_data_adr[26] o_data_adr[25] o_data_adr[24] o_data_adr[23]
++ o_data_adr[22] o_data_adr[21] o_data_adr[20] o_data_adr[19] o_data_adr[18] o_data_adr[17] o_data_adr[16]
++ o_data_adr[15] o_data_adr[14] o_data_adr[13] o_data_adr[12] o_data_adr[11] o_data_adr[10] o_data_adr[9]
++ o_data_adr[8] o_data_adr[7] o_data_adr[6] o_data_adr[5] o_data_adr[4] o_data_adr[3] o_data_adr[2] o_data_adr[1]
++ o_data_adr[0] o_data_sel[3] o_data_sel[2] o_data_sel[1] o_data_sel[0] o_data_wdata[31] o_data_wdata[30]
++ o_data_wdata[29] o_data_wdata[28] o_data_wdata[27] o_data_wdata[26] o_data_wdata[25] o_data_wdata[24]
++ o_data_wdata[23] o_data_wdata[22] o_data_wdata[21] o_data_wdata[20] o_data_wdata[19] o_data_wdata[18]
++ o_data_wdata[17] o_data_wdata[16] o_data_wdata[15] o_data_wdata[14] o_data_wdata[13] o_data_wdata[12]
++ o_data_wdata[11] o_data_wdata[10] o_data_wdata[9] o_data_wdata[8] o_data_wdata[7] o_data_wdata[6] o_data_wdata[5]
++ o_data_wdata[4] o_data_wdata[3] o_data_wdata[2] o_data_wdata[1] o_data_wdata[0] o_instr_req i_instr_ack
++ o_instr_adr[31] o_instr_adr[30] o_instr_adr[29] o_instr_adr[28] o_instr_adr[27] o_instr_adr[26] o_instr_adr[25]
++ o_instr_adr[24] o_instr_adr[23] o_instr_adr[22] o_instr_adr[21] o_instr_adr[20] o_instr_adr[19] o_instr_adr[18]
++ o_instr_adr[17] o_instr_adr[16] o_instr_adr[15] o_instr_adr[14] o_instr_adr[13] o_instr_adr[12] o_instr_adr[11]
++ o_instr_adr[10] o_instr_adr[9] o_instr_adr[8] o_instr_adr[7] o_instr_adr[6] o_instr_adr[5] o_instr_adr[4]
++ o_instr_adr[3] o_instr_adr[2] o_instr_adr[1] i_instr_rdata[31] i_instr_rdata[30] i_instr_rdata[29]
++ i_instr_rdata[28] i_instr_rdata[27] i_instr_rdata[26] i_instr_rdata[25] i_instr_rdata[24] i_instr_rdata[23]
++ i_instr_rdata[22] i_instr_rdata[21] i_instr_rdata[20] i_instr_rdata[19] i_instr_rdata[18] i_instr_rdata[17]
++ i_instr_rdata[16] i_instr_rdata[15] i_instr_rdata[14] i_instr_rdata[13] i_instr_rdata[12] i_instr_rdata[11]
++ i_instr_rdata[10] i_instr_rdata[9] i_instr_rdata[8] i_instr_rdata[7] i_instr_rdata[6] i_instr_rdata[5]
++ i_instr_rdata[4] i_instr_rdata[3] i_instr_rdata[2] i_instr_rdata[1] i_instr_rdata[0] o_csr_masked
+*.ipin i_clk
+*.ipin i_reset_n
+*.ipin i_csr_read
+*.opin o_csr_clear
+*.opin o_data_req
+*.opin
+*+ o_data_wdata[31],o_data_wdata[30],o_data_wdata[29],o_data_wdata[28],o_data_wdata[27],o_data_wdata[26],o_data_wdata[25],o_data_wdata[24],o_data_wdata[23],o_data_wdata[22],o_data_wdata[21],o_data_wdata[20],o_data_wdata[19],o_data_wdata[18],o_data_wdata[17],o_data_wdata[16],o_data_wdata[15],o_data_wdata[14],o_data_wdata[13],o_data_wdata[12],o_data_wdata[11],o_data_wdata[10],o_data_wdata[9],o_data_wdata[8],o_data_wdata[7],o_data_wdata[6],o_data_wdata[5],o_data_wdata[4],o_data_wdata[3],o_data_wdata[2],o_data_wdata[1],o_data_wdata[0]
+*.opin o_instr_issued
+*.opin
+*+ o_data_adr[31],o_data_adr[30],o_data_adr[29],o_data_adr[28],o_data_adr[27],o_data_adr[26],o_data_adr[25],o_data_adr[24],o_data_adr[23],o_data_adr[22],o_data_adr[21],o_data_adr[20],o_data_adr[19],o_data_adr[18],o_data_adr[17],o_data_adr[16],o_data_adr[15],o_data_adr[14],o_data_adr[13],o_data_adr[12],o_data_adr[11],o_data_adr[10],o_data_adr[9],o_data_adr[8],o_data_adr[7],o_data_adr[6],o_data_adr[5],o_data_adr[4],o_data_adr[3],o_data_adr[2],o_data_adr[1],o_data_adr[0]
+*.opin o_data_sel[3],o_data_sel[2],o_data_sel[1],o_data_sel[0]
+*.ipin
+*+ i_csr_data[31],i_csr_data[30],i_csr_data[29],i_csr_data[28],i_csr_data[27],i_csr_data[26],i_csr_data[25],i_csr_data[24],i_csr_data[23],i_csr_data[22],i_csr_data[21],i_csr_data[20],i_csr_data[19],i_csr_data[18],i_csr_data[17],i_csr_data[16],i_csr_data[15],i_csr_data[14],i_csr_data[13],i_csr_data[12],i_csr_data[11],i_csr_data[10],i_csr_data[9],i_csr_data[8],i_csr_data[7],i_csr_data[6],i_csr_data[5],i_csr_data[4],i_csr_data[3],i_csr_data[2],i_csr_data[1],i_csr_data[0]
+*.ipin i_csr_to_trap
+*.opin o_csr_ebreak
+*.opin o_csr_read
+*.opin o_csr_set
+*.opin o_csr_write
+*.opin o_csr_imm_sel
+*.ipin
+*+ i_csr_ret_adr[31],i_csr_ret_adr[30],i_csr_ret_adr[29],i_csr_ret_adr[28],i_csr_ret_adr[27],i_csr_ret_adr[26],i_csr_ret_adr[25],i_csr_ret_adr[24],i_csr_ret_adr[23],i_csr_ret_adr[22],i_csr_ret_adr[21],i_csr_ret_adr[20],i_csr_ret_adr[19],i_csr_ret_adr[18],i_csr_ret_adr[17],i_csr_ret_adr[16],i_csr_ret_adr[15],i_csr_ret_adr[14],i_csr_ret_adr[13],i_csr_ret_adr[12],i_csr_ret_adr[11],i_csr_ret_adr[10],i_csr_ret_adr[9],i_csr_ret_adr[8],i_csr_ret_adr[7],i_csr_ret_adr[6],i_csr_ret_adr[5],i_csr_ret_adr[4],i_csr_ret_adr[3],i_csr_ret_adr[2],i_csr_ret_adr[1]
+*.ipin
+*+ i_csr_trap_pc[31],i_csr_trap_pc[30],i_csr_trap_pc[29],i_csr_trap_pc[28],i_csr_trap_pc[27],i_csr_trap_pc[26],i_csr_trap_pc[25],i_csr_trap_pc[24],i_csr_trap_pc[23],i_csr_trap_pc[22],i_csr_trap_pc[21],i_csr_trap_pc[20],i_csr_trap_pc[19],i_csr_trap_pc[18],i_csr_trap_pc[17],i_csr_trap_pc[16],i_csr_trap_pc[15],i_csr_trap_pc[14],i_csr_trap_pc[13],i_csr_trap_pc[12],i_csr_trap_pc[11],i_csr_trap_pc[10],i_csr_trap_pc[9],i_csr_trap_pc[8],i_csr_trap_pc[7],i_csr_trap_pc[6],i_csr_trap_pc[5],i_csr_trap_pc[4],i_csr_trap_pc[3],i_csr_trap_pc[2],i_csr_trap_pc[1]
+*.opin
+*+ o_csr_idx[11],o_csr_idx[10],o_csr_idx[9],o_csr_idx[8],o_csr_idx[7],o_csr_idx[6],o_csr_idx[5],o_csr_idx[4],o_csr_idx[3],o_csr_idx[2],o_csr_idx[1],o_csr_idx[0]
+*.opin o_csr_imm[4],o_csr_imm[3],o_csr_imm[2],o_csr_imm[1],o_csr_imm[0]
+*.opin
+*+ o_csr_pc_next[31],o_csr_pc_next[30],o_csr_pc_next[29],o_csr_pc_next[28],o_csr_pc_next[27],o_csr_pc_next[26],o_csr_pc_next[25],o_csr_pc_next[24],o_csr_pc_next[23],o_csr_pc_next[22],o_csr_pc_next[21],o_csr_pc_next[20],o_csr_pc_next[19],o_csr_pc_next[18],o_csr_pc_next[17],o_csr_pc_next[16],o_csr_pc_next[15],o_csr_pc_next[14],o_csr_pc_next[13],o_csr_pc_next[12],o_csr_pc_next[11],o_csr_pc_next[10],o_csr_pc_next[9],o_csr_pc_next[8],o_csr_pc_next[7],o_csr_pc_next[6],o_csr_pc_next[5],o_csr_pc_next[4],o_csr_pc_next[3],o_csr_pc_next[2],o_csr_pc_next[1]
+*.opin
+*+ o_reg_rdata1[31],o_reg_rdata1[30],o_reg_rdata1[29],o_reg_rdata1[28],o_reg_rdata1[27],o_reg_rdata1[26],o_reg_rdata1[25],o_reg_rdata1[24],o_reg_rdata1[23],o_reg_rdata1[22],o_reg_rdata1[21],o_reg_rdata1[20],o_reg_rdata1[19],o_reg_rdata1[18],o_reg_rdata1[17],o_reg_rdata1[16],o_reg_rdata1[15],o_reg_rdata1[14],o_reg_rdata1[13],o_reg_rdata1[12],o_reg_rdata1[11],o_reg_rdata1[10],o_reg_rdata1[9],o_reg_rdata1[8],o_reg_rdata1[7],o_reg_rdata1[6],o_reg_rdata1[5],o_reg_rdata1[4],o_reg_rdata1[3],o_reg_rdata1[2],o_reg_rdata1[1],o_reg_rdata1[0]
+*.ipin i_data_ack
+*.opin o_data_write
+*.ipin
+*+ i_data_rdata[31],i_data_rdata[30],i_data_rdata[29],i_data_rdata[28],i_data_rdata[27],i_data_rdata[26],i_data_rdata[25],i_data_rdata[24],i_data_rdata[23],i_data_rdata[22],i_data_rdata[21],i_data_rdata[20],i_data_rdata[19],i_data_rdata[18],i_data_rdata[17],i_data_rdata[16],i_data_rdata[15],i_data_rdata[14],i_data_rdata[13],i_data_rdata[12],i_data_rdata[11],i_data_rdata[10],i_data_rdata[9],i_data_rdata[8],i_data_rdata[7],i_data_rdata[6],i_data_rdata[5],i_data_rdata[4],i_data_rdata[3],i_data_rdata[2],i_data_rdata[1],i_data_rdata[0]
+*.ipin i_instr_ack
+*.opin o_instr_req
+*.ipin
+*+ i_instr_rdata[31],i_instr_rdata[30],i_instr_rdata[29],i_instr_rdata[28],i_instr_rdata[27],i_instr_rdata[26],i_instr_rdata[25],i_instr_rdata[24],i_instr_rdata[23],i_instr_rdata[22],i_instr_rdata[21],i_instr_rdata[20],i_instr_rdata[19],i_instr_rdata[18],i_instr_rdata[17],i_instr_rdata[16],i_instr_rdata[15],i_instr_rdata[14],i_instr_rdata[13],i_instr_rdata[12],i_instr_rdata[11],i_instr_rdata[10],i_instr_rdata[9],i_instr_rdata[8],i_instr_rdata[7],i_instr_rdata[6],i_instr_rdata[5],i_instr_rdata[4],i_instr_rdata[3],i_instr_rdata[2],i_instr_rdata[1],i_instr_rdata[0]
+*.opin
+*+ o_instr_adr[31],o_instr_adr[30],o_instr_adr[29],o_instr_adr[28],o_instr_adr[27],o_instr_adr[26],o_instr_adr[25],o_instr_adr[24],o_instr_adr[23],o_instr_adr[22],o_instr_adr[21],o_instr_adr[20],o_instr_adr[19],o_instr_adr[18],o_instr_adr[17],o_instr_adr[16],o_instr_adr[15],o_instr_adr[14],o_instr_adr[13],o_instr_adr[12],o_instr_adr[11],o_instr_adr[10],o_instr_adr[9],o_instr_adr[8],o_instr_adr[7],o_instr_adr[6],o_instr_adr[5],o_instr_adr[4],o_instr_adr[3],o_instr_adr[2],o_instr_adr[1]
+*.opin o_csr_masked
+x1 fetch_pc_change clk_p[0] reset_n[0] o_instr_adr[31] o_instr_adr[30] o_instr_adr[29]
++ o_instr_adr[28] o_instr_adr[27] o_instr_adr[26] o_instr_adr[25] o_instr_adr[24] o_instr_adr[23] o_instr_adr[22]
++ o_instr_adr[21] o_instr_adr[20] o_instr_adr[19] o_instr_adr[18] o_instr_adr[17] o_instr_adr[16] o_instr_adr[15]
++ o_instr_adr[14] o_instr_adr[13] o_instr_adr[12] o_instr_adr[11] o_instr_adr[10] o_instr_adr[9] o_instr_adr[8]
++ o_instr_adr[7] o_instr_adr[6] o_instr_adr[5] o_instr_adr[4] o_instr_adr[3] o_instr_adr[2] o_instr_adr[1]
++ o_instr_req net51 fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction
++ fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction
++ fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction
++ fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction
++ fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction
++ fetch_instruction fetch_instruction fetch_instruction alu2_pc_target[31] alu2_pc_target[30] alu2_pc_target[29]
++ alu2_pc_target[28] alu2_pc_target[27] alu2_pc_target[26] alu2_pc_target[25] alu2_pc_target[24] alu2_pc_target[23]
++ alu2_pc_target[22] alu2_pc_target[21] alu2_pc_target[20] alu2_pc_target[19] alu2_pc_target[18] alu2_pc_target[17]
++ alu2_pc_target[16] alu2_pc_target[15] alu2_pc_target[14] alu2_pc_target[13] alu2_pc_target[12] alu2_pc_target[11]
++ alu2_pc_target[10] alu2_pc_target[9] alu2_pc_target[8] alu2_pc_target[7] alu2_pc_target[6] alu2_pc_target[5]
++ alu2_pc_target[4] alu2_pc_target[3] alu2_pc_target[2] alu2_pc_target[1] alu2_pc_select fetch_pc[31] fetch_pc[30]
++ fetch_pc[29] fetch_pc[28] fetch_pc[27] fetch_pc[26] fetch_pc[25] fetch_pc[24] fetch_pc[23] fetch_pc[22]
++ fetch_pc[21] fetch_pc[20] fetch_pc[19] fetch_pc[18] fetch_pc[17] fetch_pc[16] fetch_pc[15] fetch_pc[14]
++ fetch_pc[13] fetch_pc[12] fetch_pc[11] fetch_pc[10] fetch_pc[9] fetch_pc[8] fetch_pc[7] fetch_pc[6] fetch_pc[5]
++ fetch_pc[4] fetch_pc[3] fetch_pc[2] fetch_pc[1] fetch_pc_next[31] fetch_pc_next[30] fetch_pc_next[29]
++ fetch_pc_next[28] fetch_pc_next[27] fetch_pc_next[26] fetch_pc_next[25] fetch_pc_next[24] fetch_pc_next[23]
++ fetch_pc_next[22] fetch_pc_next[21] fetch_pc_next[20] fetch_pc_next[19] fetch_pc_next[18] fetch_pc_next[17]
++ fetch_pc_next[16] fetch_pc_next[15] fetch_pc_next[14] fetch_pc_next[13] fetch_pc_next[12] fetch_pc_next[11]
++ fetch_pc_next[10] fetch_pc_next[9] fetch_pc_next[8] fetch_pc_next[7] fetch_pc_next[6] fetch_pc_next[5]
++ fetch_pc_next[4] fetch_pc_next[3] fetch_pc_next[2] fetch_pc_next[1] i_csr_trap_pc[31] i_csr_trap_pc[30]
++ i_csr_trap_pc[29] i_csr_trap_pc[28] i_csr_trap_pc[27] i_csr_trap_pc[26] i_csr_trap_pc[25] i_csr_trap_pc[24]
++ i_csr_trap_pc[23] i_csr_trap_pc[22] i_csr_trap_pc[21] i_csr_trap_pc[20] i_csr_trap_pc[19] i_csr_trap_pc[18]
++ i_csr_trap_pc[17] i_csr_trap_pc[16] i_csr_trap_pc[15] i_csr_trap_pc[14] i_csr_trap_pc[13] i_csr_trap_pc[12]
++ i_csr_trap_pc[11] i_csr_trap_pc[10] i_csr_trap_pc[9] i_csr_trap_pc[8] i_csr_trap_pc[7] i_csr_trap_pc[6]
++ i_csr_trap_pc[5] i_csr_trap_pc[4] i_csr_trap_pc[3] i_csr_trap_pc[2] i_csr_trap_pc[1] fetch_ready alu2_to_trap
++ i_instr_rdata[31] i_instr_rdata[30] i_instr_rdata[29] i_instr_rdata[28] i_instr_rdata[27] i_instr_rdata[26]
++ i_instr_rdata[25] i_instr_rdata[24] i_instr_rdata[23] i_instr_rdata[22] i_instr_rdata[21] i_instr_rdata[20]
++ i_instr_rdata[19] i_instr_rdata[18] i_instr_rdata[17] i_instr_rdata[16] i_instr_rdata[15] i_instr_rdata[14]
++ i_instr_rdata[13] i_instr_rdata[12] i_instr_rdata[11] i_instr_rdata[10] i_instr_rdata[9] i_instr_rdata[8]
++ i_instr_rdata[7] i_instr_rdata[6] i_instr_rdata[5] i_instr_rdata[4] i_instr_rdata[3] i_instr_rdata[2]
++ i_instr_rdata[1] i_instr_rdata[0] i_instr_ack rv_fetch
+x100 i_clk VSS VSS VCC VCC clk_n sky130_fd_sc_hs__inv_1
+x102 i_reset_n VSS VSS VCC VCC reset_p sky130_fd_sc_hs__inv_1
+x103[0] reset_p VSS VSS VCC VCC reset_n[0] sky130_fd_sc_hs__inv_1
+x101[2] clk_n VSS VSS VCC VCC clk_p[2] sky130_fd_sc_hs__inv_1
+x101[1] clk_n VSS VSS VCC VCC clk_p[1] sky130_fd_sc_hs__inv_1
+x101[0] clk_n VSS VSS VCC VCC clk_p[0] sky130_fd_sc_hs__inv_1
+x103[1] reset_p VSS VSS VCC VCC reset_n[1] sky130_fd_sc_hs__inv_1
+x2 net1[30] net1[29] net1[28] net1[27] net1[26] net1[25] net1[24] net1[23] net1[22] net1[21]
++ net1[20] net1[19] net1[18] net1[17] net1[16] net1[15] net1[14] net1[13] net1[12] net1[11] net1[10] net1[9]
++ net1[8] net1[7] net1[6] net1[5] net1[4] net1[3] net1[2] net1[1] net1[0] clk_p[0] net49 net2[30] net2[29]
++ net2[28] net2[27] net2[26] net2[25] net2[24] net2[23] net2[22] net2[21] net2[20] net2[19] net2[18] net2[17]
++ net2[16] net2[15] net2[14] net2[13] net2[12] net2[11] net2[10] net2[9] net2[8] net2[7] net2[6] net2[5]
++ net2[4] net2[3] net2[2] net2[1] net2[0] o_csr_masked net3[4] net3[3] net3[2] net3[1] net3[0]
++ fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction
++ fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction
++ fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction
++ fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction
++ fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction fetch_instruction
++ fetch_instruction fetch_instruction net4[4] net4[3] net4[2] net4[1] net4[0] net5[4] net5[3] net5[2] net5[1] net5[0]
++ fetch_pc[31] fetch_pc[30] fetch_pc[29] fetch_pc[28] fetch_pc[27] fetch_pc[26] fetch_pc[25] fetch_pc[24]
++ fetch_pc[23] fetch_pc[22] fetch_pc[21] fetch_pc[20] fetch_pc[19] fetch_pc[18] fetch_pc[17] fetch_pc[16]
++ fetch_pc[15] fetch_pc[14] fetch_pc[13] fetch_pc[12] fetch_pc[11] fetch_pc[10] fetch_pc[9] fetch_pc[8]
++ fetch_pc[7] fetch_pc[6] fetch_pc[5] fetch_pc[4] fetch_pc[3] fetch_pc[2] fetch_pc[1] net6[31] net6[30] net6[29]
++ net6[28] net6[27] net6[26] net6[25] net6[24] net6[23] net6[22] net6[21] net6[20] net6[19] net6[18] net6[17]
++ net6[16] net6[15] net6[14] net6[13] net6[12] net6[11] net6[10] net6[9] net6[8] net6[7] net6[6] net6[5]
++ net6[4] net6[3] net6[2] net6[1] net6[0] fetch_pc_next[31] fetch_pc_next[30] fetch_pc_next[29]
++ fetch_pc_next[28] fetch_pc_next[27] fetch_pc_next[26] fetch_pc_next[25] fetch_pc_next[24] fetch_pc_next[23]
++ fetch_pc_next[22] fetch_pc_next[21] fetch_pc_next[20] fetch_pc_next[19] fetch_pc_next[18] fetch_pc_next[17]
++ fetch_pc_next[16] fetch_pc_next[15] fetch_pc_next[14] fetch_pc_next[13] fetch_pc_next[12] fetch_pc_next[11]
++ fetch_pc_next[10] fetch_pc_next[9] fetch_pc_next[8] fetch_pc_next[7] fetch_pc_next[6] fetch_pc_next[5]
++ fetch_pc_next[4] fetch_pc_next[3] fetch_pc_next[2] fetch_pc_next[1] fetch_ready net7[4] net7[3] net7[2] net7[1]
++ net7[0] net8[2] net8[1] net8[0] net9 net10 net11 net12 net45 net13 net14 net15 net16 net44 net17[2]
++ net17[1] net17[0] o_csr_clear o_csr_ebreak o_csr_read o_csr_set o_csr_write o_csr_imm_sel o_csr_idx[11]
++ o_csr_idx[10] o_csr_idx[9] o_csr_idx[8] o_csr_idx[7] o_csr_idx[6] o_csr_idx[5] o_csr_idx[4] o_csr_idx[3]
++ o_csr_idx[2] o_csr_idx[1] o_csr_idx[0] o_csr_imm[4] o_csr_imm[3] o_csr_imm[2] o_csr_imm[1] o_csr_imm[0]
++ o_csr_pc_next[31] o_csr_pc_next[30] o_csr_pc_next[29] o_csr_pc_next[28] o_csr_pc_next[27] o_csr_pc_next[26]
++ o_csr_pc_next[25] o_csr_pc_next[24] o_csr_pc_next[23] o_csr_pc_next[22] o_csr_pc_next[21] o_csr_pc_next[20]
++ o_csr_pc_next[19] o_csr_pc_next[18] o_csr_pc_next[17] o_csr_pc_next[16] o_csr_pc_next[15] o_csr_pc_next[14]
++ o_csr_pc_next[13] o_csr_pc_next[12] o_csr_pc_next[11] o_csr_pc_next[10] o_csr_pc_next[9] o_csr_pc_next[8]
++ o_csr_pc_next[7] o_csr_pc_next[6] o_csr_pc_next[5] o_csr_pc_next[4] o_csr_pc_next[3] o_csr_pc_next[2]
++ o_csr_pc_next[1] rv_decode
+x3 clk_p[1] net19[31] net19[30] net19[29] net19[28] net19[27] net19[26] net19[25] net19[24]
++ net19[23] net19[22] net19[21] net19[20] net19[19] net19[18] net19[17] net19[16] net19[15] net19[14] net19[13]
++ net19[12] net19[11] net19[10] net19[9] net19[8] net19[7] net19[6] net19[5] net19[4] net19[3] net19[2]
++ net19[1] net19[0] reset_n[0] net20[31] net20[30] net20[29] net20[28] net20[27] net20[26] net20[25] net20[24]
++ net20[23] net20[22] net20[21] net20[20] net20[19] net20[18] net20[17] net20[16] net20[15] net20[14] net20[13]
++ net20[12] net20[11] net20[10] net20[9] net20[8] net20[7] net20[6] net20[5] net20[4] net20[3] net20[2]
++ net20[1] net20[0] net1[30] net1[29] net1[28] net1[27] net1[26] net1[25] net1[24] net1[23] net1[22] net1[21]
++ net1[20] net1[19] net1[18] net1[17] net1[16] net1[15] net1[14] net1[13] net1[12] net1[11] net1[10] net1[9]
++ net1[8] net1[7] net1[6] net1[5] net1[4] net1[3] net1[2] net1[1] net1[0] net21 net22 net2[30] net2[29]
++ net2[28] net2[27] net2[26] net2[25] net2[24] net2[23] net2[22] net2[21] net2[20] net2[19] net2[18] net2[17]
++ net2[16] net2[15] net2[14] net2[13] net2[12] net2[11] net2[10] net2[9] net2[8] net2[7] net2[6] net2[5]
++ net2[4] net2[3] net2[2] net2[1] net2[0] net33[4] net33[3] net33[2] net33[1] net33[0] net3[4] net3[3]
++ net3[2] net3[1] net3[0] net4[4] net4[3] net4[2] net4[1] net4[0] net32[4] net32[3] net32[2] net32[1]
++ net32[0] net5[4] net5[3] net5[2] net5[1] net5[0] net23[4] net23[3] net23[2] net23[1] net23[0] net6[31]
++ net6[30] net6[29] net6[28] net6[27] net6[26] net6[25] net6[24] net6[23] net6[22] net6[21] net6[20] net6[19]
++ net6[18] net6[17] net6[16] net6[15] net6[14] net6[13] net6[12] net6[11] net6[10] net6[9] net6[8] net6[7]
++ net6[6] net6[5] net6[4] net6[3] net6[2] net6[1] net6[0] net24 net7[4] net7[3] net7[2] net7[1] net7[0] net25
++ net8[2] net8[1] net8[0] net26[30] net26[29] net26[28] net26[27] net26[26] net26[25] net26[24] net26[23]
++ net26[22] net26[21] net26[20] net26[19] net26[18] net26[17] net26[16] net26[15] net26[14] net26[13] net26[12]
++ net26[11] net26[10] net26[9] net26[8] net26[7] net26[6] net26[5] net26[4] net26[3] net26[2] net26[1] net26[0]
++ net27[30] net27[29] net27[28] net27[27] net27[26] net27[25] net27[24] net27[23] net27[22] net27[21] net27[20]
++ net27[19] net27[18] net27[17] net27[16] net27[15] net27[14] net27[13] net27[12] net27[11] net27[10] net27[9]
++ net27[8] net27[7] net27[6] net27[5] net27[4] net27[3] net27[2] net27[1] net27[0] net9 net28[30] net28[29]
++ net28[28] net28[27] net28[26] net28[25] net28[24] net28[23] net28[22] net28[21] net28[20] net28[19] net28[18]
++ net28[17] net28[16] net28[15] net28[14] net28[13] net28[12] net28[11] net28[10] net28[9] net28[8] net28[7]
++ net28[6] net28[5] net28[4] net28[3] net28[2] net28[1] net28[0] net10 net11 alu1_res_src[2] alu1_res_src[1]
++ alu1_res_src[0] net12 net29[2] net29[1] net29[0] net30[4] net30[3] net30[2] net30[1] net30[0] net13 net31 net14
++ net15 net16 net17[2] net17[1] net17[0] o_reg_rdata1[31] o_reg_rdata1[30] o_reg_rdata1[29]
++ o_reg_rdata1[28] o_reg_rdata1[27] o_reg_rdata1[26] o_reg_rdata1[25] o_reg_rdata1[24] o_reg_rdata1[23]
++ o_reg_rdata1[22] o_reg_rdata1[21] o_reg_rdata1[20] o_reg_rdata1[19] o_reg_rdata1[18] o_reg_rdata1[17]
++ o_reg_rdata1[16] o_reg_rdata1[15] o_reg_rdata1[14] o_reg_rdata1[13] o_reg_rdata1[12] o_reg_rdata1[11]
++ o_reg_rdata1[10] o_reg_rdata1[9] o_reg_rdata1[8] o_reg_rdata1[7] o_reg_rdata1[6] o_reg_rdata1[5] o_reg_rdata1[4]
++ o_reg_rdata1[3] o_reg_rdata1[2] o_reg_rdata1[1] o_reg_rdata1[0] net18[31] net18[30] net18[29] net18[28] net18[27]
++ net18[26] net18[25] net18[24] net18[23] net18[22] net18[21] net18[20] net18[19] net18[18] net18[17] net18[16]
++ net18[15] net18[14] net18[13] net18[12] net18[11] net18[10] net18[9] net18[8] net18[7] net18[6] net18[5]
++ net18[4] net18[3] net18[2] net18[1] net18[0] i_csr_to_trap net48 net47 i_csr_ret_adr[31] i_csr_ret_adr[30]
++ i_csr_ret_adr[29] i_csr_ret_adr[28] i_csr_ret_adr[27] i_csr_ret_adr[26] i_csr_ret_adr[25] i_csr_ret_adr[24]
++ i_csr_ret_adr[23] i_csr_ret_adr[22] i_csr_ret_adr[21] i_csr_ret_adr[20] i_csr_ret_adr[19] i_csr_ret_adr[18]
++ i_csr_ret_adr[17] i_csr_ret_adr[16] i_csr_ret_adr[15] i_csr_ret_adr[14] i_csr_ret_adr[13] i_csr_ret_adr[12]
++ i_csr_ret_adr[11] i_csr_ret_adr[10] i_csr_ret_adr[9] i_csr_ret_adr[8] i_csr_ret_adr[7] i_csr_ret_adr[6]
++ i_csr_ret_adr[5] i_csr_ret_adr[4] i_csr_ret_adr[3] i_csr_ret_adr[2] i_csr_ret_adr[1] rv_alu1
+x4 net52[31] net52[30] net52[29] net52[28] net52[27] net52[26] net52[25] net52[24] net52[23]
++ net52[22] net52[21] net52[20] net52[19] net52[18] net52[17] net52[16] net52[15] net52[14] net52[13] net52[12]
++ net52[11] net52[10] net52[9] net52[8] net52[7] net52[6] net52[5] net52[4] net52[3] net52[2] net52[1] net52[0]
++ clk_p[2] reset_n[1] net53[31] net53[30] net53[29] net53[28] net53[27] net53[26] net53[25] net53[24]
++ net53[23] net53[22] net53[21] net53[20] net53[19] net53[18] net53[17] net53[16] net53[15] net53[14] net53[13]
++ net53[12] net53[11] net53[10] net53[9] net53[8] net53[7] net53[6] net53[5] net53[4] net53[3] net53[2]
++ net53[1] net53[0] net35 net37 net3[4] net3[3] net3[2] net3[1] net3[0] net4[4] net4[3] net4[2] net4[1]
++ net4[0] net40[4] net40[3] net40[2] net40[1] net40[0] net54[31] net54[30] net54[29] net54[28] net54[27]
++ net54[26] net54[25] net54[24] net54[23] net54[22] net54[21] net54[20] net54[19] net54[18] net54[17] net54[16]
++ net54[15] net54[14] net54[13] net54[12] net54[11] net54[10] net54[9] net54[8] net54[7] net54[6] net54[5]
++ net54[4] net54[3] net54[2] net54[1] net54[0] rv_regs
+x5 clk_p[0] o_reg_rdata1[31] o_reg_rdata1[30] o_reg_rdata1[29] o_reg_rdata1[28] o_reg_rdata1[27]
++ o_reg_rdata1[26] o_reg_rdata1[25] o_reg_rdata1[24] o_reg_rdata1[23] o_reg_rdata1[22] o_reg_rdata1[21]
++ o_reg_rdata1[20] o_reg_rdata1[19] o_reg_rdata1[18] o_reg_rdata1[17] o_reg_rdata1[16] o_reg_rdata1[15]
++ o_reg_rdata1[14] o_reg_rdata1[13] o_reg_rdata1[12] o_reg_rdata1[11] o_reg_rdata1[10] o_reg_rdata1[9] o_reg_rdata1[8]
++ o_reg_rdata1[7] o_reg_rdata1[6] o_reg_rdata1[5] o_reg_rdata1[4] o_reg_rdata1[3] o_reg_rdata1[2] o_reg_rdata1[1]
++ o_reg_rdata1[0] net33[4] net33[3] net33[2] net33[1] net33[0] net18[31] net18[30] net18[29] net18[28] net18[27]
++ net18[26] net18[25] net18[24] net18[23] net18[22] net18[21] net18[20] net18[19] net18[18] net18[17] net18[16]
++ net18[15] net18[14] net18[13] net18[12] net18[11] net18[10] net18[9] net18[8] net18[7] net18[6] net18[5]
++ net18[4] net18[3] net18[2] net18[1] net18[0] net32[4] net32[3] net32[2] net32[1] net32[0] net41[31]
++ net41[30] net41[29] net41[28] net41[27] net41[26] net41[25] net41[24] net41[23] net41[22] net41[21] net41[20]
++ net41[19] net41[18] net41[17] net41[16] net41[15] net41[14] net41[13] net41[12] net41[11] net41[10] net41[9]
++ net41[8] net41[7] net41[6] net41[5] net41[4] net41[3] net41[2] net41[1] net41[0] net36[4] net36[3] net36[2]
++ net36[1] net36[0] net54[31] net54[30] net54[29] net54[28] net54[27] net54[26] net54[25] net54[24] net54[23]
++ net54[22] net54[21] net54[20] net54[19] net54[18] net54[17] net54[16] net54[15] net54[14] net54[13] net54[12]
++ net54[11] net54[10] net54[9] net54[8] net54[7] net54[6] net54[5] net54[4] net54[3] net54[2] net54[1] net54[0]
++ net40[4] net40[3] net40[2] net40[1] net40[0] net46[31] net46[30] net46[29] net46[28] net46[27] net46[26]
++ net46[25] net46[24] net46[23] net46[22] net46[21] net46[20] net46[19] net46[18] net46[17] net46[16] net46[15]
++ net46[14] net46[13] net46[12] net46[11] net46[10] net46[9] net46[8] net46[7] net46[6] net46[5] net46[4]
++ net46[3] net46[2] net46[1] net46[0] net37 net39 net52[31] net52[30] net52[29] net52[28] net52[27] net52[26]
++ net52[25] net52[24] net52[23] net52[22] net52[21] net52[20] net52[19] net52[18] net52[17] net52[16] net52[15]
++ net52[14] net52[13] net52[12] net52[11] net52[10] net52[9] net52[8] net52[7] net52[6] net52[5] net52[4]
++ net52[3] net52[2] net52[1] net52[0] net53[31] net53[30] net53[29] net53[28] net53[27] net53[26] net53[25]
++ net53[24] net53[23] net53[22] net53[21] net53[20] net53[19] net53[18] net53[17] net53[16] net53[15] net53[14]
++ net53[13] net53[12] net53[11] net53[10] net53[9] net53[8] net53[7] net53[6] net53[5] net53[4] net53[3]
++ net53[2] net53[1] net53[0] net42[31] net42[30] net42[29] net42[28] net42[27] net42[26] net42[25] net42[24]
++ net42[23] net42[22] net42[21] net42[20] net42[19] net42[18] net42[17] net42[16] net42[15] net42[14] net42[13]
++ net42[12] net42[11] net42[10] net42[9] net42[8] net42[7] net42[6] net42[5] net42[4] net42[3] net42[2]
++ net42[1] net42[0] net43[31] net43[30] net43[29] net43[28] net43[27] net43[26] net43[25] net43[24] net43[23]
++ net43[22] net43[21] net43[20] net43[19] net43[18] net43[17] net43[16] net43[15] net43[14] net43[13] net43[12]
++ net43[11] net43[10] net43[9] net43[8] net43[7] net43[6] net43[5] net43[4] net43[3] net43[2] net43[1] net43[0]
++ rv_hazard
+x6 alu2_pc_select clk_p[1] reset_n[0] net42[31] net42[30] net42[29] net42[28] net42[27] net42[26]
++ net42[25] net42[24] net42[23] net42[22] net42[21] net42[20] net42[19] net42[18] net42[17] net42[16] net42[15]
++ net42[14] net42[13] net42[12] net42[11] net42[10] net42[9] net42[8] net42[7] net42[6] net42[5] net42[4]
++ net42[3] net42[2] net42[1] net42[0] net19[31] net19[30] net19[29] net19[28] net19[27] net19[26] net19[25]
++ net19[24] net19[23] net19[22] net19[21] net19[20] net19[19] net19[18] net19[17] net19[16] net19[15] net19[14]
++ net19[13] net19[12] net19[11] net19[10] net19[9] net19[8] net19[7] net19[6] net19[5] net19[4] net19[3]
++ net19[2] net19[1] net19[0] o_data_adr[31] o_data_adr[30] o_data_adr[29] o_data_adr[28] o_data_adr[27]
++ o_data_adr[26] o_data_adr[25] o_data_adr[24] o_data_adr[23] o_data_adr[22] o_data_adr[21] o_data_adr[20]
++ o_data_adr[19] o_data_adr[18] o_data_adr[17] o_data_adr[16] o_data_adr[15] o_data_adr[14] o_data_adr[13]
++ o_data_adr[12] o_data_adr[11] o_data_adr[10] o_data_adr[9] o_data_adr[8] o_data_adr[7] o_data_adr[6] o_data_adr[5]
++ o_data_adr[4] o_data_adr[3] o_data_adr[2] o_data_adr[1] o_data_adr[0] o_data_write net20[31] net20[30] net20[29]
++ net20[28] net20[27] net20[26] net20[25] net20[24] net20[23] net20[22] net20[21] net20[20] net20[19] net20[18]
++ net20[17] net20[16] net20[15] net20[14] net20[13] net20[12] net20[11] net20[10] net20[9] net20[8] net20[7]
++ net20[6] net20[5] net20[4] net20[3] net20[2] net20[1] net20[0] net37 net21 net36[4] net36[3] net36[2]
++ net36[1] net36[0] net22 net23[4] net23[3] net23[2] net23[1] net23[0] alu2_pc_target[31] alu2_pc_target[30]
++ alu2_pc_target[29] alu2_pc_target[28] alu2_pc_target[27] alu2_pc_target[26] alu2_pc_target[25] alu2_pc_target[24]
++ alu2_pc_target[23] alu2_pc_target[22] alu2_pc_target[21] alu2_pc_target[20] alu2_pc_target[19] alu2_pc_target[18]
++ alu2_pc_target[17] alu2_pc_target[16] alu2_pc_target[15] alu2_pc_target[14] alu2_pc_target[13] alu2_pc_target[12]
++ alu2_pc_target[11] alu2_pc_target[10] alu2_pc_target[9] alu2_pc_target[8] alu2_pc_target[7] alu2_pc_target[6]
++ alu2_pc_target[5] alu2_pc_target[4] alu2_pc_target[3] alu2_pc_target[2] alu2_pc_target[1] alu2_res_src[2]
++ alu2_res_src[1] alu2_res_src[0] net24 net25 o_data_wdata[31] o_data_wdata[30] o_data_wdata[29] o_data_wdata[28]
++ o_data_wdata[27] o_data_wdata[26] o_data_wdata[25] o_data_wdata[24] o_data_wdata[23] o_data_wdata[22]
++ o_data_wdata[21] o_data_wdata[20] o_data_wdata[19] o_data_wdata[18] o_data_wdata[17] o_data_wdata[16]
++ o_data_wdata[15] o_data_wdata[14] o_data_wdata[13] o_data_wdata[12] o_data_wdata[11] o_data_wdata[10]
++ o_data_wdata[9] o_data_wdata[8] o_data_wdata[7] o_data_wdata[6] o_data_wdata[5] o_data_wdata[4] o_data_wdata[3]
++ o_data_wdata[2] o_data_wdata[1] o_data_wdata[0] o_data_sel[3] o_data_sel[2] o_data_sel[1] o_data_sel[0] net26[30]
++ net26[29] net26[28] net26[27] net26[26] net26[25] net26[24] net26[23] net26[22] net26[21] net26[20] net26[19]
++ net26[18] net26[17] net26[16] net26[15] net26[14] net26[13] net26[12] net26[11] net26[10] net26[9] net26[8]
++ net26[7] net26[6] net26[5] net26[4] net26[3] net26[2] net26[1] net26[0] net27[30] net27[29] net27[28]
++ net27[27] net27[26] net27[25] net27[24] net27[23] net27[22] net27[21] net27[20] net27[19] net27[18] net27[17]
++ net27[16] net27[15] net27[14] net27[13] net27[12] net27[11] net27[10] net27[9] net27[8] net27[7] net27[6]
++ net27[5] net27[4] net27[3] net27[2] net27[1] net27[0] net38[2] net38[1] net38[0] alu2_to_trap net28[30]
++ net28[29] net28[28] net28[27] net28[26] net28[25] net28[24] net28[23] net28[22] net28[21] net28[20] net28[19]
++ net28[18] net28[17] net28[16] net28[15] net28[14] net28[13] net28[12] net28[11] net28[10] net28[9] net28[8]
++ net28[7] net28[6] net28[5] net28[4] net28[3] net28[2] net28[1] net28[0] alu1_res_src[2] alu1_res_src[1]
++ alu1_res_src[0] net35 net29[2] net29[1] net29[0] net30[4] net30[3] net30[2] net30[1] net30[0] net31 net46[31]
++ net46[30] net46[29] net46[28] net46[27] net46[26] net46[25] net46[24] net46[23] net46[22] net46[21] net46[20]
++ net46[19] net46[18] net46[17] net46[16] net46[15] net46[14] net46[13] net46[12] net46[11] net46[10] net46[9]
++ net46[8] net46[7] net46[6] net46[5] net46[4] net46[3] net46[2] net46[1] net46[0] i_csr_read i_csr_data[31]
++ i_csr_data[30] i_csr_data[29] i_csr_data[28] i_csr_data[27] i_csr_data[26] i_csr_data[25] i_csr_data[24]
++ i_csr_data[23] i_csr_data[22] i_csr_data[21] i_csr_data[20] i_csr_data[19] i_csr_data[18] i_csr_data[17]
++ i_csr_data[16] i_csr_data[15] i_csr_data[14] i_csr_data[13] i_csr_data[12] i_csr_data[11] i_csr_data[10]
++ i_csr_data[9] i_csr_data[8] i_csr_data[7] i_csr_data[6] i_csr_data[5] i_csr_data[4] i_csr_data[3] i_csr_data[2]
++ i_csr_data[1] i_csr_data[0] net50 rv_alu2
+x7 clk_p[1] net39 net38[2] net38[1] net38[0] net43[31] net43[30] net43[29] net43[28] net43[27]
++ net43[26] net43[25] net43[24] net43[23] net43[22] net43[21] net43[20] net43[19] net43[18] net43[17] net43[16]
++ net43[15] net43[14] net43[13] net43[12] net43[11] net43[10] net43[9] net43[8] net43[7] net43[6] net43[5]
++ net43[4] net43[3] net43[2] net43[1] net43[0] net41[31] net41[30] net41[29] net41[28] net41[27] net41[26]
++ net41[25] net41[24] net41[23] net41[22] net41[21] net41[20] net41[19] net41[18] net41[17] net41[16] net41[15]
++ net41[14] net41[13] net41[12] net41[11] net41[10] net41[9] net41[8] net41[7] net41[6] net41[5] net41[4]
++ net41[3] net41[2] net41[1] net41[0] net40[4] net40[3] net40[2] net40[1] net40[0] net37 net36[4] net36[3]
++ net36[2] net36[1] net36[0] alu2_res_src[2] i_data_rdata[31] i_data_rdata[30] i_data_rdata[29]
++ i_data_rdata[28] i_data_rdata[27] i_data_rdata[26] i_data_rdata[25] i_data_rdata[24] i_data_rdata[23]
++ i_data_rdata[22] i_data_rdata[21] i_data_rdata[20] i_data_rdata[19] i_data_rdata[18] i_data_rdata[17]
++ i_data_rdata[16] i_data_rdata[15] i_data_rdata[14] i_data_rdata[13] i_data_rdata[12] i_data_rdata[11]
++ i_data_rdata[10] i_data_rdata[9] i_data_rdata[8] i_data_rdata[7] i_data_rdata[6] i_data_rdata[5] i_data_rdata[4]
++ i_data_rdata[3] i_data_rdata[2] i_data_rdata[1] i_data_rdata[0] net34 rv_write
+x200 net35 VSS VSS VCC VCC net34 sky130_fd_sc_hs__inv_1
+x201 alu2_res_src[2] o_data_write VSS VSS VCC VCC o_data_req sky130_fd_sc_hs__or2_1
+x202 o_data_req net37 VSS VSS VCC VCC o_instr_issued sky130_fd_sc_hs__or2_1
+x8 clk_p[2] net51 reset_n[1] o_csr_masked net49 fetch_pc_change net48 net44 net47 net35
++ alu1_res_src[2] net50 net55 net56 net3[4] net3[3] net3[2] net3[1] net3[0] net4[4] net4[3] net4[2] net4[1] net4[0]
++ net23[4] net23[3] net23[2] net23[1] net23[0] rv_ctrl
+x9 net25 net24 net45 VSS VSS VCC VCC net56 sky130_fd_sc_hs__o21a_1
+.ends
+
+
+* expanding   symbol:  ../../blocks/rv_fetch/rv_fetch.sym # of pins=16
+** sym_path: /media/FlexRV32/asic/blocks/rv_fetch/rv_fetch.sym
+** sch_path: /media/FlexRV32/asic/blocks/rv_fetch/rv_fetch.sch
+.subckt rv_fetch o_pc_change i_clk i_reset_n o_addr[31] o_addr[30] o_addr[29] o_addr[28] o_addr[27]
++ o_addr[26] o_addr[25] o_addr[24] o_addr[23] o_addr[22] o_addr[21] o_addr[20] o_addr[19] o_addr[18] o_addr[17]
++ o_addr[16] o_addr[15] o_addr[14] o_addr[13] o_addr[12] o_addr[11] o_addr[10] o_addr[9] o_addr[8] o_addr[7]
++ o_addr[6] o_addr[5] o_addr[4] o_addr[3] o_addr[2] o_addr[1] o_cyc i_stall o_instruction[31] o_instruction[30]
++ o_instruction[29] o_instruction[28] o_instruction[27] o_instruction[26] o_instruction[25] o_instruction[24]
++ o_instruction[23] o_instruction[22] o_instruction[21] o_instruction[20] o_instruction[19] o_instruction[18]
++ o_instruction[17] o_instruction[16] o_instruction[15] o_instruction[14] o_instruction[13] o_instruction[12]
++ o_instruction[11] o_instruction[10] o_instruction[9] o_instruction[8] o_instruction[7] o_instruction[6]
++ o_instruction[5] o_instruction[4] o_instruction[3] o_instruction[2] o_instruction[1] o_instruction[0]
++ i_pc_target[31] i_pc_target[30] i_pc_target[29] i_pc_target[28] i_pc_target[27] i_pc_target[26] i_pc_target[25]
++ i_pc_target[24] i_pc_target[23] i_pc_target[22] i_pc_target[21] i_pc_target[20] i_pc_target[19] i_pc_target[18]
++ i_pc_target[17] i_pc_target[16] i_pc_target[15] i_pc_target[14] i_pc_target[13] i_pc_target[12] i_pc_target[11]
++ i_pc_target[10] i_pc_target[9] i_pc_target[8] i_pc_target[7] i_pc_target[6] i_pc_target[5] i_pc_target[4]
++ i_pc_target[3] i_pc_target[2] i_pc_target[1] i_pc_select o_pc[31] o_pc[30] o_pc[29] o_pc[28] o_pc[27] o_pc[26]
++ o_pc[25] o_pc[24] o_pc[23] o_pc[22] o_pc[21] o_pc[20] o_pc[19] o_pc[18] o_pc[17] o_pc[16] o_pc[15] o_pc[14]
++ o_pc[13] o_pc[12] o_pc[11] o_pc[10] o_pc[9] o_pc[8] o_pc[7] o_pc[6] o_pc[5] o_pc[4] o_pc[3] o_pc[2] o_pc[1]
++ o_pc_next[31] o_pc_next[30] o_pc_next[29] o_pc_next[28] o_pc_next[27] o_pc_next[26] o_pc_next[25] o_pc_next[24]
++ o_pc_next[23] o_pc_next[22] o_pc_next[21] o_pc_next[20] o_pc_next[19] o_pc_next[18] o_pc_next[17] o_pc_next[16]
++ o_pc_next[15] o_pc_next[14] o_pc_next[13] o_pc_next[12] o_pc_next[11] o_pc_next[10] o_pc_next[9] o_pc_next[8]
++ o_pc_next[7] o_pc_next[6] o_pc_next[5] o_pc_next[4] o_pc_next[3] o_pc_next[2] o_pc_next[1] i_pc_trap[31]
++ i_pc_trap[30] i_pc_trap[29] i_pc_trap[28] i_pc_trap[27] i_pc_trap[26] i_pc_trap[25] i_pc_trap[24] i_pc_trap[23]
++ i_pc_trap[22] i_pc_trap[21] i_pc_trap[20] i_pc_trap[19] i_pc_trap[18] i_pc_trap[17] i_pc_trap[16] i_pc_trap[15]
++ i_pc_trap[14] i_pc_trap[13] i_pc_trap[12] i_pc_trap[11] i_pc_trap[10] i_pc_trap[9] i_pc_trap[8] i_pc_trap[7]
++ i_pc_trap[6] i_pc_trap[5] i_pc_trap[4] i_pc_trap[3] i_pc_trap[2] i_pc_trap[1] o_ready i_ebreak i_instruction[31]
++ i_instruction[30] i_instruction[29] i_instruction[28] i_instruction[27] i_instruction[26] i_instruction[25]
++ i_instruction[24] i_instruction[23] i_instruction[22] i_instruction[21] i_instruction[20] i_instruction[19]
++ i_instruction[18] i_instruction[17] i_instruction[16] i_instruction[15] i_instruction[14] i_instruction[13]
++ i_instruction[12] i_instruction[11] i_instruction[10] i_instruction[9] i_instruction[8] i_instruction[7]
++ i_instruction[6] i_instruction[5] i_instruction[4] i_instruction[3] i_instruction[2] i_instruction[1]
++ i_instruction[0] i_ack
+*.ipin i_clk
+*.ipin i_reset_n
+*.ipin i_stall
+*.ipin
+*+ i_pc_target[31],i_pc_target[30],i_pc_target[29],i_pc_target[28],i_pc_target[27],i_pc_target[26],i_pc_target[25],i_pc_target[24],i_pc_target[23],i_pc_target[22],i_pc_target[21],i_pc_target[20],i_pc_target[19],i_pc_target[18],i_pc_target[17],i_pc_target[16],i_pc_target[15],i_pc_target[14],i_pc_target[13],i_pc_target[12],i_pc_target[11],i_pc_target[10],i_pc_target[9],i_pc_target[8],i_pc_target[7],i_pc_target[6],i_pc_target[5],i_pc_target[4],i_pc_target[3],i_pc_target[2],i_pc_target[1]
+*.ipin i_pc_select
+*.ipin
+*+ i_pc_trap[31],i_pc_trap[30],i_pc_trap[29],i_pc_trap[28],i_pc_trap[27],i_pc_trap[26],i_pc_trap[25],i_pc_trap[24],i_pc_trap[23],i_pc_trap[22],i_pc_trap[21],i_pc_trap[20],i_pc_trap[19],i_pc_trap[18],i_pc_trap[17],i_pc_trap[16],i_pc_trap[15],i_pc_trap[14],i_pc_trap[13],i_pc_trap[12],i_pc_trap[11],i_pc_trap[10],i_pc_trap[9],i_pc_trap[8],i_pc_trap[7],i_pc_trap[6],i_pc_trap[5],i_pc_trap[4],i_pc_trap[3],i_pc_trap[2],i_pc_trap[1]
+*.ipin i_ebreak
+*.ipin
+*+ i_instruction[31],i_instruction[30],i_instruction[29],i_instruction[28],i_instruction[27],i_instruction[26],i_instruction[25],i_instruction[24],i_instruction[23],i_instruction[22],i_instruction[21],i_instruction[20],i_instruction[19],i_instruction[18],i_instruction[17],i_instruction[16],i_instruction[15],i_instruction[14],i_instruction[13],i_instruction[12],i_instruction[11],i_instruction[10],i_instruction[9],i_instruction[8],i_instruction[7],i_instruction[6],i_instruction[5],i_instruction[4],i_instruction[3],i_instruction[2],i_instruction[1],i_instruction[0]
+*.ipin i_ack
+*.opin o_pc_change
+*.opin
+*+ o_addr[31],o_addr[30],o_addr[29],o_addr[28],o_addr[27],o_addr[26],o_addr[25],o_addr[24],o_addr[23],o_addr[22],o_addr[21],o_addr[20],o_addr[19],o_addr[18],o_addr[17],o_addr[16],o_addr[15],o_addr[14],o_addr[13],o_addr[12],o_addr[11],o_addr[10],o_addr[9],o_addr[8],o_addr[7],o_addr[6],o_addr[5],o_addr[4],o_addr[3],o_addr[2],o_addr[1]
+*.opin o_cyc
+*.opin
+*+ o_instruction[31],o_instruction[30],o_instruction[29],o_instruction[28],o_instruction[27],o_instruction[26],o_instruction[25],o_instruction[24],o_instruction[23],o_instruction[22],o_instruction[21],o_instruction[20],o_instruction[19],o_instruction[18],o_instruction[17],o_instruction[16],o_instruction[15],o_instruction[14],o_instruction[13],o_instruction[12],o_instruction[11],o_instruction[10],o_instruction[9],o_instruction[8],o_instruction[7],o_instruction[6],o_instruction[5],o_instruction[4],o_instruction[3],o_instruction[2],o_instruction[1],o_instruction[0]
+*.opin
+*+ o_pc[31],o_pc[30],o_pc[29],o_pc[28],o_pc[27],o_pc[26],o_pc[25],o_pc[24],o_pc[23],o_pc[22],o_pc[21],o_pc[20],o_pc[19],o_pc[18],o_pc[17],o_pc[16],o_pc[15],o_pc[14],o_pc[13],o_pc[12],o_pc[11],o_pc[10],o_pc[9],o_pc[8],o_pc[7],o_pc[6],o_pc[5],o_pc[4],o_pc[3],o_pc[2],o_pc[1]
+*.opin
+*+ o_pc_next[31],o_pc_next[30],o_pc_next[29],o_pc_next[28],o_pc_next[27],o_pc_next[26],o_pc_next[25],o_pc_next[24],o_pc_next[23],o_pc_next[22],o_pc_next[21],o_pc_next[20],o_pc_next[19],o_pc_next[18],o_pc_next[17],o_pc_next[16],o_pc_next[15],o_pc_next[14],o_pc_next[13],o_pc_next[12],o_pc_next[11],o_pc_next[10],o_pc_next[9],o_pc_next[8],o_pc_next[7],o_pc_next[6],o_pc_next[5],o_pc_next[4],o_pc_next[3],o_pc_next[2],o_pc_next[1]
+*.opin o_ready
+x101[2] i_clk VSS VSS VCC VCC clk_n0[2] sky130_fd_sc_hs__inv_1
+x101[1] i_clk VSS VSS VCC VCC clk_n0[1] sky130_fd_sc_hs__inv_1
+x101[0] i_clk VSS VSS VCC VCC clk_n0[0] sky130_fd_sc_hs__inv_1
+x200 i_ack o_cyc VSS VSS VCC VCC move_pc sky130_fd_sc_hs__and2_1
+x201 i_ebreak i_pc_select VSS VSS VCC VCC o_pc_change sky130_fd_sc_hs__or2_1
+x202 o_pc_change move_pc i_reset_n VSS VSS VCC VCC update_pc sky130_fd_sc_hs__or3b_1
+x203 o_addr[31] o_addr[30] o_addr[29] o_addr[28] o_addr[27] o_addr[26] o_addr[25] o_addr[24]
++ o_addr[23] o_addr[22] o_addr[21] o_addr[20] o_addr[19] o_addr[18] o_addr[17] o_addr[16] o_addr[15] o_addr[14]
++ o_addr[13] o_addr[12] o_addr[11] o_addr[10] o_addr[9] o_addr[8] o_addr[7] o_addr[6] o_addr[5] o_addr[4]
++ o_addr[3] o_addr[2] o_addr[1] o_addr[1] net1 pc_sum[31] pc_sum[30] pc_sum[29] pc_sum[28] pc_sum[27]
++ pc_sum[26] pc_sum[25] pc_sum[24] pc_sum[23] pc_sum[22] pc_sum[21] pc_sum[20] pc_sum[19] pc_sum[18] pc_sum[17]
++ pc_sum[16] pc_sum[15] pc_sum[14] pc_sum[13] pc_sum[12] pc_sum[11] pc_sum[10] pc_sum[9] pc_sum[8] pc_sum[7]
++ pc_sum[6] pc_sum[5] pc_sum[4] pc_sum[3] pc_sum[2] pc_sum[1] pc_inc
+x205[31] i_ebreak net17[30] i_pc_trap[31] i_pc_select i_pc_target[31] net2 pc_sum[31] mux3
+x205[30] i_ebreak net17[29] i_pc_trap[30] i_pc_select i_pc_target[30] net2 pc_sum[30] mux3
+x205[29] i_ebreak net17[28] i_pc_trap[29] i_pc_select i_pc_target[29] net2 pc_sum[29] mux3
+x205[28] i_ebreak net17[27] i_pc_trap[28] i_pc_select i_pc_target[28] net2 pc_sum[28] mux3
+x205[27] i_ebreak net17[26] i_pc_trap[27] i_pc_select i_pc_target[27] net2 pc_sum[27] mux3
+x205[26] i_ebreak net17[25] i_pc_trap[26] i_pc_select i_pc_target[26] net2 pc_sum[26] mux3
+x205[25] i_ebreak net17[24] i_pc_trap[25] i_pc_select i_pc_target[25] net2 pc_sum[25] mux3
+x205[24] i_ebreak net17[23] i_pc_trap[24] i_pc_select i_pc_target[24] net2 pc_sum[24] mux3
+x205[23] i_ebreak net17[22] i_pc_trap[23] i_pc_select i_pc_target[23] net2 pc_sum[23] mux3
+x205[22] i_ebreak net17[21] i_pc_trap[22] i_pc_select i_pc_target[22] net2 pc_sum[22] mux3
+x205[21] i_ebreak net17[20] i_pc_trap[21] i_pc_select i_pc_target[21] net2 pc_sum[21] mux3
+x205[20] i_ebreak net17[19] i_pc_trap[20] i_pc_select i_pc_target[20] net2 pc_sum[20] mux3
+x205[19] i_ebreak net17[18] i_pc_trap[19] i_pc_select i_pc_target[19] net2 pc_sum[19] mux3
+x205[18] i_ebreak net17[17] i_pc_trap[18] i_pc_select i_pc_target[18] net2 pc_sum[18] mux3
+x205[17] i_ebreak net17[16] i_pc_trap[17] i_pc_select i_pc_target[17] net2 pc_sum[17] mux3
+x205[16] i_ebreak net17[15] i_pc_trap[16] i_pc_select i_pc_target[16] net2 pc_sum[16] mux3
+x205[15] i_ebreak net17[14] i_pc_trap[15] i_pc_select i_pc_target[15] net2 pc_sum[15] mux3
+x205[14] i_ebreak net17[13] i_pc_trap[14] i_pc_select i_pc_target[14] net2 pc_sum[14] mux3
+x205[13] i_ebreak net17[12] i_pc_trap[13] i_pc_select i_pc_target[13] net2 pc_sum[13] mux3
+x205[12] i_ebreak net17[11] i_pc_trap[12] i_pc_select i_pc_target[12] net2 pc_sum[12] mux3
+x205[11] i_ebreak net17[10] i_pc_trap[11] i_pc_select i_pc_target[11] net2 pc_sum[11] mux3
+x205[10] i_ebreak net17[9] i_pc_trap[10] i_pc_select i_pc_target[10] net2 pc_sum[10] mux3
+x205[9] i_ebreak net17[8] i_pc_trap[9] i_pc_select i_pc_target[9] net2 pc_sum[9] mux3
+x205[8] i_ebreak net17[7] i_pc_trap[8] i_pc_select i_pc_target[8] net2 pc_sum[8] mux3
+x205[7] i_ebreak net17[6] i_pc_trap[7] i_pc_select i_pc_target[7] net2 pc_sum[7] mux3
+x205[6] i_ebreak net17[5] i_pc_trap[6] i_pc_select i_pc_target[6] net2 pc_sum[6] mux3
+x205[5] i_ebreak net17[4] i_pc_trap[5] i_pc_select i_pc_target[5] net2 pc_sum[5] mux3
+x205[4] i_ebreak net17[3] i_pc_trap[4] i_pc_select i_pc_target[4] net2 pc_sum[4] mux3
+x205[3] i_ebreak net17[2] i_pc_trap[3] i_pc_select i_pc_target[3] net2 pc_sum[3] mux3
+x205[2] i_ebreak net17[1] i_pc_trap[2] i_pc_select i_pc_target[2] net2 pc_sum[2] mux3
+x205[1] i_ebreak net17[0] i_pc_trap[1] i_pc_select i_pc_target[1] net2 pc_sum[1] mux3
+x207[31] net18[2] net17[30] VSS VSS VCC VCC pc_next_sel[31] sky130_fd_sc_hs__and2_1
+x207[30] net18[1] net17[29] VSS VSS VCC VCC pc_next_sel[30] sky130_fd_sc_hs__and2_1
+x207[29] net18[0] net17[28] VSS VSS VCC VCC pc_next_sel[29] sky130_fd_sc_hs__and2_1
+x207[28] net18[2] net17[27] VSS VSS VCC VCC pc_next_sel[28] sky130_fd_sc_hs__and2_1
+x207[27] net18[1] net17[26] VSS VSS VCC VCC pc_next_sel[27] sky130_fd_sc_hs__and2_1
+x207[26] net18[0] net17[25] VSS VSS VCC VCC pc_next_sel[26] sky130_fd_sc_hs__and2_1
+x207[25] net18[2] net17[24] VSS VSS VCC VCC pc_next_sel[25] sky130_fd_sc_hs__and2_1
+x207[24] net18[1] net17[23] VSS VSS VCC VCC pc_next_sel[24] sky130_fd_sc_hs__and2_1
+x207[23] net18[0] net17[22] VSS VSS VCC VCC pc_next_sel[23] sky130_fd_sc_hs__and2_1
+x207[22] net18[2] net17[21] VSS VSS VCC VCC pc_next_sel[22] sky130_fd_sc_hs__and2_1
+x207[21] net18[1] net17[20] VSS VSS VCC VCC pc_next_sel[21] sky130_fd_sc_hs__and2_1
+x207[20] net18[0] net17[19] VSS VSS VCC VCC pc_next_sel[20] sky130_fd_sc_hs__and2_1
+x207[19] net18[2] net17[18] VSS VSS VCC VCC pc_next_sel[19] sky130_fd_sc_hs__and2_1
+x207[18] net18[1] net17[17] VSS VSS VCC VCC pc_next_sel[18] sky130_fd_sc_hs__and2_1
+x207[17] net18[0] net17[16] VSS VSS VCC VCC pc_next_sel[17] sky130_fd_sc_hs__and2_1
+x207[16] net18[2] net17[15] VSS VSS VCC VCC pc_next_sel[16] sky130_fd_sc_hs__and2_1
+x207[15] net18[1] net17[14] VSS VSS VCC VCC pc_next_sel[15] sky130_fd_sc_hs__and2_1
+x207[14] net18[0] net17[13] VSS VSS VCC VCC pc_next_sel[14] sky130_fd_sc_hs__and2_1
+x207[13] net18[2] net17[12] VSS VSS VCC VCC pc_next_sel[13] sky130_fd_sc_hs__and2_1
+x207[12] net18[1] net17[11] VSS VSS VCC VCC pc_next_sel[12] sky130_fd_sc_hs__and2_1
+x207[11] net18[0] net17[10] VSS VSS VCC VCC pc_next_sel[11] sky130_fd_sc_hs__and2_1
+x207[10] net18[2] net17[9] VSS VSS VCC VCC pc_next_sel[10] sky130_fd_sc_hs__and2_1
+x207[9] net18[1] net17[8] VSS VSS VCC VCC pc_next_sel[9] sky130_fd_sc_hs__and2_1
+x207[8] net18[0] net17[7] VSS VSS VCC VCC pc_next_sel[8] sky130_fd_sc_hs__and2_1
+x207[7] net18[2] net17[6] VSS VSS VCC VCC pc_next_sel[7] sky130_fd_sc_hs__and2_1
+x207[6] net18[1] net17[5] VSS VSS VCC VCC pc_next_sel[6] sky130_fd_sc_hs__and2_1
+x207[5] net18[0] net17[4] VSS VSS VCC VCC pc_next_sel[5] sky130_fd_sc_hs__and2_1
+x207[4] net18[2] net17[3] VSS VSS VCC VCC pc_next_sel[4] sky130_fd_sc_hs__and2_1
+x207[3] net18[1] net17[2] VSS VSS VCC VCC pc_next_sel[3] sky130_fd_sc_hs__and2_1
+x207[2] net18[0] net17[1] VSS VSS VCC VCC pc_next_sel[2] sky130_fd_sc_hs__and2_1
+x207[1] net18[2] net17[0] VSS VSS VCC VCC pc_next_sel[1] sky130_fd_sc_hs__and2_1
+x110 i_reset_n VSS VSS VCC VCC reset_p[0] sky130_fd_sc_hs__inv_1
+x206[2] reset_p[0] VSS VSS VCC VCC net18[2] sky130_fd_sc_hs__inv_1
+x206[1] reset_p[0] VSS VSS VCC VCC net18[1] sky130_fd_sc_hs__inv_1
+x206[0] reset_p[0] VSS VSS VCC VCC net18[0] sky130_fd_sc_hs__inv_1
+x208 i_ebreak i_pc_select VSS VSS VCC VCC net2 sky130_fd_sc_hs__nor2_1
+x210[31] clk_p3[9] net19[30] VSS VSS VCC VCC o_addr[31] sky130_fd_sc_hs__dfxtp_1
+x210[30] clk_p3[8] net19[29] VSS VSS VCC VCC o_addr[30] sky130_fd_sc_hs__dfxtp_1
+x210[29] clk_p3[7] net19[28] VSS VSS VCC VCC o_addr[29] sky130_fd_sc_hs__dfxtp_1
+x210[28] clk_p3[6] net19[27] VSS VSS VCC VCC o_addr[28] sky130_fd_sc_hs__dfxtp_1
+x210[27] clk_p3[5] net19[26] VSS VSS VCC VCC o_addr[27] sky130_fd_sc_hs__dfxtp_1
+x210[26] clk_p3[4] net19[25] VSS VSS VCC VCC o_addr[26] sky130_fd_sc_hs__dfxtp_1
+x210[25] clk_p3[3] net19[24] VSS VSS VCC VCC o_addr[25] sky130_fd_sc_hs__dfxtp_1
+x210[24] clk_p3[2] net19[23] VSS VSS VCC VCC o_addr[24] sky130_fd_sc_hs__dfxtp_1
+x210[23] clk_p3[1] net19[22] VSS VSS VCC VCC o_addr[23] sky130_fd_sc_hs__dfxtp_1
+x210[22] clk_p3[0] net19[21] VSS VSS VCC VCC o_addr[22] sky130_fd_sc_hs__dfxtp_1
+x210[21] clk_p3[9] net19[20] VSS VSS VCC VCC o_addr[21] sky130_fd_sc_hs__dfxtp_1
+x210[20] clk_p3[8] net19[19] VSS VSS VCC VCC o_addr[20] sky130_fd_sc_hs__dfxtp_1
+x210[19] clk_p3[7] net19[18] VSS VSS VCC VCC o_addr[19] sky130_fd_sc_hs__dfxtp_1
+x210[18] clk_p3[6] net19[17] VSS VSS VCC VCC o_addr[18] sky130_fd_sc_hs__dfxtp_1
+x210[17] clk_p3[5] net19[16] VSS VSS VCC VCC o_addr[17] sky130_fd_sc_hs__dfxtp_1
+x210[16] clk_p3[4] net19[15] VSS VSS VCC VCC o_addr[16] sky130_fd_sc_hs__dfxtp_1
+x210[15] clk_p3[3] net19[14] VSS VSS VCC VCC o_addr[15] sky130_fd_sc_hs__dfxtp_1
+x210[14] clk_p3[2] net19[13] VSS VSS VCC VCC o_addr[14] sky130_fd_sc_hs__dfxtp_1
+x210[13] clk_p3[1] net19[12] VSS VSS VCC VCC o_addr[13] sky130_fd_sc_hs__dfxtp_1
+x210[12] clk_p3[0] net19[11] VSS VSS VCC VCC o_addr[12] sky130_fd_sc_hs__dfxtp_1
+x210[11] clk_p3[9] net19[10] VSS VSS VCC VCC o_addr[11] sky130_fd_sc_hs__dfxtp_1
+x210[10] clk_p3[8] net19[9] VSS VSS VCC VCC o_addr[10] sky130_fd_sc_hs__dfxtp_1
+x210[9] clk_p3[7] net19[8] VSS VSS VCC VCC o_addr[9] sky130_fd_sc_hs__dfxtp_1
+x210[8] clk_p3[6] net19[7] VSS VSS VCC VCC o_addr[8] sky130_fd_sc_hs__dfxtp_1
+x210[7] clk_p3[5] net19[6] VSS VSS VCC VCC o_addr[7] sky130_fd_sc_hs__dfxtp_1
+x210[6] clk_p3[4] net19[5] VSS VSS VCC VCC o_addr[6] sky130_fd_sc_hs__dfxtp_1
+x210[5] clk_p3[3] net19[4] VSS VSS VCC VCC o_addr[5] sky130_fd_sc_hs__dfxtp_1
+x210[4] clk_p3[2] net19[3] VSS VSS VCC VCC o_addr[4] sky130_fd_sc_hs__dfxtp_1
+x210[3] clk_p3[1] net19[2] VSS VSS VCC VCC o_addr[3] sky130_fd_sc_hs__dfxtp_1
+x210[2] clk_p3[0] net19[1] VSS VSS VCC VCC o_addr[2] sky130_fd_sc_hs__dfxtp_1
+x210[1] clk_p3[9] net19[0] VSS VSS VCC VCC o_addr[1] sky130_fd_sc_hs__dfxtp_1
+x211[31] update_pc pc_next_sel[31] net19[30] net3 o_addr[31] mux2
+x211[30] update_pc pc_next_sel[30] net19[29] net3 o_addr[30] mux2
+x211[29] update_pc pc_next_sel[29] net19[28] net3 o_addr[29] mux2
+x211[28] update_pc pc_next_sel[28] net19[27] net3 o_addr[28] mux2
+x211[27] update_pc pc_next_sel[27] net19[26] net3 o_addr[27] mux2
+x211[26] update_pc pc_next_sel[26] net19[25] net3 o_addr[26] mux2
+x211[25] update_pc pc_next_sel[25] net19[24] net3 o_addr[25] mux2
+x211[24] update_pc pc_next_sel[24] net19[23] net3 o_addr[24] mux2
+x211[23] update_pc pc_next_sel[23] net19[22] net3 o_addr[23] mux2
+x211[22] update_pc pc_next_sel[22] net19[21] net3 o_addr[22] mux2
+x211[21] update_pc pc_next_sel[21] net19[20] net3 o_addr[21] mux2
+x211[20] update_pc pc_next_sel[20] net19[19] net3 o_addr[20] mux2
+x211[19] update_pc pc_next_sel[19] net19[18] net3 o_addr[19] mux2
+x211[18] update_pc pc_next_sel[18] net19[17] net3 o_addr[18] mux2
+x211[17] update_pc pc_next_sel[17] net19[16] net3 o_addr[17] mux2
+x211[16] update_pc pc_next_sel[16] net19[15] net3 o_addr[16] mux2
+x211[15] update_pc pc_next_sel[15] net19[14] net3 o_addr[15] mux2
+x211[14] update_pc pc_next_sel[14] net19[13] net3 o_addr[14] mux2
+x211[13] update_pc pc_next_sel[13] net19[12] net3 o_addr[13] mux2
+x211[12] update_pc pc_next_sel[12] net19[11] net3 o_addr[12] mux2
+x211[11] update_pc pc_next_sel[11] net19[10] net3 o_addr[11] mux2
+x211[10] update_pc pc_next_sel[10] net19[9] net3 o_addr[10] mux2
+x211[9] update_pc pc_next_sel[9] net19[8] net3 o_addr[9] mux2
+x211[8] update_pc pc_next_sel[8] net19[7] net3 o_addr[8] mux2
+x211[7] update_pc pc_next_sel[7] net19[6] net3 o_addr[7] mux2
+x211[6] update_pc pc_next_sel[6] net19[5] net3 o_addr[6] mux2
+x211[5] update_pc pc_next_sel[5] net19[4] net3 o_addr[5] mux2
+x211[4] update_pc pc_next_sel[4] net19[3] net3 o_addr[4] mux2
+x211[3] update_pc pc_next_sel[3] net19[2] net3 o_addr[3] mux2
+x211[2] update_pc pc_next_sel[2] net19[1] net3 o_addr[2] mux2
+x211[1] update_pc pc_next_sel[1] net19[0] net3 o_addr[1] mux2
+x212 update_pc VSS VSS VCC VCC net3 sky130_fd_sc_hs__inv_1
+x300 buf_reset_n[1] i_ack o_cyc VSS VSS VCC VCC push_next sky130_fd_sc_hs__and3_1
+x301 clk_p3[0] push_next VSS VSS VCC VCC push sky130_fd_sc_hs__dfxtp_1
+x302 reset_p[0] o_pc_change VSS VSS VCC VCC net20 sky130_fd_sc_hs__nor2_1
+x204 o_addr[1] VSS VSS VCC VCC net1 sky130_fd_sc_hs__inv_1
+x902[15] pc_buf_p1[3] latch_hi_p[15] o_instruction[15] pc_buf_n1[3] data_0[15] mux2
+x902[14] pc_buf_p1[2] latch_hi_p[14] o_instruction[14] pc_buf_n1[2] data_0[14] mux2
+x902[13] pc_buf_p1[1] latch_hi_p[13] o_instruction[13] pc_buf_n1[1] data_0[13] mux2
+x902[12] pc_buf_p1[0] latch_hi_p[12] o_instruction[12] pc_buf_n1[0] data_0[12] mux2
+x902[11] pc_buf_p1[3] latch_hi_p[11] o_instruction[11] pc_buf_n1[3] data_0[11] mux2
+x902[10] pc_buf_p1[2] latch_hi_p[10] o_instruction[10] pc_buf_n1[2] data_0[10] mux2
+x902[9] pc_buf_p1[1] latch_hi_p[9] o_instruction[9] pc_buf_n1[1] data_0[9] mux2
+x902[8] pc_buf_p1[0] latch_hi_p[8] o_instruction[8] pc_buf_n1[0] data_0[8] mux2
+x902[7] pc_buf_p1[3] latch_hi_p[7] o_instruction[7] pc_buf_n1[3] data_0[7] mux2
+x902[6] pc_buf_p1[2] latch_hi_p[6] o_instruction[6] pc_buf_n1[2] data_0[6] mux2
+x902[5] pc_buf_p1[1] latch_hi_p[5] o_instruction[5] pc_buf_n1[1] data_0[5] mux2
+x902[4] pc_buf_p1[0] latch_hi_p[4] o_instruction[4] pc_buf_n1[0] data_0[4] mux2
+x902[3] pc_buf_p1[3] latch_hi_p[3] o_instruction[3] pc_buf_n1[3] data_0[3] mux2
+x902[2] pc_buf_p1[2] latch_hi_p[2] o_instruction[2] pc_buf_n1[2] data_0[2] mux2
+x902[1] pc_buf_p1[1] latch_hi_p[1] o_instruction[1] pc_buf_n1[1] data_0[1] mux2
+x902[0] pc_buf_p1[0] latch_hi_p[0] o_instruction[0] pc_buf_n1[0] data_0[0] mux2
+x902[31] pc_buf_p1[3] data_0[15] o_instruction[31] pc_buf_n1[3] data_0[31] mux2
+x902[30] pc_buf_p1[2] data_0[14] o_instruction[30] pc_buf_n1[2] data_0[30] mux2
+x902[29] pc_buf_p1[1] data_0[13] o_instruction[29] pc_buf_n1[1] data_0[29] mux2
+x902[28] pc_buf_p1[0] data_0[12] o_instruction[28] pc_buf_n1[0] data_0[28] mux2
+x902[27] pc_buf_p1[3] data_0[11] o_instruction[27] pc_buf_n1[3] data_0[27] mux2
+x902[26] pc_buf_p1[2] data_0[10] o_instruction[26] pc_buf_n1[2] data_0[26] mux2
+x902[25] pc_buf_p1[1] data_0[9] o_instruction[25] pc_buf_n1[1] data_0[25] mux2
+x902[24] pc_buf_p1[0] data_0[8] o_instruction[24] pc_buf_n1[0] data_0[24] mux2
+x902[23] pc_buf_p1[3] data_0[7] o_instruction[23] pc_buf_n1[3] data_0[23] mux2
+x902[22] pc_buf_p1[2] data_0[6] o_instruction[22] pc_buf_n1[2] data_0[22] mux2
+x902[21] pc_buf_p1[1] data_0[5] o_instruction[21] pc_buf_n1[1] data_0[21] mux2
+x902[20] pc_buf_p1[0] data_0[4] o_instruction[20] pc_buf_n1[0] data_0[20] mux2
+x902[19] pc_buf_p1[3] data_0[3] o_instruction[19] pc_buf_n1[3] data_0[19] mux2
+x902[18] pc_buf_p1[2] data_0[2] o_instruction[18] pc_buf_n1[2] data_0[18] mux2
+x902[17] pc_buf_p1[1] data_0[1] o_instruction[17] pc_buf_n1[1] data_0[17] mux2
+x902[16] pc_buf_p1[0] data_0[0] o_instruction[16] pc_buf_n1[0] data_0[16] mux2
+x700 latch_m_dn_p is_head_p[1] net21 latch_m_up_n is_head_p[0] mux2
+x740 latch_m_up_p is_head_p[3] net23 net4 is_head_p[4] mux2
+x730 latch_m_dn_p net24 is_head_p[3] latch_m_up_p is_head_p[1] net4 is_head_p[2] mux3
+x720 latch_m_dn_p net25 is_head_p[4] latch_m_up_p is_head_p[2] net4 is_head_p[3] mux3
+x710 latch_m_dn_p net26 is_head_p[2] latch_m_up_p is_head_p[0] net4 is_head_p[1] mux3
+x627[31] net6 o_pc_next[31] pc_add[31] net5 o_pc[31] buf_reset_p[8] pc_next_sel[31] mux3
+x627[30] net6 o_pc_next[30] pc_add[30] net5 o_pc[30] buf_reset_p[7] pc_next_sel[30] mux3
+x627[29] net6 o_pc_next[29] pc_add[29] net5 o_pc[29] buf_reset_p[6] pc_next_sel[29] mux3
+x627[28] net6 o_pc_next[28] pc_add[28] net5 o_pc[28] buf_reset_p[5] pc_next_sel[28] mux3
+x627[27] net6 o_pc_next[27] pc_add[27] net5 o_pc[27] buf_reset_p[4] pc_next_sel[27] mux3
+x627[26] net6 o_pc_next[26] pc_add[26] net5 o_pc[26] buf_reset_p[3] pc_next_sel[26] mux3
+x627[25] net6 o_pc_next[25] pc_add[25] net5 o_pc[25] buf_reset_p[2] pc_next_sel[25] mux3
+x627[24] net6 o_pc_next[24] pc_add[24] net5 o_pc[24] buf_reset_p[1] pc_next_sel[24] mux3
+x627[23] net6 o_pc_next[23] pc_add[23] net5 o_pc[23] buf_reset_p[8] pc_next_sel[23] mux3
+x627[22] net6 o_pc_next[22] pc_add[22] net5 o_pc[22] buf_reset_p[7] pc_next_sel[22] mux3
+x627[21] net6 o_pc_next[21] pc_add[21] net5 o_pc[21] buf_reset_p[6] pc_next_sel[21] mux3
+x627[20] net6 o_pc_next[20] pc_add[20] net5 o_pc[20] buf_reset_p[5] pc_next_sel[20] mux3
+x627[19] net6 o_pc_next[19] pc_add[19] net5 o_pc[19] buf_reset_p[4] pc_next_sel[19] mux3
+x627[18] net6 o_pc_next[18] pc_add[18] net5 o_pc[18] buf_reset_p[3] pc_next_sel[18] mux3
+x627[17] net6 o_pc_next[17] pc_add[17] net5 o_pc[17] buf_reset_p[2] pc_next_sel[17] mux3
+x627[16] net6 o_pc_next[16] pc_add[16] net5 o_pc[16] buf_reset_p[1] pc_next_sel[16] mux3
+x627[15] net6 o_pc_next[15] pc_add[15] net5 o_pc[15] buf_reset_p[8] pc_next_sel[15] mux3
+x627[14] net6 o_pc_next[14] pc_add[14] net5 o_pc[14] buf_reset_p[7] pc_next_sel[14] mux3
+x627[13] net6 o_pc_next[13] pc_add[13] net5 o_pc[13] buf_reset_p[6] pc_next_sel[13] mux3
+x627[12] net6 o_pc_next[12] pc_add[12] net5 o_pc[12] buf_reset_p[5] pc_next_sel[12] mux3
+x627[11] net6 o_pc_next[11] pc_add[11] net5 o_pc[11] buf_reset_p[4] pc_next_sel[11] mux3
+x627[10] net6 o_pc_next[10] pc_add[10] net5 o_pc[10] buf_reset_p[3] pc_next_sel[10] mux3
+x627[9] net6 o_pc_next[9] pc_add[9] net5 o_pc[9] buf_reset_p[2] pc_next_sel[9] mux3
+x627[8] net6 o_pc_next[8] pc_add[8] net5 o_pc[8] buf_reset_p[1] pc_next_sel[8] mux3
+x627[7] net6 o_pc_next[7] pc_add[7] net5 o_pc[7] buf_reset_p[8] pc_next_sel[7] mux3
+x627[6] net6 o_pc_next[6] pc_add[6] net5 o_pc[6] buf_reset_p[7] pc_next_sel[6] mux3
+x627[5] net6 o_pc_next[5] pc_add[5] net5 o_pc[5] buf_reset_p[6] pc_next_sel[5] mux3
+x627[4] net6 o_pc_next[4] pc_add[4] net5 o_pc[4] buf_reset_p[5] pc_next_sel[4] mux3
+x627[3] net6 o_pc_next[3] pc_add[3] net5 o_pc[3] buf_reset_p[4] pc_next_sel[3] mux3
+x627[2] net6 o_pc_next[2] pc_add[2] net5 o_pc[2] buf_reset_p[3] pc_next_sel[2] mux3
+x627[1] net6 o_pc_next[1] pc_add[1] net5 o_pc[1] buf_reset_p[2] pc_next_sel[1] mux3
+x604 hi_update_p hi_next net27 net10 hi_valid_p mux2
+x900[15] pop_buf_p[3] data_0[31] net28[15] pop_buf_n[3] latch_hi_p[15] mux2
+x900[14] pop_buf_p[2] data_0[30] net28[14] pop_buf_n[2] latch_hi_p[14] mux2
+x900[13] pop_buf_p[1] data_0[29] net28[13] pop_buf_n[1] latch_hi_p[13] mux2
+x900[12] pop_buf_p[0] data_0[28] net28[12] pop_buf_n[0] latch_hi_p[12] mux2
+x900[11] pop_buf_p[3] data_0[27] net28[11] pop_buf_n[3] latch_hi_p[11] mux2
+x900[10] pop_buf_p[2] data_0[26] net28[10] pop_buf_n[2] latch_hi_p[10] mux2
+x900[9] pop_buf_p[1] data_0[25] net28[9] pop_buf_n[1] latch_hi_p[9] mux2
+x900[8] pop_buf_p[0] data_0[24] net28[8] pop_buf_n[0] latch_hi_p[8] mux2
+x900[7] pop_buf_p[3] data_0[23] net28[7] pop_buf_n[3] latch_hi_p[7] mux2
+x900[6] pop_buf_p[2] data_0[22] net28[6] pop_buf_n[2] latch_hi_p[6] mux2
+x900[5] pop_buf_p[1] data_0[21] net28[5] pop_buf_n[1] latch_hi_p[5] mux2
+x900[4] pop_buf_p[0] data_0[20] net28[4] pop_buf_n[0] latch_hi_p[4] mux2
+x900[3] pop_buf_p[3] data_0[19] net28[3] pop_buf_n[3] latch_hi_p[3] mux2
+x900[2] pop_buf_p[2] data_0[18] net28[2] pop_buf_n[2] latch_hi_p[2] mux2
+x900[1] pop_buf_p[1] data_0[17] net28[1] pop_buf_n[1] latch_hi_p[1] mux2
+x900[0] pop_buf_p[0] data_0[16] net28[0] pop_buf_n[0] latch_hi_p[0] mux2
+x807[31] d0_sl d_next_0[31] data_0[31] d0_sn i_instruction[31] d0_su data_1[31] mux3
+x807[30] d0_sl d_next_0[30] data_0[30] d0_sn i_instruction[30] d0_su data_1[30] mux3
+x807[29] d0_sl d_next_0[29] data_0[29] d0_sn i_instruction[29] d0_su data_1[29] mux3
+x807[28] d0_sl d_next_0[28] data_0[28] d0_sn i_instruction[28] d0_su data_1[28] mux3
+x807[27] d0_sl d_next_0[27] data_0[27] d0_sn i_instruction[27] d0_su data_1[27] mux3
+x807[26] d0_sl d_next_0[26] data_0[26] d0_sn i_instruction[26] d0_su data_1[26] mux3
+x807[25] d0_sl d_next_0[25] data_0[25] d0_sn i_instruction[25] d0_su data_1[25] mux3
+x807[24] d0_sl d_next_0[24] data_0[24] d0_sn i_instruction[24] d0_su data_1[24] mux3
+x807[23] d0_sl d_next_0[23] data_0[23] d0_sn i_instruction[23] d0_su data_1[23] mux3
+x807[22] d0_sl d_next_0[22] data_0[22] d0_sn i_instruction[22] d0_su data_1[22] mux3
+x807[21] d0_sl d_next_0[21] data_0[21] d0_sn i_instruction[21] d0_su data_1[21] mux3
+x807[20] d0_sl d_next_0[20] data_0[20] d0_sn i_instruction[20] d0_su data_1[20] mux3
+x807[19] d0_sl d_next_0[19] data_0[19] d0_sn i_instruction[19] d0_su data_1[19] mux3
+x807[18] d0_sl d_next_0[18] data_0[18] d0_sn i_instruction[18] d0_su data_1[18] mux3
+x807[17] d0_sl d_next_0[17] data_0[17] d0_sn i_instruction[17] d0_su data_1[17] mux3
+x807[16] d0_sl d_next_0[16] data_0[16] d0_sn i_instruction[16] d0_su data_1[16] mux3
+x807[15] d0_sl d_next_0[15] data_0[15] d0_sn i_instruction[15] d0_su data_1[15] mux3
+x807[14] d0_sl d_next_0[14] data_0[14] d0_sn i_instruction[14] d0_su data_1[14] mux3
+x807[13] d0_sl d_next_0[13] data_0[13] d0_sn i_instruction[13] d0_su data_1[13] mux3
+x807[12] d0_sl d_next_0[12] data_0[12] d0_sn i_instruction[12] d0_su data_1[12] mux3
+x807[11] d0_sl d_next_0[11] data_0[11] d0_sn i_instruction[11] d0_su data_1[11] mux3
+x807[10] d0_sl d_next_0[10] data_0[10] d0_sn i_instruction[10] d0_su data_1[10] mux3
+x807[9] d0_sl d_next_0[9] data_0[9] d0_sn i_instruction[9] d0_su data_1[9] mux3
+x807[8] d0_sl d_next_0[8] data_0[8] d0_sn i_instruction[8] d0_su data_1[8] mux3
+x807[7] d0_sl d_next_0[7] data_0[7] d0_sn i_instruction[7] d0_su data_1[7] mux3
+x807[6] d0_sl d_next_0[6] data_0[6] d0_sn i_instruction[6] d0_su data_1[6] mux3
+x807[5] d0_sl d_next_0[5] data_0[5] d0_sn i_instruction[5] d0_su data_1[5] mux3
+x807[4] d0_sl d_next_0[4] data_0[4] d0_sn i_instruction[4] d0_su data_1[4] mux3
+x807[3] d0_sl d_next_0[3] data_0[3] d0_sn i_instruction[3] d0_su data_1[3] mux3
+x807[2] d0_sl d_next_0[2] data_0[2] d0_sn i_instruction[2] d0_su data_1[2] mux3
+x807[1] d0_sl d_next_0[1] data_0[1] d0_sn i_instruction[1] d0_su data_1[1] mux3
+x807[0] d0_sl d_next_0[0] data_0[0] d0_sn i_instruction[0] d0_su data_1[0] mux3
+x622 o_pc[31] o_pc[30] o_pc[29] o_pc[28] o_pc[27] o_pc[26] o_pc[25] o_pc[24] o_pc[23] o_pc[22]
++ o_pc[21] o_pc[20] o_pc[19] o_pc[18] o_pc[17] o_pc[16] o_pc[15] o_pc[14] o_pc[13] o_pc[12] o_pc[11] o_pc[10]
++ o_pc[9] o_pc[8] o_pc[7] o_pc[6] o_pc[5] o_pc[4] o_pc[3] o_pc[2] o_pc[1] is_comp_p is_comp_n pc_add[31]
++ pc_add[30] pc_add[29] pc_add[28] pc_add[27] pc_add[26] pc_add[25] pc_add[24] pc_add[23] pc_add[22] pc_add[21]
++ pc_add[20] pc_add[19] pc_add[18] pc_add[17] pc_add[16] pc_add[15] pc_add[14] pc_add[13] pc_add[12] pc_add[11]
++ pc_add[10] pc_add[9] pc_add[8] pc_add[7] pc_add[6] pc_add[5] pc_add[4] pc_add[3] pc_add[2] pc_add[1] pc_inc
+x306 push VSS VSS VCC VCC push_n sky130_fd_sc_hs__inv_1
+x111 i_stall VSS VSS VCC VCC stall_n sky130_fd_sc_hs__inv_1
+x630 o_pc[1] VSS VSS VCC VCC net29 sky130_fd_sc_hs__inv_1
+x631 pc_n[1] VSS VSS VCC VCC net30 sky130_fd_sc_hs__inv_1
+x634 pop_p VSS VSS VCC VCC net31 sky130_fd_sc_hs__inv_1
+x635 pop_n VSS VSS VCC VCC net32 sky130_fd_sc_hs__inv_1
+x632[3] net29 VSS VSS VCC VCC pc_buf_p1[3] sky130_fd_sc_hs__inv_1
+x632[2] net29 VSS VSS VCC VCC pc_buf_p1[2] sky130_fd_sc_hs__inv_1
+x632[1] net29 VSS VSS VCC VCC pc_buf_p1[1] sky130_fd_sc_hs__inv_1
+x632[0] net29 VSS VSS VCC VCC pc_buf_p1[0] sky130_fd_sc_hs__inv_1
+x633[3] net30 VSS VSS VCC VCC pc_buf_n1[3] sky130_fd_sc_hs__inv_1
+x633[2] net30 VSS VSS VCC VCC pc_buf_n1[2] sky130_fd_sc_hs__inv_1
+x633[1] net30 VSS VSS VCC VCC pc_buf_n1[1] sky130_fd_sc_hs__inv_1
+x633[0] net30 VSS VSS VCC VCC pc_buf_n1[0] sky130_fd_sc_hs__inv_1
+x636[3] net31 VSS VSS VCC VCC pop_buf_p[3] sky130_fd_sc_hs__inv_1
+x636[2] net31 VSS VSS VCC VCC pop_buf_p[2] sky130_fd_sc_hs__inv_1
+x636[1] net31 VSS VSS VCC VCC pop_buf_p[1] sky130_fd_sc_hs__inv_1
+x636[0] net31 VSS VSS VCC VCC pop_buf_p[0] sky130_fd_sc_hs__inv_1
+x637[3] net32 VSS VSS VCC VCC pop_buf_n[3] sky130_fd_sc_hs__inv_1
+x637[2] net32 VSS VSS VCC VCC pop_buf_n[2] sky130_fd_sc_hs__inv_1
+x637[1] net32 VSS VSS VCC VCC pop_buf_n[1] sky130_fd_sc_hs__inv_1
+x637[0] net32 VSS VSS VCC VCC pop_buf_n[0] sky130_fd_sc_hs__inv_1
+x500 stall_n is_head_n[0] VSS VSS VCC VCC pop_n sky130_fd_sc_hs__nand2_1
+x501 pop_n VSS VSS VCC VCC pop_p sky130_fd_sc_hs__inv_1
+x502 is_head_p[3] push pop_n VSS VSS VCC VCC net7 sky130_fd_sc_hs__nand3_1
+x503 is_head_n[4] net7 VSS VSS VCC VCC full sky130_fd_sc_hs__nand2_1
+x504 is_comp_n hi_valid_n pop_p VSS VSS VCC VCC net9 sky130_fd_sc_hs__o21a_1
+x505 pop_p pc_n[1] VSS VSS VCC VCC net8 sky130_fd_sc_hs__nand2_1
+x506 net8 VSS VSS VCC VCC net33 sky130_fd_sc_hs__inv_1
+x507 push net8 VSS VSS VCC VCC latch_up_p sky130_fd_sc_hs__and2_1
+x508 net33 net9 VSS VSS VCC VCC latch_dn_n sky130_fd_sc_hs__nor2_1
+x509 latch_dn_n VSS VSS VCC VCC latch_dn_p sky130_fd_sc_hs__inv_1
+x510 latch_dn_n push VSS VSS VCC VCC latch_m_up_n sky130_fd_sc_hs__nand2_1
+x511 latch_m_up_n VSS VSS VCC VCC latch_m_up_p sky130_fd_sc_hs__inv_1
+x512 push_n latch_dn_p VSS VSS VCC VCC latch_m_dn_n sky130_fd_sc_hs__nand2_1
+x513 latch_m_dn_n VSS VSS VCC VCC latch_m_dn_p sky130_fd_sc_hs__inv_1
+x514 is_head_n[0] first_half_n VSS VSS VCC VCC o_ready sky130_fd_sc_hs__and2_1
+x601 push pop_p buf_reset_p[0] VSS VSS VCC VCC net10 sky130_fd_sc_hs__a21oi_1
+x602 net10 VSS VSS VCC VCC hi_update_p sky130_fd_sc_hs__inv_1
+x603 buf_reset_n[0] is_head_n[0] VSS VSS VCC VCC hi_next sky130_fd_sc_hs__and2_1
+x605 clk_p3[10] net27 VSS VSS VCC VCC hi_valid_p sky130_fd_sc_hs__dfxtp_1
+x606 hi_valid_p VSS VSS VCC VCC hi_valid_n sky130_fd_sc_hs__inv_1
+x610 is_head_p[0] o_pc[1] hi_valid_n VSS VSS VCC VCC net34 sky130_fd_sc_hs__and3_1
+x611 clk_p3[10] net34 VSS VSS VCC VCC net22 first_half_n sky130_fd_sc_hs__dfxbp_1
+x701 buf_reset_p[0] net21 VSS VSS VCC VCC h_next_p[0] sky130_fd_sc_hs__or2_1
+x702 clk_p3[12] h_next_p[0] VSS VSS VCC VCC is_head_p[0] is_head_n[0] sky130_fd_sc_hs__dfxbp_1
+x703 latch_m_up_n latch_m_dn_n VSS VSS VCC VCC net4 sky130_fd_sc_hs__and2_1
+x741 buf_reset_n[1] net26 VSS VSS VCC VCC h_next_p[1] sky130_fd_sc_hs__and2_1
+x742 clk_p3[10] h_next_p[4] VSS VSS VCC VCC is_head_p[4] is_head_n[4] sky130_fd_sc_hs__dfxbp_1
+x731 buf_reset_n[1] net24 VSS VSS VCC VCC h_next_p[2] sky130_fd_sc_hs__and2_1
+x732 clk_p3[11] h_next_p[2] VSS VSS VCC VCC is_head_p[2] sky130_fd_sc_hs__dfxtp_1
+x721 buf_reset_n[0] net25 VSS VSS VCC VCC h_next_p[3] sky130_fd_sc_hs__and2_1
+x722 clk_p3[11] h_next_p[3] VSS VSS VCC VCC is_head_p[3] sky130_fd_sc_hs__dfxtp_1
+x711 buf_reset_n[0] net23 VSS VSS VCC VCC h_next_p[4] sky130_fd_sc_hs__and2_1
+x712 clk_p3[11] h_next_p[1] VSS VSS VCC VCC is_head_p[1] sky130_fd_sc_hs__dfxtp_1
+x808[31] clk_p3[66] d_next_0[31] VSS VSS VCC VCC data_0[31] sky130_fd_sc_hs__dfxtp_1
+x808[30] clk_p3[65] d_next_0[30] VSS VSS VCC VCC data_0[30] sky130_fd_sc_hs__dfxtp_1
+x808[29] clk_p3[64] d_next_0[29] VSS VSS VCC VCC data_0[29] sky130_fd_sc_hs__dfxtp_1
+x808[28] clk_p3[63] d_next_0[28] VSS VSS VCC VCC data_0[28] sky130_fd_sc_hs__dfxtp_1
+x808[27] clk_p3[62] d_next_0[27] VSS VSS VCC VCC data_0[27] sky130_fd_sc_hs__dfxtp_1
+x808[26] clk_p3[61] d_next_0[26] VSS VSS VCC VCC data_0[26] sky130_fd_sc_hs__dfxtp_1
+x808[25] clk_p3[60] d_next_0[25] VSS VSS VCC VCC data_0[25] sky130_fd_sc_hs__dfxtp_1
+x808[24] clk_p3[59] d_next_0[24] VSS VSS VCC VCC data_0[24] sky130_fd_sc_hs__dfxtp_1
+x808[23] clk_p3[58] d_next_0[23] VSS VSS VCC VCC data_0[23] sky130_fd_sc_hs__dfxtp_1
+x808[22] clk_p3[57] d_next_0[22] VSS VSS VCC VCC data_0[22] sky130_fd_sc_hs__dfxtp_1
+x808[21] clk_p3[56] d_next_0[21] VSS VSS VCC VCC data_0[21] sky130_fd_sc_hs__dfxtp_1
+x808[20] clk_p3[66] d_next_0[20] VSS VSS VCC VCC data_0[20] sky130_fd_sc_hs__dfxtp_1
+x808[19] clk_p3[65] d_next_0[19] VSS VSS VCC VCC data_0[19] sky130_fd_sc_hs__dfxtp_1
+x808[18] clk_p3[64] d_next_0[18] VSS VSS VCC VCC data_0[18] sky130_fd_sc_hs__dfxtp_1
+x808[17] clk_p3[63] d_next_0[17] VSS VSS VCC VCC data_0[17] sky130_fd_sc_hs__dfxtp_1
+x808[16] clk_p3[62] d_next_0[16] VSS VSS VCC VCC data_0[16] sky130_fd_sc_hs__dfxtp_1
+x808[15] clk_p3[61] d_next_0[15] VSS VSS VCC VCC data_0[15] sky130_fd_sc_hs__dfxtp_1
+x808[14] clk_p3[60] d_next_0[14] VSS VSS VCC VCC data_0[14] sky130_fd_sc_hs__dfxtp_1
+x808[13] clk_p3[59] d_next_0[13] VSS VSS VCC VCC data_0[13] sky130_fd_sc_hs__dfxtp_1
+x808[12] clk_p3[58] d_next_0[12] VSS VSS VCC VCC data_0[12] sky130_fd_sc_hs__dfxtp_1
+x808[11] clk_p3[57] d_next_0[11] VSS VSS VCC VCC data_0[11] sky130_fd_sc_hs__dfxtp_1
+x808[10] clk_p3[56] d_next_0[10] VSS VSS VCC VCC data_0[10] sky130_fd_sc_hs__dfxtp_1
+x808[9] clk_p3[66] d_next_0[9] VSS VSS VCC VCC data_0[9] sky130_fd_sc_hs__dfxtp_1
+x808[8] clk_p3[65] d_next_0[8] VSS VSS VCC VCC data_0[8] sky130_fd_sc_hs__dfxtp_1
+x808[7] clk_p3[64] d_next_0[7] VSS VSS VCC VCC data_0[7] sky130_fd_sc_hs__dfxtp_1
+x808[6] clk_p3[63] d_next_0[6] VSS VSS VCC VCC data_0[6] sky130_fd_sc_hs__dfxtp_1
+x808[5] clk_p3[62] d_next_0[5] VSS VSS VCC VCC data_0[5] sky130_fd_sc_hs__dfxtp_1
+x808[4] clk_p3[61] d_next_0[4] VSS VSS VCC VCC data_0[4] sky130_fd_sc_hs__dfxtp_1
+x808[3] clk_p3[60] d_next_0[3] VSS VSS VCC VCC data_0[3] sky130_fd_sc_hs__dfxtp_1
+x808[2] clk_p3[59] d_next_0[2] VSS VSS VCC VCC data_0[2] sky130_fd_sc_hs__dfxtp_1
+x808[1] clk_p3[58] d_next_0[1] VSS VSS VCC VCC data_0[1] sky130_fd_sc_hs__dfxtp_1
+x808[0] clk_p3[57] d_next_0[0] VSS VSS VCC VCC data_0[0] sky130_fd_sc_hs__dfxtp_1
+x804 net35 VSS VSS VCC VCC d0_sl sky130_fd_sc_hs__inv_4
+x805 net11 VSS VSS VCC VCC d0_sn sky130_fd_sc_hs__inv_4
+x806 net36 VSS VSS VCC VCC d0_su sky130_fd_sc_hs__inv_4
+x802 latch_dn_p net37 VSS VSS VCC VCC net35 sky130_fd_sc_hs__or2_1
+x803 net11 latch_dn_p VSS VSS VCC VCC net36 sky130_fd_sc_hs__nand2_1
+x800 latch_dn_p is_head_p[1] latch_up_p is_head_p[0] VSS VSS VCC VCC net11 sky130_fd_sc_hs__a22oi_1
+x801 net11 VSS VSS VCC VCC net37 sky130_fd_sc_hs__inv_1
+x817[31] d1_sl d_next_1[31] data_1[31] d1_sn i_instruction[31] d1_su data_2[31] mux3
+x817[30] d1_sl d_next_1[30] data_1[30] d1_sn i_instruction[30] d1_su data_2[30] mux3
+x817[29] d1_sl d_next_1[29] data_1[29] d1_sn i_instruction[29] d1_su data_2[29] mux3
+x817[28] d1_sl d_next_1[28] data_1[28] d1_sn i_instruction[28] d1_su data_2[28] mux3
+x817[27] d1_sl d_next_1[27] data_1[27] d1_sn i_instruction[27] d1_su data_2[27] mux3
+x817[26] d1_sl d_next_1[26] data_1[26] d1_sn i_instruction[26] d1_su data_2[26] mux3
+x817[25] d1_sl d_next_1[25] data_1[25] d1_sn i_instruction[25] d1_su data_2[25] mux3
+x817[24] d1_sl d_next_1[24] data_1[24] d1_sn i_instruction[24] d1_su data_2[24] mux3
+x817[23] d1_sl d_next_1[23] data_1[23] d1_sn i_instruction[23] d1_su data_2[23] mux3
+x817[22] d1_sl d_next_1[22] data_1[22] d1_sn i_instruction[22] d1_su data_2[22] mux3
+x817[21] d1_sl d_next_1[21] data_1[21] d1_sn i_instruction[21] d1_su data_2[21] mux3
+x817[20] d1_sl d_next_1[20] data_1[20] d1_sn i_instruction[20] d1_su data_2[20] mux3
+x817[19] d1_sl d_next_1[19] data_1[19] d1_sn i_instruction[19] d1_su data_2[19] mux3
+x817[18] d1_sl d_next_1[18] data_1[18] d1_sn i_instruction[18] d1_su data_2[18] mux3
+x817[17] d1_sl d_next_1[17] data_1[17] d1_sn i_instruction[17] d1_su data_2[17] mux3
+x817[16] d1_sl d_next_1[16] data_1[16] d1_sn i_instruction[16] d1_su data_2[16] mux3
+x817[15] d1_sl d_next_1[15] data_1[15] d1_sn i_instruction[15] d1_su data_2[15] mux3
+x817[14] d1_sl d_next_1[14] data_1[14] d1_sn i_instruction[14] d1_su data_2[14] mux3
+x817[13] d1_sl d_next_1[13] data_1[13] d1_sn i_instruction[13] d1_su data_2[13] mux3
+x817[12] d1_sl d_next_1[12] data_1[12] d1_sn i_instruction[12] d1_su data_2[12] mux3
+x817[11] d1_sl d_next_1[11] data_1[11] d1_sn i_instruction[11] d1_su data_2[11] mux3
+x817[10] d1_sl d_next_1[10] data_1[10] d1_sn i_instruction[10] d1_su data_2[10] mux3
+x817[9] d1_sl d_next_1[9] data_1[9] d1_sn i_instruction[9] d1_su data_2[9] mux3
+x817[8] d1_sl d_next_1[8] data_1[8] d1_sn i_instruction[8] d1_su data_2[8] mux3
+x817[7] d1_sl d_next_1[7] data_1[7] d1_sn i_instruction[7] d1_su data_2[7] mux3
+x817[6] d1_sl d_next_1[6] data_1[6] d1_sn i_instruction[6] d1_su data_2[6] mux3
+x817[5] d1_sl d_next_1[5] data_1[5] d1_sn i_instruction[5] d1_su data_2[5] mux3
+x817[4] d1_sl d_next_1[4] data_1[4] d1_sn i_instruction[4] d1_su data_2[4] mux3
+x817[3] d1_sl d_next_1[3] data_1[3] d1_sn i_instruction[3] d1_su data_2[3] mux3
+x817[2] d1_sl d_next_1[2] data_1[2] d1_sn i_instruction[2] d1_su data_2[2] mux3
+x817[1] d1_sl d_next_1[1] data_1[1] d1_sn i_instruction[1] d1_su data_2[1] mux3
+x817[0] d1_sl d_next_1[0] data_1[0] d1_sn i_instruction[0] d1_su data_2[0] mux3
+x818[31] clk_p3[55] d_next_1[31] VSS VSS VCC VCC data_1[31] sky130_fd_sc_hs__dfxtp_1
+x818[30] clk_p3[54] d_next_1[30] VSS VSS VCC VCC data_1[30] sky130_fd_sc_hs__dfxtp_1
+x818[29] clk_p3[53] d_next_1[29] VSS VSS VCC VCC data_1[29] sky130_fd_sc_hs__dfxtp_1
+x818[28] clk_p3[52] d_next_1[28] VSS VSS VCC VCC data_1[28] sky130_fd_sc_hs__dfxtp_1
+x818[27] clk_p3[51] d_next_1[27] VSS VSS VCC VCC data_1[27] sky130_fd_sc_hs__dfxtp_1
+x818[26] clk_p3[50] d_next_1[26] VSS VSS VCC VCC data_1[26] sky130_fd_sc_hs__dfxtp_1
+x818[25] clk_p3[49] d_next_1[25] VSS VSS VCC VCC data_1[25] sky130_fd_sc_hs__dfxtp_1
+x818[24] clk_p3[48] d_next_1[24] VSS VSS VCC VCC data_1[24] sky130_fd_sc_hs__dfxtp_1
+x818[23] clk_p3[47] d_next_1[23] VSS VSS VCC VCC data_1[23] sky130_fd_sc_hs__dfxtp_1
+x818[22] clk_p3[46] d_next_1[22] VSS VSS VCC VCC data_1[22] sky130_fd_sc_hs__dfxtp_1
+x818[21] clk_p3[45] d_next_1[21] VSS VSS VCC VCC data_1[21] sky130_fd_sc_hs__dfxtp_1
+x818[20] clk_p3[55] d_next_1[20] VSS VSS VCC VCC data_1[20] sky130_fd_sc_hs__dfxtp_1
+x818[19] clk_p3[54] d_next_1[19] VSS VSS VCC VCC data_1[19] sky130_fd_sc_hs__dfxtp_1
+x818[18] clk_p3[53] d_next_1[18] VSS VSS VCC VCC data_1[18] sky130_fd_sc_hs__dfxtp_1
+x818[17] clk_p3[52] d_next_1[17] VSS VSS VCC VCC data_1[17] sky130_fd_sc_hs__dfxtp_1
+x818[16] clk_p3[51] d_next_1[16] VSS VSS VCC VCC data_1[16] sky130_fd_sc_hs__dfxtp_1
+x818[15] clk_p3[50] d_next_1[15] VSS VSS VCC VCC data_1[15] sky130_fd_sc_hs__dfxtp_1
+x818[14] clk_p3[49] d_next_1[14] VSS VSS VCC VCC data_1[14] sky130_fd_sc_hs__dfxtp_1
+x818[13] clk_p3[48] d_next_1[13] VSS VSS VCC VCC data_1[13] sky130_fd_sc_hs__dfxtp_1
+x818[12] clk_p3[47] d_next_1[12] VSS VSS VCC VCC data_1[12] sky130_fd_sc_hs__dfxtp_1
+x818[11] clk_p3[46] d_next_1[11] VSS VSS VCC VCC data_1[11] sky130_fd_sc_hs__dfxtp_1
+x818[10] clk_p3[45] d_next_1[10] VSS VSS VCC VCC data_1[10] sky130_fd_sc_hs__dfxtp_1
+x818[9] clk_p3[55] d_next_1[9] VSS VSS VCC VCC data_1[9] sky130_fd_sc_hs__dfxtp_1
+x818[8] clk_p3[54] d_next_1[8] VSS VSS VCC VCC data_1[8] sky130_fd_sc_hs__dfxtp_1
+x818[7] clk_p3[53] d_next_1[7] VSS VSS VCC VCC data_1[7] sky130_fd_sc_hs__dfxtp_1
+x818[6] clk_p3[52] d_next_1[6] VSS VSS VCC VCC data_1[6] sky130_fd_sc_hs__dfxtp_1
+x818[5] clk_p3[51] d_next_1[5] VSS VSS VCC VCC data_1[5] sky130_fd_sc_hs__dfxtp_1
+x818[4] clk_p3[50] d_next_1[4] VSS VSS VCC VCC data_1[4] sky130_fd_sc_hs__dfxtp_1
+x818[3] clk_p3[49] d_next_1[3] VSS VSS VCC VCC data_1[3] sky130_fd_sc_hs__dfxtp_1
+x818[2] clk_p3[48] d_next_1[2] VSS VSS VCC VCC data_1[2] sky130_fd_sc_hs__dfxtp_1
+x818[1] clk_p3[47] d_next_1[1] VSS VSS VCC VCC data_1[1] sky130_fd_sc_hs__dfxtp_1
+x818[0] clk_p3[46] d_next_1[0] VSS VSS VCC VCC data_1[0] sky130_fd_sc_hs__dfxtp_1
+x814 net38 VSS VSS VCC VCC d1_sl sky130_fd_sc_hs__inv_4
+x815 net12 VSS VSS VCC VCC d1_sn sky130_fd_sc_hs__inv_4
+x816 net39 VSS VSS VCC VCC d1_su sky130_fd_sc_hs__inv_4
+x812 latch_dn_p net40 VSS VSS VCC VCC net38 sky130_fd_sc_hs__or2_1
+x813 net12 latch_dn_p VSS VSS VCC VCC net39 sky130_fd_sc_hs__nand2_1
+x810 latch_dn_p is_head_p[2] latch_up_p is_head_p[1] VSS VSS VCC VCC net12 sky130_fd_sc_hs__a22oi_1
+x811 net12 VSS VSS VCC VCC net40 sky130_fd_sc_hs__inv_1
+x827[31] d2_sl d_next_2[31] data_2[31] d2_sn i_instruction[31] d2_su data_3[31] mux3
+x827[30] d2_sl d_next_2[30] data_2[30] d2_sn i_instruction[30] d2_su data_3[30] mux3
+x827[29] d2_sl d_next_2[29] data_2[29] d2_sn i_instruction[29] d2_su data_3[29] mux3
+x827[28] d2_sl d_next_2[28] data_2[28] d2_sn i_instruction[28] d2_su data_3[28] mux3
+x827[27] d2_sl d_next_2[27] data_2[27] d2_sn i_instruction[27] d2_su data_3[27] mux3
+x827[26] d2_sl d_next_2[26] data_2[26] d2_sn i_instruction[26] d2_su data_3[26] mux3
+x827[25] d2_sl d_next_2[25] data_2[25] d2_sn i_instruction[25] d2_su data_3[25] mux3
+x827[24] d2_sl d_next_2[24] data_2[24] d2_sn i_instruction[24] d2_su data_3[24] mux3
+x827[23] d2_sl d_next_2[23] data_2[23] d2_sn i_instruction[23] d2_su data_3[23] mux3
+x827[22] d2_sl d_next_2[22] data_2[22] d2_sn i_instruction[22] d2_su data_3[22] mux3
+x827[21] d2_sl d_next_2[21] data_2[21] d2_sn i_instruction[21] d2_su data_3[21] mux3
+x827[20] d2_sl d_next_2[20] data_2[20] d2_sn i_instruction[20] d2_su data_3[20] mux3
+x827[19] d2_sl d_next_2[19] data_2[19] d2_sn i_instruction[19] d2_su data_3[19] mux3
+x827[18] d2_sl d_next_2[18] data_2[18] d2_sn i_instruction[18] d2_su data_3[18] mux3
+x827[17] d2_sl d_next_2[17] data_2[17] d2_sn i_instruction[17] d2_su data_3[17] mux3
+x827[16] d2_sl d_next_2[16] data_2[16] d2_sn i_instruction[16] d2_su data_3[16] mux3
+x827[15] d2_sl d_next_2[15] data_2[15] d2_sn i_instruction[15] d2_su data_3[15] mux3
+x827[14] d2_sl d_next_2[14] data_2[14] d2_sn i_instruction[14] d2_su data_3[14] mux3
+x827[13] d2_sl d_next_2[13] data_2[13] d2_sn i_instruction[13] d2_su data_3[13] mux3
+x827[12] d2_sl d_next_2[12] data_2[12] d2_sn i_instruction[12] d2_su data_3[12] mux3
+x827[11] d2_sl d_next_2[11] data_2[11] d2_sn i_instruction[11] d2_su data_3[11] mux3
+x827[10] d2_sl d_next_2[10] data_2[10] d2_sn i_instruction[10] d2_su data_3[10] mux3
+x827[9] d2_sl d_next_2[9] data_2[9] d2_sn i_instruction[9] d2_su data_3[9] mux3
+x827[8] d2_sl d_next_2[8] data_2[8] d2_sn i_instruction[8] d2_su data_3[8] mux3
+x827[7] d2_sl d_next_2[7] data_2[7] d2_sn i_instruction[7] d2_su data_3[7] mux3
+x827[6] d2_sl d_next_2[6] data_2[6] d2_sn i_instruction[6] d2_su data_3[6] mux3
+x827[5] d2_sl d_next_2[5] data_2[5] d2_sn i_instruction[5] d2_su data_3[5] mux3
+x827[4] d2_sl d_next_2[4] data_2[4] d2_sn i_instruction[4] d2_su data_3[4] mux3
+x827[3] d2_sl d_next_2[3] data_2[3] d2_sn i_instruction[3] d2_su data_3[3] mux3
+x827[2] d2_sl d_next_2[2] data_2[2] d2_sn i_instruction[2] d2_su data_3[2] mux3
+x827[1] d2_sl d_next_2[1] data_2[1] d2_sn i_instruction[1] d2_su data_3[1] mux3
+x827[0] d2_sl d_next_2[0] data_2[0] d2_sn i_instruction[0] d2_su data_3[0] mux3
+x828[31] clk_p3[44] d_next_2[31] VSS VSS VCC VCC data_2[31] sky130_fd_sc_hs__dfxtp_1
+x828[30] clk_p3[43] d_next_2[30] VSS VSS VCC VCC data_2[30] sky130_fd_sc_hs__dfxtp_1
+x828[29] clk_p3[42] d_next_2[29] VSS VSS VCC VCC data_2[29] sky130_fd_sc_hs__dfxtp_1
+x828[28] clk_p3[41] d_next_2[28] VSS VSS VCC VCC data_2[28] sky130_fd_sc_hs__dfxtp_1
+x828[27] clk_p3[40] d_next_2[27] VSS VSS VCC VCC data_2[27] sky130_fd_sc_hs__dfxtp_1
+x828[26] clk_p3[39] d_next_2[26] VSS VSS VCC VCC data_2[26] sky130_fd_sc_hs__dfxtp_1
+x828[25] clk_p3[38] d_next_2[25] VSS VSS VCC VCC data_2[25] sky130_fd_sc_hs__dfxtp_1
+x828[24] clk_p3[37] d_next_2[24] VSS VSS VCC VCC data_2[24] sky130_fd_sc_hs__dfxtp_1
+x828[23] clk_p3[36] d_next_2[23] VSS VSS VCC VCC data_2[23] sky130_fd_sc_hs__dfxtp_1
+x828[22] clk_p3[35] d_next_2[22] VSS VSS VCC VCC data_2[22] sky130_fd_sc_hs__dfxtp_1
+x828[21] clk_p3[34] d_next_2[21] VSS VSS VCC VCC data_2[21] sky130_fd_sc_hs__dfxtp_1
+x828[20] clk_p3[44] d_next_2[20] VSS VSS VCC VCC data_2[20] sky130_fd_sc_hs__dfxtp_1
+x828[19] clk_p3[43] d_next_2[19] VSS VSS VCC VCC data_2[19] sky130_fd_sc_hs__dfxtp_1
+x828[18] clk_p3[42] d_next_2[18] VSS VSS VCC VCC data_2[18] sky130_fd_sc_hs__dfxtp_1
+x828[17] clk_p3[41] d_next_2[17] VSS VSS VCC VCC data_2[17] sky130_fd_sc_hs__dfxtp_1
+x828[16] clk_p3[40] d_next_2[16] VSS VSS VCC VCC data_2[16] sky130_fd_sc_hs__dfxtp_1
+x828[15] clk_p3[39] d_next_2[15] VSS VSS VCC VCC data_2[15] sky130_fd_sc_hs__dfxtp_1
+x828[14] clk_p3[38] d_next_2[14] VSS VSS VCC VCC data_2[14] sky130_fd_sc_hs__dfxtp_1
+x828[13] clk_p3[37] d_next_2[13] VSS VSS VCC VCC data_2[13] sky130_fd_sc_hs__dfxtp_1
+x828[12] clk_p3[36] d_next_2[12] VSS VSS VCC VCC data_2[12] sky130_fd_sc_hs__dfxtp_1
+x828[11] clk_p3[35] d_next_2[11] VSS VSS VCC VCC data_2[11] sky130_fd_sc_hs__dfxtp_1
+x828[10] clk_p3[34] d_next_2[10] VSS VSS VCC VCC data_2[10] sky130_fd_sc_hs__dfxtp_1
+x828[9] clk_p3[44] d_next_2[9] VSS VSS VCC VCC data_2[9] sky130_fd_sc_hs__dfxtp_1
+x828[8] clk_p3[43] d_next_2[8] VSS VSS VCC VCC data_2[8] sky130_fd_sc_hs__dfxtp_1
+x828[7] clk_p3[42] d_next_2[7] VSS VSS VCC VCC data_2[7] sky130_fd_sc_hs__dfxtp_1
+x828[6] clk_p3[41] d_next_2[6] VSS VSS VCC VCC data_2[6] sky130_fd_sc_hs__dfxtp_1
+x828[5] clk_p3[40] d_next_2[5] VSS VSS VCC VCC data_2[5] sky130_fd_sc_hs__dfxtp_1
+x828[4] clk_p3[39] d_next_2[4] VSS VSS VCC VCC data_2[4] sky130_fd_sc_hs__dfxtp_1
+x828[3] clk_p3[38] d_next_2[3] VSS VSS VCC VCC data_2[3] sky130_fd_sc_hs__dfxtp_1
+x828[2] clk_p3[37] d_next_2[2] VSS VSS VCC VCC data_2[2] sky130_fd_sc_hs__dfxtp_1
+x828[1] clk_p3[36] d_next_2[1] VSS VSS VCC VCC data_2[1] sky130_fd_sc_hs__dfxtp_1
+x828[0] clk_p3[35] d_next_2[0] VSS VSS VCC VCC data_2[0] sky130_fd_sc_hs__dfxtp_1
+x824 net41 VSS VSS VCC VCC d2_sl sky130_fd_sc_hs__inv_4
+x825 net13 VSS VSS VCC VCC d2_sn sky130_fd_sc_hs__inv_4
+x826 net42 VSS VSS VCC VCC d2_su sky130_fd_sc_hs__inv_4
+x822 latch_dn_p net43 VSS VSS VCC VCC net41 sky130_fd_sc_hs__or2_1
+x823 net13 latch_dn_p VSS VSS VCC VCC net42 sky130_fd_sc_hs__nand2_1
+x820 latch_dn_p is_head_p[3] latch_up_p is_head_p[2] VSS VSS VCC VCC net13 sky130_fd_sc_hs__a22oi_1
+x821 net13 VSS VSS VCC VCC net43 sky130_fd_sc_hs__inv_1
+x837[31] d3_sl data_3[31] d_next_3[31] d3_sn i_instruction[31] mux2
+x837[30] d3_sl data_3[30] d_next_3[30] d3_sn i_instruction[30] mux2
+x837[29] d3_sl data_3[29] d_next_3[29] d3_sn i_instruction[29] mux2
+x837[28] d3_sl data_3[28] d_next_3[28] d3_sn i_instruction[28] mux2
+x837[27] d3_sl data_3[27] d_next_3[27] d3_sn i_instruction[27] mux2
+x837[26] d3_sl data_3[26] d_next_3[26] d3_sn i_instruction[26] mux2
+x837[25] d3_sl data_3[25] d_next_3[25] d3_sn i_instruction[25] mux2
+x837[24] d3_sl data_3[24] d_next_3[24] d3_sn i_instruction[24] mux2
+x837[23] d3_sl data_3[23] d_next_3[23] d3_sn i_instruction[23] mux2
+x837[22] d3_sl data_3[22] d_next_3[22] d3_sn i_instruction[22] mux2
+x837[21] d3_sl data_3[21] d_next_3[21] d3_sn i_instruction[21] mux2
+x837[20] d3_sl data_3[20] d_next_3[20] d3_sn i_instruction[20] mux2
+x837[19] d3_sl data_3[19] d_next_3[19] d3_sn i_instruction[19] mux2
+x837[18] d3_sl data_3[18] d_next_3[18] d3_sn i_instruction[18] mux2
+x837[17] d3_sl data_3[17] d_next_3[17] d3_sn i_instruction[17] mux2
+x837[16] d3_sl data_3[16] d_next_3[16] d3_sn i_instruction[16] mux2
+x837[15] d3_sl data_3[15] d_next_3[15] d3_sn i_instruction[15] mux2
+x837[14] d3_sl data_3[14] d_next_3[14] d3_sn i_instruction[14] mux2
+x837[13] d3_sl data_3[13] d_next_3[13] d3_sn i_instruction[13] mux2
+x837[12] d3_sl data_3[12] d_next_3[12] d3_sn i_instruction[12] mux2
+x837[11] d3_sl data_3[11] d_next_3[11] d3_sn i_instruction[11] mux2
+x837[10] d3_sl data_3[10] d_next_3[10] d3_sn i_instruction[10] mux2
+x837[9] d3_sl data_3[9] d_next_3[9] d3_sn i_instruction[9] mux2
+x837[8] d3_sl data_3[8] d_next_3[8] d3_sn i_instruction[8] mux2
+x837[7] d3_sl data_3[7] d_next_3[7] d3_sn i_instruction[7] mux2
+x837[6] d3_sl data_3[6] d_next_3[6] d3_sn i_instruction[6] mux2
+x837[5] d3_sl data_3[5] d_next_3[5] d3_sn i_instruction[5] mux2
+x837[4] d3_sl data_3[4] d_next_3[4] d3_sn i_instruction[4] mux2
+x837[3] d3_sl data_3[3] d_next_3[3] d3_sn i_instruction[3] mux2
+x837[2] d3_sl data_3[2] d_next_3[2] d3_sn i_instruction[2] mux2
+x837[1] d3_sl data_3[1] d_next_3[1] d3_sn i_instruction[1] mux2
+x837[0] d3_sl data_3[0] d_next_3[0] d3_sn i_instruction[0] mux2
+x838[31] clk_p3[33] d_next_3[31] VSS VSS VCC VCC data_3[31] sky130_fd_sc_hs__dfxtp_1
+x838[30] clk_p3[32] d_next_3[30] VSS VSS VCC VCC data_3[30] sky130_fd_sc_hs__dfxtp_1
+x838[29] clk_p3[31] d_next_3[29] VSS VSS VCC VCC data_3[29] sky130_fd_sc_hs__dfxtp_1
+x838[28] clk_p3[30] d_next_3[28] VSS VSS VCC VCC data_3[28] sky130_fd_sc_hs__dfxtp_1
+x838[27] clk_p3[29] d_next_3[27] VSS VSS VCC VCC data_3[27] sky130_fd_sc_hs__dfxtp_1
+x838[26] clk_p3[28] d_next_3[26] VSS VSS VCC VCC data_3[26] sky130_fd_sc_hs__dfxtp_1
+x838[25] clk_p3[27] d_next_3[25] VSS VSS VCC VCC data_3[25] sky130_fd_sc_hs__dfxtp_1
+x838[24] clk_p3[26] d_next_3[24] VSS VSS VCC VCC data_3[24] sky130_fd_sc_hs__dfxtp_1
+x838[23] clk_p3[25] d_next_3[23] VSS VSS VCC VCC data_3[23] sky130_fd_sc_hs__dfxtp_1
+x838[22] clk_p3[24] d_next_3[22] VSS VSS VCC VCC data_3[22] sky130_fd_sc_hs__dfxtp_1
+x838[21] clk_p3[23] d_next_3[21] VSS VSS VCC VCC data_3[21] sky130_fd_sc_hs__dfxtp_1
+x838[20] clk_p3[33] d_next_3[20] VSS VSS VCC VCC data_3[20] sky130_fd_sc_hs__dfxtp_1
+x838[19] clk_p3[32] d_next_3[19] VSS VSS VCC VCC data_3[19] sky130_fd_sc_hs__dfxtp_1
+x838[18] clk_p3[31] d_next_3[18] VSS VSS VCC VCC data_3[18] sky130_fd_sc_hs__dfxtp_1
+x838[17] clk_p3[30] d_next_3[17] VSS VSS VCC VCC data_3[17] sky130_fd_sc_hs__dfxtp_1
+x838[16] clk_p3[29] d_next_3[16] VSS VSS VCC VCC data_3[16] sky130_fd_sc_hs__dfxtp_1
+x838[15] clk_p3[28] d_next_3[15] VSS VSS VCC VCC data_3[15] sky130_fd_sc_hs__dfxtp_1
+x838[14] clk_p3[27] d_next_3[14] VSS VSS VCC VCC data_3[14] sky130_fd_sc_hs__dfxtp_1
+x838[13] clk_p3[26] d_next_3[13] VSS VSS VCC VCC data_3[13] sky130_fd_sc_hs__dfxtp_1
+x838[12] clk_p3[25] d_next_3[12] VSS VSS VCC VCC data_3[12] sky130_fd_sc_hs__dfxtp_1
+x838[11] clk_p3[24] d_next_3[11] VSS VSS VCC VCC data_3[11] sky130_fd_sc_hs__dfxtp_1
+x838[10] clk_p3[23] d_next_3[10] VSS VSS VCC VCC data_3[10] sky130_fd_sc_hs__dfxtp_1
+x838[9] clk_p3[33] d_next_3[9] VSS VSS VCC VCC data_3[9] sky130_fd_sc_hs__dfxtp_1
+x838[8] clk_p3[32] d_next_3[8] VSS VSS VCC VCC data_3[8] sky130_fd_sc_hs__dfxtp_1
+x838[7] clk_p3[31] d_next_3[7] VSS VSS VCC VCC data_3[7] sky130_fd_sc_hs__dfxtp_1
+x838[6] clk_p3[30] d_next_3[6] VSS VSS VCC VCC data_3[6] sky130_fd_sc_hs__dfxtp_1
+x838[5] clk_p3[29] d_next_3[5] VSS VSS VCC VCC data_3[5] sky130_fd_sc_hs__dfxtp_1
+x838[4] clk_p3[28] d_next_3[4] VSS VSS VCC VCC data_3[4] sky130_fd_sc_hs__dfxtp_1
+x838[3] clk_p3[27] d_next_3[3] VSS VSS VCC VCC data_3[3] sky130_fd_sc_hs__dfxtp_1
+x838[2] clk_p3[26] d_next_3[2] VSS VSS VCC VCC data_3[2] sky130_fd_sc_hs__dfxtp_1
+x838[1] clk_p3[25] d_next_3[1] VSS VSS VCC VCC data_3[1] sky130_fd_sc_hs__dfxtp_1
+x838[0] clk_p3[24] d_next_3[0] VSS VSS VCC VCC data_3[0] sky130_fd_sc_hs__dfxtp_1
+x834 net44 VSS VSS VCC VCC d3_sl sky130_fd_sc_hs__inv_4
+x835 net14 VSS VSS VCC VCC d3_sn sky130_fd_sc_hs__inv_4
+x832 latch_dn_p net45 VSS VSS VCC VCC net44 sky130_fd_sc_hs__or2_1
+x830 latch_dn_p is_head_p[4] latch_up_p is_head_p[3] VSS VSS VCC VCC net14 sky130_fd_sc_hs__a22oi_1
+x831 net14 VSS VSS VCC VCC net45 sky130_fd_sc_hs__inv_1
+x901[15] clk_p3[71] net28[15] VSS VSS VCC VCC latch_hi_p[15] sky130_fd_sc_hs__dfxtp_1
+x901[14] clk_p3[70] net28[14] VSS VSS VCC VCC latch_hi_p[14] sky130_fd_sc_hs__dfxtp_1
+x901[13] clk_p3[69] net28[13] VSS VSS VCC VCC latch_hi_p[13] sky130_fd_sc_hs__dfxtp_1
+x901[12] clk_p3[68] net28[12] VSS VSS VCC VCC latch_hi_p[12] sky130_fd_sc_hs__dfxtp_1
+x901[11] clk_p3[67] net28[11] VSS VSS VCC VCC latch_hi_p[11] sky130_fd_sc_hs__dfxtp_1
+x901[10] clk_p3[71] net28[10] VSS VSS VCC VCC latch_hi_p[10] sky130_fd_sc_hs__dfxtp_1
+x901[9] clk_p3[70] net28[9] VSS VSS VCC VCC latch_hi_p[9] sky130_fd_sc_hs__dfxtp_1
+x901[8] clk_p3[69] net28[8] VSS VSS VCC VCC latch_hi_p[8] sky130_fd_sc_hs__dfxtp_1
+x901[7] clk_p3[68] net28[7] VSS VSS VCC VCC latch_hi_p[7] sky130_fd_sc_hs__dfxtp_1
+x901[6] clk_p3[67] net28[6] VSS VSS VCC VCC latch_hi_p[6] sky130_fd_sc_hs__dfxtp_1
+x901[5] clk_p3[71] net28[5] VSS VSS VCC VCC latch_hi_p[5] sky130_fd_sc_hs__dfxtp_1
+x901[4] clk_p3[70] net28[4] VSS VSS VCC VCC latch_hi_p[4] sky130_fd_sc_hs__dfxtp_1
+x901[3] clk_p3[69] net28[3] VSS VSS VCC VCC latch_hi_p[3] sky130_fd_sc_hs__dfxtp_1
+x901[2] clk_p3[68] net28[2] VSS VSS VCC VCC latch_hi_p[2] sky130_fd_sc_hs__dfxtp_1
+x901[1] clk_p3[67] net28[1] VSS VSS VCC VCC latch_hi_p[1] sky130_fd_sc_hs__dfxtp_1
+x901[0] clk_p3[71] net28[0] VSS VSS VCC VCC latch_hi_p[0] sky130_fd_sc_hs__dfxtp_1
+x620 o_instruction[1] o_instruction[0] VSS VSS VCC VCC is_comp_p sky130_fd_sc_hs__nand2_1
+x621 is_comp_p VSS VSS VCC VCC is_comp_n sky130_fd_sc_hs__inv_1
+x625 buf_reset_n[2] net16 VSS VSS VCC VCC net6 sky130_fd_sc_hs__and2_1
+x626 buf_reset_n[2] net15 VSS VSS VCC VCC net5 sky130_fd_sc_hs__and2_1
+x623 first_half_n pop_p VSS VSS VCC VCC net15 sky130_fd_sc_hs__nand2_1
+x624 net15 VSS VSS VCC VCC net16 sky130_fd_sc_hs__inv_1
+x628[1] clk_p3[12] o_pc_next[1] VSS VSS VCC VCC o_pc[1] pc_n[1] sky130_fd_sc_hs__dfxbp_1
+x628[31] clk_p3[22] o_pc_next[31] VSS VSS VCC VCC o_pc[31] sky130_fd_sc_hs__dfxtp_1
+x628[30] clk_p3[21] o_pc_next[30] VSS VSS VCC VCC o_pc[30] sky130_fd_sc_hs__dfxtp_1
+x628[29] clk_p3[20] o_pc_next[29] VSS VSS VCC VCC o_pc[29] sky130_fd_sc_hs__dfxtp_1
+x628[28] clk_p3[19] o_pc_next[28] VSS VSS VCC VCC o_pc[28] sky130_fd_sc_hs__dfxtp_1
+x628[27] clk_p3[18] o_pc_next[27] VSS VSS VCC VCC o_pc[27] sky130_fd_sc_hs__dfxtp_1
+x628[26] clk_p3[17] o_pc_next[26] VSS VSS VCC VCC o_pc[26] sky130_fd_sc_hs__dfxtp_1
+x628[25] clk_p3[16] o_pc_next[25] VSS VSS VCC VCC o_pc[25] sky130_fd_sc_hs__dfxtp_1
+x628[24] clk_p3[15] o_pc_next[24] VSS VSS VCC VCC o_pc[24] sky130_fd_sc_hs__dfxtp_1
+x628[23] clk_p3[14] o_pc_next[23] VSS VSS VCC VCC o_pc[23] sky130_fd_sc_hs__dfxtp_1
+x628[22] clk_p3[13] o_pc_next[22] VSS VSS VCC VCC o_pc[22] sky130_fd_sc_hs__dfxtp_1
+x628[21] clk_p3[22] o_pc_next[21] VSS VSS VCC VCC o_pc[21] sky130_fd_sc_hs__dfxtp_1
+x628[20] clk_p3[21] o_pc_next[20] VSS VSS VCC VCC o_pc[20] sky130_fd_sc_hs__dfxtp_1
+x628[19] clk_p3[20] o_pc_next[19] VSS VSS VCC VCC o_pc[19] sky130_fd_sc_hs__dfxtp_1
+x628[18] clk_p3[19] o_pc_next[18] VSS VSS VCC VCC o_pc[18] sky130_fd_sc_hs__dfxtp_1
+x628[17] clk_p3[18] o_pc_next[17] VSS VSS VCC VCC o_pc[17] sky130_fd_sc_hs__dfxtp_1
+x628[16] clk_p3[17] o_pc_next[16] VSS VSS VCC VCC o_pc[16] sky130_fd_sc_hs__dfxtp_1
+x628[15] clk_p3[16] o_pc_next[15] VSS VSS VCC VCC o_pc[15] sky130_fd_sc_hs__dfxtp_1
+x628[14] clk_p3[15] o_pc_next[14] VSS VSS VCC VCC o_pc[14] sky130_fd_sc_hs__dfxtp_1
+x628[13] clk_p3[14] o_pc_next[13] VSS VSS VCC VCC o_pc[13] sky130_fd_sc_hs__dfxtp_1
+x628[12] clk_p3[13] o_pc_next[12] VSS VSS VCC VCC o_pc[12] sky130_fd_sc_hs__dfxtp_1
+x628[11] clk_p3[22] o_pc_next[11] VSS VSS VCC VCC o_pc[11] sky130_fd_sc_hs__dfxtp_1
+x628[10] clk_p3[21] o_pc_next[10] VSS VSS VCC VCC o_pc[10] sky130_fd_sc_hs__dfxtp_1
+x628[9] clk_p3[20] o_pc_next[9] VSS VSS VCC VCC o_pc[9] sky130_fd_sc_hs__dfxtp_1
+x628[8] clk_p3[19] o_pc_next[8] VSS VSS VCC VCC o_pc[8] sky130_fd_sc_hs__dfxtp_1
+x628[7] clk_p3[18] o_pc_next[7] VSS VSS VCC VCC o_pc[7] sky130_fd_sc_hs__dfxtp_1
+x628[6] clk_p3[17] o_pc_next[6] VSS VSS VCC VCC o_pc[6] sky130_fd_sc_hs__dfxtp_1
+x628[5] clk_p3[16] o_pc_next[5] VSS VSS VCC VCC o_pc[5] sky130_fd_sc_hs__dfxtp_1
+x628[4] clk_p3[15] o_pc_next[4] VSS VSS VCC VCC o_pc[4] sky130_fd_sc_hs__dfxtp_1
+x628[3] clk_p3[14] o_pc_next[3] VSS VSS VCC VCC o_pc[3] sky130_fd_sc_hs__dfxtp_1
+x628[2] clk_p3[13] o_pc_next[2] VSS VSS VCC VCC o_pc[2] sky130_fd_sc_hs__dfxtp_1
+x102[8] clk_n0[2] VSS VSS VCC VCC clk_p1[8] sky130_fd_sc_hs__inv_1
+x102[7] clk_n0[1] VSS VSS VCC VCC clk_p1[7] sky130_fd_sc_hs__inv_1
+x102[6] clk_n0[0] VSS VSS VCC VCC clk_p1[6] sky130_fd_sc_hs__inv_1
+x102[5] clk_n0[2] VSS VSS VCC VCC clk_p1[5] sky130_fd_sc_hs__inv_1
+x102[4] clk_n0[1] VSS VSS VCC VCC clk_p1[4] sky130_fd_sc_hs__inv_1
+x102[3] clk_n0[0] VSS VSS VCC VCC clk_p1[3] sky130_fd_sc_hs__inv_1
+x102[2] clk_n0[2] VSS VSS VCC VCC clk_p1[2] sky130_fd_sc_hs__inv_1
+x102[1] clk_n0[1] VSS VSS VCC VCC clk_p1[1] sky130_fd_sc_hs__inv_1
+x102[0] clk_n0[0] VSS VSS VCC VCC clk_p1[0] sky130_fd_sc_hs__inv_1
+x103[26] clk_p1[8] VSS VSS VCC VCC clk_n2[26] sky130_fd_sc_hs__inv_1
+x103[25] clk_p1[7] VSS VSS VCC VCC clk_n2[25] sky130_fd_sc_hs__inv_1
+x103[24] clk_p1[6] VSS VSS VCC VCC clk_n2[24] sky130_fd_sc_hs__inv_1
+x103[23] clk_p1[5] VSS VSS VCC VCC clk_n2[23] sky130_fd_sc_hs__inv_1
+x103[22] clk_p1[4] VSS VSS VCC VCC clk_n2[22] sky130_fd_sc_hs__inv_1
+x103[21] clk_p1[3] VSS VSS VCC VCC clk_n2[21] sky130_fd_sc_hs__inv_1
+x103[20] clk_p1[2] VSS VSS VCC VCC clk_n2[20] sky130_fd_sc_hs__inv_1
+x103[19] clk_p1[1] VSS VSS VCC VCC clk_n2[19] sky130_fd_sc_hs__inv_1
+x103[18] clk_p1[0] VSS VSS VCC VCC clk_n2[18] sky130_fd_sc_hs__inv_1
+x103[17] clk_p1[8] VSS VSS VCC VCC clk_n2[17] sky130_fd_sc_hs__inv_1
+x103[16] clk_p1[7] VSS VSS VCC VCC clk_n2[16] sky130_fd_sc_hs__inv_1
+x103[15] clk_p1[6] VSS VSS VCC VCC clk_n2[15] sky130_fd_sc_hs__inv_1
+x103[14] clk_p1[5] VSS VSS VCC VCC clk_n2[14] sky130_fd_sc_hs__inv_1
+x103[13] clk_p1[4] VSS VSS VCC VCC clk_n2[13] sky130_fd_sc_hs__inv_1
+x103[12] clk_p1[3] VSS VSS VCC VCC clk_n2[12] sky130_fd_sc_hs__inv_1
+x103[11] clk_p1[2] VSS VSS VCC VCC clk_n2[11] sky130_fd_sc_hs__inv_1
+x103[10] clk_p1[1] VSS VSS VCC VCC clk_n2[10] sky130_fd_sc_hs__inv_1
+x103[9] clk_p1[0] VSS VSS VCC VCC clk_n2[9] sky130_fd_sc_hs__inv_1
+x103[8] clk_p1[8] VSS VSS VCC VCC clk_n2[8] sky130_fd_sc_hs__inv_1
+x103[7] clk_p1[7] VSS VSS VCC VCC clk_n2[7] sky130_fd_sc_hs__inv_1
+x103[6] clk_p1[6] VSS VSS VCC VCC clk_n2[6] sky130_fd_sc_hs__inv_1
+x103[5] clk_p1[5] VSS VSS VCC VCC clk_n2[5] sky130_fd_sc_hs__inv_1
+x103[4] clk_p1[4] VSS VSS VCC VCC clk_n2[4] sky130_fd_sc_hs__inv_1
+x103[3] clk_p1[3] VSS VSS VCC VCC clk_n2[3] sky130_fd_sc_hs__inv_1
+x103[2] clk_p1[2] VSS VSS VCC VCC clk_n2[2] sky130_fd_sc_hs__inv_1
+x103[1] clk_p1[1] VSS VSS VCC VCC clk_n2[1] sky130_fd_sc_hs__inv_1
+x103[0] clk_p1[0] VSS VSS VCC VCC clk_n2[0] sky130_fd_sc_hs__inv_1
+x104[71] clk_n2[26] VSS VSS VCC VCC clk_p3[71] sky130_fd_sc_hs__inv_1
+x104[70] clk_n2[25] VSS VSS VCC VCC clk_p3[70] sky130_fd_sc_hs__inv_1
+x104[69] clk_n2[24] VSS VSS VCC VCC clk_p3[69] sky130_fd_sc_hs__inv_1
+x104[68] clk_n2[23] VSS VSS VCC VCC clk_p3[68] sky130_fd_sc_hs__inv_1
+x104[67] clk_n2[22] VSS VSS VCC VCC clk_p3[67] sky130_fd_sc_hs__inv_1
+x104[66] clk_n2[21] VSS VSS VCC VCC clk_p3[66] sky130_fd_sc_hs__inv_1
+x104[65] clk_n2[20] VSS VSS VCC VCC clk_p3[65] sky130_fd_sc_hs__inv_1
+x104[64] clk_n2[19] VSS VSS VCC VCC clk_p3[64] sky130_fd_sc_hs__inv_1
+x104[63] clk_n2[18] VSS VSS VCC VCC clk_p3[63] sky130_fd_sc_hs__inv_1
+x104[62] clk_n2[17] VSS VSS VCC VCC clk_p3[62] sky130_fd_sc_hs__inv_1
+x104[61] clk_n2[16] VSS VSS VCC VCC clk_p3[61] sky130_fd_sc_hs__inv_1
+x104[60] clk_n2[15] VSS VSS VCC VCC clk_p3[60] sky130_fd_sc_hs__inv_1
+x104[59] clk_n2[14] VSS VSS VCC VCC clk_p3[59] sky130_fd_sc_hs__inv_1
+x104[58] clk_n2[13] VSS VSS VCC VCC clk_p3[58] sky130_fd_sc_hs__inv_1
+x104[57] clk_n2[12] VSS VSS VCC VCC clk_p3[57] sky130_fd_sc_hs__inv_1
+x104[56] clk_n2[11] VSS VSS VCC VCC clk_p3[56] sky130_fd_sc_hs__inv_1
+x104[55] clk_n2[10] VSS VSS VCC VCC clk_p3[55] sky130_fd_sc_hs__inv_1
+x104[54] clk_n2[9] VSS VSS VCC VCC clk_p3[54] sky130_fd_sc_hs__inv_1
+x104[53] clk_n2[8] VSS VSS VCC VCC clk_p3[53] sky130_fd_sc_hs__inv_1
+x104[52] clk_n2[7] VSS VSS VCC VCC clk_p3[52] sky130_fd_sc_hs__inv_1
+x104[51] clk_n2[6] VSS VSS VCC VCC clk_p3[51] sky130_fd_sc_hs__inv_1
+x104[50] clk_n2[5] VSS VSS VCC VCC clk_p3[50] sky130_fd_sc_hs__inv_1
+x104[49] clk_n2[4] VSS VSS VCC VCC clk_p3[49] sky130_fd_sc_hs__inv_1
+x104[48] clk_n2[3] VSS VSS VCC VCC clk_p3[48] sky130_fd_sc_hs__inv_1
+x104[47] clk_n2[2] VSS VSS VCC VCC clk_p3[47] sky130_fd_sc_hs__inv_1
+x104[46] clk_n2[1] VSS VSS VCC VCC clk_p3[46] sky130_fd_sc_hs__inv_1
+x104[45] clk_n2[0] VSS VSS VCC VCC clk_p3[45] sky130_fd_sc_hs__inv_1
+x104[44] clk_n2[26] VSS VSS VCC VCC clk_p3[44] sky130_fd_sc_hs__inv_1
+x104[43] clk_n2[25] VSS VSS VCC VCC clk_p3[43] sky130_fd_sc_hs__inv_1
+x104[42] clk_n2[24] VSS VSS VCC VCC clk_p3[42] sky130_fd_sc_hs__inv_1
+x104[41] clk_n2[23] VSS VSS VCC VCC clk_p3[41] sky130_fd_sc_hs__inv_1
+x104[40] clk_n2[22] VSS VSS VCC VCC clk_p3[40] sky130_fd_sc_hs__inv_1
+x104[39] clk_n2[21] VSS VSS VCC VCC clk_p3[39] sky130_fd_sc_hs__inv_1
+x104[38] clk_n2[20] VSS VSS VCC VCC clk_p3[38] sky130_fd_sc_hs__inv_1
+x104[37] clk_n2[19] VSS VSS VCC VCC clk_p3[37] sky130_fd_sc_hs__inv_1
+x104[36] clk_n2[18] VSS VSS VCC VCC clk_p3[36] sky130_fd_sc_hs__inv_1
+x104[35] clk_n2[17] VSS VSS VCC VCC clk_p3[35] sky130_fd_sc_hs__inv_1
+x104[34] clk_n2[16] VSS VSS VCC VCC clk_p3[34] sky130_fd_sc_hs__inv_1
+x104[33] clk_n2[15] VSS VSS VCC VCC clk_p3[33] sky130_fd_sc_hs__inv_1
+x104[32] clk_n2[14] VSS VSS VCC VCC clk_p3[32] sky130_fd_sc_hs__inv_1
+x104[31] clk_n2[13] VSS VSS VCC VCC clk_p3[31] sky130_fd_sc_hs__inv_1
+x104[30] clk_n2[12] VSS VSS VCC VCC clk_p3[30] sky130_fd_sc_hs__inv_1
+x104[29] clk_n2[11] VSS VSS VCC VCC clk_p3[29] sky130_fd_sc_hs__inv_1
+x104[28] clk_n2[10] VSS VSS VCC VCC clk_p3[28] sky130_fd_sc_hs__inv_1
+x104[27] clk_n2[9] VSS VSS VCC VCC clk_p3[27] sky130_fd_sc_hs__inv_1
+x104[26] clk_n2[8] VSS VSS VCC VCC clk_p3[26] sky130_fd_sc_hs__inv_1
+x104[25] clk_n2[7] VSS VSS VCC VCC clk_p3[25] sky130_fd_sc_hs__inv_1
+x104[24] clk_n2[6] VSS VSS VCC VCC clk_p3[24] sky130_fd_sc_hs__inv_1
+x104[23] clk_n2[5] VSS VSS VCC VCC clk_p3[23] sky130_fd_sc_hs__inv_1
+x104[22] clk_n2[4] VSS VSS VCC VCC clk_p3[22] sky130_fd_sc_hs__inv_1
+x104[21] clk_n2[3] VSS VSS VCC VCC clk_p3[21] sky130_fd_sc_hs__inv_1
+x104[20] clk_n2[2] VSS VSS VCC VCC clk_p3[20] sky130_fd_sc_hs__inv_1
+x104[19] clk_n2[1] VSS VSS VCC VCC clk_p3[19] sky130_fd_sc_hs__inv_1
+x104[18] clk_n2[0] VSS VSS VCC VCC clk_p3[18] sky130_fd_sc_hs__inv_1
+x104[17] clk_n2[26] VSS VSS VCC VCC clk_p3[17] sky130_fd_sc_hs__inv_1
+x104[16] clk_n2[25] VSS VSS VCC VCC clk_p3[16] sky130_fd_sc_hs__inv_1
+x104[15] clk_n2[24] VSS VSS VCC VCC clk_p3[15] sky130_fd_sc_hs__inv_1
+x104[14] clk_n2[23] VSS VSS VCC VCC clk_p3[14] sky130_fd_sc_hs__inv_1
+x104[13] clk_n2[22] VSS VSS VCC VCC clk_p3[13] sky130_fd_sc_hs__inv_1
+x104[12] clk_n2[21] VSS VSS VCC VCC clk_p3[12] sky130_fd_sc_hs__inv_1
+x104[11] clk_n2[20] VSS VSS VCC VCC clk_p3[11] sky130_fd_sc_hs__inv_1
+x104[10] clk_n2[19] VSS VSS VCC VCC clk_p3[10] sky130_fd_sc_hs__inv_1
+x104[9] clk_n2[18] VSS VSS VCC VCC clk_p3[9] sky130_fd_sc_hs__inv_1
+x104[8] clk_n2[17] VSS VSS VCC VCC clk_p3[8] sky130_fd_sc_hs__inv_1
+x104[7] clk_n2[16] VSS VSS VCC VCC clk_p3[7] sky130_fd_sc_hs__inv_1
+x104[6] clk_n2[15] VSS VSS VCC VCC clk_p3[6] sky130_fd_sc_hs__inv_1
+x104[5] clk_n2[14] VSS VSS VCC VCC clk_p3[5] sky130_fd_sc_hs__inv_1
+x104[4] clk_n2[13] VSS VSS VCC VCC clk_p3[4] sky130_fd_sc_hs__inv_1
+x104[3] clk_n2[12] VSS VSS VCC VCC clk_p3[3] sky130_fd_sc_hs__inv_1
+x104[2] clk_n2[11] VSS VSS VCC VCC clk_p3[2] sky130_fd_sc_hs__inv_1
+x104[1] clk_n2[10] VSS VSS VCC VCC clk_p3[1] sky130_fd_sc_hs__inv_1
+x104[0] clk_n2[9] VSS VSS VCC VCC clk_p3[0] sky130_fd_sc_hs__inv_1
+x303[1] net20 VSS VSS VCC VCC buf_reset_p0[1] sky130_fd_sc_hs__inv_1
+x303[0] net20 VSS VSS VCC VCC buf_reset_p0[0] sky130_fd_sc_hs__inv_1
+x306[8] net46[2] VSS VSS VCC VCC buf_reset_p[8] sky130_fd_sc_hs__inv_1
+x306[7] net46[1] VSS VSS VCC VCC buf_reset_p[7] sky130_fd_sc_hs__inv_1
+x306[6] net46[0] VSS VSS VCC VCC buf_reset_p[6] sky130_fd_sc_hs__inv_1
+x306[5] net46[2] VSS VSS VCC VCC buf_reset_p[5] sky130_fd_sc_hs__inv_1
+x306[4] net46[1] VSS VSS VCC VCC buf_reset_p[4] sky130_fd_sc_hs__inv_1
+x306[3] net46[0] VSS VSS VCC VCC buf_reset_p[3] sky130_fd_sc_hs__inv_1
+x306[2] net46[2] VSS VSS VCC VCC buf_reset_p[2] sky130_fd_sc_hs__inv_1
+x306[1] net46[1] VSS VSS VCC VCC buf_reset_p[1] sky130_fd_sc_hs__inv_1
+x306[0] net46[0] VSS VSS VCC VCC buf_reset_p[0] sky130_fd_sc_hs__inv_1
+x304[2] buf_reset_p0[0] VSS VSS VCC VCC buf_reset_n[2] sky130_fd_sc_hs__inv_1
+x304[1] buf_reset_p0[0] VSS VSS VCC VCC buf_reset_n[1] sky130_fd_sc_hs__inv_1
+x304[0] buf_reset_p0[0] VSS VSS VCC VCC buf_reset_n[0] sky130_fd_sc_hs__inv_1
+x305[2] buf_reset_p0[1] VSS VSS VCC VCC net46[2] sky130_fd_sc_hs__inv_1
+x305[1] buf_reset_p0[1] VSS VSS VCC VCC net46[1] sky130_fd_sc_hs__inv_1
+x305[0] buf_reset_p0[1] VSS VSS VCC VCC net46[0] sky130_fd_sc_hs__inv_1
+x515 full VSS VSS VCC VCC o_cyc sky130_fd_sc_hs__inv_1
+.ends
+
+
+* expanding   symbol:  ../../blocks/rv_decode/rv_decode.sym # of pins=35
+** sym_path: /media/FlexRV32/asic/blocks/rv_decode/rv_decode.sym
+** sch_path: /media/FlexRV32/asic/blocks/rv_decode/rv_decode.sch
+.subckt rv_decode o_pc[31] o_pc[30] o_pc[29] o_pc[28] o_pc[27] o_pc[26] o_pc[25] o_pc[24] o_pc[23]
++ o_pc[22] o_pc[21] o_pc[20] o_pc[19] o_pc[18] o_pc[17] o_pc[16] o_pc[15] o_pc[14] o_pc[13] o_pc[12] o_pc[11]
++ o_pc[10] o_pc[9] o_pc[8] o_pc[7] o_pc[6] o_pc[5] o_pc[4] o_pc[3] o_pc[2] o_pc[1] i_clk i_stall o_pc_next[31]
++ o_pc_next[30] o_pc_next[29] o_pc_next[28] o_pc_next[27] o_pc_next[26] o_pc_next[25] o_pc_next[24] o_pc_next[23]
++ o_pc_next[22] o_pc_next[21] o_pc_next[20] o_pc_next[19] o_pc_next[18] o_pc_next[17] o_pc_next[16] o_pc_next[15]
++ o_pc_next[14] o_pc_next[13] o_pc_next[12] o_pc_next[11] o_pc_next[10] o_pc_next[9] o_pc_next[8] o_pc_next[7]
++ o_pc_next[6] o_pc_next[5] o_pc_next[4] o_pc_next[3] o_pc_next[2] o_pc_next[1] i_flush o_rs1[4] o_rs1[3] o_rs1[2]
++ o_rs1[1] o_rs1[0] i_instruction[31] i_instruction[30] i_instruction[29] i_instruction[28] i_instruction[27]
++ i_instruction[26] i_instruction[25] i_instruction[24] i_instruction[23] i_instruction[22] i_instruction[21]
++ i_instruction[20] i_instruction[19] i_instruction[18] i_instruction[17] i_instruction[16] i_instruction[15]
++ i_instruction[14] i_instruction[13] i_instruction[12] i_instruction[11] i_instruction[10] i_instruction[9]
++ i_instruction[8] i_instruction[7] i_instruction[6] i_instruction[5] i_instruction[4] i_instruction[3]
++ i_instruction[2] i_instruction[1] i_instruction[0] o_rs2[4] o_rs2[3] o_rs2[2] o_rs2[1] o_rs2[0] o_rd[4] o_rd[3]
++ o_rd[2] o_rd[1] o_rd[0] i_pc[31] i_pc[30] i_pc[29] i_pc[28] i_pc[27] i_pc[26] i_pc[25] i_pc[24] i_pc[23]
++ i_pc[22] i_pc[21] i_pc[20] i_pc[19] i_pc[18] i_pc[17] i_pc[16] i_pc[15] i_pc[14] i_pc[13] i_pc[12] i_pc[11]
++ i_pc[10] i_pc[9] i_pc[8] i_pc[7] i_pc[6] i_pc[5] i_pc[4] i_pc[3] i_pc[2] i_pc[1] o_imm_i[31] o_imm_i[30]
++ o_imm_i[29] o_imm_i[28] o_imm_i[27] o_imm_i[26] o_imm_i[25] o_imm_i[24] o_imm_i[23] o_imm_i[22] o_imm_i[21]
++ o_imm_i[20] o_imm_i[19] o_imm_i[18] o_imm_i[17] o_imm_i[16] o_imm_i[15] o_imm_i[14] o_imm_i[13] o_imm_i[12]
++ o_imm_i[11] o_imm_i[10] o_imm_i[9] o_imm_i[8] o_imm_i[7] o_imm_i[6] o_imm_i[5] o_imm_i[4] o_imm_i[3] o_imm_i[2]
++ o_imm_i[1] o_imm_i[0] i_pc_next[31] i_pc_next[30] i_pc_next[29] i_pc_next[28] i_pc_next[27] i_pc_next[26]
++ i_pc_next[25] i_pc_next[24] i_pc_next[23] i_pc_next[22] i_pc_next[21] i_pc_next[20] i_pc_next[19] i_pc_next[18]
++ i_pc_next[17] i_pc_next[16] i_pc_next[15] i_pc_next[14] i_pc_next[13] i_pc_next[12] i_pc_next[11] i_pc_next[10]
++ i_pc_next[9] i_pc_next[8] i_pc_next[7] i_pc_next[6] i_pc_next[5] i_pc_next[4] i_pc_next[3] i_pc_next[2]
++ i_pc_next[1] i_ready o_alu_ctrl[4] o_alu_ctrl[3] o_alu_ctrl[2] o_alu_ctrl[1] o_alu_ctrl[0] o_funct3[2]
++ o_funct3[1] o_funct3[0] o_reg_write o_op1_src o_op2_src o_inst_branch o_inst_csr_req o_inst_jal o_inst_jalr
++ o_inst_mret o_inst_store o_inst_supported o_res_src[2] o_res_src[1] o_res_src[0] o_csr_clear o_csr_ebreak
++ o_csr_read o_csr_set o_csr_write o_csr_imm_sel o_csr_idx[11] o_csr_idx[10] o_csr_idx[9] o_csr_idx[8]
++ o_csr_idx[7] o_csr_idx[6] o_csr_idx[5] o_csr_idx[4] o_csr_idx[3] o_csr_idx[2] o_csr_idx[1] o_csr_idx[0]
++ o_csr_imm[4] o_csr_imm[3] o_csr_imm[2] o_csr_imm[1] o_csr_imm[0] o_csr_pc_next[31] o_csr_pc_next[30]
++ o_csr_pc_next[29] o_csr_pc_next[28] o_csr_pc_next[27] o_csr_pc_next[26] o_csr_pc_next[25] o_csr_pc_next[24]
++ o_csr_pc_next[23] o_csr_pc_next[22] o_csr_pc_next[21] o_csr_pc_next[20] o_csr_pc_next[19] o_csr_pc_next[18]
++ o_csr_pc_next[17] o_csr_pc_next[16] o_csr_pc_next[15] o_csr_pc_next[14] o_csr_pc_next[13] o_csr_pc_next[12]
++ o_csr_pc_next[11] o_csr_pc_next[10] o_csr_pc_next[9] o_csr_pc_next[8] o_csr_pc_next[7] o_csr_pc_next[6]
++ o_csr_pc_next[5] o_csr_pc_next[4] o_csr_pc_next[3] o_csr_pc_next[2] o_csr_pc_next[1]
+*.ipin i_clk
+*.opin o_csr_clear
+*.opin o_csr_ebreak
+*.opin o_csr_read
+*.opin o_csr_set
+*.opin o_csr_write
+*.opin o_csr_imm_sel
+*.opin
+*+ o_csr_idx[11],o_csr_idx[10],o_csr_idx[9],o_csr_idx[8],o_csr_idx[7],o_csr_idx[6],o_csr_idx[5],o_csr_idx[4],o_csr_idx[3],o_csr_idx[2],o_csr_idx[1],o_csr_idx[0]
+*.opin o_csr_imm[4],o_csr_imm[3],o_csr_imm[2],o_csr_imm[1],o_csr_imm[0]
+*.opin
+*+ o_csr_pc_next[31],o_csr_pc_next[30],o_csr_pc_next[29],o_csr_pc_next[28],o_csr_pc_next[27],o_csr_pc_next[26],o_csr_pc_next[25],o_csr_pc_next[24],o_csr_pc_next[23],o_csr_pc_next[22],o_csr_pc_next[21],o_csr_pc_next[20],o_csr_pc_next[19],o_csr_pc_next[18],o_csr_pc_next[17],o_csr_pc_next[16],o_csr_pc_next[15],o_csr_pc_next[14],o_csr_pc_next[13],o_csr_pc_next[12],o_csr_pc_next[11],o_csr_pc_next[10],o_csr_pc_next[9],o_csr_pc_next[8],o_csr_pc_next[7],o_csr_pc_next[6],o_csr_pc_next[5],o_csr_pc_next[4],o_csr_pc_next[3],o_csr_pc_next[2],o_csr_pc_next[1]
+*.ipin i_stall
+*.ipin i_flush
+*.ipin
+*+ i_instruction[31],i_instruction[30],i_instruction[29],i_instruction[28],i_instruction[27],i_instruction[26],i_instruction[25],i_instruction[24],i_instruction[23],i_instruction[22],i_instruction[21],i_instruction[20],i_instruction[19],i_instruction[18],i_instruction[17],i_instruction[16],i_instruction[15],i_instruction[14],i_instruction[13],i_instruction[12],i_instruction[11],i_instruction[10],i_instruction[9],i_instruction[8],i_instruction[7],i_instruction[6],i_instruction[5],i_instruction[4],i_instruction[3],i_instruction[2],i_instruction[1],i_instruction[0]
+*.ipin i_ready
+*.ipin
+*+ i_pc[31],i_pc[30],i_pc[29],i_pc[28],i_pc[27],i_pc[26],i_pc[25],i_pc[24],i_pc[23],i_pc[22],i_pc[21],i_pc[20],i_pc[19],i_pc[18],i_pc[17],i_pc[16],i_pc[15],i_pc[14],i_pc[13],i_pc[12],i_pc[11],i_pc[10],i_pc[9],i_pc[8],i_pc[7],i_pc[6],i_pc[5],i_pc[4],i_pc[3],i_pc[2],i_pc[1]
+*.ipin
+*+ i_pc_next[31],i_pc_next[30],i_pc_next[29],i_pc_next[28],i_pc_next[27],i_pc_next[26],i_pc_next[25],i_pc_next[24],i_pc_next[23],i_pc_next[22],i_pc_next[21],i_pc_next[20],i_pc_next[19],i_pc_next[18],i_pc_next[17],i_pc_next[16],i_pc_next[15],i_pc_next[14],i_pc_next[13],i_pc_next[12],i_pc_next[11],i_pc_next[10],i_pc_next[9],i_pc_next[8],i_pc_next[7],i_pc_next[6],i_pc_next[5],i_pc_next[4],i_pc_next[3],i_pc_next[2],i_pc_next[1]
+*.opin
+*+ o_pc[31],o_pc[30],o_pc[29],o_pc[28],o_pc[27],o_pc[26],o_pc[25],o_pc[24],o_pc[23],o_pc[22],o_pc[21],o_pc[20],o_pc[19],o_pc[18],o_pc[17],o_pc[16],o_pc[15],o_pc[14],o_pc[13],o_pc[12],o_pc[11],o_pc[10],o_pc[9],o_pc[8],o_pc[7],o_pc[6],o_pc[5],o_pc[4],o_pc[3],o_pc[2],o_pc[1]
+*.opin
+*+ o_pc_next[31],o_pc_next[30],o_pc_next[29],o_pc_next[28],o_pc_next[27],o_pc_next[26],o_pc_next[25],o_pc_next[24],o_pc_next[23],o_pc_next[22],o_pc_next[21],o_pc_next[20],o_pc_next[19],o_pc_next[18],o_pc_next[17],o_pc_next[16],o_pc_next[15],o_pc_next[14],o_pc_next[13],o_pc_next[12],o_pc_next[11],o_pc_next[10],o_pc_next[9],o_pc_next[8],o_pc_next[7],o_pc_next[6],o_pc_next[5],o_pc_next[4],o_pc_next[3],o_pc_next[2],o_pc_next[1]
+*.opin o_rs1[4],o_rs1[3],o_rs1[2],o_rs1[1],o_rs1[0]
+*.opin o_rs2[4],o_rs2[3],o_rs2[2],o_rs2[1],o_rs2[0]
+*.opin o_rd[4],o_rd[3],o_rd[2],o_rd[1],o_rd[0]
+*.opin
+*+ o_imm_i[31],o_imm_i[30],o_imm_i[29],o_imm_i[28],o_imm_i[27],o_imm_i[26],o_imm_i[25],o_imm_i[24],o_imm_i[23],o_imm_i[22],o_imm_i[21],o_imm_i[20],o_imm_i[19],o_imm_i[18],o_imm_i[17],o_imm_i[16],o_imm_i[15],o_imm_i[14],o_imm_i[13],o_imm_i[12],o_imm_i[11],o_imm_i[10],o_imm_i[9],o_imm_i[8],o_imm_i[7],o_imm_i[6],o_imm_i[5],o_imm_i[4],o_imm_i[3],o_imm_i[2],o_imm_i[1],o_imm_i[0]
+*.opin o_alu_ctrl[4],o_alu_ctrl[3],o_alu_ctrl[2],o_alu_ctrl[1],o_alu_ctrl[0]
+*.opin o_funct3[2],o_funct3[1],o_funct3[0]
+*.opin o_reg_write
+*.opin o_op1_src
+*.opin o_op2_src
+*.opin o_inst_branch
+*.opin o_inst_csr_req
+*.opin o_inst_jal
+*.opin o_inst_jalr
+*.opin o_inst_mret
+*.opin o_inst_store
+*.opin o_inst_supported
+*.opin o_res_src[2],o_res_src[1],o_res_src[0]
+**** begin user architecture code
+.include ../../openlane/rv_decode.spice
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  ../../blocks/rv_alu1/rv_alu1.sym # of pins=41
+** sym_path: /media/FlexRV32/asic/blocks/rv_alu1/rv_alu1.sym
+** sch_path: /media/FlexRV32/asic/blocks/rv_alu1/rv_alu1.sch
+.subckt rv_alu1 i_clk o_op1[31] o_op1[30] o_op1[29] o_op1[28] o_op1[27] o_op1[26] o_op1[25]
++ o_op1[24] o_op1[23] o_op1[22] o_op1[21] o_op1[20] o_op1[19] o_op1[18] o_op1[17] o_op1[16] o_op1[15] o_op1[14]
++ o_op1[13] o_op1[12] o_op1[11] o_op1[10] o_op1[9] o_op1[8] o_op1[7] o_op1[6] o_op1[5] o_op1[4] o_op1[3]
++ o_op1[2] o_op1[1] o_op1[0] i_reset_n o_op2[31] o_op2[30] o_op2[29] o_op2[28] o_op2[27] o_op2[26] o_op2[25]
++ o_op2[24] o_op2[23] o_op2[22] o_op2[21] o_op2[20] o_op2[19] o_op2[18] o_op2[17] o_op2[16] o_op2[15] o_op2[14]
++ o_op2[13] o_op2[12] o_op2[11] o_op2[10] o_op2[9] o_op2[8] o_op2[7] o_op2[6] o_op2[5] o_op2[4] o_op2[3]
++ o_op2[2] o_op2[1] o_op2[0] i_pc[31] i_pc[30] i_pc[29] i_pc[28] i_pc[27] i_pc[26] i_pc[25] i_pc[24] i_pc[23]
++ i_pc[22] i_pc[21] i_pc[20] i_pc[19] i_pc[18] i_pc[17] i_pc[16] i_pc[15] i_pc[14] i_pc[13] i_pc[12] i_pc[11]
++ i_pc[10] i_pc[9] i_pc[8] i_pc[7] i_pc[6] i_pc[5] i_pc[4] i_pc[3] i_pc[2] i_pc[1] o_store o_reg_write
++ i_pc_next[31] i_pc_next[30] i_pc_next[29] i_pc_next[28] i_pc_next[27] i_pc_next[26] i_pc_next[25] i_pc_next[24]
++ i_pc_next[23] i_pc_next[22] i_pc_next[21] i_pc_next[20] i_pc_next[19] i_pc_next[18] i_pc_next[17] i_pc_next[16]
++ i_pc_next[15] i_pc_next[14] i_pc_next[13] i_pc_next[12] i_pc_next[11] i_pc_next[10] i_pc_next[9] i_pc_next[8]
++ i_pc_next[7] i_pc_next[6] i_pc_next[5] i_pc_next[4] i_pc_next[3] i_pc_next[2] i_pc_next[1] o_rs1[4] o_rs1[3]
++ o_rs1[2] o_rs1[1] o_rs1[0] i_rs1[4] i_rs1[3] i_rs1[2] i_rs1[1] i_rs1[0] i_rs2[4] i_rs2[3] i_rs2[2] i_rs2[1]
++ i_rs2[0] o_rs2[4] o_rs2[3] o_rs2[2] o_rs2[1] o_rs2[0] i_rd[4] i_rd[3] i_rd[2] i_rd[1] i_rd[0] o_rd[4]
++ o_rd[3] o_rd[2] o_rd[1] o_rd[0] i_imm_i[31] i_imm_i[30] i_imm_i[29] i_imm_i[28] i_imm_i[27] i_imm_i[26]
++ i_imm_i[25] i_imm_i[24] i_imm_i[23] i_imm_i[22] i_imm_i[21] i_imm_i[20] i_imm_i[19] i_imm_i[18] i_imm_i[17]
++ i_imm_i[16] i_imm_i[15] i_imm_i[14] i_imm_i[13] i_imm_i[12] i_imm_i[11] i_imm_i[10] i_imm_i[9] i_imm_i[8]
++ i_imm_i[7] i_imm_i[6] i_imm_i[5] i_imm_i[4] i_imm_i[3] i_imm_i[2] i_imm_i[1] i_imm_i[0] o_inst_jal_jalr
++ i_alu_ctrl[4] i_alu_ctrl[3] i_alu_ctrl[2] i_alu_ctrl[1] i_alu_ctrl[0] o_inst_branch i_funct3[2] i_funct3[1]
++ i_funct3[0] o_pc[31] o_pc[30] o_pc[29] o_pc[28] o_pc[27] o_pc[26] o_pc[25] o_pc[24] o_pc[23] o_pc[22] o_pc[21]
++ o_pc[20] o_pc[19] o_pc[18] o_pc[17] o_pc[16] o_pc[15] o_pc[14] o_pc[13] o_pc[12] o_pc[11] o_pc[10] o_pc[9]
++ o_pc[8] o_pc[7] o_pc[6] o_pc[5] o_pc[4] o_pc[3] o_pc[2] o_pc[1] o_pc_next[31] o_pc_next[30] o_pc_next[29]
++ o_pc_next[28] o_pc_next[27] o_pc_next[26] o_pc_next[25] o_pc_next[24] o_pc_next[23] o_pc_next[22] o_pc_next[21]
++ o_pc_next[20] o_pc_next[19] o_pc_next[18] o_pc_next[17] o_pc_next[16] o_pc_next[15] o_pc_next[14] o_pc_next[13]
++ o_pc_next[12] o_pc_next[11] o_pc_next[10] o_pc_next[9] o_pc_next[8] o_pc_next[7] o_pc_next[6] o_pc_next[5]
++ o_pc_next[4] o_pc_next[3] o_pc_next[2] o_pc_next[1] i_reg_write o_pc_target[31] o_pc_target[30] o_pc_target[29]
++ o_pc_target[28] o_pc_target[27] o_pc_target[26] o_pc_target[25] o_pc_target[24] o_pc_target[23] o_pc_target[22]
++ o_pc_target[21] o_pc_target[20] o_pc_target[19] o_pc_target[18] o_pc_target[17] o_pc_target[16] o_pc_target[15]
++ o_pc_target[14] o_pc_target[13] o_pc_target[12] o_pc_target[11] o_pc_target[10] o_pc_target[9] o_pc_target[8]
++ o_pc_target[7] o_pc_target[6] o_pc_target[5] o_pc_target[4] o_pc_target[3] o_pc_target[2] o_pc_target[1] i_op1_src
++ i_op2_src o_res_src[2] o_res_src[1] o_res_src[0] i_inst_branch o_funct3[2] o_funct3[1] o_funct3[0]
++ o_alu_ctrl[4] o_alu_ctrl[3] o_alu_ctrl[2] o_alu_ctrl[1] o_alu_ctrl[0] i_inst_jal o_to_trap i_inst_jalr
++ i_inst_mret i_inst_store i_res_src[2] i_res_src[1] i_res_src[0] i_reg1_data[31] i_reg1_data[30] i_reg1_data[29]
++ i_reg1_data[28] i_reg1_data[27] i_reg1_data[26] i_reg1_data[25] i_reg1_data[24] i_reg1_data[23] i_reg1_data[22]
++ i_reg1_data[21] i_reg1_data[20] i_reg1_data[19] i_reg1_data[18] i_reg1_data[17] i_reg1_data[16] i_reg1_data[15]
++ i_reg1_data[14] i_reg1_data[13] i_reg1_data[12] i_reg1_data[11] i_reg1_data[10] i_reg1_data[9] i_reg1_data[8]
++ i_reg1_data[7] i_reg1_data[6] i_reg1_data[5] i_reg1_data[4] i_reg1_data[3] i_reg1_data[2] i_reg1_data[1]
++ i_reg1_data[0] i_reg2_data[31] i_reg2_data[30] i_reg2_data[29] i_reg2_data[28] i_reg2_data[27] i_reg2_data[26]
++ i_reg2_data[25] i_reg2_data[24] i_reg2_data[23] i_reg2_data[22] i_reg2_data[21] i_reg2_data[20] i_reg2_data[19]
++ i_reg2_data[18] i_reg2_data[17] i_reg2_data[16] i_reg2_data[15] i_reg2_data[14] i_reg2_data[13] i_reg2_data[12]
++ i_reg2_data[11] i_reg2_data[10] i_reg2_data[9] i_reg2_data[8] i_reg2_data[7] i_reg2_data[6] i_reg2_data[5]
++ i_reg2_data[4] i_reg2_data[3] i_reg2_data[2] i_reg2_data[1] i_reg2_data[0] i_to_trap i_flush i_stall
++ i_ret_addr[31] i_ret_addr[30] i_ret_addr[29] i_ret_addr[28] i_ret_addr[27] i_ret_addr[26] i_ret_addr[25]
++ i_ret_addr[24] i_ret_addr[23] i_ret_addr[22] i_ret_addr[21] i_ret_addr[20] i_ret_addr[19] i_ret_addr[18]
++ i_ret_addr[17] i_ret_addr[16] i_ret_addr[15] i_ret_addr[14] i_ret_addr[13] i_ret_addr[12] i_ret_addr[11]
++ i_ret_addr[10] i_ret_addr[9] i_ret_addr[8] i_ret_addr[7] i_ret_addr[6] i_ret_addr[5] i_ret_addr[4] i_ret_addr[3]
++ i_ret_addr[2] i_ret_addr[1]
+*.ipin i_clk
+*.opin
+*+ o_pc_target[31],o_pc_target[30],o_pc_target[29],o_pc_target[28],o_pc_target[27],o_pc_target[26],o_pc_target[25],o_pc_target[24],o_pc_target[23],o_pc_target[22],o_pc_target[21],o_pc_target[20],o_pc_target[19],o_pc_target[18],o_pc_target[17],o_pc_target[16],o_pc_target[15],o_pc_target[14],o_pc_target[13],o_pc_target[12],o_pc_target[11],o_pc_target[10],o_pc_target[9],o_pc_target[8],o_pc_target[7],o_pc_target[6],o_pc_target[5],o_pc_target[4],o_pc_target[3],o_pc_target[2],o_pc_target[1]
+*.ipin
+*+ i_pc[31],i_pc[30],i_pc[29],i_pc[28],i_pc[27],i_pc[26],i_pc[25],i_pc[24],i_pc[23],i_pc[22],i_pc[21],i_pc[20],i_pc[19],i_pc[18],i_pc[17],i_pc[16],i_pc[15],i_pc[14],i_pc[13],i_pc[12],i_pc[11],i_pc[10],i_pc[9],i_pc[8],i_pc[7],i_pc[6],i_pc[5],i_pc[4],i_pc[3],i_pc[2],i_pc[1]
+*.ipin
+*+ i_pc_next[31],i_pc_next[30],i_pc_next[29],i_pc_next[28],i_pc_next[27],i_pc_next[26],i_pc_next[25],i_pc_next[24],i_pc_next[23],i_pc_next[22],i_pc_next[21],i_pc_next[20],i_pc_next[19],i_pc_next[18],i_pc_next[17],i_pc_next[16],i_pc_next[15],i_pc_next[14],i_pc_next[13],i_pc_next[12],i_pc_next[11],i_pc_next[10],i_pc_next[9],i_pc_next[8],i_pc_next[7],i_pc_next[6],i_pc_next[5],i_pc_next[4],i_pc_next[3],i_pc_next[2],i_pc_next[1]
+*.ipin i_rs1[4],i_rs1[3],i_rs1[2],i_rs1[1],i_rs1[0]
+*.ipin i_rs2[4],i_rs2[3],i_rs2[2],i_rs2[1],i_rs2[0]
+*.ipin i_rd[4],i_rd[3],i_rd[2],i_rd[1],i_rd[0]
+*.ipin
+*+ i_imm_i[31],i_imm_i[30],i_imm_i[29],i_imm_i[28],i_imm_i[27],i_imm_i[26],i_imm_i[25],i_imm_i[24],i_imm_i[23],i_imm_i[22],i_imm_i[21],i_imm_i[20],i_imm_i[19],i_imm_i[18],i_imm_i[17],i_imm_i[16],i_imm_i[15],i_imm_i[14],i_imm_i[13],i_imm_i[12],i_imm_i[11],i_imm_i[10],i_imm_i[9],i_imm_i[8],i_imm_i[7],i_imm_i[6],i_imm_i[5],i_imm_i[4],i_imm_i[3],i_imm_i[2],i_imm_i[1],i_imm_i[0]
+*.ipin i_alu_ctrl[4],i_alu_ctrl[3],i_alu_ctrl[2],i_alu_ctrl[1],i_alu_ctrl[0]
+*.ipin i_funct3[2],i_funct3[1],i_funct3[0]
+*.ipin i_reg_write
+*.ipin i_op1_src
+*.ipin i_op2_src
+*.ipin i_inst_branch
+*.ipin i_inst_jal
+*.ipin i_inst_jalr
+*.ipin i_inst_mret
+*.ipin i_inst_store
+*.ipin i_res_src[2],i_res_src[1],i_res_src[0]
+*.ipin i_reset_n
+*.ipin i_flush
+*.ipin i_stall
+*.ipin
+*+ i_reg1_data[31],i_reg1_data[30],i_reg1_data[29],i_reg1_data[28],i_reg1_data[27],i_reg1_data[26],i_reg1_data[25],i_reg1_data[24],i_reg1_data[23],i_reg1_data[22],i_reg1_data[21],i_reg1_data[20],i_reg1_data[19],i_reg1_data[18],i_reg1_data[17],i_reg1_data[16],i_reg1_data[15],i_reg1_data[14],i_reg1_data[13],i_reg1_data[12],i_reg1_data[11],i_reg1_data[10],i_reg1_data[9],i_reg1_data[8],i_reg1_data[7],i_reg1_data[6],i_reg1_data[5],i_reg1_data[4],i_reg1_data[3],i_reg1_data[2],i_reg1_data[1],i_reg1_data[0]
+*.ipin
+*+ i_reg2_data[31],i_reg2_data[30],i_reg2_data[29],i_reg2_data[28],i_reg2_data[27],i_reg2_data[26],i_reg2_data[25],i_reg2_data[24],i_reg2_data[23],i_reg2_data[22],i_reg2_data[21],i_reg2_data[20],i_reg2_data[19],i_reg2_data[18],i_reg2_data[17],i_reg2_data[16],i_reg2_data[15],i_reg2_data[14],i_reg2_data[13],i_reg2_data[12],i_reg2_data[11],i_reg2_data[10],i_reg2_data[9],i_reg2_data[8],i_reg2_data[7],i_reg2_data[6],i_reg2_data[5],i_reg2_data[4],i_reg2_data[3],i_reg2_data[2],i_reg2_data[1],i_reg2_data[0]
+*.ipin i_to_trap
+*.opin
+*+ o_op1[31],o_op1[30],o_op1[29],o_op1[28],o_op1[27],o_op1[26],o_op1[25],o_op1[24],o_op1[23],o_op1[22],o_op1[21],o_op1[20],o_op1[19],o_op1[18],o_op1[17],o_op1[16],o_op1[15],o_op1[14],o_op1[13],o_op1[12],o_op1[11],o_op1[10],o_op1[9],o_op1[8],o_op1[7],o_op1[6],o_op1[5],o_op1[4],o_op1[3],o_op1[2],o_op1[1],o_op1[0]
+*.opin
+*+ o_op2[31],o_op2[30],o_op2[29],o_op2[28],o_op2[27],o_op2[26],o_op2[25],o_op2[24],o_op2[23],o_op2[22],o_op2[21],o_op2[20],o_op2[19],o_op2[18],o_op2[17],o_op2[16],o_op2[15],o_op2[14],o_op2[13],o_op2[12],o_op2[11],o_op2[10],o_op2[9],o_op2[8],o_op2[7],o_op2[6],o_op2[5],o_op2[4],o_op2[3],o_op2[2],o_op2[1],o_op2[0]
+*.opin o_store
+*.opin o_reg_write
+*.opin o_rs1[4],o_rs1[3],o_rs1[2],o_rs1[1],o_rs1[0]
+*.opin o_rs2[4],o_rs2[3],o_rs2[2],o_rs2[1],o_rs2[0]
+*.opin o_rd[4],o_rd[3],o_rd[2],o_rd[1],o_rd[0]
+*.opin
+*+ o_pc[31],o_pc[30],o_pc[29],o_pc[28],o_pc[27],o_pc[26],o_pc[25],o_pc[24],o_pc[23],o_pc[22],o_pc[21],o_pc[20],o_pc[19],o_pc[18],o_pc[17],o_pc[16],o_pc[15],o_pc[14],o_pc[13],o_pc[12],o_pc[11],o_pc[10],o_pc[9],o_pc[8],o_pc[7],o_pc[6],o_pc[5],o_pc[4],o_pc[3],o_pc[2],o_pc[1]
+*.opin
+*+ o_pc_next[31],o_pc_next[30],o_pc_next[29],o_pc_next[28],o_pc_next[27],o_pc_next[26],o_pc_next[25],o_pc_next[24],o_pc_next[23],o_pc_next[22],o_pc_next[21],o_pc_next[20],o_pc_next[19],o_pc_next[18],o_pc_next[17],o_pc_next[16],o_pc_next[15],o_pc_next[14],o_pc_next[13],o_pc_next[12],o_pc_next[11],o_pc_next[10],o_pc_next[9],o_pc_next[8],o_pc_next[7],o_pc_next[6],o_pc_next[5],o_pc_next[4],o_pc_next[3],o_pc_next[2],o_pc_next[1]
+*.opin o_inst_branch
+*.opin o_inst_jal_jalr
+*.opin o_res_src[2],o_res_src[1],o_res_src[0]
+*.opin o_funct3[2],o_funct3[1],o_funct3[0]
+*.opin o_alu_ctrl[4],o_alu_ctrl[3],o_alu_ctrl[2],o_alu_ctrl[1],o_alu_ctrl[0]
+*.opin o_to_trap
+*.ipin
+*+ i_ret_addr[31],i_ret_addr[30],i_ret_addr[29],i_ret_addr[28],i_ret_addr[27],i_ret_addr[26],i_ret_addr[25],i_ret_addr[24],i_ret_addr[23],i_ret_addr[22],i_ret_addr[21],i_ret_addr[20],i_ret_addr[19],i_ret_addr[18],i_ret_addr[17],i_ret_addr[16],i_ret_addr[15],i_ret_addr[14],i_ret_addr[13],i_ret_addr[12],i_ret_addr[11],i_ret_addr[10],i_ret_addr[9],i_ret_addr[8],i_ret_addr[7],i_ret_addr[6],i_ret_addr[5],i_ret_addr[4],i_ret_addr[3],i_ret_addr[2],i_ret_addr[1]
+**** begin user architecture code
+.include ../../openlane/rv_alu1.spice
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  ../../blocks/rv_regs/rv_regs.sym # of pins=10
+** sym_path: /media/FlexRV32/asic/blocks/rv_regs/rv_regs.sym
+** sch_path: /media/FlexRV32/asic/blocks/rv_regs/rv_regs.sch
+.subckt rv_regs o_data1[31] o_data1[30] o_data1[29] o_data1[28] o_data1[27] o_data1[26] o_data1[25]
++ o_data1[24] o_data1[23] o_data1[22] o_data1[21] o_data1[20] o_data1[19] o_data1[18] o_data1[17] o_data1[16]
++ o_data1[15] o_data1[14] o_data1[13] o_data1[12] o_data1[11] o_data1[10] o_data1[9] o_data1[8] o_data1[7]
++ o_data1[6] o_data1[5] o_data1[4] o_data1[3] o_data1[2] o_data1[1] o_data1[0] i_clk i_reset_n o_data2[31]
++ o_data2[30] o_data2[29] o_data2[28] o_data2[27] o_data2[26] o_data2[25] o_data2[24] o_data2[23] o_data2[22]
++ o_data2[21] o_data2[20] o_data2[19] o_data2[18] o_data2[17] o_data2[16] o_data2[15] o_data2[14] o_data2[13]
++ o_data2[12] o_data2[11] o_data2[10] o_data2[9] o_data2[8] o_data2[7] o_data2[6] o_data2[5] o_data2[4]
++ o_data2[3] o_data2[2] o_data2[1] o_data2[0] i_rs_valid i_write i_rs1[4] i_rs1[3] i_rs1[2] i_rs1[1] i_rs1[0]
++ i_rs2[4] i_rs2[3] i_rs2[2] i_rs2[1] i_rs2[0] i_rd[4] i_rd[3] i_rd[2] i_rd[1] i_rd[0] i_data[31] i_data[30]
++ i_data[29] i_data[28] i_data[27] i_data[26] i_data[25] i_data[24] i_data[23] i_data[22] i_data[21] i_data[20]
++ i_data[19] i_data[18] i_data[17] i_data[16] i_data[15] i_data[14] i_data[13] i_data[12] i_data[11] i_data[10]
++ i_data[9] i_data[8] i_data[7] i_data[6] i_data[5] i_data[4] i_data[3] i_data[2] i_data[1] i_data[0]
+*.ipin i_clk
+*.ipin i_rs1[4],i_rs1[3],i_rs1[2],i_rs1[1],i_rs1[0]
+*.ipin i_rs2[4],i_rs2[3],i_rs2[2],i_rs2[1],i_rs2[0]
+*.ipin i_rd[4],i_rd[3],i_rd[2],i_rd[1],i_rd[0]
+*.ipin
+*+ i_data[31],i_data[30],i_data[29],i_data[28],i_data[27],i_data[26],i_data[25],i_data[24],i_data[23],i_data[22],i_data[21],i_data[20],i_data[19],i_data[18],i_data[17],i_data[16],i_data[15],i_data[14],i_data[13],i_data[12],i_data[11],i_data[10],i_data[9],i_data[8],i_data[7],i_data[6],i_data[5],i_data[4],i_data[3],i_data[2],i_data[1],i_data[0]
+*.ipin i_rs_valid
+*.ipin i_write
+*.ipin i_reset_n
+*.opin
+*+ o_data1[31],o_data1[30],o_data1[29],o_data1[28],o_data1[27],o_data1[26],o_data1[25],o_data1[24],o_data1[23],o_data1[22],o_data1[21],o_data1[20],o_data1[19],o_data1[18],o_data1[17],o_data1[16],o_data1[15],o_data1[14],o_data1[13],o_data1[12],o_data1[11],o_data1[10],o_data1[9],o_data1[8],o_data1[7],o_data1[6],o_data1[5],o_data1[4],o_data1[3],o_data1[2],o_data1[1],o_data1[0]
+*.opin
+*+ o_data2[31],o_data2[30],o_data2[29],o_data2[28],o_data2[27],o_data2[26],o_data2[25],o_data2[24],o_data2[23],o_data2[22],o_data2[21],o_data2[20],o_data2[19],o_data2[18],o_data2[17],o_data2[16],o_data2[15],o_data2[14],o_data2[13],o_data2[12],o_data2[11],o_data2[10],o_data2[9],o_data2[8],o_data2[7],o_data2[6],o_data2[5],o_data2[4],o_data2[3],o_data2[2],o_data2[1],o_data2[0]
+**** begin user architecture code
+.include ../../openlane/rv_regs.spice
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  ../../blocks/rv_hazard/rv_hazard.sym # of pins=16
+** sym_path: /media/FlexRV32/asic/blocks/rv_hazard/rv_hazard.sym
+** sch_path: /media/FlexRV32/asic/blocks/rv_hazard/rv_hazard.sch
+.subckt rv_hazard i_clk o_data1[31] o_data1[30] o_data1[29] o_data1[28] o_data1[27] o_data1[26]
++ o_data1[25] o_data1[24] o_data1[23] o_data1[22] o_data1[21] o_data1[20] o_data1[19] o_data1[18] o_data1[17]
++ o_data1[16] o_data1[15] o_data1[14] o_data1[13] o_data1[12] o_data1[11] o_data1[10] o_data1[9] o_data1[8]
++ o_data1[7] o_data1[6] o_data1[5] o_data1[4] o_data1[3] o_data1[2] o_data1[1] o_data1[0] i_alu_rs1[4]
++ i_alu_rs1[3] i_alu_rs1[2] i_alu_rs1[1] i_alu_rs1[0] o_data2[31] o_data2[30] o_data2[29] o_data2[28] o_data2[27]
++ o_data2[26] o_data2[25] o_data2[24] o_data2[23] o_data2[22] o_data2[21] o_data2[20] o_data2[19] o_data2[18]
++ o_data2[17] o_data2[16] o_data2[15] o_data2[14] o_data2[13] o_data2[12] o_data2[11] o_data2[10] o_data2[9]
++ o_data2[8] o_data2[7] o_data2[6] o_data2[5] o_data2[4] o_data2[3] o_data2[2] o_data2[1] o_data2[0]
++ i_alu_rs2[4] i_alu_rs2[3] i_alu_rs2[2] i_alu_rs2[1] i_alu_rs2[0] o_alu2_data[31] o_alu2_data[30] o_alu2_data[29]
++ o_alu2_data[28] o_alu2_data[27] o_alu2_data[26] o_alu2_data[25] o_alu2_data[24] o_alu2_data[23] o_alu2_data[22]
++ o_alu2_data[21] o_alu2_data[20] o_alu2_data[19] o_alu2_data[18] o_alu2_data[17] o_alu2_data[16] o_alu2_data[15]
++ o_alu2_data[14] o_alu2_data[13] o_alu2_data[12] o_alu2_data[11] o_alu2_data[10] o_alu2_data[9] o_alu2_data[8]
++ o_alu2_data[7] o_alu2_data[6] o_alu2_data[5] o_alu2_data[4] o_alu2_data[3] o_alu2_data[2] o_alu2_data[1]
++ o_alu2_data[0] i_alu2_rd[4] i_alu2_rd[3] i_alu2_rd[2] i_alu2_rd[1] i_alu2_rd[0] o_write_data[31] o_write_data[30]
++ o_write_data[29] o_write_data[28] o_write_data[27] o_write_data[26] o_write_data[25] o_write_data[24]
++ o_write_data[23] o_write_data[22] o_write_data[21] o_write_data[20] o_write_data[19] o_write_data[18]
++ o_write_data[17] o_write_data[16] o_write_data[15] o_write_data[14] o_write_data[13] o_write_data[12]
++ o_write_data[11] o_write_data[10] o_write_data[9] o_write_data[8] o_write_data[7] o_write_data[6] o_write_data[5]
++ o_write_data[4] o_write_data[3] o_write_data[2] o_write_data[1] o_write_data[0] i_write_rd[4] i_write_rd[3]
++ i_write_rd[2] i_write_rd[1] i_write_rd[0] o_data2_ex[31] o_data2_ex[30] o_data2_ex[29] o_data2_ex[28]
++ o_data2_ex[27] o_data2_ex[26] o_data2_ex[25] o_data2_ex[24] o_data2_ex[23] o_data2_ex[22] o_data2_ex[21]
++ o_data2_ex[20] o_data2_ex[19] o_data2_ex[18] o_data2_ex[17] o_data2_ex[16] o_data2_ex[15] o_data2_ex[14]
++ o_data2_ex[13] o_data2_ex[12] o_data2_ex[11] o_data2_ex[10] o_data2_ex[9] o_data2_ex[8] o_data2_ex[7]
++ o_data2_ex[6] o_data2_ex[5] o_data2_ex[4] o_data2_ex[3] o_data2_ex[2] o_data2_ex[1] o_data2_ex[0]
++ i_alu2_reg_write i_write_reg_write i_reg_data1[31] i_reg_data1[30] i_reg_data1[29] i_reg_data1[28] i_reg_data1[27]
++ i_reg_data1[26] i_reg_data1[25] i_reg_data1[24] i_reg_data1[23] i_reg_data1[22] i_reg_data1[21] i_reg_data1[20]
++ i_reg_data1[19] i_reg_data1[18] i_reg_data1[17] i_reg_data1[16] i_reg_data1[15] i_reg_data1[14] i_reg_data1[13]
++ i_reg_data1[12] i_reg_data1[11] i_reg_data1[10] i_reg_data1[9] i_reg_data1[8] i_reg_data1[7] i_reg_data1[6]
++ i_reg_data1[5] i_reg_data1[4] i_reg_data1[3] i_reg_data1[2] i_reg_data1[1] i_reg_data1[0] i_reg_data2[31]
++ i_reg_data2[30] i_reg_data2[29] i_reg_data2[28] i_reg_data2[27] i_reg_data2[26] i_reg_data2[25] i_reg_data2[24]
++ i_reg_data2[23] i_reg_data2[22] i_reg_data2[21] i_reg_data2[20] i_reg_data2[19] i_reg_data2[18] i_reg_data2[17]
++ i_reg_data2[16] i_reg_data2[15] i_reg_data2[14] i_reg_data2[13] i_reg_data2[12] i_reg_data2[11] i_reg_data2[10]
++ i_reg_data2[9] i_reg_data2[8] i_reg_data2[7] i_reg_data2[6] i_reg_data2[5] i_reg_data2[4] i_reg_data2[3]
++ i_reg_data2[2] i_reg_data2[1] i_reg_data2[0] i_alu2_data[31] i_alu2_data[30] i_alu2_data[29] i_alu2_data[28]
++ i_alu2_data[27] i_alu2_data[26] i_alu2_data[25] i_alu2_data[24] i_alu2_data[23] i_alu2_data[22] i_alu2_data[21]
++ i_alu2_data[20] i_alu2_data[19] i_alu2_data[18] i_alu2_data[17] i_alu2_data[16] i_alu2_data[15] i_alu2_data[14]
++ i_alu2_data[13] i_alu2_data[12] i_alu2_data[11] i_alu2_data[10] i_alu2_data[9] i_alu2_data[8] i_alu2_data[7]
++ i_alu2_data[6] i_alu2_data[5] i_alu2_data[4] i_alu2_data[3] i_alu2_data[2] i_alu2_data[1] i_alu2_data[0]
++ i_wr_data[31] i_wr_data[30] i_wr_data[29] i_wr_data[28] i_wr_data[27] i_wr_data[26] i_wr_data[25] i_wr_data[24]
++ i_wr_data[23] i_wr_data[22] i_wr_data[21] i_wr_data[20] i_wr_data[19] i_wr_data[18] i_wr_data[17] i_wr_data[16]
++ i_wr_data[15] i_wr_data[14] i_wr_data[13] i_wr_data[12] i_wr_data[11] i_wr_data[10] i_wr_data[9] i_wr_data[8]
++ i_wr_data[7] i_wr_data[6] i_wr_data[5] i_wr_data[4] i_wr_data[3] i_wr_data[2] i_wr_data[1] i_wr_data[0]
+*.ipin i_clk
+*.ipin i_alu_rs1[4],i_alu_rs1[3],i_alu_rs1[2],i_alu_rs1[1],i_alu_rs1[0]
+*.ipin i_alu_rs2[4],i_alu_rs2[3],i_alu_rs2[2],i_alu_rs2[1],i_alu_rs2[0]
+*.ipin i_alu2_rd[4],i_alu2_rd[3],i_alu2_rd[2],i_alu2_rd[1],i_alu2_rd[0]
+*.ipin
+*+ i_reg_data1[31],i_reg_data1[30],i_reg_data1[29],i_reg_data1[28],i_reg_data1[27],i_reg_data1[26],i_reg_data1[25],i_reg_data1[24],i_reg_data1[23],i_reg_data1[22],i_reg_data1[21],i_reg_data1[20],i_reg_data1[19],i_reg_data1[18],i_reg_data1[17],i_reg_data1[16],i_reg_data1[15],i_reg_data1[14],i_reg_data1[13],i_reg_data1[12],i_reg_data1[11],i_reg_data1[10],i_reg_data1[9],i_reg_data1[8],i_reg_data1[7],i_reg_data1[6],i_reg_data1[5],i_reg_data1[4],i_reg_data1[3],i_reg_data1[2],i_reg_data1[1],i_reg_data1[0]
+*.ipin i_alu2_reg_write
+*.opin
+*+ o_data1[31],o_data1[30],o_data1[29],o_data1[28],o_data1[27],o_data1[26],o_data1[25],o_data1[24],o_data1[23],o_data1[22],o_data1[21],o_data1[20],o_data1[19],o_data1[18],o_data1[17],o_data1[16],o_data1[15],o_data1[14],o_data1[13],o_data1[12],o_data1[11],o_data1[10],o_data1[9],o_data1[8],o_data1[7],o_data1[6],o_data1[5],o_data1[4],o_data1[3],o_data1[2],o_data1[1],o_data1[0]
+*.opin
+*+ o_data2[31],o_data2[30],o_data2[29],o_data2[28],o_data2[27],o_data2[26],o_data2[25],o_data2[24],o_data2[23],o_data2[22],o_data2[21],o_data2[20],o_data2[19],o_data2[18],o_data2[17],o_data2[16],o_data2[15],o_data2[14],o_data2[13],o_data2[12],o_data2[11],o_data2[10],o_data2[9],o_data2[8],o_data2[7],o_data2[6],o_data2[5],o_data2[4],o_data2[3],o_data2[2],o_data2[1],o_data2[0]
+*.ipin i_write_rd[4],i_write_rd[3],i_write_rd[2],i_write_rd[1],i_write_rd[0]
+*.ipin i_write_reg_write
+*.ipin
+*+ i_reg_data2[31],i_reg_data2[30],i_reg_data2[29],i_reg_data2[28],i_reg_data2[27],i_reg_data2[26],i_reg_data2[25],i_reg_data2[24],i_reg_data2[23],i_reg_data2[22],i_reg_data2[21],i_reg_data2[20],i_reg_data2[19],i_reg_data2[18],i_reg_data2[17],i_reg_data2[16],i_reg_data2[15],i_reg_data2[14],i_reg_data2[13],i_reg_data2[12],i_reg_data2[11],i_reg_data2[10],i_reg_data2[9],i_reg_data2[8],i_reg_data2[7],i_reg_data2[6],i_reg_data2[5],i_reg_data2[4],i_reg_data2[3],i_reg_data2[2],i_reg_data2[1],i_reg_data2[0]
+*.ipin
+*+ i_alu2_data[31],i_alu2_data[30],i_alu2_data[29],i_alu2_data[28],i_alu2_data[27],i_alu2_data[26],i_alu2_data[25],i_alu2_data[24],i_alu2_data[23],i_alu2_data[22],i_alu2_data[21],i_alu2_data[20],i_alu2_data[19],i_alu2_data[18],i_alu2_data[17],i_alu2_data[16],i_alu2_data[15],i_alu2_data[14],i_alu2_data[13],i_alu2_data[12],i_alu2_data[11],i_alu2_data[10],i_alu2_data[9],i_alu2_data[8],i_alu2_data[7],i_alu2_data[6],i_alu2_data[5],i_alu2_data[4],i_alu2_data[3],i_alu2_data[2],i_alu2_data[1],i_alu2_data[0]
+*.ipin
+*+ i_wr_data[31],i_wr_data[30],i_wr_data[29],i_wr_data[28],i_wr_data[27],i_wr_data[26],i_wr_data[25],i_wr_data[24],i_wr_data[23],i_wr_data[22],i_wr_data[21],i_wr_data[20],i_wr_data[19],i_wr_data[18],i_wr_data[17],i_wr_data[16],i_wr_data[15],i_wr_data[14],i_wr_data[13],i_wr_data[12],i_wr_data[11],i_wr_data[10],i_wr_data[9],i_wr_data[8],i_wr_data[7],i_wr_data[6],i_wr_data[5],i_wr_data[4],i_wr_data[3],i_wr_data[2],i_wr_data[1],i_wr_data[0]
+*.opin
+*+ o_alu2_data[31],o_alu2_data[30],o_alu2_data[29],o_alu2_data[28],o_alu2_data[27],o_alu2_data[26],o_alu2_data[25],o_alu2_data[24],o_alu2_data[23],o_alu2_data[22],o_alu2_data[21],o_alu2_data[20],o_alu2_data[19],o_alu2_data[18],o_alu2_data[17],o_alu2_data[16],o_alu2_data[15],o_alu2_data[14],o_alu2_data[13],o_alu2_data[12],o_alu2_data[11],o_alu2_data[10],o_alu2_data[9],o_alu2_data[8],o_alu2_data[7],o_alu2_data[6],o_alu2_data[5],o_alu2_data[4],o_alu2_data[3],o_alu2_data[2],o_alu2_data[1],o_alu2_data[0]
+*.opin
+*+ o_write_data[31],o_write_data[30],o_write_data[29],o_write_data[28],o_write_data[27],o_write_data[26],o_write_data[25],o_write_data[24],o_write_data[23],o_write_data[22],o_write_data[21],o_write_data[20],o_write_data[19],o_write_data[18],o_write_data[17],o_write_data[16],o_write_data[15],o_write_data[14],o_write_data[13],o_write_data[12],o_write_data[11],o_write_data[10],o_write_data[9],o_write_data[8],o_write_data[7],o_write_data[6],o_write_data[5],o_write_data[4],o_write_data[3],o_write_data[2],o_write_data[1],o_write_data[0]
+*.opin
+*+ o_data2_ex[31],o_data2_ex[30],o_data2_ex[29],o_data2_ex[28],o_data2_ex[27],o_data2_ex[26],o_data2_ex[25],o_data2_ex[24],o_data2_ex[23],o_data2_ex[22],o_data2_ex[21],o_data2_ex[20],o_data2_ex[19],o_data2_ex[18],o_data2_ex[17],o_data2_ex[16],o_data2_ex[15],o_data2_ex[14],o_data2_ex[13],o_data2_ex[12],o_data2_ex[11],o_data2_ex[10],o_data2_ex[9],o_data2_ex[8],o_data2_ex[7],o_data2_ex[6],o_data2_ex[5],o_data2_ex[4],o_data2_ex[3],o_data2_ex[2],o_data2_ex[1],o_data2_ex[0]
+**** begin user architecture code
+.include ../../openlane/rv_hazard.spice
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  ../../blocks/rv_alu2/rv_alu2.sym # of pins=33
+** sym_path: /media/FlexRV32/asic/blocks/rv_alu2/rv_alu2.sym
+** sch_path: /media/FlexRV32/asic/blocks/rv_alu2/rv_alu2.sch
+.subckt rv_alu2 o_pc_select i_clk i_reset_n o_result[31] o_result[30] o_result[29] o_result[28]
++ o_result[27] o_result[26] o_result[25] o_result[24] o_result[23] o_result[22] o_result[21] o_result[20]
++ o_result[19] o_result[18] o_result[17] o_result[16] o_result[15] o_result[14] o_result[13] o_result[12]
++ o_result[11] o_result[10] o_result[9] o_result[8] o_result[7] o_result[6] o_result[5] o_result[4] o_result[3]
++ o_result[2] o_result[1] o_result[0] i_op1[31] i_op1[30] i_op1[29] i_op1[28] i_op1[27] i_op1[26] i_op1[25]
++ i_op1[24] i_op1[23] i_op1[22] i_op1[21] i_op1[20] i_op1[19] i_op1[18] i_op1[17] i_op1[16] i_op1[15] i_op1[14]
++ i_op1[13] i_op1[12] i_op1[11] i_op1[10] i_op1[9] i_op1[8] i_op1[7] i_op1[6] i_op1[5] i_op1[4] i_op1[3]
++ i_op1[2] i_op1[1] i_op1[0] o_add[31] o_add[30] o_add[29] o_add[28] o_add[27] o_add[26] o_add[25] o_add[24]
++ o_add[23] o_add[22] o_add[21] o_add[20] o_add[19] o_add[18] o_add[17] o_add[16] o_add[15] o_add[14] o_add[13]
++ o_add[12] o_add[11] o_add[10] o_add[9] o_add[8] o_add[7] o_add[6] o_add[5] o_add[4] o_add[3] o_add[2]
++ o_add[1] o_add[0] o_store i_op2[31] i_op2[30] i_op2[29] i_op2[28] i_op2[27] i_op2[26] i_op2[25] i_op2[24]
++ i_op2[23] i_op2[22] i_op2[21] i_op2[20] i_op2[19] i_op2[18] i_op2[17] i_op2[16] i_op2[15] i_op2[14] i_op2[13]
++ i_op2[12] i_op2[11] i_op2[10] i_op2[9] i_op2[8] i_op2[7] i_op2[6] i_op2[5] i_op2[4] i_op2[3] i_op2[2]
++ i_op2[1] i_op2[0] o_reg_write i_store o_rd[4] o_rd[3] o_rd[2] o_rd[1] o_rd[0] i_reg_write i_rd[4] i_rd[3]
++ i_rd[2] i_rd[1] i_rd[0] o_pc_target[31] o_pc_target[30] o_pc_target[29] o_pc_target[28] o_pc_target[27]
++ o_pc_target[26] o_pc_target[25] o_pc_target[24] o_pc_target[23] o_pc_target[22] o_pc_target[21] o_pc_target[20]
++ o_pc_target[19] o_pc_target[18] o_pc_target[17] o_pc_target[16] o_pc_target[15] o_pc_target[14] o_pc_target[13]
++ o_pc_target[12] o_pc_target[11] o_pc_target[10] o_pc_target[9] o_pc_target[8] o_pc_target[7] o_pc_target[6]
++ o_pc_target[5] o_pc_target[4] o_pc_target[3] o_pc_target[2] o_pc_target[1] o_res_src[2] o_res_src[1] o_res_src[0]
++ i_inst_jal_jalr i_inst_branch o_wdata[31] o_wdata[30] o_wdata[29] o_wdata[28] o_wdata[27] o_wdata[26] o_wdata[25]
++ o_wdata[24] o_wdata[23] o_wdata[22] o_wdata[21] o_wdata[20] o_wdata[19] o_wdata[18] o_wdata[17] o_wdata[16]
++ o_wdata[15] o_wdata[14] o_wdata[13] o_wdata[12] o_wdata[11] o_wdata[10] o_wdata[9] o_wdata[8] o_wdata[7]
++ o_wdata[6] o_wdata[5] o_wdata[4] o_wdata[3] o_wdata[2] o_wdata[1] o_wdata[0] o_wsel[3] o_wsel[2] o_wsel[1]
++ o_wsel[0] i_pc[31] i_pc[30] i_pc[29] i_pc[28] i_pc[27] i_pc[26] i_pc[25] i_pc[24] i_pc[23] i_pc[22] i_pc[21]
++ i_pc[20] i_pc[19] i_pc[18] i_pc[17] i_pc[16] i_pc[15] i_pc[14] i_pc[13] i_pc[12] i_pc[11] i_pc[10] i_pc[9]
++ i_pc[8] i_pc[7] i_pc[6] i_pc[5] i_pc[4] i_pc[3] i_pc[2] i_pc[1] i_pc_next[31] i_pc_next[30] i_pc_next[29]
++ i_pc_next[28] i_pc_next[27] i_pc_next[26] i_pc_next[25] i_pc_next[24] i_pc_next[23] i_pc_next[22] i_pc_next[21]
++ i_pc_next[20] i_pc_next[19] i_pc_next[18] i_pc_next[17] i_pc_next[16] i_pc_next[15] i_pc_next[14] i_pc_next[13]
++ i_pc_next[12] i_pc_next[11] i_pc_next[10] i_pc_next[9] i_pc_next[8] i_pc_next[7] i_pc_next[6] i_pc_next[5]
++ i_pc_next[4] i_pc_next[3] i_pc_next[2] i_pc_next[1] o_funct3[2] o_funct3[1] o_funct3[0] o_to_trap
++ i_pc_target[31] i_pc_target[30] i_pc_target[29] i_pc_target[28] i_pc_target[27] i_pc_target[26] i_pc_target[25]
++ i_pc_target[24] i_pc_target[23] i_pc_target[22] i_pc_target[21] i_pc_target[20] i_pc_target[19] i_pc_target[18]
++ i_pc_target[17] i_pc_target[16] i_pc_target[15] i_pc_target[14] i_pc_target[13] i_pc_target[12] i_pc_target[11]
++ i_pc_target[10] i_pc_target[9] i_pc_target[8] i_pc_target[7] i_pc_target[6] i_pc_target[5] i_pc_target[4]
++ i_pc_target[3] i_pc_target[2] i_pc_target[1] i_res_src[2] i_res_src[1] i_res_src[0] o_ready i_funct3[2]
++ i_funct3[1] i_funct3[0] i_alu_ctrl[4] i_alu_ctrl[3] i_alu_ctrl[2] i_alu_ctrl[1] i_alu_ctrl[0] i_to_trap
++ i_reg_data2[31] i_reg_data2[30] i_reg_data2[29] i_reg_data2[28] i_reg_data2[27] i_reg_data2[26] i_reg_data2[25]
++ i_reg_data2[24] i_reg_data2[23] i_reg_data2[22] i_reg_data2[21] i_reg_data2[20] i_reg_data2[19] i_reg_data2[18]
++ i_reg_data2[17] i_reg_data2[16] i_reg_data2[15] i_reg_data2[14] i_reg_data2[13] i_reg_data2[12] i_reg_data2[11]
++ i_reg_data2[10] i_reg_data2[9] i_reg_data2[8] i_reg_data2[7] i_reg_data2[6] i_reg_data2[5] i_reg_data2[4]
++ i_reg_data2[3] i_reg_data2[2] i_reg_data2[1] i_reg_data2[0] i_csr_read i_csr_data[31] i_csr_data[30]
++ i_csr_data[29] i_csr_data[28] i_csr_data[27] i_csr_data[26] i_csr_data[25] i_csr_data[24] i_csr_data[23]
++ i_csr_data[22] i_csr_data[21] i_csr_data[20] i_csr_data[19] i_csr_data[18] i_csr_data[17] i_csr_data[16]
++ i_csr_data[15] i_csr_data[14] i_csr_data[13] i_csr_data[12] i_csr_data[11] i_csr_data[10] i_csr_data[9]
++ i_csr_data[8] i_csr_data[7] i_csr_data[6] i_csr_data[5] i_csr_data[4] i_csr_data[3] i_csr_data[2] i_csr_data[1]
++ i_csr_data[0] i_flush
+*.ipin i_clk
+*.ipin
+*+ i_pc_target[31],i_pc_target[30],i_pc_target[29],i_pc_target[28],i_pc_target[27],i_pc_target[26],i_pc_target[25],i_pc_target[24],i_pc_target[23],i_pc_target[22],i_pc_target[21],i_pc_target[20],i_pc_target[19],i_pc_target[18],i_pc_target[17],i_pc_target[16],i_pc_target[15],i_pc_target[14],i_pc_target[13],i_pc_target[12],i_pc_target[11],i_pc_target[10],i_pc_target[9],i_pc_target[8],i_pc_target[7],i_pc_target[6],i_pc_target[5],i_pc_target[4],i_pc_target[3],i_pc_target[2],i_pc_target[1]
+*.ipin
+*+ i_reg_data2[31],i_reg_data2[30],i_reg_data2[29],i_reg_data2[28],i_reg_data2[27],i_reg_data2[26],i_reg_data2[25],i_reg_data2[24],i_reg_data2[23],i_reg_data2[22],i_reg_data2[21],i_reg_data2[20],i_reg_data2[19],i_reg_data2[18],i_reg_data2[17],i_reg_data2[16],i_reg_data2[15],i_reg_data2[14],i_reg_data2[13],i_reg_data2[12],i_reg_data2[11],i_reg_data2[10],i_reg_data2[9],i_reg_data2[8],i_reg_data2[7],i_reg_data2[6],i_reg_data2[5],i_reg_data2[4],i_reg_data2[3],i_reg_data2[2],i_reg_data2[1],i_reg_data2[0]
+*.ipin i_csr_read
+*.ipin
+*+ i_csr_data[31],i_csr_data[30],i_csr_data[29],i_csr_data[28],i_csr_data[27],i_csr_data[26],i_csr_data[25],i_csr_data[24],i_csr_data[23],i_csr_data[22],i_csr_data[21],i_csr_data[20],i_csr_data[19],i_csr_data[18],i_csr_data[17],i_csr_data[16],i_csr_data[15],i_csr_data[14],i_csr_data[13],i_csr_data[12],i_csr_data[11],i_csr_data[10],i_csr_data[9],i_csr_data[8],i_csr_data[7],i_csr_data[6],i_csr_data[5],i_csr_data[4],i_csr_data[3],i_csr_data[2],i_csr_data[1],i_csr_data[0]
+*.ipin i_flush
+*.ipin i_reset_n
+*.ipin
+*+ i_op1[31],i_op1[30],i_op1[29],i_op1[28],i_op1[27],i_op1[26],i_op1[25],i_op1[24],i_op1[23],i_op1[22],i_op1[21],i_op1[20],i_op1[19],i_op1[18],i_op1[17],i_op1[16],i_op1[15],i_op1[14],i_op1[13],i_op1[12],i_op1[11],i_op1[10],i_op1[9],i_op1[8],i_op1[7],i_op1[6],i_op1[5],i_op1[4],i_op1[3],i_op1[2],i_op1[1],i_op1[0]
+*.ipin
+*+ i_op2[31],i_op2[30],i_op2[29],i_op2[28],i_op2[27],i_op2[26],i_op2[25],i_op2[24],i_op2[23],i_op2[22],i_op2[21],i_op2[20],i_op2[19],i_op2[18],i_op2[17],i_op2[16],i_op2[15],i_op2[14],i_op2[13],i_op2[12],i_op2[11],i_op2[10],i_op2[9],i_op2[8],i_op2[7],i_op2[6],i_op2[5],i_op2[4],i_op2[3],i_op2[2],i_op2[1],i_op2[0]
+*.ipin i_store
+*.ipin i_reg_write
+*.ipin i_rd[4],i_rd[3],i_rd[2],i_rd[1],i_rd[0]
+*.ipin
+*+ i_pc[31],i_pc[30],i_pc[29],i_pc[28],i_pc[27],i_pc[26],i_pc[25],i_pc[24],i_pc[23],i_pc[22],i_pc[21],i_pc[20],i_pc[19],i_pc[18],i_pc[17],i_pc[16],i_pc[15],i_pc[14],i_pc[13],i_pc[12],i_pc[11],i_pc[10],i_pc[9],i_pc[8],i_pc[7],i_pc[6],i_pc[5],i_pc[4],i_pc[3],i_pc[2],i_pc[1]
+*.ipin
+*+ i_pc_next[31],i_pc_next[30],i_pc_next[29],i_pc_next[28],i_pc_next[27],i_pc_next[26],i_pc_next[25],i_pc_next[24],i_pc_next[23],i_pc_next[22],i_pc_next[21],i_pc_next[20],i_pc_next[19],i_pc_next[18],i_pc_next[17],i_pc_next[16],i_pc_next[15],i_pc_next[14],i_pc_next[13],i_pc_next[12],i_pc_next[11],i_pc_next[10],i_pc_next[9],i_pc_next[8],i_pc_next[7],i_pc_next[6],i_pc_next[5],i_pc_next[4],i_pc_next[3],i_pc_next[2],i_pc_next[1]
+*.ipin i_inst_branch
+*.ipin i_inst_jal_jalr
+*.ipin i_res_src[2],i_res_src[1],i_res_src[0]
+*.ipin i_funct3[2],i_funct3[1],i_funct3[0]
+*.ipin i_alu_ctrl[4],i_alu_ctrl[3],i_alu_ctrl[2],i_alu_ctrl[1],i_alu_ctrl[0]
+*.ipin i_to_trap
+*.opin
+*+ o_pc_target[31],o_pc_target[30],o_pc_target[29],o_pc_target[28],o_pc_target[27],o_pc_target[26],o_pc_target[25],o_pc_target[24],o_pc_target[23],o_pc_target[22],o_pc_target[21],o_pc_target[20],o_pc_target[19],o_pc_target[18],o_pc_target[17],o_pc_target[16],o_pc_target[15],o_pc_target[14],o_pc_target[13],o_pc_target[12],o_pc_target[11],o_pc_target[10],o_pc_target[9],o_pc_target[8],o_pc_target[7],o_pc_target[6],o_pc_target[5],o_pc_target[4],o_pc_target[3],o_pc_target[2],o_pc_target[1]
+*.opin o_store
+*.opin o_reg_write
+*.opin o_rd[4],o_rd[3],o_rd[2],o_rd[1],o_rd[0]
+*.opin o_res_src[2],o_res_src[1],o_res_src[0]
+*.opin o_funct3[2],o_funct3[1],o_funct3[0]
+*.opin o_to_trap
+*.opin o_pc_select
+*.opin
+*+ o_result[31],o_result[30],o_result[29],o_result[28],o_result[27],o_result[26],o_result[25],o_result[24],o_result[23],o_result[22],o_result[21],o_result[20],o_result[19],o_result[18],o_result[17],o_result[16],o_result[15],o_result[14],o_result[13],o_result[12],o_result[11],o_result[10],o_result[9],o_result[8],o_result[7],o_result[6],o_result[5],o_result[4],o_result[3],o_result[2],o_result[1],o_result[0]
+*.opin
+*+ o_add[31],o_add[30],o_add[29],o_add[28],o_add[27],o_add[26],o_add[25],o_add[24],o_add[23],o_add[22],o_add[21],o_add[20],o_add[19],o_add[18],o_add[17],o_add[16],o_add[15],o_add[14],o_add[13],o_add[12],o_add[11],o_add[10],o_add[9],o_add[8],o_add[7],o_add[6],o_add[5],o_add[4],o_add[3],o_add[2],o_add[1],o_add[0]
+*.opin
+*+ o_wdata[31],o_wdata[30],o_wdata[29],o_wdata[28],o_wdata[27],o_wdata[26],o_wdata[25],o_wdata[24],o_wdata[23],o_wdata[22],o_wdata[21],o_wdata[20],o_wdata[19],o_wdata[18],o_wdata[17],o_wdata[16],o_wdata[15],o_wdata[14],o_wdata[13],o_wdata[12],o_wdata[11],o_wdata[10],o_wdata[9],o_wdata[8],o_wdata[7],o_wdata[6],o_wdata[5],o_wdata[4],o_wdata[3],o_wdata[2],o_wdata[1],o_wdata[0]
+*.opin o_wsel[3],o_wsel[2],o_wsel[1],o_wsel[0]
+*.opin o_ready
+**** begin user architecture code
+.include ../../openlane/rv_alu2.spice
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  ../../blocks/rv_write/rv_write.sym # of pins=11
+** sym_path: /media/FlexRV32/asic/blocks/rv_write/rv_write.sym
+** sch_path: /media/FlexRV32/asic/blocks/rv_write/rv_write.sch
+.subckt rv_write i_clk o_write_op i_funct3[2] i_funct3[1] i_funct3[0] o_data[31] o_data[30]
++ o_data[29] o_data[28] o_data[27] o_data[26] o_data[25] o_data[24] o_data[23] o_data[22] o_data[21] o_data[20]
++ o_data[19] o_data[18] o_data[17] o_data[16] o_data[15] o_data[14] o_data[13] o_data[12] o_data[11] o_data[10]
++ o_data[9] o_data[8] o_data[7] o_data[6] o_data[5] o_data[4] o_data[3] o_data[2] o_data[1] o_data[0]
++ i_alu_result[31] i_alu_result[30] i_alu_result[29] i_alu_result[28] i_alu_result[27] i_alu_result[26]
++ i_alu_result[25] i_alu_result[24] i_alu_result[23] i_alu_result[22] i_alu_result[21] i_alu_result[20]
++ i_alu_result[19] i_alu_result[18] i_alu_result[17] i_alu_result[16] i_alu_result[15] i_alu_result[14]
++ i_alu_result[13] i_alu_result[12] i_alu_result[11] i_alu_result[10] i_alu_result[9] i_alu_result[8] i_alu_result[7]
++ i_alu_result[6] i_alu_result[5] i_alu_result[4] i_alu_result[3] i_alu_result[2] i_alu_result[1] i_alu_result[0]
++ o_rd[4] o_rd[3] o_rd[2] o_rd[1] o_rd[0] i_reg_write i_rd[4] i_rd[3] i_rd[2] i_rd[1] i_rd[0] i_res_src[2]
++ i_data[31] i_data[30] i_data[29] i_data[28] i_data[27] i_data[26] i_data[25] i_data[24] i_data[23] i_data[22]
++ i_data[21] i_data[20] i_data[19] i_data[18] i_data[17] i_data[16] i_data[15] i_data[14] i_data[13] i_data[12]
++ i_data[11] i_data[10] i_data[9] i_data[8] i_data[7] i_data[6] i_data[5] i_data[4] i_data[3] i_data[2]
++ i_data[1] i_data[0] i_flush
+*.ipin i_clk
+*.ipin i_flush
+*.ipin
+*+ i_alu_result[31],i_alu_result[30],i_alu_result[29],i_alu_result[28],i_alu_result[27],i_alu_result[26],i_alu_result[25],i_alu_result[24],i_alu_result[23],i_alu_result[22],i_alu_result[21],i_alu_result[20],i_alu_result[19],i_alu_result[18],i_alu_result[17],i_alu_result[16],i_alu_result[15],i_alu_result[14],i_alu_result[13],i_alu_result[12],i_alu_result[11],i_alu_result[10],i_alu_result[9],i_alu_result[8],i_alu_result[7],i_alu_result[6],i_alu_result[5],i_alu_result[4],i_alu_result[3],i_alu_result[2],i_alu_result[1],i_alu_result[0]
+*.ipin
+*+ i_data[31],i_data[30],i_data[29],i_data[28],i_data[27],i_data[26],i_data[25],i_data[24],i_data[23],i_data[22],i_data[21],i_data[20],i_data[19],i_data[18],i_data[17],i_data[16],i_data[15],i_data[14],i_data[13],i_data[12],i_data[11],i_data[10],i_data[9],i_data[8],i_data[7],i_data[6],i_data[5],i_data[4],i_data[3],i_data[2],i_data[1],i_data[0]
+*.ipin i_reg_write
+*.ipin i_rd[4],i_rd[3],i_rd[2],i_rd[1],i_rd[0]
+*.ipin i_res_src[2]
+*.ipin i_funct3[2],i_funct3[1],i_funct3[0]
+*.opin o_write_op
+*.opin o_rd[4],o_rd[3],o_rd[2],o_rd[1],o_rd[0]
+*.opin
+*+ o_data[31],o_data[30],o_data[29],o_data[28],o_data[27],o_data[26],o_data[25],o_data[24],o_data[23],o_data[22],o_data[21],o_data[20],o_data[19],o_data[18],o_data[17],o_data[16],o_data[15],o_data[14],o_data[13],o_data[12],o_data[11],o_data[10],o_data[9],o_data[8],o_data[7],o_data[6],o_data[5],o_data[4],o_data[3],o_data[2],o_data[1],o_data[0]
+**** begin user architecture code
+.include ../../openlane/rv_write.spice
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  ../../blocks/rv_ctrl/rv_ctrl.sym # of pins=17
+** sym_path: /media/FlexRV32/asic/blocks/rv_ctrl/rv_ctrl.sym
+** sch_path: /media/FlexRV32/asic/blocks/rv_ctrl/rv_ctrl.sch
+.subckt rv_ctrl i_clk o_fetch_stall i_reset_n o_decode_flush o_decode_stall i_pc_change o_alu1_flush
++ i_decode_inst_sup o_alu1_stall i_alu2_ready i_alu1_mem_rd o_alu2_flush o_inv_inst i_need_pause i_decode_rs1[4]
++ i_decode_rs1[3] i_decode_rs1[2] i_decode_rs1[1] i_decode_rs1[0] i_decode_rs2[4] i_decode_rs2[3] i_decode_rs2[2]
++ i_decode_rs2[1] i_decode_rs2[0] i_alu1_rd[4] i_alu1_rd[3] i_alu1_rd[2] i_alu1_rd[1] i_alu1_rd[0]
+*.ipin i_clk
+*.ipin i_reset_n
+*.ipin i_pc_change
+*.ipin i_decode_inst_sup
+*.ipin i_alu2_ready
+*.ipin i_alu1_mem_rd
+*.ipin i_need_pause
+*.opin o_fetch_stall
+*.opin o_decode_flush
+*.opin o_decode_stall
+*.opin o_alu1_flush
+*.opin o_alu1_stall
+*.opin o_alu2_flush
+*.opin o_inv_inst
+*.ipin i_decode_rs1[4],i_decode_rs1[3],i_decode_rs1[2],i_decode_rs1[1],i_decode_rs1[0]
+*.ipin i_decode_rs2[4],i_decode_rs2[3],i_decode_rs2[2],i_decode_rs2[1],i_decode_rs2[0]
+*.ipin i_alu1_rd[4],i_alu1_rd[3],i_alu1_rd[2],i_alu1_rd[1],i_alu1_rd[0]
+**** begin user architecture code
+.include ../../openlane/rv_ctrl.spice
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  ../../blocks/pc_inc/pc_inc.sym # of pins=4
+** sym_path: /media/FlexRV32/asic/blocks/pc_inc/pc_inc.sym
+** sch_path: /media/FlexRV32/asic/blocks/pc_inc/pc_inc.sch
+.subckt pc_inc A[31] A[30] A[29] A[28] A[27] A[26] A[25] A[24] A[23] A[22] A[21] A[20] A[19] A[18]
++ A[17] A[16] A[15] A[14] A[13] A[12] A[11] A[10] A[9] A[8] A[7] A[6] A[5] A[4] A[3] A[2] A[1] is_comp_p
++ is_comp_n S[31] S[30] S[29] S[28] S[27] S[26] S[25] S[24] S[23] S[22] S[21] S[20] S[19] S[18] S[17] S[16]
++ S[15] S[14] S[13] S[12] S[11] S[10] S[9] S[8] S[7] S[6] S[5] S[4] S[3] S[2] S[1]
+*.opin
+*+ S[31],S[30],S[29],S[28],S[27],S[26],S[25],S[24],S[23],S[22],S[21],S[20],S[19],S[18],S[17],S[16],S[15],S[14],S[13],S[12],S[11],S[10],S[9],S[8],S[7],S[6],S[5],S[4],S[3],S[2],S[1]
+*.ipin
+*+ A[31],A[30],A[29],A[28],A[27],A[26],A[25],A[24],A[23],A[22],A[21],A[20],A[19],A[18],A[17],A[16],A[15],A[14],A[13],A[12],A[11],A[10],A[9],A[8],A[7],A[6],A[5],A[4],A[3],A[2],A[1]
+*.ipin is_comp_p
+*.ipin is_comp_n
+x21 g[2] net30 VSS VSS VCC VCC net25 sky130_fd_sc_hs__or2_1
+x68 A[24] net1 VSS VSS VCC VCC S[24] sky130_fd_sc_hs__xor2_1
+x69 A[24] net1 VSS VSS VCC VCC net2 sky130_fd_sc_hs__and2_1
+x70 A[25] net2 VSS VSS VCC VCC S[25] sky130_fd_sc_hs__xor2_1
+x71 A[25] net2 VSS VSS VCC VCC net3 sky130_fd_sc_hs__and2_1
+x72 A[26] net3 VSS VSS VCC VCC S[26] sky130_fd_sc_hs__xor2_1
+x73 A[26] net3 VSS VSS VCC VCC net4 sky130_fd_sc_hs__and2_1
+x74 A[27] net4 VSS VSS VCC VCC S[27] sky130_fd_sc_hs__xor2_1
+x75 A[27] net4 VSS VSS VCC VCC net5 sky130_fd_sc_hs__and2_1
+x76 A[28] net5 VSS VSS VCC VCC S[28] sky130_fd_sc_hs__xor2_1
+x77 A[28] net5 VSS VSS VCC VCC net6 sky130_fd_sc_hs__and2_1
+x78 A[29] net6 VSS VSS VCC VCC S[29] sky130_fd_sc_hs__xor2_1
+x79 A[29] net6 VSS VSS VCC VCC net7 sky130_fd_sc_hs__and2_1
+x80 A[30] net7 VSS VSS VCC VCC S[30] sky130_fd_sc_hs__xor2_1
+x81 A[30] net7 VSS VSS VCC VCC net8 sky130_fd_sc_hs__and2_1
+x82 A[31] net8 VSS VSS VCC VCC S[31] sky130_fd_sc_hs__xor2_1
+x53 A[16] net9 VSS VSS VCC VCC S[16] sky130_fd_sc_hs__xor2_1
+x54 A[16] net9 VSS VSS VCC VCC net10 sky130_fd_sc_hs__and2_1
+x55 A[17] net10 VSS VSS VCC VCC S[17] sky130_fd_sc_hs__xor2_1
+x56 A[17] net10 VSS VSS VCC VCC net11 sky130_fd_sc_hs__and2_1
+x57 A[18] net11 VSS VSS VCC VCC S[18] sky130_fd_sc_hs__xor2_1
+x58 A[18] net11 VSS VSS VCC VCC net12 sky130_fd_sc_hs__and2_1
+x59 A[19] net12 VSS VSS VCC VCC S[19] sky130_fd_sc_hs__xor2_1
+x60 A[19] net12 VSS VSS VCC VCC net13 sky130_fd_sc_hs__and2_1
+x61 A[20] net13 VSS VSS VCC VCC S[20] sky130_fd_sc_hs__xor2_1
+x62 A[20] net13 VSS VSS VCC VCC net14 sky130_fd_sc_hs__and2_1
+x63 A[21] net14 VSS VSS VCC VCC S[21] sky130_fd_sc_hs__xor2_1
+x64 A[21] net14 VSS VSS VCC VCC net15 sky130_fd_sc_hs__and2_1
+x65 A[22] net15 VSS VSS VCC VCC S[22] sky130_fd_sc_hs__xor2_1
+x66 A[22] net15 VSS VSS VCC VCC net16 sky130_fd_sc_hs__and2_1
+x67 A[23] net16 VSS VSS VCC VCC S[23] sky130_fd_sc_hs__xor2_1
+x83 A[8] net17 VSS VSS VCC VCC S[8] sky130_fd_sc_hs__xor2_1
+x84 A[8] net17 VSS VSS VCC VCC net18 sky130_fd_sc_hs__and2_1
+x85 A[9] net18 VSS VSS VCC VCC S[9] sky130_fd_sc_hs__xor2_1
+x86 A[9] net18 VSS VSS VCC VCC net19 sky130_fd_sc_hs__and2_1
+x87 A[10] net19 VSS VSS VCC VCC S[10] sky130_fd_sc_hs__xor2_1
+x88 A[10] net19 VSS VSS VCC VCC net20 sky130_fd_sc_hs__and2_1
+x89 A[11] net20 VSS VSS VCC VCC S[11] sky130_fd_sc_hs__xor2_1
+x90 A[11] net20 VSS VSS VCC VCC net21 sky130_fd_sc_hs__and2_1
+x91 A[12] net21 VSS VSS VCC VCC S[12] sky130_fd_sc_hs__xor2_1
+x92 A[12] net21 VSS VSS VCC VCC net22 sky130_fd_sc_hs__and2_1
+x93 A[13] net22 VSS VSS VCC VCC S[13] sky130_fd_sc_hs__xor2_1
+x94 A[13] net22 VSS VSS VCC VCC net23 sky130_fd_sc_hs__and2_1
+x95 A[14] net23 VSS VSS VCC VCC S[14] sky130_fd_sc_hs__xor2_1
+x96 A[14] net23 VSS VSS VCC VCC net24 sky130_fd_sc_hs__and2_1
+x97 A[15] net24 VSS VSS VCC VCC S[15] sky130_fd_sc_hs__xor2_1
+x102 p[2] g[1] VSS VSS VCC VCC S[2] sky130_fd_sc_hs__xor2_1
+x103 p[2] g[1] VSS VSS VCC VCC net30 sky130_fd_sc_hs__and2_1
+x104 A[3] net25 VSS VSS VCC VCC S[3] sky130_fd_sc_hs__xor2_1
+x105 A[3] net25 VSS VSS VCC VCC net26 sky130_fd_sc_hs__and2_1
+x106 A[4] net26 VSS VSS VCC VCC S[4] sky130_fd_sc_hs__xor2_1
+x107 A[4] net26 VSS VSS VCC VCC net27 sky130_fd_sc_hs__and2_1
+x108 A[5] net27 VSS VSS VCC VCC S[5] sky130_fd_sc_hs__xor2_1
+x109 A[5] net27 VSS VSS VCC VCC net28 sky130_fd_sc_hs__and2_1
+x110 A[6] net28 VSS VSS VCC VCC S[6] sky130_fd_sc_hs__xor2_1
+x111 A[6] net28 VSS VSS VCC VCC net29 sky130_fd_sc_hs__and2_1
+x112 A[7] net29 VSS VSS VCC VCC S[7] sky130_fd_sc_hs__xor2_1
+x113 A[23] net16 VSS VSS VCC VCC net1 sky130_fd_sc_hs__and2_1
+x114 A[15] net24 VSS VSS VCC VCC net9 sky130_fd_sc_hs__and2_1
+x115 A[7] net29 VSS VSS VCC VCC net17 sky130_fd_sc_hs__and2_1
+x8 is_comp_n A[2] VSS VSS VCC VCC p[2] sky130_fd_sc_hs__xor2_1
+x11 is_comp_p A[1] VSS VSS VCC VCC S[1] sky130_fd_sc_hs__xor2_1
+x12 is_comp_n A[2] VSS VSS VCC VCC g[2] sky130_fd_sc_hs__and2_1
+x13 is_comp_p A[1] VSS VSS VCC VCC g[1] sky130_fd_sc_hs__and2_1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/mux3.sym # of pins=7
+** sym_path: /media/FlexRV32/asic/elements/logic/mux3.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/mux3.sch
+.subckt mux3 s0 Y d0 s1 d1 s2 d2
+*.ipin s0
+*.ipin d0
+*.ipin s1
+*.ipin d1
+*.ipin s2
+*.ipin d2
+*.opin Y
+x1 d0 s0 VSS VSS VCC VCC net2 sky130_fd_sc_hs__nand2_1
+x2 s1 d1 VSS VSS VCC VCC net3 sky130_fd_sc_hs__nand2_1
+x3 s2 d2 VSS VSS VCC VCC net1 sky130_fd_sc_hs__nand2_1
+x4 net2 net3 net1 VSS VSS VCC VCC Y sky130_fd_sc_hs__nand3_1
+.ends
+
+
+* expanding   symbol:  ../../elements/logic/mux2.sym # of pins=5
+** sym_path: /media/FlexRV32/asic/elements/logic/mux2.sym
+** sch_path: /media/FlexRV32/asic/elements/logic/mux2.sch
+.subckt mux2 s0 d0 Y s1 d1
+*.ipin s0
+*.ipin d0
+*.ipin s1
+*.ipin d1
+*.opin Y
+x1 s0 d0 VSS VSS VCC VCC net1 sky130_fd_sc_hs__nand2_1
+x2 s1 d1 VSS VSS VCC VCC net2 sky130_fd_sc_hs__nand2_1
+x3 net1 net2 VSS VSS VCC VCC Y sky130_fd_sc_hs__nand2_1
+.ends
+
+.GLOBAL VCC
+.end

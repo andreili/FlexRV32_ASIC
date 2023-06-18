@@ -57,10 +57,18 @@ N 980 620 1030 620 {
 lab=#net3}
 N 1000 490 1000 540 {
 lab=#net3}
-N 500 370 500 450 {
-lab=VCC}
 N 340 370 500 370 {
 lab=VCC}
+N 490 450 500 450 {
+lab=VCC}
+N 490 370 490 450 {
+lab=VCC}
+N 490 430 500 430 {
+lab=VCC}
+N 490 410 500 410 {
+lab=VCC}
+N 440 390 500 390 {
+lab=GND}
 C {devices/ipin.sym} 500 330 0 0 {name=p1 lab=i_clk}
 C {devices/ipin.sym} 500 350 0 0 {name=p2 lab=i_reset_n}
 C {devices/ipin.sym} 100 470 0 0 {name=p3 lab=i_wb_ack}
@@ -68,7 +76,7 @@ C {devices/opin.sym} 1120 560 0 0 {name=p10 lab=o_wb_we}
 C {devices/opin.sym} 1150 640 0 0 {name=p11 lab=o_wb_sel[3:0]}
 C {devices/opin.sym} 680 190 0 0 {name=p12 lab=o_wb_stb}
 C {devices/opin.sym} 680 210 0 0 {name=p4 lab=o_wb_cyc}
-C {devices/opin.sym} 670 240 0 0 {name=p5 lab=o_wb_adr[31:0]}
+C {devices/opin.sym} 1310 310 0 0 {name=p5 lab=o_wb_adr[31:0]}
 C {devices/opin.sym} 800 630 0 0 {name=p6 lab=o_wb_dat[31:0]}
 C {devices/ipin.sym} 480 530 0 0 {name=p7 lab=i_wb_dat[31:0]}
 C {../../blocks/rv_core/rv_core.sym} 650 500 0 0 {name=x1}
@@ -98,7 +106,7 @@ C {devices/lab_pin.sym} 1190 390 0 1 {name=p19 sig_type=std_logic lab=o_wb_adr[0
 C {devices/lab_pin.sym} 1070 410 0 0 {name=p20 sig_type=std_logic lab=data_req[3]}
 C {devices/lab_pin.sym} 800 590 0 1 {name=p21 sig_type=std_logic lab=data_addr[31:0]}
 C {devices/lab_pin.sym} 800 670 0 1 {name=p22 sig_type=std_logic lab=instr_addr[31:1]}
-C {sky130_stdcells/mux2_1.sym} 1110 260 0 0 {name=x10 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
+C {sky130_stdcells/mux2_1.sym} 1110 260 0 0 {name=x11[31:1] VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hs__ }
 C {devices/lab_pin.sym} 1070 320 0 0 {name=p23 sig_type=std_logic lab=data_req[3:0]}
 C {devices/lab_pin.sym} 1150 260 0 1 {name=p24 sig_type=std_logic lab=o_wb_adr[31:1]}
 C {devices/lab_pin.sym} 1070 240 0 0 {name=p25 sig_type=std_logic lab=instr_addr[31:1]}
@@ -108,3 +116,4 @@ C {devices/noconn.sym} 680 190 0 0 {name=l12}
 C {devices/noconn.sym} 800 310 0 1 {name=l13}
 C {devices/vdd.sym} 340 370 0 0 {name=l14 lab=VCC}
 C {devices/lab_pin.sym} 1070 370 0 0 {name=p8 sig_type=std_logic lab=data_addr[0]}
+C {devices/gnd.sym} 440 390 0 0 {name=l15 lab=VSS}
