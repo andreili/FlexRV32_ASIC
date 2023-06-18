@@ -360,7 +360,7 @@ C {sky130_stdcells/inv_1.sym} 490 490 0 0 {name=x204 VGND=VSS VNB=VSS VPB=VCC VP
 C {devices/lab_pin.sym} 800 1540 3 0 {name=p36 sig_type=std_logic lab=h_next_p[4]}
 C {devices/lab_pin.sym} 980 1520 2 0 {name=p37 sig_type=std_logic lab=is_head_p[4]}
 C {devices/lab_pin.sym} 380 1580 2 1 {name=p70 sig_type=std_logic lab=is_head_p[3]}
-C {devices/lab_pin.sym} 560 910 2 1 {name=p73 sig_type=std_logic lab=is_head_n[4]}
+C {devices/lab_pin.sym} 560 910 2 1 {name=p73 sig_type=std_logic lab=is_head_n4}
 C {devices/lab_pin.sym} 440 930 2 1 {name=p74 sig_type=std_logic lab=is_head_p[3]}
 C {devices/lab_pin.sym} 440 970 2 1 {name=p75 sig_type=std_logic lab=push}
 C {devices/lab_pin.sym} 570 750 2 0 {name=p77 sig_type=std_logic lab=push_n}
@@ -427,7 +427,7 @@ C {devices/lab_pin.sym} 1600 1170 3 0 {name=p193 sig_type=std_logic lab=is_comp_
 C {devices/lab_pin.sym} 440 1010 3 0 {name=p204 sig_type=std_logic lab=pop_n}
 C {devices/lab_pin.sym} 950 160 2 0 {name=p123 sig_type=std_logic lab=stall_n}
 C {devices/lab_pin.sym} 920 1350 2 0 {name=p128 sig_type=std_logic lab=hi_valid_n}
-C {devices/lab_pin.sym} 980 1540 2 0 {name=p205 sig_type=std_logic lab=is_head_n[4]}
+C {devices/lab_pin.sym} 980 1540 2 0 {name=p205 sig_type=std_logic lab=is_head_n4}
 C {../../elements/logic/mux2.sym} 540 2310 0 0 {name=x700}
 C {devices/noconn.sym} 1280 1420 0 1 {name=l10}
 C {../../elements/logic/mux2.sym} 530 1590 0 0 {name=x740}
