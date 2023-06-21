@@ -47,7 +47,7 @@ B 5 -732.5 -122.5 -727.5 -117.5 {name=i_need_pause dir=in}
 B 5 -1272.5 -122.5 -1267.5 -117.5 {name=i_decode_rs1[4:0] dir=in}
 B 5 -1252.5 -122.5 -1247.5 -117.5 {name=i_decode_rs2[4:0] dir=in}
 B 5 -512.5 -122.5 -507.5 -117.5 {name=i_alu1_rd[4:0] dir=in}
-B 5 157.5 -122.5 162.5 -117.5 {name=o_write_flush dir=in}
+B 5 157.5 -122.5 162.5 -117.5 {name=o_write_flush dir=out}
 T {@symname} -689.5 -56 0 0 0.3 0.3 {}
 T {@name} 185 -112 0 0 0.2 0.2 {}
 T {i_clk} -936 -95 1 0 0.2 0.2 {}

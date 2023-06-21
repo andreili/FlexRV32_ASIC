@@ -1,0 +1,29 @@
+{
+    "name": "nic_main",
+    "data_width": 32,
+    "addr_width": 32,
+    "sel_width": 4,
+    "masters":
+    [
+        {
+            "name": "core"
+        }
+    ],
+    "slaves":
+    [
+        {
+            "name": "ROM",
+            "addr_width": 12,
+            "addr_lo": false,
+            "mode": "ro",
+            "addr_mask": "0xxxxxx"
+        },
+        {
+            "name": "SRAM",
+            "addr_width": "8",
+            "mode": "rw",
+            "addr_lo": false,
+            "addr_mask": "1xxxxxx"
+        }
+    ]
+}

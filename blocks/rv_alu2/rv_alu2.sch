@@ -17,11 +17,9 @@ C {devices/noconn.sym} 130 280 0 1 {name=l14}
 C {devices/ipin.sym} 130 340 0 0 {name=p2 lab=i_reg_data2[31:0]}
 C {devices/ipin.sym} 130 360 0 0 {name=p11 lab=i_csr_read}
 C {devices/ipin.sym} 130 380 0 0 {name=p12 lab=i_csr_data[31:0]}
-C {devices/ipin.sym} 130 400 0 0 {name=p32 lab=i_flush}
 C {devices/noconn.sym} 130 380 0 1 {name=l12}
 C {devices/noconn.sym} 130 360 0 1 {name=l13}
 C {devices/noconn.sym} 130 340 0 1 {name=l1}
-C {devices/noconn.sym} 130 400 0 1 {name=l32}
 C {devices/ipin.sym} 130 40 0 0 {name=p3 lab=i_reset_n}
 C {devices/noconn.sym} 130 40 0 1 {name=l2}
 C {devices/ipin.sym} 130 60 0 0 {name=p9 lab=i_op1[31:0]}

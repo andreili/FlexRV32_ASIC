@@ -1,0 +1,5 @@
+{
+    "VCC": "1.8",
+    "power_on_delay": 1,
+    "clock_period": 1
+}

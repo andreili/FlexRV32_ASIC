@@ -10,7 +10,10 @@ export PDK_ROOT := $(PDK_ROOT)
 export PDK := $(PDK)
 
 blocks=$(shell cd blocks && find * -maxdepth 0 -type d)
+openlane=rv_alu1 rv_alu2 rv_ctrl rv_decode rv_fetch rv_hazard rv_regs rv_write
 utils=raw2fst mkrom
+
+openlane_imp=$(openlane:%=import_%)
 
 netlists=$(blocks:%=netlist_%)
 sim_blks=$(blocks:%=sim_blk_%)
@@ -24,6 +27,14 @@ default: all
 
 %.sch:
 	cd blocks/$* && xschem --rcfile ${PDK_ROOT}/${PDK}/libs.tech/xschem/xschemrc $*.sch
+
+import: $(openlane_imp)
+
+import_%:
+	cp ../../ASIC/caravel_FlexRV32/openlane/$*/runs/$*/results/final/spi/lvs/$*.spice ./blocks/openlane/$*.spice
+	sed -i '/.*_decap_.*/d' blocks/openlane/$*.spice
+	sed -i '/.*_fill_.*/d' blocks/openlane/$*.spice
+	sed -i '/.*_tapvpwrvgnd_.*/d' blocks/openlane/$*.spice
 
 netlist_%:
 	@echo "--- Generate SPICE netlist ($*) ---"

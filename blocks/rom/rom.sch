@@ -85,6 +85,6 @@ VGND=VSS
 VNB=VSS
 VPB=VCC
 VPWR=VCC
-prefix=sky130_fd_sc_hs__ }
+prefix=sky130_fd_sc_hd__ }
 C {devices/lab_pin.sym} 450 120 1 0 {name=p4 sig_type=std_logic lab=A_L[9:0]}
 C {devices/ipin.sym} 270 120 0 0 {name=p5 lab=i_clk}

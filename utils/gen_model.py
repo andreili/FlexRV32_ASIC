@@ -321,7 +321,7 @@ def gen_alu2_conn():
 
 def gen_write_conn():
     global f
-    f.write("\nXXM0 alu2_ready vssd1 vssd1 vccd1 vccd1 alu2_nready sky130_fd_sc_hs__inv_1\n")
+    f.write("\nXXM0 alu2_ready vssd1 vssd1 vccd1 vccd1 alu2_nready sky130_fd_sc_hd__inv_1\n")
     f.write("\nXu_st5_write i_clk alu2_nready")
     f.write("\n+ ")
     for i in range(3):
@@ -386,9 +386,9 @@ def gen_ctrl_conn():
 def gen_core_logic():
     global f
     f.write("\n\n* Glue logic")
-    f.write("\nXXM1 alu1_inst_jal_jalr alu1_inst_branch decode_inst_csr_req vssd1 vssd1 vccd1 vccd1 ctrl_need_pause sky130_fd_sc_hs__o21a_1")
-    f.write("\nXXM2 alu2_res_src[2] o_data_write vssd1 vssd1 vccd1 vccd1 o_data_req sky130_fd_sc_hs__or2_1")
-    f.write("\nXXM3 o_data_req alu2_reg_write vssd1 vssd1 vccd1 vccd1 o_instr_issued sky130_fd_sc_hs__or2_1")
+    f.write("\nXXM1 alu1_inst_jal_jalr alu1_inst_branch decode_inst_csr_req vssd1 vssd1 vccd1 vccd1 ctrl_need_pause sky130_fd_sc_hd__o21a_1")
+    f.write("\nXXM2 alu2_res_src[2] o_data_write vssd1 vssd1 vccd1 vccd1 o_data_req sky130_fd_sc_hd__or2_1")
+    f.write("\nXXM3 o_data_req alu2_reg_write vssd1 vssd1 vccd1 vccd1 o_instr_issued sky130_fd_sc_hd__or2_1")
     f.write("\n")
     f.write("\n")
     f.write("\n")

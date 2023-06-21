@@ -93,45 +93,45 @@ Vcsr_rdata31 csr_rdata[31] 0 PWL 0n 0
 Vo_wb_stb o_wb_stb 0 PWL 0n {VCC}
 Vo_wb_cyc o_wb_cyc 0 PWL 0n {VCC}
 
-XXM0 data_req vssd1 vssd1 vccd1 vccd1 data_nreq sky130_fd_sc_hs__inv_1
-XXM1 i_wb_ack data_nreq instr_req vssd1 vssd1 vccd1 vccd1 instr_ack sky130_fd_sc_hs__and3_1
-XXM2 instr_ack vssd1 vssd1 vccd1 vccd1 instr_nack sky130_fd_sc_hs__inv_1
-XXM3 i_wb_ack instr_nack vssd1 vssd1 vccd1 vccd1 instr_ack sky130_fd_sc_hs__and2_1
-XXM4 data_req data_write vssd1 vssd1 vccd1 vccd1 o_wb_we sky130_fd_sc_hs__and2_1
-XXM5 data_sel vssd1 vssd1 vccd1 vccd1 data_nsel sky130_fd_sc_hs__inv_1
-XXM6 data_nsel data_req vssd1 vssd1 vccd1 vccd1 o_wb_sel sky130_fd_sc_hs__nand2_1
+XXM0 data_req vssd1 vssd1 vccd1 vccd1 data_nreq sky130_fd_sc_hd__inv_1
+XXM1 i_wb_ack data_nreq instr_req vssd1 vssd1 vccd1 vccd1 instr_ack sky130_fd_sc_hd__and3_1
+XXM2 instr_ack vssd1 vssd1 vccd1 vccd1 instr_nack sky130_fd_sc_hd__inv_1
+XXM3 i_wb_ack instr_nack vssd1 vssd1 vccd1 vccd1 instr_ack sky130_fd_sc_hd__and2_1
+XXM4 data_req data_write vssd1 vssd1 vccd1 vccd1 o_wb_we sky130_fd_sc_hd__and2_1
+XXM5 data_sel vssd1 vssd1 vccd1 vccd1 data_nsel sky130_fd_sc_hd__inv_1
+XXM6 data_nsel data_req vssd1 vssd1 vccd1 vccd1 o_wb_sel sky130_fd_sc_hd__nand2_1
 
-XM0 data_req data_addr[0] vssd1 vssd1 vccd1 vccd1 o_wb_adr[0] sky130_fd_sc_hs__and2_1
-XM1 instr_addr[1] data_addr[1] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[1] sky130_fd_sc_hs__mux2_1
-XM2 instr_addr[2] data_addr[2] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[2] sky130_fd_sc_hs__mux2_1
-XM3 instr_addr[3] data_addr[3] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[3] sky130_fd_sc_hs__mux2_1
-XM4 instr_addr[4] data_addr[4] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[4] sky130_fd_sc_hs__mux2_1
-XM5 instr_addr[5] data_addr[5] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[5] sky130_fd_sc_hs__mux2_1
-XM6 instr_addr[6] data_addr[6] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[6] sky130_fd_sc_hs__mux2_1
-XM7 instr_addr[7] data_addr[7] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[7] sky130_fd_sc_hs__mux2_1
-XM8 instr_addr[8] data_addr[8] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[8] sky130_fd_sc_hs__mux2_1
-XM9 instr_addr[9] data_addr[9] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[9] sky130_fd_sc_hs__mux2_1
-XM10 instr_addr[10] data_addr[10] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[10] sky130_fd_sc_hs__mux2_1
-XM11 instr_addr[11] data_addr[11] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[11] sky130_fd_sc_hs__mux2_1
-XM12 instr_addr[12] data_addr[12] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[12] sky130_fd_sc_hs__mux2_1
-XM13 instr_addr[13] data_addr[13] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[13] sky130_fd_sc_hs__mux2_1
-XM14 instr_addr[14] data_addr[14] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[14] sky130_fd_sc_hs__mux2_1
-XM15 instr_addr[15] data_addr[15] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[15] sky130_fd_sc_hs__mux2_1
-XM16 data_req data_addr[16] vssd1 vssd1 vccd1 vccd1 o_wb_adr[16] sky130_fd_sc_hs__and2_1
-XM17 data_req data_addr[17] vssd1 vssd1 vccd1 vccd1 o_wb_adr[17] sky130_fd_sc_hs__and2_1
-XM18 data_req data_addr[18] vssd1 vssd1 vccd1 vccd1 o_wb_adr[18] sky130_fd_sc_hs__and2_1
-XM19 data_req data_addr[19] vssd1 vssd1 vccd1 vccd1 o_wb_adr[19] sky130_fd_sc_hs__and2_1
-XM20 data_req data_addr[20] vssd1 vssd1 vccd1 vccd1 o_wb_adr[20] sky130_fd_sc_hs__and2_1
-XM21 data_req data_addr[21] vssd1 vssd1 vccd1 vccd1 o_wb_adr[21] sky130_fd_sc_hs__and2_1
-XM22 data_req data_addr[22] vssd1 vssd1 vccd1 vccd1 o_wb_adr[22] sky130_fd_sc_hs__and2_1
-XM23 data_req data_addr[23] vssd1 vssd1 vccd1 vccd1 o_wb_adr[23] sky130_fd_sc_hs__and2_1
-XM24 data_req data_addr[24] vssd1 vssd1 vccd1 vccd1 o_wb_adr[24] sky130_fd_sc_hs__and2_1
-XM25 data_req data_addr[25] vssd1 vssd1 vccd1 vccd1 o_wb_adr[25] sky130_fd_sc_hs__and2_1
-XM26 data_req data_addr[26] vssd1 vssd1 vccd1 vccd1 o_wb_adr[26] sky130_fd_sc_hs__and2_1
-XM27 data_req data_addr[27] vssd1 vssd1 vccd1 vccd1 o_wb_adr[27] sky130_fd_sc_hs__and2_1
-XM28 data_req data_addr[28] vssd1 vssd1 vccd1 vccd1 o_wb_adr[28] sky130_fd_sc_hs__and2_1
-XM29 data_req data_addr[29] vssd1 vssd1 vccd1 vccd1 o_wb_adr[29] sky130_fd_sc_hs__and2_1
-XM30 data_req data_addr[30] vssd1 vssd1 vccd1 vccd1 o_wb_adr[30] sky130_fd_sc_hs__and2_1
-XM31 data_req data_addr[31] vssd1 vssd1 vccd1 vccd1 o_wb_adr[31] sky130_fd_sc_hs__and2_1
+XM0 data_req data_addr[0] vssd1 vssd1 vccd1 vccd1 o_wb_adr[0] sky130_fd_sc_hd__and2_1
+XM1 instr_addr[1] data_addr[1] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[1] sky130_fd_sc_hd__mux2_1
+XM2 instr_addr[2] data_addr[2] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[2] sky130_fd_sc_hd__mux2_1
+XM3 instr_addr[3] data_addr[3] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[3] sky130_fd_sc_hd__mux2_1
+XM4 instr_addr[4] data_addr[4] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[4] sky130_fd_sc_hd__mux2_1
+XM5 instr_addr[5] data_addr[5] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[5] sky130_fd_sc_hd__mux2_1
+XM6 instr_addr[6] data_addr[6] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[6] sky130_fd_sc_hd__mux2_1
+XM7 instr_addr[7] data_addr[7] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[7] sky130_fd_sc_hd__mux2_1
+XM8 instr_addr[8] data_addr[8] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[8] sky130_fd_sc_hd__mux2_1
+XM9 instr_addr[9] data_addr[9] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[9] sky130_fd_sc_hd__mux2_1
+XM10 instr_addr[10] data_addr[10] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[10] sky130_fd_sc_hd__mux2_1
+XM11 instr_addr[11] data_addr[11] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[11] sky130_fd_sc_hd__mux2_1
+XM12 instr_addr[12] data_addr[12] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[12] sky130_fd_sc_hd__mux2_1
+XM13 instr_addr[13] data_addr[13] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[13] sky130_fd_sc_hd__mux2_1
+XM14 instr_addr[14] data_addr[14] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[14] sky130_fd_sc_hd__mux2_1
+XM15 instr_addr[15] data_addr[15] data_req vssd1 vssd1 vccd1 vccd1 o_wb_adr[15] sky130_fd_sc_hd__mux2_1
+XM16 data_req data_addr[16] vssd1 vssd1 vccd1 vccd1 o_wb_adr[16] sky130_fd_sc_hd__and2_1
+XM17 data_req data_addr[17] vssd1 vssd1 vccd1 vccd1 o_wb_adr[17] sky130_fd_sc_hd__and2_1
+XM18 data_req data_addr[18] vssd1 vssd1 vccd1 vccd1 o_wb_adr[18] sky130_fd_sc_hd__and2_1
+XM19 data_req data_addr[19] vssd1 vssd1 vccd1 vccd1 o_wb_adr[19] sky130_fd_sc_hd__and2_1
+XM20 data_req data_addr[20] vssd1 vssd1 vccd1 vccd1 o_wb_adr[20] sky130_fd_sc_hd__and2_1
+XM21 data_req data_addr[21] vssd1 vssd1 vccd1 vccd1 o_wb_adr[21] sky130_fd_sc_hd__and2_1
+XM22 data_req data_addr[22] vssd1 vssd1 vccd1 vccd1 o_wb_adr[22] sky130_fd_sc_hd__and2_1
+XM23 data_req data_addr[23] vssd1 vssd1 vccd1 vccd1 o_wb_adr[23] sky130_fd_sc_hd__and2_1
+XM24 data_req data_addr[24] vssd1 vssd1 vccd1 vccd1 o_wb_adr[24] sky130_fd_sc_hd__and2_1
+XM25 data_req data_addr[25] vssd1 vssd1 vccd1 vccd1 o_wb_adr[25] sky130_fd_sc_hd__and2_1
+XM26 data_req data_addr[26] vssd1 vssd1 vccd1 vccd1 o_wb_adr[26] sky130_fd_sc_hd__and2_1
+XM27 data_req data_addr[27] vssd1 vssd1 vccd1 vccd1 o_wb_adr[27] sky130_fd_sc_hd__and2_1
+XM28 data_req data_addr[28] vssd1 vssd1 vccd1 vccd1 o_wb_adr[28] sky130_fd_sc_hd__and2_1
+XM29 data_req data_addr[29] vssd1 vssd1 vccd1 vccd1 o_wb_adr[29] sky130_fd_sc_hd__and2_1
+XM30 data_req data_addr[30] vssd1 vssd1 vccd1 vccd1 o_wb_adr[30] sky130_fd_sc_hd__and2_1
+XM31 data_req data_addr[31] vssd1 vssd1 vccd1 vccd1 o_wb_adr[31] sky130_fd_sc_hd__and2_1
 
 .ends
