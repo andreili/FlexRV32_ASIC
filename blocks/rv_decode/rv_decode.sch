@@ -272,5 +272,5 @@ C {sky130_stdcells/and3_1.sym} 410 2070 0 0 {name=x51 VGND=VSS VNB=VSS VPB=VCC V
 C {devices/lab_pin.sym} 350 2070 2 1 {name=p154 sig_type=std_logic lab=inst_full}
 C {devices/lab_pin.sym} 470 2070 2 0 {name=p155 sig_type=std_logic lab=inst_auipc}
 C {devices/noconn.sym} 590 740 0 1 {name=l3}
-C {/media/FlexRV32/asic/blocks/rv_decode_comp/rv_decode_comp.sym} 440 730 0 0 {name=x101}
+C {../../blocks/rv_decode_comp/rv_decode_comp.sym} 440 730 0 0 {name=x101}
 C {devices/lab_pin.sym} 590 720 2 0 {name=p21 sig_type=std_logic lab=instruction_unc[31:0]}
