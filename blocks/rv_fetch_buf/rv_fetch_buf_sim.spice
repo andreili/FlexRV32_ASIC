@@ -1,25 +1,12 @@
 
-.include ../../elements/inc_lib.spice
+.include ../block_head.spice
 .include simulation/rv_fetch_buf.spice
 
-.param VCC=1.8
-
-VVCC VCC 0 PWL 0ns 0 1ns 0 1.1ns {VCC}
 Vi_clk i_clk 0 PULSE 0 {VCC} 0 20ps 20ps 1960ps 4000ps
-VVSS VSS 0 PWL 0n 0
 
 .include simulation/stimuli_rv_fetch_buf.cir
 
-.OPTIONS MEASURE MEASFAIL=1
-.OPTIONS LINSOL type=klu2 AZ_tol=1.0e-3 TR_PARTITION=1 TR_PARTITION_TYPE=GRAPH
-.OPTIONS TIMEINT RELTOL=1e-3 ABSTOL=1e-5 method=gear
-.OPTIONS DIST STRATEGY=2
-
-*.options timeint reltol=1e-3 abstol=1e-5
-*.options linsol type=belos AZ_tol=1.0e-3
 .tran 1p 90n
 .print tran format=raw file=simulation/rv_fetch_buf.spice.raw v(*)
 
-.GLOBAL VCC
-.GLOBAL VSS
 .end
