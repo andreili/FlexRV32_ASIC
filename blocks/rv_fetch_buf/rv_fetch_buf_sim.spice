@@ -6,7 +6,7 @@ Vi_clk i_clk 0 PULSE 0 {VCC} 0 20ps 20ps 1960ps 4000ps
 
 .include simulation/stimuli_rv_fetch_buf.cir
 
-.tran 1p 90n
+.tran 1p 20n
 .print tran format=raw file=simulation/rv_fetch_buf.spice.raw v(*)
 
 .end

@@ -91,7 +91,6 @@ C {devices/opin.sym} 280 440 0 0 {name=p9 lab=o_csr_ebreak}
 C {devices/opin.sym} 280 460 0 0 {name=p13 lab=o_csr_read}
 C {devices/opin.sym} 280 480 0 0 {name=p14 lab=o_csr_set}
 C {devices/opin.sym} 280 500 0 0 {name=p15 lab=o_csr_write}
-C {devices/opin.sym} 280 520 0 0 {name=p16 lab=o_csr_imm_sel}
 C {devices/opin.sym} 280 540 0 0 {name=p19 lab=o_csr_idx[11:0]}
 C {devices/opin.sym} 280 560 0 0 {name=p20 lab=o_csr_imm[4:0]}
 C {devices/ipin.sym} 90 960 0 0 {name=p3 lab=i_stall}
@@ -132,7 +131,6 @@ C {devices/noconn.sym} 280 210 0 0 {name=l19}
 C {devices/noconn.sym} 280 190 0 0 {name=l20}
 C {devices/noconn.sym} 280 170 0 0 {name=l21}
 C {devices/noconn.sym} 280 540 0 0 {name=l22}
-C {devices/noconn.sym} 280 520 0 0 {name=l23}
 C {devices/noconn.sym} 280 500 0 0 {name=l24}
 C {devices/noconn.sym} 280 480 0 0 {name=l25}
 C {devices/noconn.sym} 280 460 0 0 {name=l26}

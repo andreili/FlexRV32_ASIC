@@ -6,7 +6,7 @@
 Vi_clk i_clk 0 PULSE 0 {VCC} 0 20ps 20ps 1960ps 4000ps
 Vi_reset_n i_reset_n 0 PWL 0ns 0 8ns 0 8.1ns {VCC}
 
-.tran 1p 200n
+.tran 1p 20n
 .print tran format=raw file=simulation/top.spice.raw v(*) i(*)
 
 .meas tran power avg par('(-1*v(VCC)*I(VVCC))') from=1.4n to=999n
