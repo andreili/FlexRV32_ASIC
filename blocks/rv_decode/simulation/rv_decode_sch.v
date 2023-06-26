@@ -53,32 +53,33 @@ wire net18 ;
 wire net19 ;
 wire [15:0] op0 ;
 wire net20 ;
-wire net21 ;
-wire net22 ;
-wire net23 ;
+wire [31:0] net21 ;
+wire [31:0] net22 ;
+wire [31:0] net23 ;
 wire [31:0] net24 ;
 wire [31:0] net25 ;
 wire [31:0] net26 ;
-wire [31:0] net27 ;
+wire net27 ;
 wire [31:0] net28 ;
 wire [31:0] net29 ;
 wire net30 ;
-wire [31:0] net31 ;
-wire [31:0] net32 ;
+wire net31 ;
+wire net32 ;
 wire net33 ;
-wire net34 ;
-wire net35 ;
+wire [30:0] net34 ;
+wire [30:0] net35 ;
 wire net36 ;
 wire [30:0] net37 ;
 wire [30:0] net38 ;
 wire net39 ;
-wire [30:0] net40 ;
-wire [30:0] net41 ;
-wire net42 ;
-wire [7:0] net43 ;
-wire [2:0] net44 ;
+wire ariph_inv_n ;
+wire [2:0] net40 ;
+wire net41 ;
+wire [4:0] net42 ;
+wire net43 ;
+wire net44 ;
 wire net45 ;
-wire [4:0] net46 ;
+wire net46 ;
 wire net47 ;
 wire net48 ;
 wire net49 ;
@@ -90,43 +91,25 @@ wire net54 ;
 wire net55 ;
 wire net56 ;
 wire net57 ;
-wire net58 ;
-wire net59 ;
+wire [11:0] net58 ;
+wire [4:0] net59 ;
 wire net60 ;
 wire net61 ;
 wire net62 ;
 wire net63 ;
 wire net64 ;
 wire net65 ;
-wire net66 ;
+wire [4:0] net66 ;
 wire net67 ;
-wire net68 ;
+wire [4:0] net68 ;
 wire net69 ;
 wire net70 ;
-wire [11:0] net71 ;
-wire [4:0] net72 ;
+wire net71 ;
+wire [31:0] net72 ;
 wire net73 ;
 wire net74 ;
 wire net75 ;
-wire net76 ;
-wire net77 ;
-wire net78 ;
-wire net79 ;
-wire net80 ;
-wire [4:0] net81 ;
-wire net82 ;
-wire [4:0] net83 ;
-wire net84 ;
-wire net85 ;
-wire net86 ;
-wire net87 ;
-wire net88 ;
-wire net89 ;
 wire rs1_zeroize ;
-wire net90 ;
-wire [31:0] net91 ;
-wire net92 ;
-wire net93 ;
 wire inst_grp_fnmsub ;
 wire inst_custom0 ;
 wire inst_custom1 ;
@@ -137,6 +120,7 @@ wire inst_grp_store_fp ;
 wire inst_grp_amo ;
 wire inst_grp_ari ;
 wire inst_grp_arr ;
+wire op2_inv_n ;
 wire [7:0] funct3 ;
 wire inst_grp_fmsub ;
 wire imm_sel_i ;
@@ -146,10 +130,9 @@ wire imm_sel_u ;
 wire valid_input ;
 wire inst_grp_load ;
 wire inst_auipc ;
-wire ariph_inv ;
 wire [31:0] op ;
+wire inst_grp_sys_n ;
 wire VSS ;
-wire inst_misc_mem ;
 wire inst_jal ;
 wire [4:0] op_pn ;
 wire inst_grp_fnmadd ;
@@ -161,6 +144,8 @@ wire inst_ecall ;
 wire inst_opv ;
 wire inst_grp_fmadd ;
 wire inst_grp_branch ;
+wire inst_full_n ;
+wire inst_misc_mem_n ;
 wire inst_grp_fp ;
 wire net1 ;
 wire net2 ;
@@ -172,10 +157,9 @@ wire net7 ;
 wire net8 ;
 wire net9 ;
 wire [4:0] op_n ;
+wire [7:0] funct3_n ;
 wire inst_fence ;
 wire inst_grp_reg ;
-wire op2_inv ;
-wire inst_grp_sys ;
 wire inst_jalr ;
 wire inst_grp_load_fp ;
 wire inst_fence_i ;
@@ -411,7 +395,7 @@ x100_0 (
 cell_dfxtp
 x205_31 ( 
  .CLK( i_clk ),
- .D( net31[31] ),
+ .D( net28[31] ),
  .Q( instruction[31] )
 );
 
@@ -419,7 +403,7 @@ x205_31 (
 cell_dfxtp
 x205_30 ( 
  .CLK( i_clk ),
- .D( net31[30] ),
+ .D( net28[30] ),
  .Q( instruction[30] )
 );
 
@@ -427,7 +411,7 @@ x205_30 (
 cell_dfxtp
 x205_29 ( 
  .CLK( i_clk ),
- .D( net31[29] ),
+ .D( net28[29] ),
  .Q( instruction[29] )
 );
 
@@ -435,7 +419,7 @@ x205_29 (
 cell_dfxtp
 x205_28 ( 
  .CLK( i_clk ),
- .D( net31[28] ),
+ .D( net28[28] ),
  .Q( instruction[28] )
 );
 
@@ -443,7 +427,7 @@ x205_28 (
 cell_dfxtp
 x205_27 ( 
  .CLK( i_clk ),
- .D( net31[27] ),
+ .D( net28[27] ),
  .Q( instruction[27] )
 );
 
@@ -451,7 +435,7 @@ x205_27 (
 cell_dfxtp
 x205_26 ( 
  .CLK( i_clk ),
- .D( net31[26] ),
+ .D( net28[26] ),
  .Q( instruction[26] )
 );
 
@@ -459,7 +443,7 @@ x205_26 (
 cell_dfxtp
 x205_25 ( 
  .CLK( i_clk ),
- .D( net31[25] ),
+ .D( net28[25] ),
  .Q( instruction[25] )
 );
 
@@ -467,7 +451,7 @@ x205_25 (
 cell_dfxtp
 x205_24 ( 
  .CLK( i_clk ),
- .D( net31[24] ),
+ .D( net28[24] ),
  .Q( instruction[24] )
 );
 
@@ -475,7 +459,7 @@ x205_24 (
 cell_dfxtp
 x205_23 ( 
  .CLK( i_clk ),
- .D( net31[23] ),
+ .D( net28[23] ),
  .Q( instruction[23] )
 );
 
@@ -483,7 +467,7 @@ x205_23 (
 cell_dfxtp
 x205_22 ( 
  .CLK( i_clk ),
- .D( net31[22] ),
+ .D( net28[22] ),
  .Q( instruction[22] )
 );
 
@@ -491,7 +475,7 @@ x205_22 (
 cell_dfxtp
 x205_21 ( 
  .CLK( i_clk ),
- .D( net31[21] ),
+ .D( net28[21] ),
  .Q( instruction[21] )
 );
 
@@ -499,7 +483,7 @@ x205_21 (
 cell_dfxtp
 x205_20 ( 
  .CLK( i_clk ),
- .D( net31[20] ),
+ .D( net28[20] ),
  .Q( instruction[20] )
 );
 
@@ -507,7 +491,7 @@ x205_20 (
 cell_dfxtp
 x205_19 ( 
  .CLK( i_clk ),
- .D( net31[19] ),
+ .D( net28[19] ),
  .Q( instruction[19] )
 );
 
@@ -515,7 +499,7 @@ x205_19 (
 cell_dfxtp
 x205_18 ( 
  .CLK( i_clk ),
- .D( net31[18] ),
+ .D( net28[18] ),
  .Q( instruction[18] )
 );
 
@@ -523,7 +507,7 @@ x205_18 (
 cell_dfxtp
 x205_17 ( 
  .CLK( i_clk ),
- .D( net31[17] ),
+ .D( net28[17] ),
  .Q( instruction[17] )
 );
 
@@ -531,7 +515,7 @@ x205_17 (
 cell_dfxtp
 x205_16 ( 
  .CLK( i_clk ),
- .D( net31[16] ),
+ .D( net28[16] ),
  .Q( instruction[16] )
 );
 
@@ -539,7 +523,7 @@ x205_16 (
 cell_dfxtp
 x205_15 ( 
  .CLK( i_clk ),
- .D( net31[15] ),
+ .D( net28[15] ),
  .Q( instruction[15] )
 );
 
@@ -547,7 +531,7 @@ x205_15 (
 cell_dfxtp
 x205_14 ( 
  .CLK( i_clk ),
- .D( net31[14] ),
+ .D( net28[14] ),
  .Q( instruction[14] )
 );
 
@@ -555,7 +539,7 @@ x205_14 (
 cell_dfxtp
 x205_13 ( 
  .CLK( i_clk ),
- .D( net31[13] ),
+ .D( net28[13] ),
  .Q( instruction[13] )
 );
 
@@ -563,7 +547,7 @@ x205_13 (
 cell_dfxtp
 x205_12 ( 
  .CLK( i_clk ),
- .D( net31[12] ),
+ .D( net28[12] ),
  .Q( instruction[12] )
 );
 
@@ -571,7 +555,7 @@ x205_12 (
 cell_dfxtp
 x205_11 ( 
  .CLK( i_clk ),
- .D( net31[11] ),
+ .D( net28[11] ),
  .Q( instruction[11] )
 );
 
@@ -579,7 +563,7 @@ x205_11 (
 cell_dfxtp
 x205_10 ( 
  .CLK( i_clk ),
- .D( net31[10] ),
+ .D( net28[10] ),
  .Q( instruction[10] )
 );
 
@@ -587,7 +571,7 @@ x205_10 (
 cell_dfxtp
 x205_9 ( 
  .CLK( i_clk ),
- .D( net31[9] ),
+ .D( net28[9] ),
  .Q( instruction[9] )
 );
 
@@ -595,7 +579,7 @@ x205_9 (
 cell_dfxtp
 x205_8 ( 
  .CLK( i_clk ),
- .D( net31[8] ),
+ .D( net28[8] ),
  .Q( instruction[8] )
 );
 
@@ -603,7 +587,7 @@ x205_8 (
 cell_dfxtp
 x205_7 ( 
  .CLK( i_clk ),
- .D( net31[7] ),
+ .D( net28[7] ),
  .Q( instruction[7] )
 );
 
@@ -611,7 +595,7 @@ x205_7 (
 cell_dfxtp
 x205_6 ( 
  .CLK( i_clk ),
- .D( net31[6] ),
+ .D( net28[6] ),
  .Q( instruction[6] )
 );
 
@@ -619,7 +603,7 @@ x205_6 (
 cell_dfxtp
 x205_5 ( 
  .CLK( i_clk ),
- .D( net31[5] ),
+ .D( net28[5] ),
  .Q( instruction[5] )
 );
 
@@ -627,7 +611,7 @@ x205_5 (
 cell_dfxtp
 x205_4 ( 
  .CLK( i_clk ),
- .D( net31[4] ),
+ .D( net28[4] ),
  .Q( instruction[4] )
 );
 
@@ -635,7 +619,7 @@ x205_4 (
 cell_dfxtp
 x205_3 ( 
  .CLK( i_clk ),
- .D( net31[3] ),
+ .D( net28[3] ),
  .Q( instruction[3] )
 );
 
@@ -643,7 +627,7 @@ x205_3 (
 cell_dfxtp
 x205_2 ( 
  .CLK( i_clk ),
- .D( net31[2] ),
+ .D( net28[2] ),
  .Q( instruction[2] )
 );
 
@@ -651,7 +635,7 @@ x205_2 (
 cell_dfxtp
 x205_1 ( 
  .CLK( i_clk ),
- .D( net31[1] ),
+ .D( net28[1] ),
  .Q( instruction[1] )
 );
 
@@ -659,7 +643,7 @@ x205_1 (
 cell_dfxtp
 x205_0 ( 
  .CLK( i_clk ),
- .D( net31[0] ),
+ .D( net28[0] ),
  .Q( instruction[0] )
 );
 
@@ -668,7 +652,7 @@ mux2
 x203_31 ( 
  .s0( net2 ),
  .d0( instruction_unc[31] ),
- .Y( net32[31] ),
+ .Y( net29[31] ),
  .s1( net1 ),
  .d1( instruction[31] )
 );
@@ -678,7 +662,7 @@ mux2
 x203_30 ( 
  .s0( net2 ),
  .d0( instruction_unc[30] ),
- .Y( net32[30] ),
+ .Y( net29[30] ),
  .s1( net1 ),
  .d1( instruction[30] )
 );
@@ -688,7 +672,7 @@ mux2
 x203_29 ( 
  .s0( net2 ),
  .d0( instruction_unc[29] ),
- .Y( net32[29] ),
+ .Y( net29[29] ),
  .s1( net1 ),
  .d1( instruction[29] )
 );
@@ -698,7 +682,7 @@ mux2
 x203_28 ( 
  .s0( net2 ),
  .d0( instruction_unc[28] ),
- .Y( net32[28] ),
+ .Y( net29[28] ),
  .s1( net1 ),
  .d1( instruction[28] )
 );
@@ -708,7 +692,7 @@ mux2
 x203_27 ( 
  .s0( net2 ),
  .d0( instruction_unc[27] ),
- .Y( net32[27] ),
+ .Y( net29[27] ),
  .s1( net1 ),
  .d1( instruction[27] )
 );
@@ -718,7 +702,7 @@ mux2
 x203_26 ( 
  .s0( net2 ),
  .d0( instruction_unc[26] ),
- .Y( net32[26] ),
+ .Y( net29[26] ),
  .s1( net1 ),
  .d1( instruction[26] )
 );
@@ -728,7 +712,7 @@ mux2
 x203_25 ( 
  .s0( net2 ),
  .d0( instruction_unc[25] ),
- .Y( net32[25] ),
+ .Y( net29[25] ),
  .s1( net1 ),
  .d1( instruction[25] )
 );
@@ -738,7 +722,7 @@ mux2
 x203_24 ( 
  .s0( net2 ),
  .d0( instruction_unc[24] ),
- .Y( net32[24] ),
+ .Y( net29[24] ),
  .s1( net1 ),
  .d1( instruction[24] )
 );
@@ -748,7 +732,7 @@ mux2
 x203_23 ( 
  .s0( net2 ),
  .d0( instruction_unc[23] ),
- .Y( net32[23] ),
+ .Y( net29[23] ),
  .s1( net1 ),
  .d1( instruction[23] )
 );
@@ -758,7 +742,7 @@ mux2
 x203_22 ( 
  .s0( net2 ),
  .d0( instruction_unc[22] ),
- .Y( net32[22] ),
+ .Y( net29[22] ),
  .s1( net1 ),
  .d1( instruction[22] )
 );
@@ -768,7 +752,7 @@ mux2
 x203_21 ( 
  .s0( net2 ),
  .d0( instruction_unc[21] ),
- .Y( net32[21] ),
+ .Y( net29[21] ),
  .s1( net1 ),
  .d1( instruction[21] )
 );
@@ -778,7 +762,7 @@ mux2
 x203_20 ( 
  .s0( net2 ),
  .d0( instruction_unc[20] ),
- .Y( net32[20] ),
+ .Y( net29[20] ),
  .s1( net1 ),
  .d1( instruction[20] )
 );
@@ -788,7 +772,7 @@ mux2
 x203_19 ( 
  .s0( net2 ),
  .d0( instruction_unc[19] ),
- .Y( net32[19] ),
+ .Y( net29[19] ),
  .s1( net1 ),
  .d1( instruction[19] )
 );
@@ -798,7 +782,7 @@ mux2
 x203_18 ( 
  .s0( net2 ),
  .d0( instruction_unc[18] ),
- .Y( net32[18] ),
+ .Y( net29[18] ),
  .s1( net1 ),
  .d1( instruction[18] )
 );
@@ -808,7 +792,7 @@ mux2
 x203_17 ( 
  .s0( net2 ),
  .d0( instruction_unc[17] ),
- .Y( net32[17] ),
+ .Y( net29[17] ),
  .s1( net1 ),
  .d1( instruction[17] )
 );
@@ -818,7 +802,7 @@ mux2
 x203_16 ( 
  .s0( net2 ),
  .d0( instruction_unc[16] ),
- .Y( net32[16] ),
+ .Y( net29[16] ),
  .s1( net1 ),
  .d1( instruction[16] )
 );
@@ -828,7 +812,7 @@ mux2
 x203_15 ( 
  .s0( net2 ),
  .d0( instruction_unc[15] ),
- .Y( net32[15] ),
+ .Y( net29[15] ),
  .s1( net1 ),
  .d1( instruction[15] )
 );
@@ -838,7 +822,7 @@ mux2
 x203_14 ( 
  .s0( net2 ),
  .d0( instruction_unc[14] ),
- .Y( net32[14] ),
+ .Y( net29[14] ),
  .s1( net1 ),
  .d1( instruction[14] )
 );
@@ -848,7 +832,7 @@ mux2
 x203_13 ( 
  .s0( net2 ),
  .d0( instruction_unc[13] ),
- .Y( net32[13] ),
+ .Y( net29[13] ),
  .s1( net1 ),
  .d1( instruction[13] )
 );
@@ -858,7 +842,7 @@ mux2
 x203_12 ( 
  .s0( net2 ),
  .d0( instruction_unc[12] ),
- .Y( net32[12] ),
+ .Y( net29[12] ),
  .s1( net1 ),
  .d1( instruction[12] )
 );
@@ -868,7 +852,7 @@ mux2
 x203_11 ( 
  .s0( net2 ),
  .d0( instruction_unc[11] ),
- .Y( net32[11] ),
+ .Y( net29[11] ),
  .s1( net1 ),
  .d1( instruction[11] )
 );
@@ -878,7 +862,7 @@ mux2
 x203_10 ( 
  .s0( net2 ),
  .d0( instruction_unc[10] ),
- .Y( net32[10] ),
+ .Y( net29[10] ),
  .s1( net1 ),
  .d1( instruction[10] )
 );
@@ -888,7 +872,7 @@ mux2
 x203_9 ( 
  .s0( net2 ),
  .d0( instruction_unc[9] ),
- .Y( net32[9] ),
+ .Y( net29[9] ),
  .s1( net1 ),
  .d1( instruction[9] )
 );
@@ -898,7 +882,7 @@ mux2
 x203_8 ( 
  .s0( net2 ),
  .d0( instruction_unc[8] ),
- .Y( net32[8] ),
+ .Y( net29[8] ),
  .s1( net1 ),
  .d1( instruction[8] )
 );
@@ -908,7 +892,7 @@ mux2
 x203_7 ( 
  .s0( net2 ),
  .d0( instruction_unc[7] ),
- .Y( net32[7] ),
+ .Y( net29[7] ),
  .s1( net1 ),
  .d1( instruction[7] )
 );
@@ -918,7 +902,7 @@ mux2
 x203_6 ( 
  .s0( net2 ),
  .d0( instruction_unc[6] ),
- .Y( net32[6] ),
+ .Y( net29[6] ),
  .s1( net1 ),
  .d1( instruction[6] )
 );
@@ -928,7 +912,7 @@ mux2
 x203_5 ( 
  .s0( net2 ),
  .d0( instruction_unc[5] ),
- .Y( net32[5] ),
+ .Y( net29[5] ),
  .s1( net1 ),
  .d1( instruction[5] )
 );
@@ -938,7 +922,7 @@ mux2
 x203_4 ( 
  .s0( net2 ),
  .d0( instruction_unc[4] ),
- .Y( net32[4] ),
+ .Y( net29[4] ),
  .s1( net1 ),
  .d1( instruction[4] )
 );
@@ -948,7 +932,7 @@ mux2
 x203_3 ( 
  .s0( net2 ),
  .d0( instruction_unc[3] ),
- .Y( net32[3] ),
+ .Y( net29[3] ),
  .s1( net1 ),
  .d1( instruction[3] )
 );
@@ -958,7 +942,7 @@ mux2
 x203_2 ( 
  .s0( net2 ),
  .d0( instruction_unc[2] ),
- .Y( net32[2] ),
+ .Y( net29[2] ),
  .s1( net1 ),
  .d1( instruction[2] )
 );
@@ -968,7 +952,7 @@ mux2
 x203_1 ( 
  .s0( net2 ),
  .d0( instruction_unc[1] ),
- .Y( net32[1] ),
+ .Y( net29[1] ),
  .s1( net1 ),
  .d1( instruction[1] )
 );
@@ -978,7 +962,7 @@ mux2
 x203_0 ( 
  .s0( net2 ),
  .d0( instruction_unc[0] ),
- .Y( net32[0] ),
+ .Y( net29[0] ),
  .s1( net1 ),
  .d1( instruction[0] )
 );
@@ -987,269 +971,269 @@ x203_0 (
 cell_and2
 x204_31 ( 
  .A( net9 ),
- .B( net32[31] ),
- .X( net31[31] )
+ .B( net29[31] ),
+ .X( net28[31] )
 );
 
 
 cell_and2
 x204_30 ( 
  .A( net9 ),
- .B( net32[30] ),
- .X( net31[30] )
+ .B( net29[30] ),
+ .X( net28[30] )
 );
 
 
 cell_and2
 x204_29 ( 
  .A( net9 ),
- .B( net32[29] ),
- .X( net31[29] )
+ .B( net29[29] ),
+ .X( net28[29] )
 );
 
 
 cell_and2
 x204_28 ( 
  .A( net9 ),
- .B( net32[28] ),
- .X( net31[28] )
+ .B( net29[28] ),
+ .X( net28[28] )
 );
 
 
 cell_and2
 x204_27 ( 
  .A( net9 ),
- .B( net32[27] ),
- .X( net31[27] )
+ .B( net29[27] ),
+ .X( net28[27] )
 );
 
 
 cell_and2
 x204_26 ( 
  .A( net9 ),
- .B( net32[26] ),
- .X( net31[26] )
+ .B( net29[26] ),
+ .X( net28[26] )
 );
 
 
 cell_and2
 x204_25 ( 
  .A( net9 ),
- .B( net32[25] ),
- .X( net31[25] )
+ .B( net29[25] ),
+ .X( net28[25] )
 );
 
 
 cell_and2
 x204_24 ( 
  .A( net9 ),
- .B( net32[24] ),
- .X( net31[24] )
+ .B( net29[24] ),
+ .X( net28[24] )
 );
 
 
 cell_and2
 x204_23 ( 
  .A( net9 ),
- .B( net32[23] ),
- .X( net31[23] )
+ .B( net29[23] ),
+ .X( net28[23] )
 );
 
 
 cell_and2
 x204_22 ( 
  .A( net9 ),
- .B( net32[22] ),
- .X( net31[22] )
+ .B( net29[22] ),
+ .X( net28[22] )
 );
 
 
 cell_and2
 x204_21 ( 
  .A( net9 ),
- .B( net32[21] ),
- .X( net31[21] )
+ .B( net29[21] ),
+ .X( net28[21] )
 );
 
 
 cell_and2
 x204_20 ( 
  .A( net9 ),
- .B( net32[20] ),
- .X( net31[20] )
+ .B( net29[20] ),
+ .X( net28[20] )
 );
 
 
 cell_and2
 x204_19 ( 
  .A( net9 ),
- .B( net32[19] ),
- .X( net31[19] )
+ .B( net29[19] ),
+ .X( net28[19] )
 );
 
 
 cell_and2
 x204_18 ( 
  .A( net9 ),
- .B( net32[18] ),
- .X( net31[18] )
+ .B( net29[18] ),
+ .X( net28[18] )
 );
 
 
 cell_and2
 x204_17 ( 
  .A( net9 ),
- .B( net32[17] ),
- .X( net31[17] )
+ .B( net29[17] ),
+ .X( net28[17] )
 );
 
 
 cell_and2
 x204_16 ( 
  .A( net9 ),
- .B( net32[16] ),
- .X( net31[16] )
+ .B( net29[16] ),
+ .X( net28[16] )
 );
 
 
 cell_and2
 x204_15 ( 
  .A( net9 ),
- .B( net32[15] ),
- .X( net31[15] )
+ .B( net29[15] ),
+ .X( net28[15] )
 );
 
 
 cell_and2
 x204_14 ( 
  .A( net9 ),
- .B( net32[14] ),
- .X( net31[14] )
+ .B( net29[14] ),
+ .X( net28[14] )
 );
 
 
 cell_and2
 x204_13 ( 
  .A( net9 ),
- .B( net32[13] ),
- .X( net31[13] )
+ .B( net29[13] ),
+ .X( net28[13] )
 );
 
 
 cell_and2
 x204_12 ( 
  .A( net9 ),
- .B( net32[12] ),
- .X( net31[12] )
+ .B( net29[12] ),
+ .X( net28[12] )
 );
 
 
 cell_and2
 x204_11 ( 
  .A( net9 ),
- .B( net32[11] ),
- .X( net31[11] )
+ .B( net29[11] ),
+ .X( net28[11] )
 );
 
 
 cell_and2
 x204_10 ( 
  .A( net9 ),
- .B( net32[10] ),
- .X( net31[10] )
+ .B( net29[10] ),
+ .X( net28[10] )
 );
 
 
 cell_and2
 x204_9 ( 
  .A( net9 ),
- .B( net32[9] ),
- .X( net31[9] )
+ .B( net29[9] ),
+ .X( net28[9] )
 );
 
 
 cell_and2
 x204_8 ( 
  .A( net9 ),
- .B( net32[8] ),
- .X( net31[8] )
+ .B( net29[8] ),
+ .X( net28[8] )
 );
 
 
 cell_and2
 x204_7 ( 
  .A( net9 ),
- .B( net32[7] ),
- .X( net31[7] )
+ .B( net29[7] ),
+ .X( net28[7] )
 );
 
 
 cell_and2
 x204_6 ( 
  .A( net9 ),
- .B( net32[6] ),
- .X( net31[6] )
+ .B( net29[6] ),
+ .X( net28[6] )
 );
 
 
 cell_and2
 x204_5 ( 
  .A( net9 ),
- .B( net32[5] ),
- .X( net31[5] )
+ .B( net29[5] ),
+ .X( net28[5] )
 );
 
 
 cell_and2
 x204_4 ( 
  .A( net9 ),
- .B( net32[4] ),
- .X( net31[4] )
+ .B( net29[4] ),
+ .X( net28[4] )
 );
 
 
 cell_and2
 x204_3 ( 
  .A( net9 ),
- .B( net32[3] ),
- .X( net31[3] )
+ .B( net29[3] ),
+ .X( net28[3] )
 );
 
 
 cell_and2
 x204_2 ( 
  .A( net9 ),
- .B( net32[2] ),
- .X( net31[2] )
+ .B( net29[2] ),
+ .X( net28[2] )
 );
 
 
 cell_and2
 x204_1 ( 
  .A( net9 ),
- .B( net32[1] ),
- .X( net31[1] )
+ .B( net29[1] ),
+ .X( net28[1] )
 );
 
 
 cell_and2
 x204_0 ( 
  .A( net9 ),
- .B( net32[0] ),
- .X( net31[0] )
+ .B( net29[0] ),
+ .X( net28[0] )
 );
 
 
 cell_inv
 x201 ( 
  .A( i_stall ),
- .Y( net33 )
+ .Y( net30 )
 );
 
 
 cell_inv
 x202 ( 
- .A( net33 ),
+ .A( net30 ),
  .Y( net1 )
 );
 
@@ -1264,7 +1248,7 @@ x200 (
 cell_dfxtp
 x215 ( 
  .CLK( i_clk ),
- .D( net34 ),
+ .D( net31 ),
  .Q( valid_input )
 );
 
@@ -1273,7 +1257,7 @@ mux2
 x213 ( 
  .s0( net4 ),
  .d0( i_ready ),
- .Y( net35 ),
+ .Y( net32 ),
  .s1( net3 ),
  .d1( valid_input )
 );
@@ -1282,21 +1266,21 @@ x213 (
 cell_and2
 x214 ( 
  .A( net9 ),
- .B( net35 ),
- .X( net34 )
+ .B( net32 ),
+ .X( net31 )
 );
 
 
 cell_inv
 x211 ( 
  .A( i_stall ),
- .Y( net36 )
+ .Y( net33 )
 );
 
 
 cell_inv
 x212 ( 
- .A( net36 ),
+ .A( net33 ),
  .Y( net3 )
 );
 
@@ -1311,7 +1295,7 @@ x210 (
 cell_dfxtp
 x225_31 ( 
  .CLK( i_clk ),
- .D( net37[30] ),
+ .D( net34[30] ),
  .Q( o_pc[31] )
 );
 
@@ -1319,7 +1303,7 @@ x225_31 (
 cell_dfxtp
 x225_30 ( 
  .CLK( i_clk ),
- .D( net37[29] ),
+ .D( net34[29] ),
  .Q( o_pc[30] )
 );
 
@@ -1327,7 +1311,7 @@ x225_30 (
 cell_dfxtp
 x225_29 ( 
  .CLK( i_clk ),
- .D( net37[28] ),
+ .D( net34[28] ),
  .Q( o_pc[29] )
 );
 
@@ -1335,7 +1319,7 @@ x225_29 (
 cell_dfxtp
 x225_28 ( 
  .CLK( i_clk ),
- .D( net37[27] ),
+ .D( net34[27] ),
  .Q( o_pc[28] )
 );
 
@@ -1343,7 +1327,7 @@ x225_28 (
 cell_dfxtp
 x225_27 ( 
  .CLK( i_clk ),
- .D( net37[26] ),
+ .D( net34[26] ),
  .Q( o_pc[27] )
 );
 
@@ -1351,7 +1335,7 @@ x225_27 (
 cell_dfxtp
 x225_26 ( 
  .CLK( i_clk ),
- .D( net37[25] ),
+ .D( net34[25] ),
  .Q( o_pc[26] )
 );
 
@@ -1359,7 +1343,7 @@ x225_26 (
 cell_dfxtp
 x225_25 ( 
  .CLK( i_clk ),
- .D( net37[24] ),
+ .D( net34[24] ),
  .Q( o_pc[25] )
 );
 
@@ -1367,7 +1351,7 @@ x225_25 (
 cell_dfxtp
 x225_24 ( 
  .CLK( i_clk ),
- .D( net37[23] ),
+ .D( net34[23] ),
  .Q( o_pc[24] )
 );
 
@@ -1375,7 +1359,7 @@ x225_24 (
 cell_dfxtp
 x225_23 ( 
  .CLK( i_clk ),
- .D( net37[22] ),
+ .D( net34[22] ),
  .Q( o_pc[23] )
 );
 
@@ -1383,7 +1367,7 @@ x225_23 (
 cell_dfxtp
 x225_22 ( 
  .CLK( i_clk ),
- .D( net37[21] ),
+ .D( net34[21] ),
  .Q( o_pc[22] )
 );
 
@@ -1391,7 +1375,7 @@ x225_22 (
 cell_dfxtp
 x225_21 ( 
  .CLK( i_clk ),
- .D( net37[20] ),
+ .D( net34[20] ),
  .Q( o_pc[21] )
 );
 
@@ -1399,7 +1383,7 @@ x225_21 (
 cell_dfxtp
 x225_20 ( 
  .CLK( i_clk ),
- .D( net37[19] ),
+ .D( net34[19] ),
  .Q( o_pc[20] )
 );
 
@@ -1407,7 +1391,7 @@ x225_20 (
 cell_dfxtp
 x225_19 ( 
  .CLK( i_clk ),
- .D( net37[18] ),
+ .D( net34[18] ),
  .Q( o_pc[19] )
 );
 
@@ -1415,7 +1399,7 @@ x225_19 (
 cell_dfxtp
 x225_18 ( 
  .CLK( i_clk ),
- .D( net37[17] ),
+ .D( net34[17] ),
  .Q( o_pc[18] )
 );
 
@@ -1423,7 +1407,7 @@ x225_18 (
 cell_dfxtp
 x225_17 ( 
  .CLK( i_clk ),
- .D( net37[16] ),
+ .D( net34[16] ),
  .Q( o_pc[17] )
 );
 
@@ -1431,7 +1415,7 @@ x225_17 (
 cell_dfxtp
 x225_16 ( 
  .CLK( i_clk ),
- .D( net37[15] ),
+ .D( net34[15] ),
  .Q( o_pc[16] )
 );
 
@@ -1439,7 +1423,7 @@ x225_16 (
 cell_dfxtp
 x225_15 ( 
  .CLK( i_clk ),
- .D( net37[14] ),
+ .D( net34[14] ),
  .Q( o_pc[15] )
 );
 
@@ -1447,7 +1431,7 @@ x225_15 (
 cell_dfxtp
 x225_14 ( 
  .CLK( i_clk ),
- .D( net37[13] ),
+ .D( net34[13] ),
  .Q( o_pc[14] )
 );
 
@@ -1455,7 +1439,7 @@ x225_14 (
 cell_dfxtp
 x225_13 ( 
  .CLK( i_clk ),
- .D( net37[12] ),
+ .D( net34[12] ),
  .Q( o_pc[13] )
 );
 
@@ -1463,7 +1447,7 @@ x225_13 (
 cell_dfxtp
 x225_12 ( 
  .CLK( i_clk ),
- .D( net37[11] ),
+ .D( net34[11] ),
  .Q( o_pc[12] )
 );
 
@@ -1471,7 +1455,7 @@ x225_12 (
 cell_dfxtp
 x225_11 ( 
  .CLK( i_clk ),
- .D( net37[10] ),
+ .D( net34[10] ),
  .Q( o_pc[11] )
 );
 
@@ -1479,7 +1463,7 @@ x225_11 (
 cell_dfxtp
 x225_10 ( 
  .CLK( i_clk ),
- .D( net37[9] ),
+ .D( net34[9] ),
  .Q( o_pc[10] )
 );
 
@@ -1487,7 +1471,7 @@ x225_10 (
 cell_dfxtp
 x225_9 ( 
  .CLK( i_clk ),
- .D( net37[8] ),
+ .D( net34[8] ),
  .Q( o_pc[9] )
 );
 
@@ -1495,7 +1479,7 @@ x225_9 (
 cell_dfxtp
 x225_8 ( 
  .CLK( i_clk ),
- .D( net37[7] ),
+ .D( net34[7] ),
  .Q( o_pc[8] )
 );
 
@@ -1503,7 +1487,7 @@ x225_8 (
 cell_dfxtp
 x225_7 ( 
  .CLK( i_clk ),
- .D( net37[6] ),
+ .D( net34[6] ),
  .Q( o_pc[7] )
 );
 
@@ -1511,7 +1495,7 @@ x225_7 (
 cell_dfxtp
 x225_6 ( 
  .CLK( i_clk ),
- .D( net37[5] ),
+ .D( net34[5] ),
  .Q( o_pc[6] )
 );
 
@@ -1519,7 +1503,7 @@ x225_6 (
 cell_dfxtp
 x225_5 ( 
  .CLK( i_clk ),
- .D( net37[4] ),
+ .D( net34[4] ),
  .Q( o_pc[5] )
 );
 
@@ -1527,7 +1511,7 @@ x225_5 (
 cell_dfxtp
 x225_4 ( 
  .CLK( i_clk ),
- .D( net37[3] ),
+ .D( net34[3] ),
  .Q( o_pc[4] )
 );
 
@@ -1535,7 +1519,7 @@ x225_4 (
 cell_dfxtp
 x225_3 ( 
  .CLK( i_clk ),
- .D( net37[2] ),
+ .D( net34[2] ),
  .Q( o_pc[3] )
 );
 
@@ -1543,7 +1527,7 @@ x225_3 (
 cell_dfxtp
 x225_2 ( 
  .CLK( i_clk ),
- .D( net37[1] ),
+ .D( net34[1] ),
  .Q( o_pc[2] )
 );
 
@@ -1551,7 +1535,7 @@ x225_2 (
 cell_dfxtp
 x225_1 ( 
  .CLK( i_clk ),
- .D( net37[0] ),
+ .D( net34[0] ),
  .Q( o_pc[1] )
 );
 
@@ -1560,7 +1544,7 @@ mux2
 x223_31 ( 
  .s0( net6 ),
  .d0( i_pc[31] ),
- .Y( net38[30] ),
+ .Y( net35[30] ),
  .s1( net5 ),
  .d1( o_pc[31] )
 );
@@ -1570,7 +1554,7 @@ mux2
 x223_30 ( 
  .s0( net6 ),
  .d0( i_pc[30] ),
- .Y( net38[29] ),
+ .Y( net35[29] ),
  .s1( net5 ),
  .d1( o_pc[30] )
 );
@@ -1580,7 +1564,7 @@ mux2
 x223_29 ( 
  .s0( net6 ),
  .d0( i_pc[29] ),
- .Y( net38[28] ),
+ .Y( net35[28] ),
  .s1( net5 ),
  .d1( o_pc[29] )
 );
@@ -1590,7 +1574,7 @@ mux2
 x223_28 ( 
  .s0( net6 ),
  .d0( i_pc[28] ),
- .Y( net38[27] ),
+ .Y( net35[27] ),
  .s1( net5 ),
  .d1( o_pc[28] )
 );
@@ -1600,7 +1584,7 @@ mux2
 x223_27 ( 
  .s0( net6 ),
  .d0( i_pc[27] ),
- .Y( net38[26] ),
+ .Y( net35[26] ),
  .s1( net5 ),
  .d1( o_pc[27] )
 );
@@ -1610,7 +1594,7 @@ mux2
 x223_26 ( 
  .s0( net6 ),
  .d0( i_pc[26] ),
- .Y( net38[25] ),
+ .Y( net35[25] ),
  .s1( net5 ),
  .d1( o_pc[26] )
 );
@@ -1620,7 +1604,7 @@ mux2
 x223_25 ( 
  .s0( net6 ),
  .d0( i_pc[25] ),
- .Y( net38[24] ),
+ .Y( net35[24] ),
  .s1( net5 ),
  .d1( o_pc[25] )
 );
@@ -1630,7 +1614,7 @@ mux2
 x223_24 ( 
  .s0( net6 ),
  .d0( i_pc[24] ),
- .Y( net38[23] ),
+ .Y( net35[23] ),
  .s1( net5 ),
  .d1( o_pc[24] )
 );
@@ -1640,7 +1624,7 @@ mux2
 x223_23 ( 
  .s0( net6 ),
  .d0( i_pc[23] ),
- .Y( net38[22] ),
+ .Y( net35[22] ),
  .s1( net5 ),
  .d1( o_pc[23] )
 );
@@ -1650,7 +1634,7 @@ mux2
 x223_22 ( 
  .s0( net6 ),
  .d0( i_pc[22] ),
- .Y( net38[21] ),
+ .Y( net35[21] ),
  .s1( net5 ),
  .d1( o_pc[22] )
 );
@@ -1660,7 +1644,7 @@ mux2
 x223_21 ( 
  .s0( net6 ),
  .d0( i_pc[21] ),
- .Y( net38[20] ),
+ .Y( net35[20] ),
  .s1( net5 ),
  .d1( o_pc[21] )
 );
@@ -1670,7 +1654,7 @@ mux2
 x223_20 ( 
  .s0( net6 ),
  .d0( i_pc[20] ),
- .Y( net38[19] ),
+ .Y( net35[19] ),
  .s1( net5 ),
  .d1( o_pc[20] )
 );
@@ -1680,7 +1664,7 @@ mux2
 x223_19 ( 
  .s0( net6 ),
  .d0( i_pc[19] ),
- .Y( net38[18] ),
+ .Y( net35[18] ),
  .s1( net5 ),
  .d1( o_pc[19] )
 );
@@ -1690,7 +1674,7 @@ mux2
 x223_18 ( 
  .s0( net6 ),
  .d0( i_pc[18] ),
- .Y( net38[17] ),
+ .Y( net35[17] ),
  .s1( net5 ),
  .d1( o_pc[18] )
 );
@@ -1700,7 +1684,7 @@ mux2
 x223_17 ( 
  .s0( net6 ),
  .d0( i_pc[17] ),
- .Y( net38[16] ),
+ .Y( net35[16] ),
  .s1( net5 ),
  .d1( o_pc[17] )
 );
@@ -1710,7 +1694,7 @@ mux2
 x223_16 ( 
  .s0( net6 ),
  .d0( i_pc[16] ),
- .Y( net38[15] ),
+ .Y( net35[15] ),
  .s1( net5 ),
  .d1( o_pc[16] )
 );
@@ -1720,7 +1704,7 @@ mux2
 x223_15 ( 
  .s0( net6 ),
  .d0( i_pc[15] ),
- .Y( net38[14] ),
+ .Y( net35[14] ),
  .s1( net5 ),
  .d1( o_pc[15] )
 );
@@ -1730,7 +1714,7 @@ mux2
 x223_14 ( 
  .s0( net6 ),
  .d0( i_pc[14] ),
- .Y( net38[13] ),
+ .Y( net35[13] ),
  .s1( net5 ),
  .d1( o_pc[14] )
 );
@@ -1740,7 +1724,7 @@ mux2
 x223_13 ( 
  .s0( net6 ),
  .d0( i_pc[13] ),
- .Y( net38[12] ),
+ .Y( net35[12] ),
  .s1( net5 ),
  .d1( o_pc[13] )
 );
@@ -1750,7 +1734,7 @@ mux2
 x223_12 ( 
  .s0( net6 ),
  .d0( i_pc[12] ),
- .Y( net38[11] ),
+ .Y( net35[11] ),
  .s1( net5 ),
  .d1( o_pc[12] )
 );
@@ -1760,7 +1744,7 @@ mux2
 x223_11 ( 
  .s0( net6 ),
  .d0( i_pc[11] ),
- .Y( net38[10] ),
+ .Y( net35[10] ),
  .s1( net5 ),
  .d1( o_pc[11] )
 );
@@ -1770,7 +1754,7 @@ mux2
 x223_10 ( 
  .s0( net6 ),
  .d0( i_pc[10] ),
- .Y( net38[9] ),
+ .Y( net35[9] ),
  .s1( net5 ),
  .d1( o_pc[10] )
 );
@@ -1780,7 +1764,7 @@ mux2
 x223_9 ( 
  .s0( net6 ),
  .d0( i_pc[9] ),
- .Y( net38[8] ),
+ .Y( net35[8] ),
  .s1( net5 ),
  .d1( o_pc[9] )
 );
@@ -1790,7 +1774,7 @@ mux2
 x223_8 ( 
  .s0( net6 ),
  .d0( i_pc[8] ),
- .Y( net38[7] ),
+ .Y( net35[7] ),
  .s1( net5 ),
  .d1( o_pc[8] )
 );
@@ -1800,7 +1784,7 @@ mux2
 x223_7 ( 
  .s0( net6 ),
  .d0( i_pc[7] ),
- .Y( net38[6] ),
+ .Y( net35[6] ),
  .s1( net5 ),
  .d1( o_pc[7] )
 );
@@ -1810,7 +1794,7 @@ mux2
 x223_6 ( 
  .s0( net6 ),
  .d0( i_pc[6] ),
- .Y( net38[5] ),
+ .Y( net35[5] ),
  .s1( net5 ),
  .d1( o_pc[6] )
 );
@@ -1820,7 +1804,7 @@ mux2
 x223_5 ( 
  .s0( net6 ),
  .d0( i_pc[5] ),
- .Y( net38[4] ),
+ .Y( net35[4] ),
  .s1( net5 ),
  .d1( o_pc[5] )
 );
@@ -1830,7 +1814,7 @@ mux2
 x223_4 ( 
  .s0( net6 ),
  .d0( i_pc[4] ),
- .Y( net38[3] ),
+ .Y( net35[3] ),
  .s1( net5 ),
  .d1( o_pc[4] )
 );
@@ -1840,7 +1824,7 @@ mux2
 x223_3 ( 
  .s0( net6 ),
  .d0( i_pc[3] ),
- .Y( net38[2] ),
+ .Y( net35[2] ),
  .s1( net5 ),
  .d1( o_pc[3] )
 );
@@ -1850,7 +1834,7 @@ mux2
 x223_2 ( 
  .s0( net6 ),
  .d0( i_pc[2] ),
- .Y( net38[1] ),
+ .Y( net35[1] ),
  .s1( net5 ),
  .d1( o_pc[2] )
 );
@@ -1860,7 +1844,7 @@ mux2
 x223_1 ( 
  .s0( net6 ),
  .d0( i_pc[1] ),
- .Y( net38[0] ),
+ .Y( net35[0] ),
  .s1( net5 ),
  .d1( o_pc[1] )
 );
@@ -1869,261 +1853,261 @@ x223_1 (
 cell_and2
 x224_31 ( 
  .A( net9 ),
- .B( net38[30] ),
- .X( net37[30] )
+ .B( net35[30] ),
+ .X( net34[30] )
 );
 
 
 cell_and2
 x224_30 ( 
  .A( net9 ),
- .B( net38[29] ),
- .X( net37[29] )
+ .B( net35[29] ),
+ .X( net34[29] )
 );
 
 
 cell_and2
 x224_29 ( 
  .A( net9 ),
- .B( net38[28] ),
- .X( net37[28] )
+ .B( net35[28] ),
+ .X( net34[28] )
 );
 
 
 cell_and2
 x224_28 ( 
  .A( net9 ),
- .B( net38[27] ),
- .X( net37[27] )
+ .B( net35[27] ),
+ .X( net34[27] )
 );
 
 
 cell_and2
 x224_27 ( 
  .A( net9 ),
- .B( net38[26] ),
- .X( net37[26] )
+ .B( net35[26] ),
+ .X( net34[26] )
 );
 
 
 cell_and2
 x224_26 ( 
  .A( net9 ),
- .B( net38[25] ),
- .X( net37[25] )
+ .B( net35[25] ),
+ .X( net34[25] )
 );
 
 
 cell_and2
 x224_25 ( 
  .A( net9 ),
- .B( net38[24] ),
- .X( net37[24] )
+ .B( net35[24] ),
+ .X( net34[24] )
 );
 
 
 cell_and2
 x224_24 ( 
  .A( net9 ),
- .B( net38[23] ),
- .X( net37[23] )
+ .B( net35[23] ),
+ .X( net34[23] )
 );
 
 
 cell_and2
 x224_23 ( 
  .A( net9 ),
- .B( net38[22] ),
- .X( net37[22] )
+ .B( net35[22] ),
+ .X( net34[22] )
 );
 
 
 cell_and2
 x224_22 ( 
  .A( net9 ),
- .B( net38[21] ),
- .X( net37[21] )
+ .B( net35[21] ),
+ .X( net34[21] )
 );
 
 
 cell_and2
 x224_21 ( 
  .A( net9 ),
- .B( net38[20] ),
- .X( net37[20] )
+ .B( net35[20] ),
+ .X( net34[20] )
 );
 
 
 cell_and2
 x224_20 ( 
  .A( net9 ),
- .B( net38[19] ),
- .X( net37[19] )
+ .B( net35[19] ),
+ .X( net34[19] )
 );
 
 
 cell_and2
 x224_19 ( 
  .A( net9 ),
- .B( net38[18] ),
- .X( net37[18] )
+ .B( net35[18] ),
+ .X( net34[18] )
 );
 
 
 cell_and2
 x224_18 ( 
  .A( net9 ),
- .B( net38[17] ),
- .X( net37[17] )
+ .B( net35[17] ),
+ .X( net34[17] )
 );
 
 
 cell_and2
 x224_17 ( 
  .A( net9 ),
- .B( net38[16] ),
- .X( net37[16] )
+ .B( net35[16] ),
+ .X( net34[16] )
 );
 
 
 cell_and2
 x224_16 ( 
  .A( net9 ),
- .B( net38[15] ),
- .X( net37[15] )
+ .B( net35[15] ),
+ .X( net34[15] )
 );
 
 
 cell_and2
 x224_15 ( 
  .A( net9 ),
- .B( net38[14] ),
- .X( net37[14] )
+ .B( net35[14] ),
+ .X( net34[14] )
 );
 
 
 cell_and2
 x224_14 ( 
  .A( net9 ),
- .B( net38[13] ),
- .X( net37[13] )
+ .B( net35[13] ),
+ .X( net34[13] )
 );
 
 
 cell_and2
 x224_13 ( 
  .A( net9 ),
- .B( net38[12] ),
- .X( net37[12] )
+ .B( net35[12] ),
+ .X( net34[12] )
 );
 
 
 cell_and2
 x224_12 ( 
  .A( net9 ),
- .B( net38[11] ),
- .X( net37[11] )
+ .B( net35[11] ),
+ .X( net34[11] )
 );
 
 
 cell_and2
 x224_11 ( 
  .A( net9 ),
- .B( net38[10] ),
- .X( net37[10] )
+ .B( net35[10] ),
+ .X( net34[10] )
 );
 
 
 cell_and2
 x224_10 ( 
  .A( net9 ),
- .B( net38[9] ),
- .X( net37[9] )
+ .B( net35[9] ),
+ .X( net34[9] )
 );
 
 
 cell_and2
 x224_9 ( 
  .A( net9 ),
- .B( net38[8] ),
- .X( net37[8] )
+ .B( net35[8] ),
+ .X( net34[8] )
 );
 
 
 cell_and2
 x224_8 ( 
  .A( net9 ),
- .B( net38[7] ),
- .X( net37[7] )
+ .B( net35[7] ),
+ .X( net34[7] )
 );
 
 
 cell_and2
 x224_7 ( 
  .A( net9 ),
- .B( net38[6] ),
- .X( net37[6] )
+ .B( net35[6] ),
+ .X( net34[6] )
 );
 
 
 cell_and2
 x224_6 ( 
  .A( net9 ),
- .B( net38[5] ),
- .X( net37[5] )
+ .B( net35[5] ),
+ .X( net34[5] )
 );
 
 
 cell_and2
 x224_5 ( 
  .A( net9 ),
- .B( net38[4] ),
- .X( net37[4] )
+ .B( net35[4] ),
+ .X( net34[4] )
 );
 
 
 cell_and2
 x224_4 ( 
  .A( net9 ),
- .B( net38[3] ),
- .X( net37[3] )
+ .B( net35[3] ),
+ .X( net34[3] )
 );
 
 
 cell_and2
 x224_3 ( 
  .A( net9 ),
- .B( net38[2] ),
- .X( net37[2] )
+ .B( net35[2] ),
+ .X( net34[2] )
 );
 
 
 cell_and2
 x224_2 ( 
  .A( net9 ),
- .B( net38[1] ),
- .X( net37[1] )
+ .B( net35[1] ),
+ .X( net34[1] )
 );
 
 
 cell_and2
 x224_1 ( 
  .A( net9 ),
- .B( net38[0] ),
- .X( net37[0] )
+ .B( net35[0] ),
+ .X( net34[0] )
 );
 
 
 cell_inv
 x221 ( 
  .A( i_stall ),
- .Y( net39 )
+ .Y( net36 )
 );
 
 
 cell_inv
 x222 ( 
- .A( net39 ),
+ .A( net36 ),
  .Y( net5 )
 );
 
@@ -2138,7 +2122,7 @@ x220 (
 cell_dfxtp
 x235_31 ( 
  .CLK( i_clk ),
- .D( net40[30] ),
+ .D( net37[30] ),
  .Q( o_pc_next[31] )
 );
 
@@ -2146,7 +2130,7 @@ x235_31 (
 cell_dfxtp
 x235_30 ( 
  .CLK( i_clk ),
- .D( net40[29] ),
+ .D( net37[29] ),
  .Q( o_pc_next[30] )
 );
 
@@ -2154,7 +2138,7 @@ x235_30 (
 cell_dfxtp
 x235_29 ( 
  .CLK( i_clk ),
- .D( net40[28] ),
+ .D( net37[28] ),
  .Q( o_pc_next[29] )
 );
 
@@ -2162,7 +2146,7 @@ x235_29 (
 cell_dfxtp
 x235_28 ( 
  .CLK( i_clk ),
- .D( net40[27] ),
+ .D( net37[27] ),
  .Q( o_pc_next[28] )
 );
 
@@ -2170,7 +2154,7 @@ x235_28 (
 cell_dfxtp
 x235_27 ( 
  .CLK( i_clk ),
- .D( net40[26] ),
+ .D( net37[26] ),
  .Q( o_pc_next[27] )
 );
 
@@ -2178,7 +2162,7 @@ x235_27 (
 cell_dfxtp
 x235_26 ( 
  .CLK( i_clk ),
- .D( net40[25] ),
+ .D( net37[25] ),
  .Q( o_pc_next[26] )
 );
 
@@ -2186,7 +2170,7 @@ x235_26 (
 cell_dfxtp
 x235_25 ( 
  .CLK( i_clk ),
- .D( net40[24] ),
+ .D( net37[24] ),
  .Q( o_pc_next[25] )
 );
 
@@ -2194,7 +2178,7 @@ x235_25 (
 cell_dfxtp
 x235_24 ( 
  .CLK( i_clk ),
- .D( net40[23] ),
+ .D( net37[23] ),
  .Q( o_pc_next[24] )
 );
 
@@ -2202,7 +2186,7 @@ x235_24 (
 cell_dfxtp
 x235_23 ( 
  .CLK( i_clk ),
- .D( net40[22] ),
+ .D( net37[22] ),
  .Q( o_pc_next[23] )
 );
 
@@ -2210,7 +2194,7 @@ x235_23 (
 cell_dfxtp
 x235_22 ( 
  .CLK( i_clk ),
- .D( net40[21] ),
+ .D( net37[21] ),
  .Q( o_pc_next[22] )
 );
 
@@ -2218,7 +2202,7 @@ x235_22 (
 cell_dfxtp
 x235_21 ( 
  .CLK( i_clk ),
- .D( net40[20] ),
+ .D( net37[20] ),
  .Q( o_pc_next[21] )
 );
 
@@ -2226,7 +2210,7 @@ x235_21 (
 cell_dfxtp
 x235_20 ( 
  .CLK( i_clk ),
- .D( net40[19] ),
+ .D( net37[19] ),
  .Q( o_pc_next[20] )
 );
 
@@ -2234,7 +2218,7 @@ x235_20 (
 cell_dfxtp
 x235_19 ( 
  .CLK( i_clk ),
- .D( net40[18] ),
+ .D( net37[18] ),
  .Q( o_pc_next[19] )
 );
 
@@ -2242,7 +2226,7 @@ x235_19 (
 cell_dfxtp
 x235_18 ( 
  .CLK( i_clk ),
- .D( net40[17] ),
+ .D( net37[17] ),
  .Q( o_pc_next[18] )
 );
 
@@ -2250,7 +2234,7 @@ x235_18 (
 cell_dfxtp
 x235_17 ( 
  .CLK( i_clk ),
- .D( net40[16] ),
+ .D( net37[16] ),
  .Q( o_pc_next[17] )
 );
 
@@ -2258,7 +2242,7 @@ x235_17 (
 cell_dfxtp
 x235_16 ( 
  .CLK( i_clk ),
- .D( net40[15] ),
+ .D( net37[15] ),
  .Q( o_pc_next[16] )
 );
 
@@ -2266,7 +2250,7 @@ x235_16 (
 cell_dfxtp
 x235_15 ( 
  .CLK( i_clk ),
- .D( net40[14] ),
+ .D( net37[14] ),
  .Q( o_pc_next[15] )
 );
 
@@ -2274,7 +2258,7 @@ x235_15 (
 cell_dfxtp
 x235_14 ( 
  .CLK( i_clk ),
- .D( net40[13] ),
+ .D( net37[13] ),
  .Q( o_pc_next[14] )
 );
 
@@ -2282,7 +2266,7 @@ x235_14 (
 cell_dfxtp
 x235_13 ( 
  .CLK( i_clk ),
- .D( net40[12] ),
+ .D( net37[12] ),
  .Q( o_pc_next[13] )
 );
 
@@ -2290,7 +2274,7 @@ x235_13 (
 cell_dfxtp
 x235_12 ( 
  .CLK( i_clk ),
- .D( net40[11] ),
+ .D( net37[11] ),
  .Q( o_pc_next[12] )
 );
 
@@ -2298,7 +2282,7 @@ x235_12 (
 cell_dfxtp
 x235_11 ( 
  .CLK( i_clk ),
- .D( net40[10] ),
+ .D( net37[10] ),
  .Q( o_pc_next[11] )
 );
 
@@ -2306,7 +2290,7 @@ x235_11 (
 cell_dfxtp
 x235_10 ( 
  .CLK( i_clk ),
- .D( net40[9] ),
+ .D( net37[9] ),
  .Q( o_pc_next[10] )
 );
 
@@ -2314,7 +2298,7 @@ x235_10 (
 cell_dfxtp
 x235_9 ( 
  .CLK( i_clk ),
- .D( net40[8] ),
+ .D( net37[8] ),
  .Q( o_pc_next[9] )
 );
 
@@ -2322,7 +2306,7 @@ x235_9 (
 cell_dfxtp
 x235_8 ( 
  .CLK( i_clk ),
- .D( net40[7] ),
+ .D( net37[7] ),
  .Q( o_pc_next[8] )
 );
 
@@ -2330,7 +2314,7 @@ x235_8 (
 cell_dfxtp
 x235_7 ( 
  .CLK( i_clk ),
- .D( net40[6] ),
+ .D( net37[6] ),
  .Q( o_pc_next[7] )
 );
 
@@ -2338,7 +2322,7 @@ x235_7 (
 cell_dfxtp
 x235_6 ( 
  .CLK( i_clk ),
- .D( net40[5] ),
+ .D( net37[5] ),
  .Q( o_pc_next[6] )
 );
 
@@ -2346,7 +2330,7 @@ x235_6 (
 cell_dfxtp
 x235_5 ( 
  .CLK( i_clk ),
- .D( net40[4] ),
+ .D( net37[4] ),
  .Q( o_pc_next[5] )
 );
 
@@ -2354,7 +2338,7 @@ x235_5 (
 cell_dfxtp
 x235_4 ( 
  .CLK( i_clk ),
- .D( net40[3] ),
+ .D( net37[3] ),
  .Q( o_pc_next[4] )
 );
 
@@ -2362,7 +2346,7 @@ x235_4 (
 cell_dfxtp
 x235_3 ( 
  .CLK( i_clk ),
- .D( net40[2] ),
+ .D( net37[2] ),
  .Q( o_pc_next[3] )
 );
 
@@ -2370,7 +2354,7 @@ x235_3 (
 cell_dfxtp
 x235_2 ( 
  .CLK( i_clk ),
- .D( net40[1] ),
+ .D( net37[1] ),
  .Q( o_pc_next[2] )
 );
 
@@ -2378,7 +2362,7 @@ x235_2 (
 cell_dfxtp
 x235_1 ( 
  .CLK( i_clk ),
- .D( net40[0] ),
+ .D( net37[0] ),
  .Q( o_pc_next[1] )
 );
 
@@ -2387,7 +2371,7 @@ mux2
 x233_31 ( 
  .s0( net8 ),
  .d0( i_pc_next[31] ),
- .Y( net41[30] ),
+ .Y( net38[30] ),
  .s1( net7 ),
  .d1( o_pc_next[31] )
 );
@@ -2397,7 +2381,7 @@ mux2
 x233_30 ( 
  .s0( net8 ),
  .d0( i_pc_next[30] ),
- .Y( net41[29] ),
+ .Y( net38[29] ),
  .s1( net7 ),
  .d1( o_pc_next[30] )
 );
@@ -2407,7 +2391,7 @@ mux2
 x233_29 ( 
  .s0( net8 ),
  .d0( i_pc_next[29] ),
- .Y( net41[28] ),
+ .Y( net38[28] ),
  .s1( net7 ),
  .d1( o_pc_next[29] )
 );
@@ -2417,7 +2401,7 @@ mux2
 x233_28 ( 
  .s0( net8 ),
  .d0( i_pc_next[28] ),
- .Y( net41[27] ),
+ .Y( net38[27] ),
  .s1( net7 ),
  .d1( o_pc_next[28] )
 );
@@ -2427,7 +2411,7 @@ mux2
 x233_27 ( 
  .s0( net8 ),
  .d0( i_pc_next[27] ),
- .Y( net41[26] ),
+ .Y( net38[26] ),
  .s1( net7 ),
  .d1( o_pc_next[27] )
 );
@@ -2437,7 +2421,7 @@ mux2
 x233_26 ( 
  .s0( net8 ),
  .d0( i_pc_next[26] ),
- .Y( net41[25] ),
+ .Y( net38[25] ),
  .s1( net7 ),
  .d1( o_pc_next[26] )
 );
@@ -2447,7 +2431,7 @@ mux2
 x233_25 ( 
  .s0( net8 ),
  .d0( i_pc_next[25] ),
- .Y( net41[24] ),
+ .Y( net38[24] ),
  .s1( net7 ),
  .d1( o_pc_next[25] )
 );
@@ -2457,7 +2441,7 @@ mux2
 x233_24 ( 
  .s0( net8 ),
  .d0( i_pc_next[24] ),
- .Y( net41[23] ),
+ .Y( net38[23] ),
  .s1( net7 ),
  .d1( o_pc_next[24] )
 );
@@ -2467,7 +2451,7 @@ mux2
 x233_23 ( 
  .s0( net8 ),
  .d0( i_pc_next[23] ),
- .Y( net41[22] ),
+ .Y( net38[22] ),
  .s1( net7 ),
  .d1( o_pc_next[23] )
 );
@@ -2477,7 +2461,7 @@ mux2
 x233_22 ( 
  .s0( net8 ),
  .d0( i_pc_next[22] ),
- .Y( net41[21] ),
+ .Y( net38[21] ),
  .s1( net7 ),
  .d1( o_pc_next[22] )
 );
@@ -2487,7 +2471,7 @@ mux2
 x233_21 ( 
  .s0( net8 ),
  .d0( i_pc_next[21] ),
- .Y( net41[20] ),
+ .Y( net38[20] ),
  .s1( net7 ),
  .d1( o_pc_next[21] )
 );
@@ -2497,7 +2481,7 @@ mux2
 x233_20 ( 
  .s0( net8 ),
  .d0( i_pc_next[20] ),
- .Y( net41[19] ),
+ .Y( net38[19] ),
  .s1( net7 ),
  .d1( o_pc_next[20] )
 );
@@ -2507,7 +2491,7 @@ mux2
 x233_19 ( 
  .s0( net8 ),
  .d0( i_pc_next[19] ),
- .Y( net41[18] ),
+ .Y( net38[18] ),
  .s1( net7 ),
  .d1( o_pc_next[19] )
 );
@@ -2517,7 +2501,7 @@ mux2
 x233_18 ( 
  .s0( net8 ),
  .d0( i_pc_next[18] ),
- .Y( net41[17] ),
+ .Y( net38[17] ),
  .s1( net7 ),
  .d1( o_pc_next[18] )
 );
@@ -2527,7 +2511,7 @@ mux2
 x233_17 ( 
  .s0( net8 ),
  .d0( i_pc_next[17] ),
- .Y( net41[16] ),
+ .Y( net38[16] ),
  .s1( net7 ),
  .d1( o_pc_next[17] )
 );
@@ -2537,7 +2521,7 @@ mux2
 x233_16 ( 
  .s0( net8 ),
  .d0( i_pc_next[16] ),
- .Y( net41[15] ),
+ .Y( net38[15] ),
  .s1( net7 ),
  .d1( o_pc_next[16] )
 );
@@ -2547,7 +2531,7 @@ mux2
 x233_15 ( 
  .s0( net8 ),
  .d0( i_pc_next[15] ),
- .Y( net41[14] ),
+ .Y( net38[14] ),
  .s1( net7 ),
  .d1( o_pc_next[15] )
 );
@@ -2557,7 +2541,7 @@ mux2
 x233_14 ( 
  .s0( net8 ),
  .d0( i_pc_next[14] ),
- .Y( net41[13] ),
+ .Y( net38[13] ),
  .s1( net7 ),
  .d1( o_pc_next[14] )
 );
@@ -2567,7 +2551,7 @@ mux2
 x233_13 ( 
  .s0( net8 ),
  .d0( i_pc_next[13] ),
- .Y( net41[12] ),
+ .Y( net38[12] ),
  .s1( net7 ),
  .d1( o_pc_next[13] )
 );
@@ -2577,7 +2561,7 @@ mux2
 x233_12 ( 
  .s0( net8 ),
  .d0( i_pc_next[12] ),
- .Y( net41[11] ),
+ .Y( net38[11] ),
  .s1( net7 ),
  .d1( o_pc_next[12] )
 );
@@ -2587,7 +2571,7 @@ mux2
 x233_11 ( 
  .s0( net8 ),
  .d0( i_pc_next[11] ),
- .Y( net41[10] ),
+ .Y( net38[10] ),
  .s1( net7 ),
  .d1( o_pc_next[11] )
 );
@@ -2597,7 +2581,7 @@ mux2
 x233_10 ( 
  .s0( net8 ),
  .d0( i_pc_next[10] ),
- .Y( net41[9] ),
+ .Y( net38[9] ),
  .s1( net7 ),
  .d1( o_pc_next[10] )
 );
@@ -2607,7 +2591,7 @@ mux2
 x233_9 ( 
  .s0( net8 ),
  .d0( i_pc_next[9] ),
- .Y( net41[8] ),
+ .Y( net38[8] ),
  .s1( net7 ),
  .d1( o_pc_next[9] )
 );
@@ -2617,7 +2601,7 @@ mux2
 x233_8 ( 
  .s0( net8 ),
  .d0( i_pc_next[8] ),
- .Y( net41[7] ),
+ .Y( net38[7] ),
  .s1( net7 ),
  .d1( o_pc_next[8] )
 );
@@ -2627,7 +2611,7 @@ mux2
 x233_7 ( 
  .s0( net8 ),
  .d0( i_pc_next[7] ),
- .Y( net41[6] ),
+ .Y( net38[6] ),
  .s1( net7 ),
  .d1( o_pc_next[7] )
 );
@@ -2637,7 +2621,7 @@ mux2
 x233_6 ( 
  .s0( net8 ),
  .d0( i_pc_next[6] ),
- .Y( net41[5] ),
+ .Y( net38[5] ),
  .s1( net7 ),
  .d1( o_pc_next[6] )
 );
@@ -2647,7 +2631,7 @@ mux2
 x233_5 ( 
  .s0( net8 ),
  .d0( i_pc_next[5] ),
- .Y( net41[4] ),
+ .Y( net38[4] ),
  .s1( net7 ),
  .d1( o_pc_next[5] )
 );
@@ -2657,7 +2641,7 @@ mux2
 x233_4 ( 
  .s0( net8 ),
  .d0( i_pc_next[4] ),
- .Y( net41[3] ),
+ .Y( net38[3] ),
  .s1( net7 ),
  .d1( o_pc_next[4] )
 );
@@ -2667,7 +2651,7 @@ mux2
 x233_3 ( 
  .s0( net8 ),
  .d0( i_pc_next[3] ),
- .Y( net41[2] ),
+ .Y( net38[2] ),
  .s1( net7 ),
  .d1( o_pc_next[3] )
 );
@@ -2677,7 +2661,7 @@ mux2
 x233_2 ( 
  .s0( net8 ),
  .d0( i_pc_next[2] ),
- .Y( net41[1] ),
+ .Y( net38[1] ),
  .s1( net7 ),
  .d1( o_pc_next[2] )
 );
@@ -2687,7 +2671,7 @@ mux2
 x233_1 ( 
  .s0( net8 ),
  .d0( i_pc_next[1] ),
- .Y( net41[0] ),
+ .Y( net38[0] ),
  .s1( net7 ),
  .d1( o_pc_next[1] )
 );
@@ -2696,261 +2680,261 @@ x233_1 (
 cell_and2
 x234_31 ( 
  .A( net9 ),
- .B( net41[30] ),
- .X( net40[30] )
+ .B( net38[30] ),
+ .X( net37[30] )
 );
 
 
 cell_and2
 x234_30 ( 
  .A( net9 ),
- .B( net41[29] ),
- .X( net40[29] )
+ .B( net38[29] ),
+ .X( net37[29] )
 );
 
 
 cell_and2
 x234_29 ( 
  .A( net9 ),
- .B( net41[28] ),
- .X( net40[28] )
+ .B( net38[28] ),
+ .X( net37[28] )
 );
 
 
 cell_and2
 x234_28 ( 
  .A( net9 ),
- .B( net41[27] ),
- .X( net40[27] )
+ .B( net38[27] ),
+ .X( net37[27] )
 );
 
 
 cell_and2
 x234_27 ( 
  .A( net9 ),
- .B( net41[26] ),
- .X( net40[26] )
+ .B( net38[26] ),
+ .X( net37[26] )
 );
 
 
 cell_and2
 x234_26 ( 
  .A( net9 ),
- .B( net41[25] ),
- .X( net40[25] )
+ .B( net38[25] ),
+ .X( net37[25] )
 );
 
 
 cell_and2
 x234_25 ( 
  .A( net9 ),
- .B( net41[24] ),
- .X( net40[24] )
+ .B( net38[24] ),
+ .X( net37[24] )
 );
 
 
 cell_and2
 x234_24 ( 
  .A( net9 ),
- .B( net41[23] ),
- .X( net40[23] )
+ .B( net38[23] ),
+ .X( net37[23] )
 );
 
 
 cell_and2
 x234_23 ( 
  .A( net9 ),
- .B( net41[22] ),
- .X( net40[22] )
+ .B( net38[22] ),
+ .X( net37[22] )
 );
 
 
 cell_and2
 x234_22 ( 
  .A( net9 ),
- .B( net41[21] ),
- .X( net40[21] )
+ .B( net38[21] ),
+ .X( net37[21] )
 );
 
 
 cell_and2
 x234_21 ( 
  .A( net9 ),
- .B( net41[20] ),
- .X( net40[20] )
+ .B( net38[20] ),
+ .X( net37[20] )
 );
 
 
 cell_and2
 x234_20 ( 
  .A( net9 ),
- .B( net41[19] ),
- .X( net40[19] )
+ .B( net38[19] ),
+ .X( net37[19] )
 );
 
 
 cell_and2
 x234_19 ( 
  .A( net9 ),
- .B( net41[18] ),
- .X( net40[18] )
+ .B( net38[18] ),
+ .X( net37[18] )
 );
 
 
 cell_and2
 x234_18 ( 
  .A( net9 ),
- .B( net41[17] ),
- .X( net40[17] )
+ .B( net38[17] ),
+ .X( net37[17] )
 );
 
 
 cell_and2
 x234_17 ( 
  .A( net9 ),
- .B( net41[16] ),
- .X( net40[16] )
+ .B( net38[16] ),
+ .X( net37[16] )
 );
 
 
 cell_and2
 x234_16 ( 
  .A( net9 ),
- .B( net41[15] ),
- .X( net40[15] )
+ .B( net38[15] ),
+ .X( net37[15] )
 );
 
 
 cell_and2
 x234_15 ( 
  .A( net9 ),
- .B( net41[14] ),
- .X( net40[14] )
+ .B( net38[14] ),
+ .X( net37[14] )
 );
 
 
 cell_and2
 x234_14 ( 
  .A( net9 ),
- .B( net41[13] ),
- .X( net40[13] )
+ .B( net38[13] ),
+ .X( net37[13] )
 );
 
 
 cell_and2
 x234_13 ( 
  .A( net9 ),
- .B( net41[12] ),
- .X( net40[12] )
+ .B( net38[12] ),
+ .X( net37[12] )
 );
 
 
 cell_and2
 x234_12 ( 
  .A( net9 ),
- .B( net41[11] ),
- .X( net40[11] )
+ .B( net38[11] ),
+ .X( net37[11] )
 );
 
 
 cell_and2
 x234_11 ( 
  .A( net9 ),
- .B( net41[10] ),
- .X( net40[10] )
+ .B( net38[10] ),
+ .X( net37[10] )
 );
 
 
 cell_and2
 x234_10 ( 
  .A( net9 ),
- .B( net41[9] ),
- .X( net40[9] )
+ .B( net38[9] ),
+ .X( net37[9] )
 );
 
 
 cell_and2
 x234_9 ( 
  .A( net9 ),
- .B( net41[8] ),
- .X( net40[8] )
+ .B( net38[8] ),
+ .X( net37[8] )
 );
 
 
 cell_and2
 x234_8 ( 
  .A( net9 ),
- .B( net41[7] ),
- .X( net40[7] )
+ .B( net38[7] ),
+ .X( net37[7] )
 );
 
 
 cell_and2
 x234_7 ( 
  .A( net9 ),
- .B( net41[6] ),
- .X( net40[6] )
+ .B( net38[6] ),
+ .X( net37[6] )
 );
 
 
 cell_and2
 x234_6 ( 
  .A( net9 ),
- .B( net41[5] ),
- .X( net40[5] )
+ .B( net38[5] ),
+ .X( net37[5] )
 );
 
 
 cell_and2
 x234_5 ( 
  .A( net9 ),
- .B( net41[4] ),
- .X( net40[4] )
+ .B( net38[4] ),
+ .X( net37[4] )
 );
 
 
 cell_and2
 x234_4 ( 
  .A( net9 ),
- .B( net41[3] ),
- .X( net40[3] )
+ .B( net38[3] ),
+ .X( net37[3] )
 );
 
 
 cell_and2
 x234_3 ( 
  .A( net9 ),
- .B( net41[2] ),
- .X( net40[2] )
+ .B( net38[2] ),
+ .X( net37[2] )
 );
 
 
 cell_and2
 x234_2 ( 
  .A( net9 ),
- .B( net41[1] ),
- .X( net40[1] )
+ .B( net38[1] ),
+ .X( net37[1] )
 );
 
 
 cell_and2
 x234_1 ( 
  .A( net9 ),
- .B( net41[0] ),
- .X( net40[0] )
+ .B( net38[0] ),
+ .X( net37[0] )
 );
 
 
 cell_inv
 x231 ( 
  .A( i_stall ),
- .Y( net42 )
+ .Y( net39 )
 );
 
 
 cell_inv
 x232 ( 
- .A( net42 ),
+ .A( net39 ),
  .Y( net7 )
 );
 
@@ -2962,17 +2946,17 @@ x230 (
 );
 
 
-cell_and2
+cell_nand2
 x300 ( 
  .A( instruction[0] ),
  .B( instruction[1] ),
- .X( inst_full )
+ .Y( inst_full_n )
 );
 
 
 rom_dec_3b
 x293 ( 
- .SELn( net43 ),
+ .SELn( funct3_n ),
  .Ap( o_funct3[2:0] ),
  .An( net10 )
 );
@@ -2981,41 +2965,41 @@ x293 (
 cell_inv
 x290_2 ( 
  .A( instruction[14] ),
- .Y( net44[2] )
+ .Y( net40[2] )
 );
 
 
 cell_inv
 x290_1 ( 
  .A( instruction[13] ),
- .Y( net44[1] )
+ .Y( net40[1] )
 );
 
 
 cell_inv
 x290_0 ( 
  .A( instruction[12] ),
- .Y( net44[0] )
+ .Y( net40[0] )
 );
 
 
 cell_inv
 x291_2 ( 
- .A( net44[2] ),
+ .A( net40[2] ),
  .Y( o_funct3[2] )
 );
 
 
 cell_inv
 x291_1 ( 
- .A( net44[1] ),
+ .A( net40[1] ),
  .Y( o_funct3[1] )
 );
 
 
 cell_inv
 x291_0 ( 
- .A( net44[0] ),
+ .A( net40[0] ),
  .Y( o_funct3[0] )
 );
 
@@ -3043,56 +3027,56 @@ x292_0 (
 
 cell_inv
 x294_7 ( 
- .A( net43[7] ),
+ .A( funct3_n[7] ),
  .Y( funct3[7] )
 );
 
 
 cell_inv
 x294_6 ( 
- .A( net43[6] ),
+ .A( funct3_n[6] ),
  .Y( funct3[6] )
 );
 
 
 cell_inv
 x294_5 ( 
- .A( net43[5] ),
+ .A( funct3_n[5] ),
  .Y( funct3[5] )
 );
 
 
 cell_inv
 x294_4 ( 
- .A( net43[4] ),
+ .A( funct3_n[4] ),
  .Y( funct3[4] )
 );
 
 
 cell_inv
 x294_3 ( 
- .A( net43[3] ),
+ .A( funct3_n[3] ),
  .Y( funct3[3] )
 );
 
 
 cell_inv
 x294_2 ( 
- .A( net43[2] ),
+ .A( funct3_n[2] ),
  .Y( funct3[2] )
 );
 
 
 cell_inv
 x294_1 ( 
- .A( net43[1] ),
+ .A( funct3_n[1] ),
  .Y( funct3[1] )
 );
 
 
 cell_inv
 x294_0 ( 
- .A( net43[0] ),
+ .A( funct3_n[0] ),
  .Y( funct3[0] )
 );
 
@@ -3100,7 +3084,7 @@ x294_0 (
 rv_decode_comp
 x101 ( 
  .o_instruction( instruction_unc ),
- .o_illegal_instruction( net45 ),
+ .o_illegal_instruction( net41 ),
  .i_instruction( instruction_c )
 );
 
@@ -3185,35 +3169,35 @@ x304_0 (
 
 cell_inv
 x303_4 ( 
- .A( net46[4] ),
+ .A( net42[4] ),
  .Y( op_n[4] )
 );
 
 
 cell_inv
 x303_3 ( 
- .A( net46[3] ),
+ .A( net42[3] ),
  .Y( op_n[3] )
 );
 
 
 cell_inv
 x303_2 ( 
- .A( net46[2] ),
+ .A( net42[2] ),
  .Y( op_n[2] )
 );
 
 
 cell_inv
 x303_1 ( 
- .A( net46[1] ),
+ .A( net42[1] ),
  .Y( op_n[1] )
 );
 
 
 cell_inv
 x303_0 ( 
- .A( net46[0] ),
+ .A( net42[0] ),
  .Y( op_n[0] )
 );
 
@@ -3221,35 +3205,35 @@ x303_0 (
 cell_inv
 x302_4 ( 
  .A( op_pn[4] ),
- .Y( net46[4] )
+ .Y( net42[4] )
 );
 
 
 cell_inv
 x302_3 ( 
  .A( op_pn[3] ),
- .Y( net46[3] )
+ .Y( net42[3] )
 );
 
 
 cell_inv
 x302_2 ( 
  .A( op_pn[2] ),
- .Y( net46[2] )
+ .Y( net42[2] )
 );
 
 
 cell_inv
 x302_1 ( 
  .A( op_pn[1] ),
- .Y( net46[1] )
+ .Y( net42[1] )
 );
 
 
 cell_inv
 x302_0 ( 
  .A( op_pn[0] ),
- .Y( net46[0] )
+ .Y( net42[0] )
 );
 
 
@@ -3533,11 +3517,11 @@ x307_2 (
 );
 
 
-cell_and2
+cell_nand2
 x307_3 ( 
  .A( op[3] ),
  .B( inst_full ),
- .X( inst_misc_mem )
+ .Y( inst_misc_mem_n )
 );
 
 
@@ -3702,11 +3686,11 @@ x307_27 (
 );
 
 
-cell_and2
+cell_nand2
 x307_28 ( 
  .A( op[28] ),
  .B( inst_full ),
- .X( inst_grp_sys )
+ .Y( inst_grp_sys_n )
 );
 
 
@@ -3729,7 +3713,7 @@ x307_30 (
 cell_or3
 x308_7 ( 
  .A( net13 ),
- .B( net47 ),
+ .B( net43 ),
  .C( net14 ),
  .X( o_inst_supported )
 );
@@ -3738,9 +3722,9 @@ x308_7 (
 cell_or3
 x308_6 ( 
  .A( net12 ),
- .B( net48 ),
+ .B( net44 ),
  .C( net11 ),
- .X( net47 )
+ .X( net43 )
 );
 
 
@@ -3757,7 +3741,7 @@ cell_or3
 x308_4 ( 
  .A( inst_grp_arr ),
  .B( inst_grp_load ),
- .C( net30 ),
+ .C( net27 ),
  .X( net14 )
 );
 
@@ -3767,7 +3751,7 @@ x308_2 (
  .A( inst_ecall ),
  .B( inst_jal ),
  .C( inst_jalr ),
- .X( net48 )
+ .X( net44 )
 );
 
 
@@ -3789,39 +3773,25 @@ x308_3 (
 );
 
 
-cell_inv
-x308_5 ( 
- .A( valid_input ),
- .Y( net49 )
-);
-
-
-cell_and2
+cell_nor2
 x310 ( 
- .A( inst_grp_sys ),
- .B( funct3[0] ),
- .X( inst_grp_trap )
+ .A( inst_grp_sys_n ),
+ .B( funct3_n[0] ),
+ .Y( inst_grp_trap )
 );
 
 
-cell_and2
+cell_nor2
 x311 ( 
- .A( inst_grp_sys ),
- .B( net50 ),
- .X( o_csr_read )
-);
-
-
-cell_inv
-x312 ( 
- .A( funct3[0] ),
- .Y( net50 )
+ .A( inst_grp_sys_n ),
+ .B( funct3[0] ),
+ .Y( o_csr_read )
 );
 
 
 cell_and3
 x313 ( 
- .A( net51 ),
+ .A( net45 ),
  .B( net15 ),
  .C( inst_grp_trap ),
  .X( inst_ecall )
@@ -3831,7 +3801,7 @@ x313 (
 cell_inv
 x314 ( 
  .A( instruction[20] ),
- .Y( net51 )
+ .Y( net45 )
 );
 
 
@@ -3846,7 +3816,7 @@ x315 (
 
 cell_and4
 x316 ( 
- .A( net52 ),
+ .A( net46 ),
  .B( instruction[21] ),
  .C( instruction[29] ),
  .D( inst_grp_trap ),
@@ -3864,14 +3834,14 @@ x3141 (
 cell_inv
 x317 ( 
  .A( instruction[22] ),
- .Y( net52 )
+ .Y( net46 )
 );
 
 
 cell_and2
 x320 ( 
  .A( inst_grp_reg ),
- .B( net53 ),
+ .B( net47 ),
  .X( inst_grp_arr )
 );
 
@@ -3879,7 +3849,7 @@ x320 (
 cell_inv
 x319 ( 
  .A( instruction[25] ),
- .Y( net53 )
+ .Y( net47 )
 );
 
 
@@ -3910,387 +3880,316 @@ x323 (
 cell_inv
 x357 ( 
  .A( instruction[30] ),
- .Y( net54 )
+ .Y( net48 )
 );
 
 
 cell_inv
 x358 ( 
- .A( net54 ),
+ .A( net48 ),
  .Y( o_alu_ctrl[3] )
 );
 
 
-cell_or2
+cell_nand2
 x356 ( 
- .A( ariph_inv ),
- .B( net55 ),
- .X( o_alu_ctrl[2] )
+ .A( ariph_inv_n ),
+ .B( net49 ),
+ .Y( o_alu_ctrl[2] )
 );
 
 
-cell_and2
+cell_nand2
 x355 ( 
  .A( instruction[30] ),
- .B( net56 ),
- .X( net55 )
+ .B( op2_inv_n ),
+ .Y( net49 )
 );
 
 
-cell_or3
+cell_nor3
 x342 ( 
- .A( net16 ),
- .B( net57 ),
- .C( net17 ),
- .X( ariph_inv )
-);
-
-
-cell_and3
-x336 ( 
- .A( net58 ),
- .B( instruction[5] ),
- .C( instruction[6] ),
- .X( net16 )
-);
-
-
-cell_and3
-x334 ( 
- .A( net59 ),
- .B( net60 ),
- .C( net61 ),
- .X( net58 )
+ .A( inst_grp_branch ),
+ .B( net50 ),
+ .C( net16 ),
+ .Y( ariph_inv_n )
 );
 
 
 cell_and3
 x337 ( 
  .A( inst_grp_ari ),
- .B( net62 ),
+ .B( net51 ),
  .C( instruction[13] ),
- .X( net57 )
+ .X( net50 )
 );
 
 
 cell_and3
 x341 ( 
  .A( inst_grp_reg ),
- .B( net18 ),
- .C( net63 ),
- .X( net17 )
-);
-
-
-cell_inv
-x331 ( 
- .A( instruction[2] ),
- .Y( net59 )
-);
-
-
-cell_inv
-x332 ( 
- .A( instruction[3] ),
- .Y( net60 )
-);
-
-
-cell_inv
-x333 ( 
- .A( instruction[4] ),
- .Y( net61 )
+ .B( net17 ),
+ .C( net52 ),
+ .X( net16 )
 );
 
 
 cell_inv
 x335 ( 
  .A( instruction[14] ),
- .Y( net62 )
+ .Y( net51 )
 );
 
 
 cell_and2
 x339 ( 
- .A( net64 ),
+ .A( net53 ),
  .B( instruction[13] ),
- .X( net18 )
+ .X( net17 )
 );
 
 
 cell_inv
 x338 ( 
  .A( instruction[14] ),
- .Y( net64 )
+ .Y( net53 )
 );
 
 
 cell_inv
 x340 ( 
  .A( instruction[25] ),
- .Y( net63 )
-);
-
-
-cell_inv
-x354 ( 
- .A( op2_inv ),
- .Y( net56 )
+ .Y( net52 )
 );
 
 
 cell_or3
 x352 ( 
- .A( net19 ),
- .B( net20 ),
- .C( net21 ),
+ .A( inst_jal ),
+ .B( net18 ),
+ .C( net19 ),
  .X( o_alu_ctrl[4] )
 );
 
 
-cell_or2
+cell_nor2
 x353 ( 
  .A( inst_grp_ari ),
  .B( o_alu_ctrl[4] ),
- .X( op2_inv )
-);
-
-
-cell_and3
-x349 ( 
- .A( net65 ),
- .B( instruction[5] ),
- .C( instruction[6] ),
- .X( net19 )
-);
-
-
-cell_and3
-x344 ( 
- .A( instruction[2] ),
- .B( instruction[3] ),
- .C( net66 ),
- .X( net65 )
-);
-
-
-cell_inv
-x343 ( 
- .A( instruction[4] ),
- .Y( net66 )
+ .Y( op2_inv_n )
 );
 
 
 cell_and3
 x350 ( 
- .A( net67 ),
- .B( net68 ),
- .C( net69 ),
- .X( net20 )
+ .A( net54 ),
+ .B( net55 ),
+ .C( net56 ),
+ .X( net18 )
 );
 
 
 cell_and3
 x351 ( 
  .A( instruction[2] ),
- .B( net70 ),
+ .B( net57 ),
  .C( instruction[4] ),
- .X( net21 )
+ .X( net19 )
 );
 
 
 cell_inv
 x345 ( 
  .A( instruction[3] ),
- .Y( net67 )
+ .Y( net54 )
 );
 
 
 cell_inv
 x346 ( 
  .A( instruction[4] ),
- .Y( net68 )
+ .Y( net55 )
 );
 
 
 cell_inv
 x347 ( 
  .A( instruction[6] ),
- .Y( net69 )
+ .Y( net56 )
 );
 
 
 cell_inv
 x348 ( 
  .A( instruction[3] ),
- .Y( net70 )
+ .Y( net57 )
 );
 
 
 cell_inv
 x359_11 ( 
  .A( instruction[31] ),
- .Y( net71[11] )
+ .Y( net58[11] )
 );
 
 
 cell_inv
 x359_10 ( 
  .A( instruction[30] ),
- .Y( net71[10] )
+ .Y( net58[10] )
 );
 
 
 cell_inv
 x359_9 ( 
  .A( instruction[29] ),
- .Y( net71[9] )
+ .Y( net58[9] )
 );
 
 
 cell_inv
 x359_8 ( 
  .A( instruction[28] ),
- .Y( net71[8] )
+ .Y( net58[8] )
 );
 
 
 cell_inv
 x359_7 ( 
  .A( instruction[27] ),
- .Y( net71[7] )
+ .Y( net58[7] )
 );
 
 
 cell_inv
 x359_6 ( 
  .A( instruction[26] ),
- .Y( net71[6] )
+ .Y( net58[6] )
 );
 
 
 cell_inv
 x359_5 ( 
  .A( instruction[25] ),
- .Y( net71[5] )
+ .Y( net58[5] )
 );
 
 
 cell_inv
 x359_4 ( 
  .A( instruction[24] ),
- .Y( net71[4] )
+ .Y( net58[4] )
 );
 
 
 cell_inv
 x359_3 ( 
  .A( instruction[23] ),
- .Y( net71[3] )
+ .Y( net58[3] )
 );
 
 
 cell_inv
 x359_2 ( 
  .A( instruction[22] ),
- .Y( net71[2] )
+ .Y( net58[2] )
 );
 
 
 cell_inv
 x359_1 ( 
  .A( instruction[21] ),
- .Y( net71[1] )
+ .Y( net58[1] )
 );
 
 
 cell_inv
 x359_0 ( 
  .A( instruction[20] ),
- .Y( net71[0] )
+ .Y( net58[0] )
 );
 
 
 cell_inv
 x360_11 ( 
- .A( net71[11] ),
+ .A( net58[11] ),
  .Y( o_csr_idx[11] )
 );
 
 
 cell_inv
 x360_10 ( 
- .A( net71[10] ),
+ .A( net58[10] ),
  .Y( o_csr_idx[10] )
 );
 
 
 cell_inv
 x360_9 ( 
- .A( net71[9] ),
+ .A( net58[9] ),
  .Y( o_csr_idx[9] )
 );
 
 
 cell_inv
 x360_8 ( 
- .A( net71[8] ),
+ .A( net58[8] ),
  .Y( o_csr_idx[8] )
 );
 
 
 cell_inv
 x360_7 ( 
- .A( net71[7] ),
+ .A( net58[7] ),
  .Y( o_csr_idx[7] )
 );
 
 
 cell_inv
 x360_6 ( 
- .A( net71[6] ),
+ .A( net58[6] ),
  .Y( o_csr_idx[6] )
 );
 
 
 cell_inv
 x360_5 ( 
- .A( net71[5] ),
+ .A( net58[5] ),
  .Y( o_csr_idx[5] )
 );
 
 
 cell_inv
 x360_4 ( 
- .A( net71[4] ),
+ .A( net58[4] ),
  .Y( o_csr_idx[4] )
 );
 
 
 cell_inv
 x360_3 ( 
- .A( net71[3] ),
+ .A( net58[3] ),
  .Y( o_csr_idx[3] )
 );
 
 
 cell_inv
 x360_2 ( 
- .A( net71[2] ),
+ .A( net58[2] ),
  .Y( o_csr_idx[2] )
 );
 
 
 cell_inv
 x360_1 ( 
- .A( net71[1] ),
+ .A( net58[1] ),
  .Y( o_csr_idx[1] )
 );
 
 
 cell_inv
 x360_0 ( 
- .A( net71[0] ),
+ .A( net58[0] ),
  .Y( o_csr_idx[0] )
 );
 
@@ -4298,240 +4197,226 @@ x360_0 (
 cell_inv
 x361_4 ( 
  .A( instruction[19] ),
- .Y( net72[4] )
+ .Y( net59[4] )
 );
 
 
 cell_inv
 x361_3 ( 
  .A( instruction[18] ),
- .Y( net72[3] )
+ .Y( net59[3] )
 );
 
 
 cell_inv
 x361_2 ( 
  .A( instruction[17] ),
- .Y( net72[2] )
+ .Y( net59[2] )
 );
 
 
 cell_inv
 x361_1 ( 
  .A( instruction[16] ),
- .Y( net72[1] )
+ .Y( net59[1] )
 );
 
 
 cell_inv
 x361_0 ( 
  .A( instruction[15] ),
- .Y( net72[0] )
+ .Y( net59[0] )
 );
 
 
 cell_inv
 x362_4 ( 
- .A( net72[4] ),
+ .A( net59[4] ),
  .Y( o_csr_imm[4] )
 );
 
 
 cell_inv
 x362_3 ( 
- .A( net72[3] ),
+ .A( net59[3] ),
  .Y( o_csr_imm[3] )
 );
 
 
 cell_inv
 x362_2 ( 
- .A( net72[2] ),
+ .A( net59[2] ),
  .Y( o_csr_imm[2] )
 );
 
 
 cell_inv
 x362_1 ( 
- .A( net72[1] ),
+ .A( net59[1] ),
  .Y( o_csr_imm[1] )
 );
 
 
 cell_inv
 x362_0 ( 
- .A( net72[0] ),
+ .A( net59[0] ),
  .Y( o_csr_imm[0] )
 );
 
 
-cell_or2
+cell_nor2
 x372 ( 
  .A( funct3[1] ),
- .B( net73 ),
- .X( net74 )
+ .B( funct3[5] ),
+ .Y( net60 )
 );
 
 
-cell_and2
+cell_nor2
 x375 ( 
- .A( inst_grp_sys ),
- .B( net74 ),
- .X( o_csr_write )
+ .A( inst_grp_sys_n ),
+ .B( net60 ),
+ .Y( o_csr_write )
 );
 
 
-cell_inv
-x370 ( 
- .A( funct3[4] ),
- .Y( net73 )
-);
-
-
-cell_or2
+cell_nor2
 x373 ( 
- .A( net75 ),
- .B( funct3[4] ),
- .X( net76 )
+ .A( funct3[2] ),
+ .B( funct3[6] ),
+ .Y( net61 )
 );
 
 
-cell_and2
+cell_nor2
 x376 ( 
- .A( inst_grp_sys ),
- .B( net76 ),
- .X( o_csr_set )
+ .A( inst_grp_sys_n ),
+ .B( net61 ),
+ .Y( o_csr_set )
 );
 
 
-cell_inv
-x371 ( 
- .A( funct3[1] ),
- .Y( net75 )
-);
-
-
-cell_or2
+cell_nor2
 x374 ( 
- .A( funct3[1] ),
- .B( funct3[4] ),
- .X( net77 )
+ .A( funct3[3] ),
+ .B( funct3[7] ),
+ .Y( net62 )
 );
 
 
-cell_and2
+cell_nor2
 x377 ( 
- .A( inst_grp_sys ),
- .B( net77 ),
- .X( o_csr_clear )
+ .A( inst_grp_sys_n ),
+ .B( net62 ),
+ .Y( o_csr_clear )
 );
 
 
 cell_and2
 x9 ( 
  .A( inst_full ),
- .B( net78 ),
+ .B( net63 ),
  .X( o_reg_write )
 );
 
 
 cell_or2
 x1 ( 
- .A( net22 ),
+ .A( net20 ),
  .B( instruction[2] ),
- .X( net78 )
+ .X( net63 )
 );
 
 
 cell_nand3
 x2 ( 
  .A( instruction[5] ),
- .B( net79 ),
- .C( net80 ),
- .Y( net22 )
+ .B( net64 ),
+ .C( net65 ),
+ .Y( net20 )
 );
 
 
 cell_inv
 x3 ( 
  .A( instruction[3] ),
- .Y( net80 )
+ .Y( net65 )
 );
 
 
 cell_inv
 x4 ( 
  .A( instruction[4] ),
- .Y( net79 )
+ .Y( net64 )
 );
 
 
 cell_inv
 x1_4 ( 
  .A( instruction[11] ),
- .Y( net81[4] )
+ .Y( net66[4] )
 );
 
 
 cell_inv
 x1_3 ( 
  .A( instruction[10] ),
- .Y( net81[3] )
+ .Y( net66[3] )
 );
 
 
 cell_inv
 x1_2 ( 
  .A( instruction[9] ),
- .Y( net81[2] )
+ .Y( net66[2] )
 );
 
 
 cell_inv
 x1_1 ( 
  .A( instruction[8] ),
- .Y( net81[1] )
+ .Y( net66[1] )
 );
 
 
 cell_inv
 x1_0 ( 
  .A( instruction[7] ),
- .Y( net81[0] )
+ .Y( net66[0] )
 );
 
 
 cell_inv
 x2_4 ( 
- .A( net81[4] ),
+ .A( net66[4] ),
  .Y( o_rd[4] )
 );
 
 
 cell_inv
 x2_3 ( 
- .A( net81[3] ),
+ .A( net66[3] ),
  .Y( o_rd[3] )
 );
 
 
 cell_inv
 x2_2 ( 
- .A( net81[2] ),
+ .A( net66[2] ),
  .Y( o_rd[2] )
 );
 
 
 cell_inv
 x2_1 ( 
- .A( net81[1] ),
+ .A( net66[1] ),
  .Y( o_rd[1] )
 );
 
 
 cell_inv
 x2_0 ( 
- .A( net81[0] ),
+ .A( net66[0] ),
  .Y( o_rd[0] )
 );
 
@@ -4539,7 +4424,7 @@ x2_0 (
 cell_nand3
 x5 ( 
  .A( instruction[2] ),
- .B( net82 ),
+ .B( net67 ),
  .C( instruction[4] ),
  .Y( rs1_zeroize )
 );
@@ -4548,7 +4433,7 @@ x5 (
 cell_inv
 x6 ( 
  .A( instruction[3] ),
- .Y( net82 )
+ .Y( net67 )
 );
 
 
@@ -4595,69 +4480,69 @@ x7_0 (
 cell_inv
 x3_4 ( 
  .A( instruction[24] ),
- .Y( net83[4] )
+ .Y( net68[4] )
 );
 
 
 cell_inv
 x3_3 ( 
  .A( instruction[23] ),
- .Y( net83[3] )
+ .Y( net68[3] )
 );
 
 
 cell_inv
 x3_2 ( 
  .A( instruction[22] ),
- .Y( net83[2] )
+ .Y( net68[2] )
 );
 
 
 cell_inv
 x3_1 ( 
  .A( instruction[21] ),
- .Y( net83[1] )
+ .Y( net68[1] )
 );
 
 
 cell_inv
 x3_0 ( 
  .A( instruction[20] ),
- .Y( net83[0] )
+ .Y( net68[0] )
 );
 
 
 cell_inv
 x4_4 ( 
- .A( net83[4] ),
+ .A( net68[4] ),
  .Y( o_rs2[4] )
 );
 
 
 cell_inv
 x4_3 ( 
- .A( net83[3] ),
+ .A( net68[3] ),
  .Y( o_rs2[3] )
 );
 
 
 cell_inv
 x4_2 ( 
- .A( net83[2] ),
+ .A( net68[2] ),
  .Y( o_rs2[2] )
 );
 
 
 cell_inv
 x4_1 ( 
- .A( net83[1] ),
+ .A( net68[1] ),
  .Y( o_rs2[1] )
 );
 
 
 cell_inv
 x4_0 ( 
- .A( net83[0] ),
+ .A( net68[0] ),
  .Y( o_rs2[0] )
 );
 
@@ -4668,52 +4553,6 @@ x8 (
  .B( inst_grp_fp ),
  .C( inst_grp_branch ),
  .Y( o_op2_src )
-);
-
-
-cell_and3
-x10 ( 
- .A( inst_full ),
- .B( net84 ),
- .C( net85 ),
- .X( net23 )
-);
-
-
-cell_and3
-x11 ( 
- .A( net23 ),
- .B( net86 ),
- .C( net87 ),
- .X( o_res_src[2] )
-);
-
-
-cell_inv
-x12 ( 
- .A( instruction[3] ),
- .Y( net84 )
-);
-
-
-cell_inv
-x13 ( 
- .A( instruction[4] ),
- .Y( net85 )
-);
-
-
-cell_inv
-x14 ( 
- .A( instruction[5] ),
- .Y( net86 )
-);
-
-
-cell_inv
-x15 ( 
- .A( instruction[6] ),
- .Y( net87 )
 );
 
 
@@ -4736,13 +4575,13 @@ x17 (
 cell_inv
 x18 ( 
  .A( inst_jal ),
- .Y( net88 )
+ .Y( net69 )
 );
 
 
 cell_inv
 x19 ( 
- .A( net88 ),
+ .A( net69 ),
  .Y( o_inst_jal )
 );
 
@@ -4750,13 +4589,13 @@ x19 (
 cell_inv
 x20 ( 
  .A( inst_jalr ),
- .Y( net89 )
+ .Y( net70 )
 );
 
 
 cell_inv
 x21 ( 
- .A( net89 ),
+ .A( net70 ),
  .Y( o_inst_jalr )
 );
 
@@ -4764,13 +4603,13 @@ x21 (
 cell_inv
 x22 ( 
  .A( inst_grp_branch ),
- .Y( net90 )
+ .Y( net71 )
 );
 
 
 cell_inv
 x23 ( 
- .A( net90 ),
+ .A( net71 ),
  .Y( o_inst_branch )
 );
 
@@ -4779,7 +4618,7 @@ cell_nand2
 x400_31 ( 
  .A( instruction[31] ),
  .B( imm_sel_u ),
- .Y( net26[31] )
+ .Y( net23[31] )
 );
 
 
@@ -4787,7 +4626,7 @@ cell_nand2
 x400_30 ( 
  .A( instruction[30] ),
  .B( imm_sel_u ),
- .Y( net26[30] )
+ .Y( net23[30] )
 );
 
 
@@ -4795,7 +4634,7 @@ cell_nand2
 x400_29 ( 
  .A( instruction[29] ),
  .B( imm_sel_u ),
- .Y( net26[29] )
+ .Y( net23[29] )
 );
 
 
@@ -4803,7 +4642,7 @@ cell_nand2
 x400_28 ( 
  .A( instruction[28] ),
  .B( imm_sel_u ),
- .Y( net26[28] )
+ .Y( net23[28] )
 );
 
 
@@ -4811,7 +4650,7 @@ cell_nand2
 x400_27 ( 
  .A( instruction[27] ),
  .B( imm_sel_u ),
- .Y( net26[27] )
+ .Y( net23[27] )
 );
 
 
@@ -4819,7 +4658,7 @@ cell_nand2
 x400_26 ( 
  .A( instruction[26] ),
  .B( imm_sel_u ),
- .Y( net26[26] )
+ .Y( net23[26] )
 );
 
 
@@ -4827,7 +4666,7 @@ cell_nand2
 x400_25 ( 
  .A( instruction[25] ),
  .B( imm_sel_u ),
- .Y( net26[25] )
+ .Y( net23[25] )
 );
 
 
@@ -4835,7 +4674,7 @@ cell_nand2
 x400_24 ( 
  .A( instruction[24] ),
  .B( imm_sel_u ),
- .Y( net26[24] )
+ .Y( net23[24] )
 );
 
 
@@ -4843,7 +4682,7 @@ cell_nand2
 x400_23 ( 
  .A( instruction[23] ),
  .B( imm_sel_u ),
- .Y( net26[23] )
+ .Y( net23[23] )
 );
 
 
@@ -4851,7 +4690,7 @@ cell_nand2
 x400_22 ( 
  .A( instruction[22] ),
  .B( imm_sel_u ),
- .Y( net26[22] )
+ .Y( net23[22] )
 );
 
 
@@ -4859,7 +4698,7 @@ cell_nand2
 x400_21 ( 
  .A( instruction[21] ),
  .B( imm_sel_u ),
- .Y( net26[21] )
+ .Y( net23[21] )
 );
 
 
@@ -4867,7 +4706,7 @@ cell_nand2
 x400_20 ( 
  .A( instruction[20] ),
  .B( imm_sel_u ),
- .Y( net26[20] )
+ .Y( net23[20] )
 );
 
 
@@ -4875,7 +4714,7 @@ cell_nand2
 x400_19 ( 
  .A( instruction[19] ),
  .B( imm_sel_u ),
- .Y( net26[19] )
+ .Y( net23[19] )
 );
 
 
@@ -4883,7 +4722,7 @@ cell_nand2
 x400_18 ( 
  .A( instruction[18] ),
  .B( imm_sel_u ),
- .Y( net26[18] )
+ .Y( net23[18] )
 );
 
 
@@ -4891,7 +4730,7 @@ cell_nand2
 x400_17 ( 
  .A( instruction[17] ),
  .B( imm_sel_u ),
- .Y( net26[17] )
+ .Y( net23[17] )
 );
 
 
@@ -4899,7 +4738,7 @@ cell_nand2
 x400_16 ( 
  .A( instruction[16] ),
  .B( imm_sel_u ),
- .Y( net26[16] )
+ .Y( net23[16] )
 );
 
 
@@ -4907,7 +4746,7 @@ cell_nand2
 x400_15 ( 
  .A( instruction[15] ),
  .B( imm_sel_u ),
- .Y( net26[15] )
+ .Y( net23[15] )
 );
 
 
@@ -4915,7 +4754,7 @@ cell_nand2
 x400_14 ( 
  .A( instruction[14] ),
  .B( imm_sel_u ),
- .Y( net26[14] )
+ .Y( net23[14] )
 );
 
 
@@ -4923,7 +4762,7 @@ cell_nand2
 x400_13 ( 
  .A( instruction[13] ),
  .B( imm_sel_u ),
- .Y( net26[13] )
+ .Y( net23[13] )
 );
 
 
@@ -4931,7 +4770,7 @@ cell_nand2
 x400_12 ( 
  .A( instruction[12] ),
  .B( imm_sel_u ),
- .Y( net26[12] )
+ .Y( net23[12] )
 );
 
 
@@ -4939,7 +4778,7 @@ cell_nand2
 x400_11 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[11] )
+ .Y( net23[11] )
 );
 
 
@@ -4947,7 +4786,7 @@ cell_nand2
 x400_10 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[10] )
+ .Y( net23[10] )
 );
 
 
@@ -4955,7 +4794,7 @@ cell_nand2
 x400_9 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[9] )
+ .Y( net23[9] )
 );
 
 
@@ -4963,7 +4802,7 @@ cell_nand2
 x400_8 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[8] )
+ .Y( net23[8] )
 );
 
 
@@ -4971,7 +4810,7 @@ cell_nand2
 x400_7 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[7] )
+ .Y( net23[7] )
 );
 
 
@@ -4979,7 +4818,7 @@ cell_nand2
 x400_6 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[6] )
+ .Y( net23[6] )
 );
 
 
@@ -4987,7 +4826,7 @@ cell_nand2
 x400_5 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[5] )
+ .Y( net23[5] )
 );
 
 
@@ -4995,7 +4834,7 @@ cell_nand2
 x400_4 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[4] )
+ .Y( net23[4] )
 );
 
 
@@ -5003,7 +4842,7 @@ cell_nand2
 x400_3 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[3] )
+ .Y( net23[3] )
 );
 
 
@@ -5011,7 +4850,7 @@ cell_nand2
 x400_2 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[2] )
+ .Y( net23[2] )
 );
 
 
@@ -5019,7 +4858,7 @@ cell_nand2
 x400_1 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[1] )
+ .Y( net23[1] )
 );
 
 
@@ -5027,295 +4866,295 @@ cell_nand2
 x400_0 ( 
  .A( VSS ),
  .B( imm_sel_u ),
- .Y( net26[0] )
+ .Y( net23[0] )
 );
 
 
 cell_nand3
 x406_31 ( 
- .A( net26[31] ),
- .B( net91[31] ),
- .C( net25[31] ),
- .Y( net24[31] )
+ .A( net23[31] ),
+ .B( net72[31] ),
+ .C( net22[31] ),
+ .Y( net21[31] )
 );
 
 
 cell_nand3
 x406_30 ( 
- .A( net26[30] ),
- .B( net91[30] ),
- .C( net25[30] ),
- .Y( net24[30] )
+ .A( net23[30] ),
+ .B( net72[30] ),
+ .C( net22[30] ),
+ .Y( net21[30] )
 );
 
 
 cell_nand3
 x406_29 ( 
- .A( net26[29] ),
- .B( net91[29] ),
- .C( net25[29] ),
- .Y( net24[29] )
+ .A( net23[29] ),
+ .B( net72[29] ),
+ .C( net22[29] ),
+ .Y( net21[29] )
 );
 
 
 cell_nand3
 x406_28 ( 
- .A( net26[28] ),
- .B( net91[28] ),
- .C( net25[28] ),
- .Y( net24[28] )
+ .A( net23[28] ),
+ .B( net72[28] ),
+ .C( net22[28] ),
+ .Y( net21[28] )
 );
 
 
 cell_nand3
 x406_27 ( 
- .A( net26[27] ),
- .B( net91[27] ),
- .C( net25[27] ),
- .Y( net24[27] )
+ .A( net23[27] ),
+ .B( net72[27] ),
+ .C( net22[27] ),
+ .Y( net21[27] )
 );
 
 
 cell_nand3
 x406_26 ( 
- .A( net26[26] ),
- .B( net91[26] ),
- .C( net25[26] ),
- .Y( net24[26] )
+ .A( net23[26] ),
+ .B( net72[26] ),
+ .C( net22[26] ),
+ .Y( net21[26] )
 );
 
 
 cell_nand3
 x406_25 ( 
- .A( net26[25] ),
- .B( net91[25] ),
- .C( net25[25] ),
- .Y( net24[25] )
+ .A( net23[25] ),
+ .B( net72[25] ),
+ .C( net22[25] ),
+ .Y( net21[25] )
 );
 
 
 cell_nand3
 x406_24 ( 
- .A( net26[24] ),
- .B( net91[24] ),
- .C( net25[24] ),
- .Y( net24[24] )
+ .A( net23[24] ),
+ .B( net72[24] ),
+ .C( net22[24] ),
+ .Y( net21[24] )
 );
 
 
 cell_nand3
 x406_23 ( 
- .A( net26[23] ),
- .B( net91[23] ),
- .C( net25[23] ),
- .Y( net24[23] )
+ .A( net23[23] ),
+ .B( net72[23] ),
+ .C( net22[23] ),
+ .Y( net21[23] )
 );
 
 
 cell_nand3
 x406_22 ( 
- .A( net26[22] ),
- .B( net91[22] ),
- .C( net25[22] ),
- .Y( net24[22] )
+ .A( net23[22] ),
+ .B( net72[22] ),
+ .C( net22[22] ),
+ .Y( net21[22] )
 );
 
 
 cell_nand3
 x406_21 ( 
- .A( net26[21] ),
- .B( net91[21] ),
- .C( net25[21] ),
- .Y( net24[21] )
+ .A( net23[21] ),
+ .B( net72[21] ),
+ .C( net22[21] ),
+ .Y( net21[21] )
 );
 
 
 cell_nand3
 x406_20 ( 
- .A( net26[20] ),
- .B( net91[20] ),
- .C( net25[20] ),
- .Y( net24[20] )
+ .A( net23[20] ),
+ .B( net72[20] ),
+ .C( net22[20] ),
+ .Y( net21[20] )
 );
 
 
 cell_nand3
 x406_19 ( 
- .A( net26[19] ),
- .B( net91[19] ),
- .C( net25[19] ),
- .Y( net24[19] )
+ .A( net23[19] ),
+ .B( net72[19] ),
+ .C( net22[19] ),
+ .Y( net21[19] )
 );
 
 
 cell_nand3
 x406_18 ( 
- .A( net26[18] ),
- .B( net91[18] ),
- .C( net25[18] ),
- .Y( net24[18] )
+ .A( net23[18] ),
+ .B( net72[18] ),
+ .C( net22[18] ),
+ .Y( net21[18] )
 );
 
 
 cell_nand3
 x406_17 ( 
- .A( net26[17] ),
- .B( net91[17] ),
- .C( net25[17] ),
- .Y( net24[17] )
+ .A( net23[17] ),
+ .B( net72[17] ),
+ .C( net22[17] ),
+ .Y( net21[17] )
 );
 
 
 cell_nand3
 x406_16 ( 
- .A( net26[16] ),
- .B( net91[16] ),
- .C( net25[16] ),
- .Y( net24[16] )
+ .A( net23[16] ),
+ .B( net72[16] ),
+ .C( net22[16] ),
+ .Y( net21[16] )
 );
 
 
 cell_nand3
 x406_15 ( 
- .A( net26[15] ),
- .B( net91[15] ),
- .C( net25[15] ),
- .Y( net24[15] )
+ .A( net23[15] ),
+ .B( net72[15] ),
+ .C( net22[15] ),
+ .Y( net21[15] )
 );
 
 
 cell_nand3
 x406_14 ( 
- .A( net26[14] ),
- .B( net91[14] ),
- .C( net25[14] ),
- .Y( net24[14] )
+ .A( net23[14] ),
+ .B( net72[14] ),
+ .C( net22[14] ),
+ .Y( net21[14] )
 );
 
 
 cell_nand3
 x406_13 ( 
- .A( net26[13] ),
- .B( net91[13] ),
- .C( net25[13] ),
- .Y( net24[13] )
+ .A( net23[13] ),
+ .B( net72[13] ),
+ .C( net22[13] ),
+ .Y( net21[13] )
 );
 
 
 cell_nand3
 x406_12 ( 
- .A( net26[12] ),
- .B( net91[12] ),
- .C( net25[12] ),
- .Y( net24[12] )
+ .A( net23[12] ),
+ .B( net72[12] ),
+ .C( net22[12] ),
+ .Y( net21[12] )
 );
 
 
 cell_nand3
 x406_11 ( 
- .A( net26[11] ),
- .B( net91[11] ),
- .C( net25[11] ),
- .Y( net24[11] )
+ .A( net23[11] ),
+ .B( net72[11] ),
+ .C( net22[11] ),
+ .Y( net21[11] )
 );
 
 
 cell_nand3
 x406_10 ( 
- .A( net26[10] ),
- .B( net91[10] ),
- .C( net25[10] ),
- .Y( net24[10] )
+ .A( net23[10] ),
+ .B( net72[10] ),
+ .C( net22[10] ),
+ .Y( net21[10] )
 );
 
 
 cell_nand3
 x406_9 ( 
- .A( net26[9] ),
- .B( net91[9] ),
- .C( net25[9] ),
- .Y( net24[9] )
+ .A( net23[9] ),
+ .B( net72[9] ),
+ .C( net22[9] ),
+ .Y( net21[9] )
 );
 
 
 cell_nand3
 x406_8 ( 
- .A( net26[8] ),
- .B( net91[8] ),
- .C( net25[8] ),
- .Y( net24[8] )
+ .A( net23[8] ),
+ .B( net72[8] ),
+ .C( net22[8] ),
+ .Y( net21[8] )
 );
 
 
 cell_nand3
 x406_7 ( 
- .A( net26[7] ),
- .B( net91[7] ),
- .C( net25[7] ),
- .Y( net24[7] )
+ .A( net23[7] ),
+ .B( net72[7] ),
+ .C( net22[7] ),
+ .Y( net21[7] )
 );
 
 
 cell_nand3
 x406_6 ( 
- .A( net26[6] ),
- .B( net91[6] ),
- .C( net25[6] ),
- .Y( net24[6] )
+ .A( net23[6] ),
+ .B( net72[6] ),
+ .C( net22[6] ),
+ .Y( net21[6] )
 );
 
 
 cell_nand3
 x406_5 ( 
- .A( net26[5] ),
- .B( net91[5] ),
- .C( net25[5] ),
- .Y( net24[5] )
+ .A( net23[5] ),
+ .B( net72[5] ),
+ .C( net22[5] ),
+ .Y( net21[5] )
 );
 
 
 cell_nand3
 x406_4 ( 
- .A( net26[4] ),
- .B( net91[4] ),
- .C( net25[4] ),
- .Y( net24[4] )
+ .A( net23[4] ),
+ .B( net72[4] ),
+ .C( net22[4] ),
+ .Y( net21[4] )
 );
 
 
 cell_nand3
 x406_3 ( 
- .A( net26[3] ),
- .B( net91[3] ),
- .C( net25[3] ),
- .Y( net24[3] )
+ .A( net23[3] ),
+ .B( net72[3] ),
+ .C( net22[3] ),
+ .Y( net21[3] )
 );
 
 
 cell_nand3
 x406_2 ( 
- .A( net26[2] ),
- .B( net91[2] ),
- .C( net25[2] ),
- .Y( net24[2] )
+ .A( net23[2] ),
+ .B( net72[2] ),
+ .C( net22[2] ),
+ .Y( net21[2] )
 );
 
 
 cell_nand3
 x406_1 ( 
- .A( net26[1] ),
- .B( net91[1] ),
- .C( net25[1] ),
- .Y( net24[1] )
+ .A( net23[1] ),
+ .B( net72[1] ),
+ .C( net22[1] ),
+ .Y( net21[1] )
 );
 
 
 cell_nand3
 x406_0 ( 
- .A( net26[0] ),
- .B( net91[0] ),
- .C( net25[0] ),
- .Y( net24[0] )
+ .A( net23[0] ),
+ .B( net72[0] ),
+ .C( net22[0] ),
+ .Y( net21[0] )
 );
 
 
@@ -5323,7 +5162,7 @@ cell_nand2
 x401_31 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[31] )
+ .Y( net72[31] )
 );
 
 
@@ -5331,7 +5170,7 @@ cell_nand2
 x401_30 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[30] )
+ .Y( net72[30] )
 );
 
 
@@ -5339,7 +5178,7 @@ cell_nand2
 x401_29 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[29] )
+ .Y( net72[29] )
 );
 
 
@@ -5347,7 +5186,7 @@ cell_nand2
 x401_28 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[28] )
+ .Y( net72[28] )
 );
 
 
@@ -5355,7 +5194,7 @@ cell_nand2
 x401_27 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[27] )
+ .Y( net72[27] )
 );
 
 
@@ -5363,7 +5202,7 @@ cell_nand2
 x401_26 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[26] )
+ .Y( net72[26] )
 );
 
 
@@ -5371,7 +5210,7 @@ cell_nand2
 x401_25 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[25] )
+ .Y( net72[25] )
 );
 
 
@@ -5379,7 +5218,7 @@ cell_nand2
 x401_24 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[24] )
+ .Y( net72[24] )
 );
 
 
@@ -5387,7 +5226,7 @@ cell_nand2
 x401_23 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[23] )
+ .Y( net72[23] )
 );
 
 
@@ -5395,7 +5234,7 @@ cell_nand2
 x401_22 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[22] )
+ .Y( net72[22] )
 );
 
 
@@ -5403,7 +5242,7 @@ cell_nand2
 x401_21 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[21] )
+ .Y( net72[21] )
 );
 
 
@@ -5411,7 +5250,7 @@ cell_nand2
 x401_20 ( 
  .A( instruction[31] ),
  .B( imm_sel_j ),
- .Y( net91[20] )
+ .Y( net72[20] )
 );
 
 
@@ -5419,7 +5258,7 @@ cell_nand2
 x401_19 ( 
  .A( instruction[19] ),
  .B( imm_sel_j ),
- .Y( net91[19] )
+ .Y( net72[19] )
 );
 
 
@@ -5427,7 +5266,7 @@ cell_nand2
 x401_18 ( 
  .A( instruction[18] ),
  .B( imm_sel_j ),
- .Y( net91[18] )
+ .Y( net72[18] )
 );
 
 
@@ -5435,7 +5274,7 @@ cell_nand2
 x401_17 ( 
  .A( instruction[17] ),
  .B( imm_sel_j ),
- .Y( net91[17] )
+ .Y( net72[17] )
 );
 
 
@@ -5443,7 +5282,7 @@ cell_nand2
 x401_16 ( 
  .A( instruction[16] ),
  .B( imm_sel_j ),
- .Y( net91[16] )
+ .Y( net72[16] )
 );
 
 
@@ -5451,7 +5290,7 @@ cell_nand2
 x401_15 ( 
  .A( instruction[15] ),
  .B( imm_sel_j ),
- .Y( net91[15] )
+ .Y( net72[15] )
 );
 
 
@@ -5459,7 +5298,7 @@ cell_nand2
 x401_14 ( 
  .A( instruction[14] ),
  .B( imm_sel_j ),
- .Y( net91[14] )
+ .Y( net72[14] )
 );
 
 
@@ -5467,7 +5306,7 @@ cell_nand2
 x401_13 ( 
  .A( instruction[13] ),
  .B( imm_sel_j ),
- .Y( net91[13] )
+ .Y( net72[13] )
 );
 
 
@@ -5475,7 +5314,7 @@ cell_nand2
 x401_12 ( 
  .A( instruction[12] ),
  .B( imm_sel_j ),
- .Y( net91[12] )
+ .Y( net72[12] )
 );
 
 
@@ -5483,7 +5322,7 @@ cell_nand2
 x401_11 ( 
  .A( instruction[20] ),
  .B( imm_sel_j ),
- .Y( net91[11] )
+ .Y( net72[11] )
 );
 
 
@@ -5491,7 +5330,7 @@ cell_nand2
 x401_10 ( 
  .A( instruction[30] ),
  .B( imm_sel_j ),
- .Y( net91[10] )
+ .Y( net72[10] )
 );
 
 
@@ -5499,7 +5338,7 @@ cell_nand2
 x401_9 ( 
  .A( instruction[29] ),
  .B( imm_sel_j ),
- .Y( net91[9] )
+ .Y( net72[9] )
 );
 
 
@@ -5507,7 +5346,7 @@ cell_nand2
 x401_8 ( 
  .A( instruction[28] ),
  .B( imm_sel_j ),
- .Y( net91[8] )
+ .Y( net72[8] )
 );
 
 
@@ -5515,7 +5354,7 @@ cell_nand2
 x401_7 ( 
  .A( instruction[27] ),
  .B( imm_sel_j ),
- .Y( net91[7] )
+ .Y( net72[7] )
 );
 
 
@@ -5523,7 +5362,7 @@ cell_nand2
 x401_6 ( 
  .A( instruction[26] ),
  .B( imm_sel_j ),
- .Y( net91[6] )
+ .Y( net72[6] )
 );
 
 
@@ -5531,7 +5370,7 @@ cell_nand2
 x401_5 ( 
  .A( instruction[25] ),
  .B( imm_sel_j ),
- .Y( net91[5] )
+ .Y( net72[5] )
 );
 
 
@@ -5539,7 +5378,7 @@ cell_nand2
 x401_4 ( 
  .A( instruction[24] ),
  .B( imm_sel_j ),
- .Y( net91[4] )
+ .Y( net72[4] )
 );
 
 
@@ -5547,7 +5386,7 @@ cell_nand2
 x401_3 ( 
  .A( instruction[23] ),
  .B( imm_sel_j ),
- .Y( net91[3] )
+ .Y( net72[3] )
 );
 
 
@@ -5555,7 +5394,7 @@ cell_nand2
 x401_2 ( 
  .A( instruction[22] ),
  .B( imm_sel_j ),
- .Y( net91[2] )
+ .Y( net72[2] )
 );
 
 
@@ -5563,7 +5402,7 @@ cell_nand2
 x401_1 ( 
  .A( instruction[21] ),
  .B( imm_sel_j ),
- .Y( net91[1] )
+ .Y( net72[1] )
 );
 
 
@@ -5571,7 +5410,7 @@ cell_nand2
 x401_0 ( 
  .A( VSS ),
  .B( imm_sel_j ),
- .Y( net91[0] )
+ .Y( net72[0] )
 );
 
 
@@ -5579,7 +5418,7 @@ cell_nand2
 x402_31 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[31] )
+ .Y( net22[31] )
 );
 
 
@@ -5587,7 +5426,7 @@ cell_nand2
 x402_30 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[30] )
+ .Y( net22[30] )
 );
 
 
@@ -5595,7 +5434,7 @@ cell_nand2
 x402_29 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[29] )
+ .Y( net22[29] )
 );
 
 
@@ -5603,7 +5442,7 @@ cell_nand2
 x402_28 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[28] )
+ .Y( net22[28] )
 );
 
 
@@ -5611,7 +5450,7 @@ cell_nand2
 x402_27 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[27] )
+ .Y( net22[27] )
 );
 
 
@@ -5619,7 +5458,7 @@ cell_nand2
 x402_26 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[26] )
+ .Y( net22[26] )
 );
 
 
@@ -5627,7 +5466,7 @@ cell_nand2
 x402_25 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[25] )
+ .Y( net22[25] )
 );
 
 
@@ -5635,7 +5474,7 @@ cell_nand2
 x402_24 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[24] )
+ .Y( net22[24] )
 );
 
 
@@ -5643,7 +5482,7 @@ cell_nand2
 x402_23 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[23] )
+ .Y( net22[23] )
 );
 
 
@@ -5651,7 +5490,7 @@ cell_nand2
 x402_22 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[22] )
+ .Y( net22[22] )
 );
 
 
@@ -5659,7 +5498,7 @@ cell_nand2
 x402_21 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[21] )
+ .Y( net22[21] )
 );
 
 
@@ -5667,7 +5506,7 @@ cell_nand2
 x402_20 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[20] )
+ .Y( net22[20] )
 );
 
 
@@ -5675,7 +5514,7 @@ cell_nand2
 x402_19 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[19] )
+ .Y( net22[19] )
 );
 
 
@@ -5683,7 +5522,7 @@ cell_nand2
 x402_18 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[18] )
+ .Y( net22[18] )
 );
 
 
@@ -5691,7 +5530,7 @@ cell_nand2
 x402_17 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[17] )
+ .Y( net22[17] )
 );
 
 
@@ -5699,7 +5538,7 @@ cell_nand2
 x402_16 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[16] )
+ .Y( net22[16] )
 );
 
 
@@ -5707,7 +5546,7 @@ cell_nand2
 x402_15 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[15] )
+ .Y( net22[15] )
 );
 
 
@@ -5715,7 +5554,7 @@ cell_nand2
 x402_14 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[14] )
+ .Y( net22[14] )
 );
 
 
@@ -5723,7 +5562,7 @@ cell_nand2
 x402_13 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[13] )
+ .Y( net22[13] )
 );
 
 
@@ -5731,7 +5570,7 @@ cell_nand2
 x402_12 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[12] )
+ .Y( net22[12] )
 );
 
 
@@ -5739,7 +5578,7 @@ cell_nand2
 x402_11 ( 
  .A( instruction[31] ),
  .B( imm_sel_s ),
- .Y( net25[11] )
+ .Y( net22[11] )
 );
 
 
@@ -5747,7 +5586,7 @@ cell_nand2
 x402_10 ( 
  .A( instruction[30] ),
  .B( imm_sel_s ),
- .Y( net25[10] )
+ .Y( net22[10] )
 );
 
 
@@ -5755,7 +5594,7 @@ cell_nand2
 x402_9 ( 
  .A( instruction[29] ),
  .B( imm_sel_s ),
- .Y( net25[9] )
+ .Y( net22[9] )
 );
 
 
@@ -5763,7 +5602,7 @@ cell_nand2
 x402_8 ( 
  .A( instruction[28] ),
  .B( imm_sel_s ),
- .Y( net25[8] )
+ .Y( net22[8] )
 );
 
 
@@ -5771,7 +5610,7 @@ cell_nand2
 x402_7 ( 
  .A( instruction[27] ),
  .B( imm_sel_s ),
- .Y( net25[7] )
+ .Y( net22[7] )
 );
 
 
@@ -5779,7 +5618,7 @@ cell_nand2
 x402_6 ( 
  .A( instruction[26] ),
  .B( imm_sel_s ),
- .Y( net25[6] )
+ .Y( net22[6] )
 );
 
 
@@ -5787,7 +5626,7 @@ cell_nand2
 x402_5 ( 
  .A( instruction[25] ),
  .B( imm_sel_s ),
- .Y( net25[5] )
+ .Y( net22[5] )
 );
 
 
@@ -5795,7 +5634,7 @@ cell_nand2
 x402_4 ( 
  .A( instruction[11] ),
  .B( imm_sel_s ),
- .Y( net25[4] )
+ .Y( net22[4] )
 );
 
 
@@ -5803,7 +5642,7 @@ cell_nand2
 x402_3 ( 
  .A( instruction[10] ),
  .B( imm_sel_s ),
- .Y( net25[3] )
+ .Y( net22[3] )
 );
 
 
@@ -5811,7 +5650,7 @@ cell_nand2
 x402_2 ( 
  .A( instruction[9] ),
  .B( imm_sel_s ),
- .Y( net25[2] )
+ .Y( net22[2] )
 );
 
 
@@ -5819,7 +5658,7 @@ cell_nand2
 x402_1 ( 
  .A( instruction[8] ),
  .B( imm_sel_s ),
- .Y( net25[1] )
+ .Y( net22[1] )
 );
 
 
@@ -5827,7 +5666,7 @@ cell_nand2
 x402_0 ( 
  .A( instruction[7] ),
  .B( imm_sel_s ),
- .Y( net25[0] )
+ .Y( net22[0] )
 );
 
 
@@ -5835,7 +5674,7 @@ cell_nand2
 x404_31 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[31] )
+ .Y( net25[31] )
 );
 
 
@@ -5843,7 +5682,7 @@ cell_nand2
 x404_30 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[30] )
+ .Y( net25[30] )
 );
 
 
@@ -5851,7 +5690,7 @@ cell_nand2
 x404_29 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[29] )
+ .Y( net25[29] )
 );
 
 
@@ -5859,7 +5698,7 @@ cell_nand2
 x404_28 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[28] )
+ .Y( net25[28] )
 );
 
 
@@ -5867,7 +5706,7 @@ cell_nand2
 x404_27 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[27] )
+ .Y( net25[27] )
 );
 
 
@@ -5875,7 +5714,7 @@ cell_nand2
 x404_26 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[26] )
+ .Y( net25[26] )
 );
 
 
@@ -5883,7 +5722,7 @@ cell_nand2
 x404_25 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[25] )
+ .Y( net25[25] )
 );
 
 
@@ -5891,7 +5730,7 @@ cell_nand2
 x404_24 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[24] )
+ .Y( net25[24] )
 );
 
 
@@ -5899,7 +5738,7 @@ cell_nand2
 x404_23 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[23] )
+ .Y( net25[23] )
 );
 
 
@@ -5907,7 +5746,7 @@ cell_nand2
 x404_22 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[22] )
+ .Y( net25[22] )
 );
 
 
@@ -5915,7 +5754,7 @@ cell_nand2
 x404_21 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[21] )
+ .Y( net25[21] )
 );
 
 
@@ -5923,7 +5762,7 @@ cell_nand2
 x404_20 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[20] )
+ .Y( net25[20] )
 );
 
 
@@ -5931,7 +5770,7 @@ cell_nand2
 x404_19 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[19] )
+ .Y( net25[19] )
 );
 
 
@@ -5939,7 +5778,7 @@ cell_nand2
 x404_18 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[18] )
+ .Y( net25[18] )
 );
 
 
@@ -5947,7 +5786,7 @@ cell_nand2
 x404_17 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[17] )
+ .Y( net25[17] )
 );
 
 
@@ -5955,7 +5794,7 @@ cell_nand2
 x404_16 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[16] )
+ .Y( net25[16] )
 );
 
 
@@ -5963,7 +5802,7 @@ cell_nand2
 x404_15 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[15] )
+ .Y( net25[15] )
 );
 
 
@@ -5971,7 +5810,7 @@ cell_nand2
 x404_14 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[14] )
+ .Y( net25[14] )
 );
 
 
@@ -5979,7 +5818,7 @@ cell_nand2
 x404_13 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[13] )
+ .Y( net25[13] )
 );
 
 
@@ -5987,7 +5826,7 @@ cell_nand2
 x404_12 ( 
  .A( instruction[31] ),
  .B( inst_grp_branch ),
- .Y( net28[12] )
+ .Y( net25[12] )
 );
 
 
@@ -5995,7 +5834,7 @@ cell_nand2
 x404_11 ( 
  .A( instruction[7] ),
  .B( inst_grp_branch ),
- .Y( net28[11] )
+ .Y( net25[11] )
 );
 
 
@@ -6003,7 +5842,7 @@ cell_nand2
 x404_10 ( 
  .A( instruction[30] ),
  .B( inst_grp_branch ),
- .Y( net28[10] )
+ .Y( net25[10] )
 );
 
 
@@ -6011,7 +5850,7 @@ cell_nand2
 x404_9 ( 
  .A( instruction[29] ),
  .B( inst_grp_branch ),
- .Y( net28[9] )
+ .Y( net25[9] )
 );
 
 
@@ -6019,7 +5858,7 @@ cell_nand2
 x404_8 ( 
  .A( instruction[28] ),
  .B( inst_grp_branch ),
- .Y( net28[8] )
+ .Y( net25[8] )
 );
 
 
@@ -6027,7 +5866,7 @@ cell_nand2
 x404_7 ( 
  .A( instruction[27] ),
  .B( inst_grp_branch ),
- .Y( net28[7] )
+ .Y( net25[7] )
 );
 
 
@@ -6035,7 +5874,7 @@ cell_nand2
 x404_6 ( 
  .A( instruction[26] ),
  .B( inst_grp_branch ),
- .Y( net28[6] )
+ .Y( net25[6] )
 );
 
 
@@ -6043,7 +5882,7 @@ cell_nand2
 x404_5 ( 
  .A( instruction[25] ),
  .B( inst_grp_branch ),
- .Y( net28[5] )
+ .Y( net25[5] )
 );
 
 
@@ -6051,7 +5890,7 @@ cell_nand2
 x404_4 ( 
  .A( instruction[11] ),
  .B( inst_grp_branch ),
- .Y( net28[4] )
+ .Y( net25[4] )
 );
 
 
@@ -6059,7 +5898,7 @@ cell_nand2
 x404_3 ( 
  .A( instruction[10] ),
  .B( inst_grp_branch ),
- .Y( net28[3] )
+ .Y( net25[3] )
 );
 
 
@@ -6067,7 +5906,7 @@ cell_nand2
 x404_2 ( 
  .A( instruction[9] ),
  .B( inst_grp_branch ),
- .Y( net28[2] )
+ .Y( net25[2] )
 );
 
 
@@ -6075,7 +5914,7 @@ cell_nand2
 x404_1 ( 
  .A( instruction[8] ),
  .B( inst_grp_branch ),
- .Y( net28[1] )
+ .Y( net25[1] )
 );
 
 
@@ -6083,7 +5922,7 @@ cell_nand2
 x404_0 ( 
  .A( VSS ),
  .B( inst_grp_branch ),
- .Y( net28[0] )
+ .Y( net25[0] )
 );
 
 
@@ -6091,7 +5930,7 @@ cell_nand2
 x405_31 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[31] )
+ .Y( net26[31] )
 );
 
 
@@ -6099,7 +5938,7 @@ cell_nand2
 x405_30 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[30] )
+ .Y( net26[30] )
 );
 
 
@@ -6107,7 +5946,7 @@ cell_nand2
 x405_29 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[29] )
+ .Y( net26[29] )
 );
 
 
@@ -6115,7 +5954,7 @@ cell_nand2
 x405_28 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[28] )
+ .Y( net26[28] )
 );
 
 
@@ -6123,7 +5962,7 @@ cell_nand2
 x405_27 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[27] )
+ .Y( net26[27] )
 );
 
 
@@ -6131,7 +5970,7 @@ cell_nand2
 x405_26 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[26] )
+ .Y( net26[26] )
 );
 
 
@@ -6139,7 +5978,7 @@ cell_nand2
 x405_25 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[25] )
+ .Y( net26[25] )
 );
 
 
@@ -6147,7 +5986,7 @@ cell_nand2
 x405_24 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[24] )
+ .Y( net26[24] )
 );
 
 
@@ -6155,7 +5994,7 @@ cell_nand2
 x405_23 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[23] )
+ .Y( net26[23] )
 );
 
 
@@ -6163,7 +6002,7 @@ cell_nand2
 x405_22 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[22] )
+ .Y( net26[22] )
 );
 
 
@@ -6171,7 +6010,7 @@ cell_nand2
 x405_21 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[21] )
+ .Y( net26[21] )
 );
 
 
@@ -6179,7 +6018,7 @@ cell_nand2
 x405_20 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[20] )
+ .Y( net26[20] )
 );
 
 
@@ -6187,7 +6026,7 @@ cell_nand2
 x405_19 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[19] )
+ .Y( net26[19] )
 );
 
 
@@ -6195,7 +6034,7 @@ cell_nand2
 x405_18 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[18] )
+ .Y( net26[18] )
 );
 
 
@@ -6203,7 +6042,7 @@ cell_nand2
 x405_17 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[17] )
+ .Y( net26[17] )
 );
 
 
@@ -6211,7 +6050,7 @@ cell_nand2
 x405_16 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[16] )
+ .Y( net26[16] )
 );
 
 
@@ -6219,7 +6058,7 @@ cell_nand2
 x405_15 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[15] )
+ .Y( net26[15] )
 );
 
 
@@ -6227,7 +6066,7 @@ cell_nand2
 x405_14 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[14] )
+ .Y( net26[14] )
 );
 
 
@@ -6235,7 +6074,7 @@ cell_nand2
 x405_13 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[13] )
+ .Y( net26[13] )
 );
 
 
@@ -6243,7 +6082,7 @@ cell_nand2
 x405_12 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[12] )
+ .Y( net26[12] )
 );
 
 
@@ -6251,7 +6090,7 @@ cell_nand2
 x405_11 ( 
  .A( instruction[31] ),
  .B( imm_sel_i ),
- .Y( net29[11] )
+ .Y( net26[11] )
 );
 
 
@@ -6259,7 +6098,7 @@ cell_nand2
 x405_10 ( 
  .A( instruction[30] ),
  .B( imm_sel_i ),
- .Y( net29[10] )
+ .Y( net26[10] )
 );
 
 
@@ -6267,7 +6106,7 @@ cell_nand2
 x405_9 ( 
  .A( instruction[29] ),
  .B( imm_sel_i ),
- .Y( net29[9] )
+ .Y( net26[9] )
 );
 
 
@@ -6275,7 +6114,7 @@ cell_nand2
 x405_8 ( 
  .A( instruction[28] ),
  .B( imm_sel_i ),
- .Y( net29[8] )
+ .Y( net26[8] )
 );
 
 
@@ -6283,7 +6122,7 @@ cell_nand2
 x405_7 ( 
  .A( instruction[27] ),
  .B( imm_sel_i ),
- .Y( net29[7] )
+ .Y( net26[7] )
 );
 
 
@@ -6291,7 +6130,7 @@ cell_nand2
 x405_6 ( 
  .A( instruction[26] ),
  .B( imm_sel_i ),
- .Y( net29[6] )
+ .Y( net26[6] )
 );
 
 
@@ -6299,7 +6138,7 @@ cell_nand2
 x405_5 ( 
  .A( instruction[25] ),
  .B( imm_sel_i ),
- .Y( net29[5] )
+ .Y( net26[5] )
 );
 
 
@@ -6307,7 +6146,7 @@ cell_nand2
 x405_4 ( 
  .A( instruction[24] ),
  .B( imm_sel_i ),
- .Y( net29[4] )
+ .Y( net26[4] )
 );
 
 
@@ -6315,7 +6154,7 @@ cell_nand2
 x405_3 ( 
  .A( instruction[23] ),
  .B( imm_sel_i ),
- .Y( net29[3] )
+ .Y( net26[3] )
 );
 
 
@@ -6323,7 +6162,7 @@ cell_nand2
 x405_2 ( 
  .A( instruction[22] ),
  .B( imm_sel_i ),
- .Y( net29[2] )
+ .Y( net26[2] )
 );
 
 
@@ -6331,7 +6170,7 @@ cell_nand2
 x405_1 ( 
  .A( instruction[21] ),
  .B( imm_sel_i ),
- .Y( net29[1] )
+ .Y( net26[1] )
 );
 
 
@@ -6339,518 +6178,518 @@ cell_nand2
 x405_0 ( 
  .A( instruction[20] ),
  .B( imm_sel_i ),
- .Y( net29[0] )
+ .Y( net26[0] )
 );
 
 
 cell_nand2
 x407_31 ( 
- .A( net28[31] ),
- .B( net29[31] ),
- .Y( net27[31] )
+ .A( net25[31] ),
+ .B( net26[31] ),
+ .Y( net24[31] )
 );
 
 
 cell_nand2
 x407_30 ( 
- .A( net28[30] ),
- .B( net29[30] ),
- .Y( net27[30] )
+ .A( net25[30] ),
+ .B( net26[30] ),
+ .Y( net24[30] )
 );
 
 
 cell_nand2
 x407_29 ( 
- .A( net28[29] ),
- .B( net29[29] ),
- .Y( net27[29] )
+ .A( net25[29] ),
+ .B( net26[29] ),
+ .Y( net24[29] )
 );
 
 
 cell_nand2
 x407_28 ( 
- .A( net28[28] ),
- .B( net29[28] ),
- .Y( net27[28] )
+ .A( net25[28] ),
+ .B( net26[28] ),
+ .Y( net24[28] )
 );
 
 
 cell_nand2
 x407_27 ( 
- .A( net28[27] ),
- .B( net29[27] ),
- .Y( net27[27] )
+ .A( net25[27] ),
+ .B( net26[27] ),
+ .Y( net24[27] )
 );
 
 
 cell_nand2
 x407_26 ( 
- .A( net28[26] ),
- .B( net29[26] ),
- .Y( net27[26] )
+ .A( net25[26] ),
+ .B( net26[26] ),
+ .Y( net24[26] )
 );
 
 
 cell_nand2
 x407_25 ( 
- .A( net28[25] ),
- .B( net29[25] ),
- .Y( net27[25] )
+ .A( net25[25] ),
+ .B( net26[25] ),
+ .Y( net24[25] )
 );
 
 
 cell_nand2
 x407_24 ( 
- .A( net28[24] ),
- .B( net29[24] ),
- .Y( net27[24] )
+ .A( net25[24] ),
+ .B( net26[24] ),
+ .Y( net24[24] )
 );
 
 
 cell_nand2
 x407_23 ( 
- .A( net28[23] ),
- .B( net29[23] ),
- .Y( net27[23] )
+ .A( net25[23] ),
+ .B( net26[23] ),
+ .Y( net24[23] )
 );
 
 
 cell_nand2
 x407_22 ( 
- .A( net28[22] ),
- .B( net29[22] ),
- .Y( net27[22] )
+ .A( net25[22] ),
+ .B( net26[22] ),
+ .Y( net24[22] )
 );
 
 
 cell_nand2
 x407_21 ( 
- .A( net28[21] ),
- .B( net29[21] ),
- .Y( net27[21] )
+ .A( net25[21] ),
+ .B( net26[21] ),
+ .Y( net24[21] )
 );
 
 
 cell_nand2
 x407_20 ( 
- .A( net28[20] ),
- .B( net29[20] ),
- .Y( net27[20] )
+ .A( net25[20] ),
+ .B( net26[20] ),
+ .Y( net24[20] )
 );
 
 
 cell_nand2
 x407_19 ( 
- .A( net28[19] ),
- .B( net29[19] ),
- .Y( net27[19] )
+ .A( net25[19] ),
+ .B( net26[19] ),
+ .Y( net24[19] )
 );
 
 
 cell_nand2
 x407_18 ( 
- .A( net28[18] ),
- .B( net29[18] ),
- .Y( net27[18] )
+ .A( net25[18] ),
+ .B( net26[18] ),
+ .Y( net24[18] )
 );
 
 
 cell_nand2
 x407_17 ( 
- .A( net28[17] ),
- .B( net29[17] ),
- .Y( net27[17] )
+ .A( net25[17] ),
+ .B( net26[17] ),
+ .Y( net24[17] )
 );
 
 
 cell_nand2
 x407_16 ( 
- .A( net28[16] ),
- .B( net29[16] ),
- .Y( net27[16] )
+ .A( net25[16] ),
+ .B( net26[16] ),
+ .Y( net24[16] )
 );
 
 
 cell_nand2
 x407_15 ( 
- .A( net28[15] ),
- .B( net29[15] ),
- .Y( net27[15] )
+ .A( net25[15] ),
+ .B( net26[15] ),
+ .Y( net24[15] )
 );
 
 
 cell_nand2
 x407_14 ( 
- .A( net28[14] ),
- .B( net29[14] ),
- .Y( net27[14] )
+ .A( net25[14] ),
+ .B( net26[14] ),
+ .Y( net24[14] )
 );
 
 
 cell_nand2
 x407_13 ( 
- .A( net28[13] ),
- .B( net29[13] ),
- .Y( net27[13] )
+ .A( net25[13] ),
+ .B( net26[13] ),
+ .Y( net24[13] )
 );
 
 
 cell_nand2
 x407_12 ( 
- .A( net28[12] ),
- .B( net29[12] ),
- .Y( net27[12] )
+ .A( net25[12] ),
+ .B( net26[12] ),
+ .Y( net24[12] )
 );
 
 
 cell_nand2
 x407_11 ( 
- .A( net28[11] ),
- .B( net29[11] ),
- .Y( net27[11] )
+ .A( net25[11] ),
+ .B( net26[11] ),
+ .Y( net24[11] )
 );
 
 
 cell_nand2
 x407_10 ( 
- .A( net28[10] ),
- .B( net29[10] ),
- .Y( net27[10] )
+ .A( net25[10] ),
+ .B( net26[10] ),
+ .Y( net24[10] )
 );
 
 
 cell_nand2
 x407_9 ( 
- .A( net28[9] ),
- .B( net29[9] ),
- .Y( net27[9] )
+ .A( net25[9] ),
+ .B( net26[9] ),
+ .Y( net24[9] )
 );
 
 
 cell_nand2
 x407_8 ( 
- .A( net28[8] ),
- .B( net29[8] ),
- .Y( net27[8] )
+ .A( net25[8] ),
+ .B( net26[8] ),
+ .Y( net24[8] )
 );
 
 
 cell_nand2
 x407_7 ( 
- .A( net28[7] ),
- .B( net29[7] ),
- .Y( net27[7] )
+ .A( net25[7] ),
+ .B( net26[7] ),
+ .Y( net24[7] )
 );
 
 
 cell_nand2
 x407_6 ( 
- .A( net28[6] ),
- .B( net29[6] ),
- .Y( net27[6] )
+ .A( net25[6] ),
+ .B( net26[6] ),
+ .Y( net24[6] )
 );
 
 
 cell_nand2
 x407_5 ( 
- .A( net28[5] ),
- .B( net29[5] ),
- .Y( net27[5] )
+ .A( net25[5] ),
+ .B( net26[5] ),
+ .Y( net24[5] )
 );
 
 
 cell_nand2
 x407_4 ( 
- .A( net28[4] ),
- .B( net29[4] ),
- .Y( net27[4] )
+ .A( net25[4] ),
+ .B( net26[4] ),
+ .Y( net24[4] )
 );
 
 
 cell_nand2
 x407_3 ( 
- .A( net28[3] ),
- .B( net29[3] ),
- .Y( net27[3] )
+ .A( net25[3] ),
+ .B( net26[3] ),
+ .Y( net24[3] )
 );
 
 
 cell_nand2
 x407_2 ( 
- .A( net28[2] ),
- .B( net29[2] ),
- .Y( net27[2] )
+ .A( net25[2] ),
+ .B( net26[2] ),
+ .Y( net24[2] )
 );
 
 
 cell_nand2
 x407_1 ( 
- .A( net28[1] ),
- .B( net29[1] ),
- .Y( net27[1] )
+ .A( net25[1] ),
+ .B( net26[1] ),
+ .Y( net24[1] )
 );
 
 
 cell_nand2
 x407_0 ( 
- .A( net28[0] ),
- .B( net29[0] ),
- .Y( net27[0] )
+ .A( net25[0] ),
+ .B( net26[0] ),
+ .Y( net24[0] )
 );
 
 
 cell_or2
 x408_31 ( 
- .A( net24[31] ),
- .B( net27[31] ),
+ .A( net21[31] ),
+ .B( net24[31] ),
  .X( o_imm_i[31] )
 );
 
 
 cell_or2
 x408_30 ( 
- .A( net24[30] ),
- .B( net27[30] ),
+ .A( net21[30] ),
+ .B( net24[30] ),
  .X( o_imm_i[30] )
 );
 
 
 cell_or2
 x408_29 ( 
- .A( net24[29] ),
- .B( net27[29] ),
+ .A( net21[29] ),
+ .B( net24[29] ),
  .X( o_imm_i[29] )
 );
 
 
 cell_or2
 x408_28 ( 
- .A( net24[28] ),
- .B( net27[28] ),
+ .A( net21[28] ),
+ .B( net24[28] ),
  .X( o_imm_i[28] )
 );
 
 
 cell_or2
 x408_27 ( 
- .A( net24[27] ),
- .B( net27[27] ),
+ .A( net21[27] ),
+ .B( net24[27] ),
  .X( o_imm_i[27] )
 );
 
 
 cell_or2
 x408_26 ( 
- .A( net24[26] ),
- .B( net27[26] ),
+ .A( net21[26] ),
+ .B( net24[26] ),
  .X( o_imm_i[26] )
 );
 
 
 cell_or2
 x408_25 ( 
- .A( net24[25] ),
- .B( net27[25] ),
+ .A( net21[25] ),
+ .B( net24[25] ),
  .X( o_imm_i[25] )
 );
 
 
 cell_or2
 x408_24 ( 
- .A( net24[24] ),
- .B( net27[24] ),
+ .A( net21[24] ),
+ .B( net24[24] ),
  .X( o_imm_i[24] )
 );
 
 
 cell_or2
 x408_23 ( 
- .A( net24[23] ),
- .B( net27[23] ),
+ .A( net21[23] ),
+ .B( net24[23] ),
  .X( o_imm_i[23] )
 );
 
 
 cell_or2
 x408_22 ( 
- .A( net24[22] ),
- .B( net27[22] ),
+ .A( net21[22] ),
+ .B( net24[22] ),
  .X( o_imm_i[22] )
 );
 
 
 cell_or2
 x408_21 ( 
- .A( net24[21] ),
- .B( net27[21] ),
+ .A( net21[21] ),
+ .B( net24[21] ),
  .X( o_imm_i[21] )
 );
 
 
 cell_or2
 x408_20 ( 
- .A( net24[20] ),
- .B( net27[20] ),
+ .A( net21[20] ),
+ .B( net24[20] ),
  .X( o_imm_i[20] )
 );
 
 
 cell_or2
 x408_19 ( 
- .A( net24[19] ),
- .B( net27[19] ),
+ .A( net21[19] ),
+ .B( net24[19] ),
  .X( o_imm_i[19] )
 );
 
 
 cell_or2
 x408_18 ( 
- .A( net24[18] ),
- .B( net27[18] ),
+ .A( net21[18] ),
+ .B( net24[18] ),
  .X( o_imm_i[18] )
 );
 
 
 cell_or2
 x408_17 ( 
- .A( net24[17] ),
- .B( net27[17] ),
+ .A( net21[17] ),
+ .B( net24[17] ),
  .X( o_imm_i[17] )
 );
 
 
 cell_or2
 x408_16 ( 
- .A( net24[16] ),
- .B( net27[16] ),
+ .A( net21[16] ),
+ .B( net24[16] ),
  .X( o_imm_i[16] )
 );
 
 
 cell_or2
 x408_15 ( 
- .A( net24[15] ),
- .B( net27[15] ),
+ .A( net21[15] ),
+ .B( net24[15] ),
  .X( o_imm_i[15] )
 );
 
 
 cell_or2
 x408_14 ( 
- .A( net24[14] ),
- .B( net27[14] ),
+ .A( net21[14] ),
+ .B( net24[14] ),
  .X( o_imm_i[14] )
 );
 
 
 cell_or2
 x408_13 ( 
- .A( net24[13] ),
- .B( net27[13] ),
+ .A( net21[13] ),
+ .B( net24[13] ),
  .X( o_imm_i[13] )
 );
 
 
 cell_or2
 x408_12 ( 
- .A( net24[12] ),
- .B( net27[12] ),
+ .A( net21[12] ),
+ .B( net24[12] ),
  .X( o_imm_i[12] )
 );
 
 
 cell_or2
 x408_11 ( 
- .A( net24[11] ),
- .B( net27[11] ),
+ .A( net21[11] ),
+ .B( net24[11] ),
  .X( o_imm_i[11] )
 );
 
 
 cell_or2
 x408_10 ( 
- .A( net24[10] ),
- .B( net27[10] ),
+ .A( net21[10] ),
+ .B( net24[10] ),
  .X( o_imm_i[10] )
 );
 
 
 cell_or2
 x408_9 ( 
- .A( net24[9] ),
- .B( net27[9] ),
+ .A( net21[9] ),
+ .B( net24[9] ),
  .X( o_imm_i[9] )
 );
 
 
 cell_or2
 x408_8 ( 
- .A( net24[8] ),
- .B( net27[8] ),
+ .A( net21[8] ),
+ .B( net24[8] ),
  .X( o_imm_i[8] )
 );
 
 
 cell_or2
 x408_7 ( 
- .A( net24[7] ),
- .B( net27[7] ),
+ .A( net21[7] ),
+ .B( net24[7] ),
  .X( o_imm_i[7] )
 );
 
 
 cell_or2
 x408_6 ( 
- .A( net24[6] ),
- .B( net27[6] ),
+ .A( net21[6] ),
+ .B( net24[6] ),
  .X( o_imm_i[6] )
 );
 
 
 cell_or2
 x408_5 ( 
- .A( net24[5] ),
- .B( net27[5] ),
+ .A( net21[5] ),
+ .B( net24[5] ),
  .X( o_imm_i[5] )
 );
 
 
 cell_or2
 x408_4 ( 
- .A( net24[4] ),
- .B( net27[4] ),
+ .A( net21[4] ),
+ .B( net24[4] ),
  .X( o_imm_i[4] )
 );
 
 
 cell_or2
 x408_3 ( 
- .A( net24[3] ),
- .B( net27[3] ),
+ .A( net21[3] ),
+ .B( net24[3] ),
  .X( o_imm_i[3] )
 );
 
 
 cell_or2
 x408_2 ( 
- .A( net24[2] ),
- .B( net27[2] ),
+ .A( net21[2] ),
+ .B( net24[2] ),
  .X( o_imm_i[2] )
 );
 
 
 cell_or2
 x408_1 ( 
- .A( net24[1] ),
- .B( net27[1] ),
+ .A( net21[1] ),
+ .B( net24[1] ),
  .X( o_imm_i[1] )
 );
 
 
 cell_or2
 x408_0 ( 
- .A( net24[0] ),
- .B( net27[0] ),
+ .A( net21[0] ),
+ .B( net24[0] ),
  .X( o_imm_i[0] )
 );
 
@@ -6858,7 +6697,7 @@ x408_0 (
 cell_and3
 x24 ( 
  .A( instruction[2] ),
- .B( net92 ),
+ .B( net73 ),
  .C( instruction[4] ),
  .X( imm_sel_u )
 );
@@ -6867,14 +6706,14 @@ x24 (
 cell_inv
 x25 ( 
  .A( instruction[3] ),
- .Y( net92 )
+ .Y( net73 )
 );
 
 
 cell_and4
 x26 ( 
  .A( instruction[3] ),
- .B( net93 ),
+ .B( net74 ),
  .C( instruction[5] ),
  .D( instruction[6] ),
  .X( imm_sel_j )
@@ -6884,7 +6723,7 @@ x26 (
 cell_inv
 x27 ( 
  .A( instruction[4] ),
- .Y( net93 )
+ .Y( net74 )
 );
 
 
@@ -6913,30 +6752,52 @@ x7 (
 );
 
 
-cell_and3
+cell_nor3
 x30 ( 
- .A( funct3[0] ),
- .B( inst_full ),
- .C( inst_misc_mem ),
- .X( inst_fence )
+ .A( funct3_n[0] ),
+ .B( inst_full_n ),
+ .C( inst_misc_mem_n ),
+ .Y( inst_fence )
 );
 
 
-cell_and3
+cell_nor3
 x31 ( 
- .A( inst_misc_mem ),
- .B( inst_full ),
- .C( funct3[1] ),
- .X( inst_fence_i )
+ .A( inst_misc_mem_n ),
+ .B( inst_full_n ),
+ .C( funct3_n[1] ),
+ .Y( inst_fence_i )
 );
 
 
-cell_or3
-x1_5 ( 
- .A( net49 ),
+cell_nand3
+x308_5 ( 
+ .A( net75 ),
  .B( inst_fence ),
  .C( inst_fence_i ),
- .X( net30 )
+ .Y( net27 )
+);
+
+
+cell_inv
+x32 ( 
+ .A( inst_full_n ),
+ .Y( inst_full )
+);
+
+
+cell_inv
+x33 ( 
+ .A( valid_input ),
+ .Y( net75 )
+);
+
+
+cell_or2
+x34 ( 
+ .A( inst_grp_load ),
+ .B( inst_grp_load_fp ),
+ .X( o_res_src[2] )
 );
 
 endmodule
